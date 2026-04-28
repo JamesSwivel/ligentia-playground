@@ -1,0 +1,40 @@
+{
+  "issueFrom": {
+    "companyName": "Monti Apparel Company Limited",
+    "addr1": "3507, 35/F, King Palace Plaza",
+    "addr2": "52A, Sha Tsui Road",
+    "addr3": "Tsuen Wan, NT, Hong Kong",
+    "addr4": "",
+    "addressSingleLine": "3507, 35/F, King Palace Plaza, 52A, Sha Tsui Road, Tsuen Wan, NT, Hong Kong",
+    "zip": "",
+    "country": "Hong Kong",
+    "countryCode": "HK",
+    "email": "",
+    "phone": "00852-23084000",
+    "fax": "00852-23084001"
+  },
+  "issueTo": {
+    "companyName": "Nisbets Limited",
+    "addr1": "Fourth Way, Avonmouth",
+    "addr2": "Bristol",
+    "addr3": "BS11 8TB",
+    "addr4": "",
+    "addressSingleLine": "Fourth Way, Avonmouth, Bristol BS11 8TB",
+    "zip": "BS11 8TB",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "email": "",
+    "phone": "",
+    "fax": ""
+  },
+  "packingListNum": "12/29UK",
+  "packingListDate": "2024-12-30",
+  "packingListIncoterms": "FOB",
+  "packingListGrossWeightUnit": "KG",
+  "packingListGrossWeightTotal": 22057.3,
+  "packingListQtyTotal": 40360,
+  "packingListVolumeTotal": 56.0,
+  "countryOfOrigin": "KH",
+  "multiplePackingLists": [],
+  "error": ""
+}

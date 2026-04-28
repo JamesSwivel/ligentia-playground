@@ -1,0 +1,57 @@
+{
+  "invoiceFrom": {
+    "companyName": "MONTI APPAREL COMPANY LIMITED",
+    "addr1": "3507, 35/F., King Palace Plaza",
+    "addr2": "52A, Sha Tsui Road, Tsuen Wan, NT",
+    "addr3": "Hong Kong",
+    "addr4": "香港新界荃灣沙咀道52A號皇廷廣場35樓3507",
+    "addressSingleLine": "3507, 35/F., King Palace Plaza, 52A, Sha Tsui Road, Tsuen Wan, NT, Hong Kong 香港新界荃灣沙咀道52A號皇廷廣場35樓3507",
+    "zip": "",
+    "country": "Hong Kong",
+    "countryCode": "HK",
+    "email": "",
+    "phone": "00852-23084000",
+    "fax": "00852-23084001"
+  },
+  "invoiceTo": {
+    "companyName": "Nisbets Limited",
+    "addr1": "Fourth Way, Avonmouth",
+    "addr2": "Bristol",
+    "addr3": "BS11 8TB",
+    "addr4": "",
+    "addressSingleLine": "Fourth Way, Avonmouth, Bristol, BS11 8TB",
+    "zip": "BS11 8TB",
+    "country": "UK",
+    "countryCode": "GB",
+    "email": "",
+    "phone": "",
+    "fax": ""
+  },
+  "invoiceDate": "2024-12-30",
+  "invoiceNum": "832A",
+  "invoiceCurrency": "USD",
+  "invoiceCurrencyTotal": "78,477.30",
+  "countryOfOrigin": "KH",
+  "isMultipleInvoices": "true",
+  "multipleInvoices": [
+    {
+      "invoiceNum": "832A",
+      "invoiceDate": "2024-12-30",
+      "invoiceCurrency": "USD",
+      "invoiceCurrencyTotal": "78,477.30"
+    },
+    {
+      "invoiceNum": "831A",
+      "invoiceDate": "2024-12-30",
+      "invoiceCurrency": "USD",
+      "invoiceCurrencyTotal": "5,394.75"
+    },
+    {
+      "invoiceNum": "830B",
+      "invoiceDate": "2024-12-30",
+      "invoiceCurrency": "USD",
+      "invoiceCurrencyTotal": "53,080.70"
+    }
+  ],
+  "error": ""
+}
