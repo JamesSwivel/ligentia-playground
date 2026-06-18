@@ -2,35 +2,86 @@ You are an export of entity extraction and is experienced in understanding docum
 For example, master airway bill doc, house airway doc, packing list, commercial invoice, etc.
 The entity result must be based on the user document.  You must not hallucinate values.
 
+Here is the JSON schema in XML tag 'addressStateCodeEntity'
+<addressStateCodeEntity>
+Based on the address state or province, determine a state code typically in 2-3 letters, e.g.
+- US → 2-letter ('CA', 'TX', 'NY')
+- Canada → 2-letter ('ON', 'BC', 'QC')
+- Australia → 2-3 letter ('NSW', 'VIC', 'QLD')
+- China → 2-letter ('GD', 'SH', 'BJ')
+- otherwise -> '' (i.e. empty string)
+</addressStateCodeEntity>
+
+Here is the JSON schema in XML tag 'taxIDEntity'
+<taxIDEntity>
+For shipping parties, e.g. shipper, consignee, notify party, shipping agent, etc, they may indicate their tax ID info.
+The tax ID has typical terms below:
+VAT, TIN, EIN, SSN, ITIN, USCC, PCCC, CNPJ, CPF, RFC, RUT, RUN, EIN, UTR, IVA, UST, CVR, NIT, BN, ABN, CUIT, NIF, CF, CURP, SIN, CPF, TFN, CUIL, UTR, SSN, PESEL, etc. 
+If you can identity tax term and its ID, return the whole ID info, e.g. 'VAT:98876655', 'IVA.988657'"
+</taxIDEntity>
+
+Here is the type definitions in XML tag 'containerTypeCode'
+<containerTypeCode>
+'BU' : DRY BULK CONTAINER
+'DC' : DRY CONTAINER
+'FR' : FLAT RACK
+'FT' : COLLAPSIBLE FLAT RACK
+'GOH' : HANGER CONTAINER
+'GP' : GENERAL PURPOSE CONTAINER
+'HC' : HIGH CUBE DRY
+'HQRD' : HQ NON OPERATING REEFER
+'NOR' : NON OPERATING REEFER
+'OT' : OPEN TOP
+'RF' : REEFER
+'RH' : HIGH CUBE REEFER
+'TN' : TANK CONTAINER
+''  : others
+</containerTypeCode>
+
 Here is the JSON schema in XML tag 'multiplePackingListEntity'
 <multiplePackingListEntity>
 {
   "packingListNum": "packing list number",
   "packingListDate": "packing list date in ISO8601 YYYY-MM-DD format",
-  "packingListIncoterms": "packing list incoterms, e.g. FOB",
-  "packingListGrossWeightUnit": "packing list weight unit, e.g. KG, LB",
-  "packingListGrossWeightTotal": "packing list total gross weight",
-  "packingListQtyTotal": "packing list total quantity or carton quantity",
-  "packingListCartonQtyTotal": "packing list total carton quantity",
-  "packingListVolumeTotal": "packing list total volume, mostly in CBM"
+  "totalGrossWeightUnit": "packing list weight unit, e.g. KG, LB",
+  "totalGrossWeight": "packing list total gross weight",
+  "totalQty": "packing list total quantity or carton quantity",
+  "totalCartonQtyTotal": "packing list total carton quantity",
+  "totalVolume": "packing list total volume, mostly in CBM"
 }
 </multiplePackingListEntity>
+
+Here is the JSON schema in XML tag 'packingListItemExtraEntity'
+<packingListItemEntity>
+{
+  "size": "infer from item info if there is size label, e.g. size L -> 'L', size m -> 'M', etc.  If found, return the label in uppercase."
+}
+</packingListItemExtraEntity>
 
 
 Here is the JSON schema in XML tag 'packingListItemEntity'
 <packingListItemEntity>
 {
   "lineNum": "line number of the packing list item",
-  "orderNum": "line item's order number, mostly presented in column PO#, PO Num, etc",
-  "invoiceNum": "line item's invoice number, mostly presented in column Inv#, Invoice num, etc",
-  "itemNum": "line item's item number",
-  "itemDesc": "line item's item description",
-  "itemQty": "line item's quantity",
-  "perCartonQty": "line item's quantity per carton",
-  "cartonQty": "line item's carton quantity",
-  "grossWeight": "line item's gross weight",
-  "netWeight": "line item's net weight",
-  "volume": "line item's volume, mostly in CBM",
+  "PORefNum": "  "PORefNum": "PO reference number"",
+  "invoiceRefNum": "invoice reference number",
+  "code": "line item's code or number or product code",
+  "desc": "line item's item description",
+  "remark": "multi-line raw remarks or info apart from item code and description.  This raw info is useful in downstream special data extraction logics.",
+  "qty": "line item's quantity in float",
+  "qtyPerCarton": "line item's quantity per carton in float",
+  "cartonQty": "line item's carton quantity in float",
+  "grossWeight": "line item's gross weight in float",
+  "netWeight": "line item's net weight in float",
+  "cbm": "line item's CBM volume in float",
+  "containerType": "Container type/size code, e.g. '20GP', '40GP', '40HC', '45HC', '20RF', '40RF', '20OT', '40OT', '20FR', '40FR'",
+  "containerTypeCode": "container type code defined in XML tag <containerTypeCode>",
+  "containerNum": "container number",
+  "containerSealNum": "container seal number",
+  "packageStartNum": "package starting number in integer if the package number range is provided",
+  "packageEndNum": "package ending number in integer if the package number range is provided",
+  "totalPackages": "total no. of packages if package number range is provided.  The formula should be 'packageEndNum' - 'packageStartNum' + 1 since we are counting physical packages",
+  "extra": "refer to schema in XML <packingListItemExtraEntity>"
 }
 </packingListItemEntity>
 
@@ -38,41 +89,53 @@ Here is the JSON schema in XML tag 'result'
 <result>
 {
   "issueFrom": {
+    "rawAddressLines": "original multi-lines address card, including company name, addresses, contact info, etc.",
     "companyName": "company name",
     "addr1": "address line1",
     "addr2": "address line2",
     "addr3": "address line3",
     "addr4": "address line4",
     "addressSingleLine": "complete address in single line",
+    "state": "full state or province name, e.g. 'California', 'Guangdong', 'New South Wales'",
+    "stateCode": "refers to address state code entity defined in XML <addressStateCodeEntity>",
     "zip": "zip code",
     "country": "country name",
     "countryCode": "2-letter country code, e.g. 'US' for United States, 'CN' for China, 'JP' for Japan, etc",
     "email": "email address",
     "phone": "contact phone number",
-    "fax": "fax number"
+    "fax": "fax number",
+    "contactPerson": "contact person",
+    "taxID": "refers to taxID entity defined in XML <taxIDEntity>"
   },
   "issueTo": {
+    "rawAddressLines": "original multi-lines address card, including company name, addresses, contact info, etc.",
     "companyName": "company name",
     "addr1": "address line1",
     "addr2": "address line2",
     "addr3": "address line3",
     "addr4": "address line4",
     "addressSingleLine": "complete address in single line",
+    "state": "full state or province name, e.g. 'California', 'Guangdong', 'New South Wales'",
+    "stateCode": "refers to address state code entity defined in XML <addressStateCodeEntity>",
     "zip": "zip code",
     "country": "country name",
     "countryCode": "2-letter country code, e.g. 'US' for United States, 'CN' for China, 'JP' for Japan, etc",
     "email": "email address",
     "phone": "contact phone number",
-    "fax": "fax number"
+    "fax": "fax number",
+    "contactPerson": "contact person",
+    "taxID": "refers to taxID entity defined in XML <taxIDEntity>"
   },
   "packingListNum": "packing list number",
   "packingListDate": "packing list date in ISO8601 YYYY-MM-DD format",
-  "packingListIncoterms": "packing list incoterms, e.g. FOB",
-  "packingListGrossWeightUnit": "packing list weight unit, e.g. KG, LB",
-  "packingListGrossWeightTotal": "packing list total gross weight",
-  "packingListQtyTotal": "packing list total quantity or carton quantity",
-  "packingListCartonQtyTotal": "packing list total carton quantity",
-  "packingListVolumeTotal": "packing list total volume, mostly in CBM"
+  "grossWeightUnit": "invoice gross weight unit, e.g. KG, LB",
+  "totalGrossWeight": "total gross weight in float",
+  "totalNetWeight": "total net weight in float",
+  "totalLineItems": "total no. of line items in float",
+  "totalQty": "total item qty in float",
+  "totalCartonQty": "total carton qty in float",
+  "totalCbm": "total CBM (volume) in float",
+  "incoterms": "packing list incoterms, e.g. FOB",
   "countryOfOrigin": "product country of origin in 2-letter country code ISO3166, e.g. 'HK' for Hong Kong, etc",
   "packingListItems":  "array of <packingListItemEntity> if the packing list contains multiple line items, other an empty array []",
   "isMultiplePackingLists": "true if multiple packing lists are found",
