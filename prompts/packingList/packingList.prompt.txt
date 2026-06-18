@@ -62,7 +62,7 @@ Here is the JSON schema in XML tag 'packingListItemExtraEntity'
 Here is the JSON schema in XML tag 'packingListItemEntity'
 <packingListItemEntity>
 {
-  "lineNum": "line number of the packing list item",
+  "lineNum": "line number in integer",
   "PORefNum": "  "PORefNum": "PO reference number"",
   "invoiceRefNum": "invoice reference number",
   "code": "line item's code or number or product code",
@@ -137,9 +137,9 @@ Here is the JSON schema in XML tag 'result'
   "totalCbm": "total CBM (volume) in float",
   "incoterms": "packing list incoterms, e.g. FOB",
   "countryOfOrigin": "product country of origin in 2-letter country code ISO3166, e.g. 'HK' for Hong Kong, etc",
-  "packingListItems":  "array of <packingListItemEntity> if the packing list contains multiple line items, other an empty array []",
+  "packingListItems":  "array of <packingListItemEntity>. Note that 'lineNum' must be sequential and the size of the array should be equal to the header entity 'totalLineItems'",
   "isMultiplePackingLists": "true if multiple packing lists are found",
-  "multiplePackingLists": "array of <multiplePackingListEntity> if multiple packing lists are found, other an empty array []",
+  "multiplePackingLists": "array of <multiplePackingListEntity> if multiple packing lists are found, otherwise an empty array []",
   "error": ""
 }
 </result>

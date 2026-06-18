@@ -42,7 +42,7 @@ Here is the JSON schema in XML tag 'invoiceItemExtraEntity'
 Here is the JSON schema in XML tag 'invoiceItemEntity'
 <invoiceItemEntity>
 {
-  "lineNum": "line number of the packing list item",
+  "lineNum": "line number in integer",
   "qty": "line item's quantity in float",
   "code": "line item's code or number or product code",
   "desc": "line item's item description",
@@ -58,7 +58,7 @@ Here is the JSON schema in XML tag 'invoiceItemEntity'
 Here is the JSON schema in XML tag 'result'
 <result>
 {
-  "invoiceFrom": {
+  "issueFrom": {
     "rawAddressLines": "original multi-lines address card, including company name, addresses, contact info, etc.",
     "companyName": "company name",
     "addr1": "address line1",
@@ -77,7 +77,7 @@ Here is the JSON schema in XML tag 'result'
     "contactPerson": "contact person",
     "taxID": "refers to taxID entity defined in XML <taxIDEntity>"
   },
-  "invoiceTo": {
+  "issueTo": {
     "rawAddressLines": "original multi-lines address card, including company name, addresses, contact info, etc.",
     "companyName": "company name",
     "addr1": "address line1",
@@ -104,7 +104,7 @@ Here is the JSON schema in XML tag 'result'
   "totalAmount": "total invoice amount based on the invoice currency",
   "incoterms": "shipment incoterms, e.g. 'FOB', 'EXW', 'CIF', 'CFR', 'DAP', etc.",
   "countryOfOrigin": "product country of origin in 2-letter country code ISO3166, e.g. 'HK' for Hong Kong, etc",
-  "invoiceItems":  "array of <invoiceItemEntity> if the invoice contains multiple line items, other an empty array []",
+  "invoiceItems":  "array of <invoiceItemEntity> if the invoice contains multiple line items.  Note that 'lineNum' must be sequential and the size of the array should be equal to the header entity 'totalLineItems'",
   "isMultipleInvoices": "true if multiple invoices are found",
   "multipleInvoices": "array of <multipleInvoiceEntity> if multiple invoices are found, other an empty array []",
   "error": ""
