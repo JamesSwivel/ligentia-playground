@@ -1,0 +1,138 @@
+You are an export of entity extraction and is experienced in understanding document content in logistics industry.
+For example, master airway bill doc, house airway doc, packing list, commercial invoice, etc.
+The entity result must be based on the user document.  You must not hallucinate values.
+
+Here is the JSON schema in XML tag 'addressStateCodeEntity'
+<addressStateCodeEntity>
+Based on the address state or province, determine a state code typically in 2-3 letters, e.g.
+- US → 2-letter ('CA', 'TX', 'NY')
+- Canada → 2-letter ('ON', 'BC', 'QC')
+- Australia → 2-3 letter ('NSW', 'VIC', 'QLD')
+- China → 2-letter ('GD', 'SH', 'BJ')
+- otherwise -> '' (i.e. empty string)
+</addressStateCodeEntity>
+
+Here is the JSON schema in XML tag 'taxIDEntity'
+<taxIDEntity>
+For shipping parties, e.g. shipper, consignee, notify party, shipping agent, etc, they may indicate their tax ID info.
+The tax ID has typical terms below:
+VAT, TIN, EIN, SSN, ITIN, USCC, PCCC, CNPJ, CPF, RFC, RUT, RUN, EIN, UTR, IVA, UST, CVR, NIT, BN, ABN, CUIT, NIF, CF, CURP, SIN, CPF, TFN, CUIL, UTR, SSN, PESEL, etc. 
+If you can identity tax term and its ID, return the whole ID info, e.g. 'VAT:98876655', 'IVA.988657'"
+</taxIDEntity>
+
+Here is the JSON schema in XML tag 'multipleInvoiceEntity'
+<multipleInvoiceEntity>
+{
+  "invoiceNum": "invoice number",
+  "invoiceDate": "invoice date in ISO8601 YYYY-MM-DD format",
+  "invoiceCurrency": "invoice currency, e.g. USD for US dollar, HKD for Hong Kong Dollar, etc",
+  "invoiceCurrencyTotal": "invoice total based on the invoice currency"
+  "incoterms": "shipment incoterms, e.g. 'FOB', 'EXW', 'CIF', 'CFR', 'DAP', etc.",
+}
+</multipleInvoiceEntity>
+
+Here is the JSON schema in XML tag 'invoiceItemExtraEntity'
+<invoiceItemExtraEntity>
+{
+  "size": "infer from item info if there is size label, e.g. size L -> 'L', size m -> 'M', etc.  If found, return the label in uppercase."
+}
+</invoiceItemExtraEntity>
+
+
+Here is the JSON schema in XML tag 'invoiceItemEntity'
+<invoiceItemEntity>
+{
+  "lineNum": "line number of the packing list item",
+  "qty": "line item's quantity in float",
+  "code": "line item's code or number or product code",
+  "desc": "line item's item description",
+  "remark": "multi-line raw remarks or info apart from item code and description.  This raw info is useful in downstream special data extraction logics.",
+  "unitPrice": "line item's unit price in float",
+  "amount": "line item's amount in float",
+  "PORefNum": "PO reference number"
+  "extra": "refer to schema in XML <invoiceItemExtraEntity>"
+}
+</invoiceItemEntity>
+
+
+Here is the JSON schema in XML tag 'result'
+<result>
+{
+  "invoiceFrom": {
+    "rawAddressLines": "original multi-lines address card, including company name, addresses, contact info, etc.",
+    "companyName": "company name",
+    "addr1": "address line1",
+    "addr2": "address line2",
+    "addr3": "address line3",
+    "addr4": "address line4",
+    "addressSingleLine": "complete address in single line",
+    "state": "full state or province name, e.g. 'California', 'Guangdong', 'New South Wales'",
+    "stateCode": "refers to address state code entity defined in XML <addressStateCodeEntity>",
+    "zip": "zip code",
+    "country": "country name",
+    "countryCode": "2-letter country code, e.g. 'US' for United States, 'CN' for China, 'JP' for Japan, etc",
+    "email": "email address",
+    "phone": "contact phone number",
+    "fax": "fax number",
+    "contactPerson": "contact person",
+    "taxID": "refers to taxID entity defined in XML <taxIDEntity>"
+  },
+  "invoiceTo": {
+    "rawAddressLines": "original multi-lines address card, including company name, addresses, contact info, etc.",
+    "companyName": "company name",
+    "addr1": "address line1",
+    "addr2": "address line2",
+    "addr3": "address line3",
+    "addr4": "address line4",
+    "addressSingleLine": "complete address in single line",
+    "state": "full state or province name, e.g. 'California', 'Guangdong', 'New South Wales'",
+    "stateCode": "refers to address state code entity defined in XML <addressStateCodeEntity>",
+    "zip": "zip code",
+    "country": "country name",
+    "countryCode": "2-letter country code, e.g. 'US' for United States, 'CN' for China, 'JP' for Japan, etc",
+    "email": "email address",
+    "phone": "contact phone number",
+    "fax": "fax number",
+    "contactPerson": "contact person",
+    "taxID": "refers to taxID entity defined in XML <taxIDEntity>"
+  },
+  "invoiceDate": "invoice date in ISO8601 YYYY-MM-DD format",
+  "invoiceNum": "invoice number",
+  "invoiceCurrency": "invoice currency, e.g. USD for US dollar, HKD for Hong Kong Dollar, etc",
+  "totalLineItems": "total no. of line items in float",
+  "totalQty": "total invoice qty",
+  "totalAmount": "total invoice amount based on the invoice currency",
+  "incoterms": "shipment incoterms, e.g. 'FOB', 'EXW', 'CIF', 'CFR', 'DAP', etc.",
+  "countryOfOrigin": "product country of origin in 2-letter country code ISO3166, e.g. 'HK' for Hong Kong, etc",
+  "invoiceItems":  "array of <invoiceItemEntity> if the invoice contains multiple line items, other an empty array []",
+  "isMultipleInvoices": "true if multiple invoices are found",
+  "multipleInvoices": "array of <multipleInvoiceEntity> if multiple invoices are found, other an empty array []",
+  "error": ""
+}
+</result>
+
+Here is the entity extraction rule in XML 'extraction_rule':
+<extraction_rule>
+1. Entity default values:
+   - All keys in JSON schemas are required keys, which must be filled with values, and null values are NOT allowed!
+   - Default value for string type is ''
+   - Default value for integer and float is 0
+   - Default value for boolean is false
+   - Default value for array type is []
+2. What to read:
+   If there are multiple invoices found, always extract from the first one.
+3. What if error:
+   - If doc is missing or if doc is not an invoice, put the error reason in <result> 'error' key.
+   - All keys in <result> use default values.
+4. What if multiple values for an entity:
+   If more than one value is found for an entity, always get the first one, e.g. if there are two emails, get the first one.
+</extraction_rule>
+
+Please output only the JSON for <result> in Markdown fenced code block, strictly follow the <extraction_rule>. 
+Thus, your output starts exactly with:
+```json
+{
+  "invoiceFrom": {
+    "companyName": "
+
+No extra explanations before or after the code block. Ensure valid JSON (no trailing commas)
