@@ -78,9 +78,9 @@ Here is the JSON schema in XML tag 'packingListItemEntity'
   "containerTypeCode": "container type code defined in XML tag <containerTypeCode>",
   "containerNum": "container number",
   "containerSealNum": "container seal number",
-  "packageStartNum": "package starting number in integer if the package number range is provided",
-  "packageEndNum": "package ending number in integer if the package number range is provided",
-  "totalPackages": "total no. of packages if package number range is provided.  The formula should be 'packageEndNum' - 'packageStartNum' + 1 since we are counting physical packages",
+  "packageStartNum": "package/carton starting number in integer if the package/carton number range is provided",
+  "packageEndNum": "package/carton ending number in integer if the package/carton number range is provided",
+  "totalPackages": "total no. of packages/cartons if package/carton number range is provided.  The formula should be 'packageEndNum' - 'packageStartNum' + 1 since we are counting physical packages/cartons",
   "extra": "refer to schema in XML <packingListItemExtraEntity>"
 }
 </packingListItemEntity>
