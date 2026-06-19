@@ -1,0 +1,4 @@
+[ issues ]
+- Multiple invoice pdfs with their own totals but all share the same invoice number
+  i.e. invoice number + PO layout
+  

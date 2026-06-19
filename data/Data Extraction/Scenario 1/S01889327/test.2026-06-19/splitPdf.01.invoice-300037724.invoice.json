@@ -1,0 +1,418 @@
+{
+  "dateOfIssue": "2025-01-15",
+  "issueFrom": {
+    "companyName": "Royal Porcelain Public Company Limited.",
+    "rawAddressLines": "Royal Porcelain Public Company Limited.\n888/90-92, 9/F Mahatun Plaza Bldg., Ploenchit Rd., Lumpini,\nPathumwan, Bangkok 10330, Thailand.\nTel. (662) 253-6823-38 Fax: (662) 254-4093-4\nRegistration 0107543000074 (Bor Mor Jor. 661)",
+    "addr1": "888/90-92, 9/F Mahatun Plaza Bldg.",
+    "addr2": "Ploenchit Rd., Lumpini",
+    "addr3": "Pathumwan",
+    "addr4": "Bangkok 10330",
+    "addressSingleLine": "888/90-92, 9/F Mahatun Plaza Bldg., Ploenchit Rd., Lumpini, Pathumwan, Bangkok 10330, Thailand",
+    "state": "Bangkok",
+    "stateCode": "",
+    "zip": "10330",
+    "country": "Thailand",
+    "countryCode": "TH",
+    "email": "",
+    "phone": "(662) 253-6823-38",
+    "fax": "(662) 254-4093-4",
+    "contactPerson": "",
+    "taxID": "Registration:0107543000074"
+  },
+  "issueTo": {
+    "companyName": "NISBETS PLC",
+    "rawAddressLines": "NISBETS PLC\nFOURTH WAY, AVONMOUTH, BRISTOL, BS11 8TB\nUnited Kingdom",
+    "addr1": "FOURTH WAY",
+    "addr2": "AVONMOUTH",
+    "addr3": "BRISTOL",
+    "addr4": "BS11 8TB",
+    "addressSingleLine": "FOURTH WAY, AVONMOUTH, BRISTOL, BS11 8TB, United Kingdom",
+    "state": "Bristol",
+    "stateCode": "",
+    "zip": "BS11 8TB",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "email": "",
+    "phone": "",
+    "fax": "",
+    "contactPerson": "",
+    "taxID": ""
+  },
+  "invoiceDate": "2025-01-15",
+  "invoiceNum": "300037724",
+  "invoiceCurrency": "GBP",
+  "totalLineItems": 28,
+  "totalQty": 27294,
+  "totalAmount": 25428.7,
+  "incoterms": "FOB",
+  "countryOfOrigin": "TH",
+  "invoiceItems": [
+    {
+      "lineNum": 1,
+      "qty": 1584,
+      "code": "100-8523-00001100003",
+      "desc": "MUG 0.28 L.",
+      "remark": "WHITEWARE (CG244) (12/48) (5050984227738) (5050984230301)",
+      "unitPrice": 1.05,
+      "amount": 1663.2,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 2,
+      "qty": 300,
+      "code": "200002048",
+      "desc": "TEA POT W/LID 0.35 L.",
+      "remark": "WHITEWARE (CG261) (2/12) (5050984227523) (5050984230097) 100-8531-00001100003 TEA POT W/O LID 0.35 L. 1 PCS 100-8531-10001 TEA POT ONLY LID 0.415 L. 1 PCS 2 PCS/SET SET TOTAL 600 PCS",
+      "unitPrice": 3.25,
+      "amount": 975.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 3,
+      "qty": 96,
+      "code": "100-9039-00001100003",
+      "desc": "SOUP PLATE (WIDER RIM) 24.5 CM.",
+      "remark": "WHITEWARE (GT912) (-/12) (5050984461019)",
+      "unitPrice": 1.55,
+      "amount": 148.8,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 4,
+      "qty": 1152,
+      "code": "110-0237-00001100001",
+      "desc": "FLAT PLATE 21.0 CM.",
+      "remark": "WHITEWARE (CG003) (12/48) (5050984227356) (5050984229954)",
+      "unitPrice": 0.95,
+      "amount": 1094.4,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 5,
+      "qty": 432,
+      "code": "110-0202-00001100001",
+      "desc": "FLAT PLATE 24.0 CM.",
+      "remark": "WHITEWARE (CG004) (12/24) (5050984227493) (5050984230066)",
+      "unitPrice": 1.0,
+      "amount": 432.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 6,
+      "qty": 1656,
+      "code": "110-0201-00001100001",
+      "desc": "FLAT PLATE 26.0 CM.",
+      "remark": "WHITEWARE (CG005) (12/24) (5050984227363) (5050984229961)",
+      "unitPrice": 1.45,
+      "amount": 2401.2,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 7,
+      "qty": 504,
+      "code": "110-0920-00001100001",
+      "desc": "FLAT PLATE 26.0 CM.",
+      "remark": "WHITEWARE (CG009) (12/24) (5050984226052)",
+      "unitPrice": 1.25,
+      "amount": 630.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 8,
+      "qty": 864,
+      "code": "110-0210-00001100001",
+      "desc": "COFFEE CUP 0.175 L.",
+      "remark": "WHITEWARE (CG024) (12/72) (5050984226922) (5050984229275) (5050984228810)",
+      "unitPrice": 0.6,
+      "amount": 518.4,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 9,
+      "qty": 504,
+      "code": "110-0280-00001100001",
+      "desc": "AD CUP 0.10 L.",
+      "remark": "WHITEWARE (CG026) (12/72) (5050984226267) (5050984229022)",
+      "unitPrice": 0.75,
+      "amount": 378.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 10,
+      "qty": 768,
+      "code": "210002873",
+      "desc": "TEA POT W/LID 0.30 L.",
+      "remark": "WHITEWARE (CG039) (12/48) (5050984227561) (5050984230134) 110-0215-00001100001 TEA POT W/O LID 0.30 L. 1 PCS 110-0215-10301 TEA POT ONLY LID 0.30 L. 1 PCS 2 PCS/SET SET TOTAL 1,536 PCS",
+      "unitPrice": 2.1,
+      "amount": 1612.8,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 11,
+      "qty": 2208,
+      "code": "110-0307-00001100001",
+      "desc": "SALAD/SOUP BOWL 16.5 CM.",
+      "remark": "WHITEWARE (CG056) (12/48) (5050984226083) (5050984228841)",
+      "unitPrice": 0.65,
+      "amount": 1435.2,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 12,
+      "qty": 408,
+      "code": "110-0221-00001100001",
+      "desc": "SALAD (SOUP) BOWL 20 CM.",
+      "remark": "WHITEWARE (CG060) (6/24) (5050984226182) (5050984228940)",
+      "unitPrice": 1.4,
+      "amount": 571.2,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 13,
+      "qty": 264,
+      "code": "110-0222-00001100001",
+      "desc": "SALAD/SOUP BOWL 25.5 CM.",
+      "remark": "WHITEWARE (CG061) (6/12) (5050984227110) (5050984229466)",
+      "unitPrice": 1.5,
+      "amount": 396.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 14,
+      "qty": 912,
+      "code": "110-0925-00001100001",
+      "desc": "DEEP PLATE 23.5 CM.",
+      "remark": "WHITEWARE (CG062) (12/24) (5050984226359)",
+      "unitPrice": 1.25,
+      "amount": 1140.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 15,
+      "qty": 2760,
+      "code": "110-0234-00001100001",
+      "desc": "BUTTER RAMEQUIN 8.5 CM.",
+      "remark": "WHITEWARE (CG066) (12/120) (5050984226328) (5050984229084) (5050984229114)",
+      "unitPrice": 0.4,
+      "amount": 1104.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 16,
+      "qty": 216,
+      "code": "110-4105-00001100001",
+      "desc": "SQUARE COUPE PLATE 16.0 CM.",
+      "remark": "WHITEWARE (CG079) (12/72) (5050984227134) (5050984229480)",
+      "unitPrice": 1.0,
+      "amount": 216.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 17,
+      "qty": 720,
+      "code": "110-4104-00001100001",
+      "desc": "SQUARE COUPE PLATE 19.0 CM.",
+      "remark": "WHITEWARE (CG080) (12/48) (5050984227141) (5050984229497)",
+      "unitPrice": 1.15,
+      "amount": 828.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 18,
+      "qty": 1200,
+      "code": "110-4101-00001100001",
+      "desc": "SQUARE COUPE PLATE 26.5 CM.",
+      "remark": "WHITEWARE (CG083) (-/12) (5050984227349)",
+      "unitPrice": 1.5,
+      "amount": 1800.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 19,
+      "qty": 78,
+      "code": "110-4120-00001100001",
+      "desc": "SQUARE SALAD BOWL 25.0 CM.",
+      "remark": "WHITEWARE (CG108) (2/6) (5050984226175) (5050984228933)",
+      "unitPrice": 5.05,
+      "amount": 393.9,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 20,
+      "qty": 372,
+      "code": "2100021349",
+      "desc": "TEA POT W/LID 0.60 L.",
+      "remark": "WHITEWARE (CG124) (2/12) (5050984226915) (5050984229268) 110-4023-00001100001 TEA POT (SMALL) W/O LID 0.6 L. 1 PCS 110-4023-10601 TEA POT ONLY LID 0.60 L. 1 PCS 2 PCS/SET SET TOTAL 744 PCS",
+      "unitPrice": 2.65,
+      "amount": 985.8,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 21,
+      "qty": 3960,
+      "code": "110-4006-00001100001",
+      "desc": "SOY SAUCE DISH 6.8 CM.",
+      "remark": "WHITEWARE (CG134) (12/120) (5050984226106)",
+      "unitPrice": 0.3,
+      "amount": 1188.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 22,
+      "qty": 576,
+      "code": "110-4007-00001100001",
+      "desc": "THICK SAUCE DISH 10 CM.",
+      "remark": "WHITEWARE (CG136) (48/96) (5050984227998) (5050984230561) (5050984228865)",
+      "unitPrice": 0.4,
+      "amount": 230.4,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 23,
+      "qty": 1488,
+      "code": "110-0317-00001100001",
+      "desc": "TEA CUP 0.21 L.",
+      "remark": "WHITEWARE (GT927) (12/48) (5050984461552) (5050984461163)",
+      "unitPrice": 0.95,
+      "amount": 1413.6,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 24,
+      "qty": 1440,
+      "code": "110-0318-00001100001",
+      "desc": "TEA CUP SAUCER 15.0 CM.",
+      "remark": "WHITEWARE (GT928) (12/72) (5050984461569) (5050984461170)",
+      "unitPrice": 0.65,
+      "amount": 936.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 25,
+      "qty": 240,
+      "code": "110-7336-00001100001",
+      "desc": "BOUILION 0.32 L.",
+      "remark": "WHITEWARE (GT939) (12/48) (5050984461637) (5050984461286)",
+      "unitPrice": 1.65,
+      "amount": 396.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 26,
+      "qty": 144,
+      "code": "110-8025-00001100001",
+      "desc": "MUG 0.35 L.",
+      "remark": "WHITEWARE (GT945) (12/48) (5050984461675) (5050984461323)",
+      "unitPrice": 1.3,
+      "amount": 187.2,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 27,
+      "qty": 504,
+      "code": "170-6210-00001100065",
+      "desc": "FLAT PLATE 27.50 CM.",
+      "remark": "WHITEWARE (FB648) (6/24) (5050984596131) (5050984596940)",
+      "unitPrice": 3.0,
+      "amount": 1512.0,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 28,
+      "qty": 504,
+      "code": "170-6213-00001100065",
+      "desc": "FLAT PLATE 17.50 CM.",
+      "remark": "WHITEWARE (FB650) (12/72) (5050984596155) (5050984596964)",
+      "unitPrice": 1.65,
+      "amount": 831.6,
+      "PORefNum": "5173737",
+      "extra": {
+        "size": ""
+      }
+    }
+  ],
+  "isMultipleInvoices": false,
+  "multipleInvoices": [],
+  "error": ""
+}

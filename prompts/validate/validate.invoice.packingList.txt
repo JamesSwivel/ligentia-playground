@@ -1,0 +1,11 @@
+These are invoice and packing list data from a supplier.  Please output the consolidate rows with columns:
+
+PO Num 
+item code
+description
+qty
+cartonQty
+cbm
+grossWeight
+invoice Num
+

@@ -1,0 +1,444 @@
+{
+  "dateOfIssue": "2025-05-12",
+  "issueFrom": {
+    "companyName": "NINGBO XINYI IMPORT AND EXPORT CO.,LTD",
+    "rawAddressLines": "NINGBO XINYI IMPORT AND EXPORT CO.,LTD\n6-8, No. 312. lane 645, Renmin Road, jiangbei District, Ningbo city, Zhejiang province",
+    "addr1": "6-8, No. 312. lane 645",
+    "addr2": "Renmin Road",
+    "addr3": "jiangbei District, Ningbo city",
+    "addr4": "Zhejiang province",
+    "addressSingleLine": "6-8, No. 312. lane 645, Renmin Road, jiangbei District, Ningbo city, Zhejiang province",
+    "state": "Zhejiang",
+    "stateCode": "ZJ",
+    "zip": "",
+    "country": "China",
+    "countryCode": "CN",
+    "email": "",
+    "phone": "",
+    "fax": "",
+    "contactPerson": "",
+    "taxID": ""
+  },
+  "issueTo": {
+    "companyName": "HOBBY CRAFT TRADING LIMITED",
+    "rawAddressLines": "HOBBY CRAFT TRADING LIMITED,\n7 ENTERPRISE WAY,AVIATION PARK,CHRISTCHURCH,DORSET,BH23 6HG,UK",
+    "addr1": "7 ENTERPRISE WAY",
+    "addr2": "AVIATION PARK",
+    "addr3": "CHRISTCHURCH",
+    "addr4": "DORSET",
+    "addressSingleLine": "7 ENTERPRISE WAY,AVIATION PARK,CHRISTCHURCH,DORSET,BH23 6HG,UK",
+    "state": "Dorset",
+    "stateCode": "",
+    "zip": "BH23 6HG",
+    "country": "UK",
+    "countryCode": "GB",
+    "email": "",
+    "phone": "",
+    "fax": "",
+    "contactPerson": "",
+    "taxID": ""
+  },
+  "invoiceDate": "2025-05-12",
+  "invoiceNum": "XY-335",
+  "invoiceCurrency": "USD",
+  "totalLineItems": 30,
+  "totalQty": 80886,
+  "totalAmount": 33264.48,
+  "incoterms": "FOB",
+  "countryOfOrigin": "CN",
+  "invoiceItems": [
+    {
+      "lineNum": 1,
+      "qty": 1296.0,
+      "code": "6710191000",
+      "desc": "X24 Xmas Cupcake Toppers 6pk Wreaths/10.5X6.5CM",
+      "remark": "Hobby Craft Group Ltd",
+      "unitPrice": 0.9,
+      "amount": 1166.4,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 2,
+      "qty": 1536.0,
+      "code": "6707001000",
+      "desc": "X24 Wood Hanging Stars 10pk Natural/5.5CM",
+      "remark": "",
+      "unitPrice": 0.74,
+      "amount": 1136.64,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 3,
+      "qty": 2424.0,
+      "code": "6707041000",
+      "desc": "X24 PYO Snow Village 6pcs 0/0",
+      "remark": "",
+      "unitPrice": 1.43,
+      "amount": 3466.32,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 4,
+      "qty": 144.0,
+      "code": "6710191000",
+      "desc": "X24 Xmas Cupcake Toppers 6pk Wreaths/10.5X6.5CM",
+      "remark": "Hobby Craft Group Ltd",
+      "unitPrice": 0.9,
+      "amount": 129.6,
+      "PORefNum": "PO1647024W",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 5,
+      "qty": 192.0,
+      "code": "6707001000",
+      "desc": "X24 Wood Hanging Stars 10pk Natural/5.5CM",
+      "remark": "",
+      "unitPrice": 0.74,
+      "amount": 142.08,
+      "PORefNum": "PO1647024W",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 6,
+      "qty": 576.0,
+      "code": "6707041000",
+      "desc": "X24 PYO Snow Village 6pcs 0/0",
+      "remark": "",
+      "unitPrice": 1.43,
+      "amount": 823.68,
+      "PORefNum": "PO1647024W",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 7,
+      "qty": 2916.0,
+      "code": "6781251000",
+      "desc": "X5 Snowman Embellishments 4pk0/2.5X5CM",
+      "remark": "Hobby Craft Group Ltd",
+      "unitPrice": 0.64,
+      "amount": 1866.24,
+      "PORefNum": "PO1649874",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 8,
+      "qty": 162.0,
+      "code": "6781251000",
+      "desc": "X5 Snowman Embellishments 4pk0/2.5X5CM",
+      "remark": "Hobby Craft Group Ltd",
+      "unitPrice": 0.64,
+      "amount": 103.68,
+      "PORefNum": "PO1649890W",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 9,
+      "qty": 1152.0,
+      "code": "6760101000",
+      "desc": "HC Resin Earring Mould Clear/137X116MM",
+      "remark": "Hobby Craft Group Ltd",
+      "unitPrice": 0.74,
+      "amount": 852.48,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 10,
+      "qty": 1296.0,
+      "code": "6760091000",
+      "desc": "HC Resin Scale Coaster Mould Clear/105X105MM",
+      "remark": "",
+      "unitPrice": 0.7,
+      "amount": 907.2,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 11,
+      "qty": 1440.0,
+      "code": "6760171000",
+      "desc": "HC Silicone Mixing Jug Clear/250ML",
+      "remark": "",
+      "unitPrice": 0.83,
+      "amount": 1195.2,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 12,
+      "qty": 1440.0,
+      "code": "6760181000",
+      "desc": "HC Silicone Mixing Sticks 3pk Purple/ASSORTED",
+      "remark": "",
+      "unitPrice": 1.05,
+      "amount": 1512.0,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 13,
+      "qty": 1512.0,
+      "code": "6760121000",
+      "desc": "HC Resin Bookmark Mould Clear/158X148MM",
+      "remark": "",
+      "unitPrice": 0.95,
+      "amount": 1436.4,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 14,
+      "qty": 1536.0,
+      "code": "6760191000",
+      "desc": "HC Silicone Mat Mint Green/29.5X21CM",
+      "remark": "",
+      "unitPrice": 0.87,
+      "amount": 1336.32,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 15,
+      "qty": 1632.0,
+      "code": "6760111000",
+      "desc": "HC Resin Oval Tray Mould Clear/16.5X12CM",
+      "remark": "",
+      "unitPrice": 1.01,
+      "amount": 1648.32,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 16,
+      "qty": 2016.0,
+      "code": "6760141000",
+      "desc": "HC Resin Hair Clip Mould Clear/7X7.4CM",
+      "remark": "",
+      "unitPrice": 0.57,
+      "amount": 1149.12,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 17,
+      "qty": 2304.0,
+      "code": "6760151000",
+      "desc": "HC Resin Square Mould Clear/10X10CM",
+      "remark": "",
+      "unitPrice": 0.76,
+      "amount": 1751.04,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 18,
+      "qty": 2304.0,
+      "code": "6760161000",
+      "desc": "HC Resin Round Mould Clear/10X10CM",
+      "remark": "",
+      "unitPrice": 0.59,
+      "amount": 1359.36,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 19,
+      "qty": 2592.0,
+      "code": "6760131000",
+      "desc": "HC Resin Alphabet Mould Clear/17.5X18CM",
+      "remark": "",
+      "unitPrice": 0.95,
+      "amount": 2462.4,
+      "PORefNum": "PO1647007",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 20,
+      "qty": 5600.0,
+      "code": "6583621020",
+      "desc": "Foam Sheet Spearmint/22.5X30CM",
+      "remark": "Hobby Craft Group Ltd",
+      "unitPrice": 0.056,
+      "amount": 313.6,
+      "PORefNum": "PO1653023",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 21,
+      "qty": 5600.0,
+      "code": "6583621021",
+      "desc": "Foam Sheet Pink/22.5X30CM",
+      "remark": "",
+      "unitPrice": 0.056,
+      "amount": 313.6,
+      "PORefNum": "PO1653023",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 22,
+      "qty": 5600.0,
+      "code": "6583621023",
+      "desc": "Foam Sheet Purple/22.5X30CM",
+      "remark": "",
+      "unitPrice": 0.056,
+      "amount": 313.6,
+      "PORefNum": "PO1653023",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 23,
+      "qty": 5600.0,
+      "code": "6583711000",
+      "desc": "Foam Sheet Rainbow/22.5X30CM",
+      "remark": "",
+      "unitPrice": 0.161,
+      "amount": 901.6,
+      "PORefNum": "PO1653023",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 24,
+      "qty": 1008.0,
+      "code": "6586111000",
+      "desc": "HC Butter Muslin White/90X90CM",
+      "remark": "",
+      "unitPrice": 1.25,
+      "amount": 1260.0,
+      "PORefNum": "PO1653023",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 25,
+      "qty": 1008.0,
+      "code": "6596641000",
+      "desc": "A3 Acrylic Sign Clear/29.7X42CM",
+      "remark": "",
+      "unitPrice": 2.5,
+      "amount": 2520.0,
+      "PORefNum": "PO1653023",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 26,
+      "qty": 5600.0,
+      "code": "6583621001",
+      "desc": "Foam Sheet Brown/22.5X30CM",
+      "remark": "Hobby Craft Group Ltd",
+      "unitPrice": 0.056,
+      "amount": 313.6,
+      "PORefNum": "PO1654754",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 27,
+      "qty": 5600.0,
+      "code": "6583621002",
+      "desc": "Foam Sheet Light Brown/22.5X30CM",
+      "remark": "",
+      "unitPrice": 0.056,
+      "amount": 313.6,
+      "PORefNum": "PO1654754",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 28,
+      "qty": 5600.0,
+      "code": "6583621004",
+      "desc": "Foam Sheet White/22.5X30CM",
+      "remark": "",
+      "unitPrice": 0.056,
+      "amount": 313.6,
+      "PORefNum": "PO1654754",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 29,
+      "qty": 5600.0,
+      "code": "6583621007",
+      "desc": "Foam Sheet Orange/22.5X30CM",
+      "remark": "",
+      "unitPrice": 0.161,
+      "amount": 901.6,
+      "PORefNum": "PO1654754",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 30,
+      "qty": 5600.0,
+      "code": "6583631000",
+      "desc": "Metallic Fabric Foam Sheet Pink/22.5X30CM",
+      "remark": "",
+      "unitPrice": 0.242,
+      "amount": 1355.2,
+      "PORefNum": "PO1654754",
+      "extra": {
+        "size": ""
+      }
+    }
+  ],
+  "isMultipleInvoices": false,
+  "multipleInvoices": [],
+  "error": ""
+}

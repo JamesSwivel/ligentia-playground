@@ -1,0 +1,183 @@
+{
+  "res": {
+    "id": "9d38639c-5f59-4ea0-996a-410bfc0102a9",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "9d38639c-5f59-4ea0-996a-410bfc0102a9",
+    "fileName": "docPouch.pdf",
+    "fileSize": 1197184,
+    "fileExt": ".pdf",
+    "datetime": "2026-06-19T21:41:15"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 1197184,
+      "path": "ff6f4a60af7f4aaaaeda82d16e0055e12a1f2bffe3d5cea3ec9ff9f258543dfd9a308818f1905dece5b90cedc85edfc50cb3e5e2e3c464bcff8486056befd74580d507c8d7f300124f7ec854df5998612e2fa5ecef6851a5dda15ea5a06fd66e6d9cfec02f58f986ace33da70f4b6d21a60fa7eb64ed7afd2c2af79c43f589714cc9bda43f20336116f30e9609a80b844d7065985bdf4dec16a2c6eb21817a4f368fedc0156acbe1a43313fc458c5ae2346ad23de0eafd2f25f3/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/9d/38639c-5f59-4ea0-996a-410bfc0102a9/upload.pdf",
+      "token": "ff6f4a60af7f4aaaaeda82d16e0055e12a1f2bffe3d5cea3ec9ff9f258543dfd9a308818f1905dece5b90cedc85edfc50cb3e5e2e3c464bcff8486056befd74580d507c8d7f300124f7ec854df5998612e2fa5ecef6851a5dda15ea5a06fd66e6d9cfec02f58f986ace33da70f4b6d21a60fa7eb64ed7afd2c2af79c43f589714cc9bda43f20336116f30e9609a80b844d7065985bdf4dec16a2c6eb21817a4f368fedc0156acbe1a43313fc458c5ae2346ad23de0eafd2f25f3",
+      "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/ff6f4a60af7f4aaaaeda82d16e0055e12a1f2bffe3d5cea3ec9ff9f258543dfd9a308818f1905dece5b90cedc85edfc50cb3e5e2e3c464bcff8486056befd74580d507c8d7f300124f7ec854df5998612e2fa5ecef6851a5dda15ea5a06fd66e6d9cfec02f58f986ace33da70f4b6d21a60fa7eb64ed7afd2c2af79c43f589714cc9bda43f20336116f30e9609a80b844d7065985bdf4dec16a2c6eb21817a4f368fedc0156acbe1a43313fc458c5ae2346ad23de0eafd2f25f3/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/9d/38639c-5f59-4ea0-996a-410bfc0102a9/upload.pdf"
+    },
+    "nPages": 14
+  },
+  "result": {
+    "classification": [
+      {
+        "page": 1,
+        "docType": "invoice",
+        "reason": "The page is clearly titled 'COMMERCIAL INVOICE' and contains typical invoice fields such as seller, consignee, invoice number, itemized goods description, and total amount.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "invoice-XY-335"
+      },
+      {
+        "page": 2,
+        "docType": "packingList",
+        "reason": "The page is titled 'PACKING LIST' and includes detailed shipping information such as quantities per carton, total quantities, number of cartons, gross weight, net weight, and volume per item.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "packingList-XY-335"
+      },
+      {
+        "page": 3,
+        "docType": "invoice",
+        "reason": "This page is another 'COMMERCIAL INVOICE' with the same invoice number (XY-335), likely representing a continuation or a separate part of the shipment for a different PO number.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "invoice-XY-335"
+      },
+      {
+        "page": 4,
+        "docType": "packingList",
+        "reason": "The page is titled 'PACKING LIST' and provides packaging details for the items listed on the preceding invoice page.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "packingList-XY-335"
+      },
+      {
+        "page": 5,
+        "docType": "invoice",
+        "reason": "Clearly titled 'COMMERCIAL INVOICE' with invoice number XY-335 and specific item details.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "invoice-XY-335"
+      },
+      {
+        "page": 6,
+        "docType": "packingList",
+        "reason": "Clearly titled 'PACKING LIST' with packing list number XY-335, corresponding to the items on the previous page.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "packingList-XY-335"
+      },
+      {
+        "page": 7,
+        "docType": "invoice",
+        "reason": "Clearly titled 'COMMERCIAL INVOICE' with invoice number XY-335.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "invoice-XY-335"
+      },
+      {
+        "page": 8,
+        "docType": "packingList",
+        "reason": "Clearly titled 'PACKING LIST' with packing list number XY-335.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "packingList-XY-335"
+      },
+      {
+        "page": 9,
+        "docType": "invoice",
+        "reason": "Clearly titled 'COMMERCIAL INVOICE' with invoice number XY-335, containing another set of item descriptions.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "invoice-XY-335"
+      },
+      {
+        "page": 10,
+        "docType": "packingList",
+        "reason": "Clearly titled 'PACKING LIST' with packing list number XY-335.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "packingList-XY-335"
+      },
+      {
+        "page": 11,
+        "docType": "invoice",
+        "reason": "Clearly titled 'COMMERCIAL INVOICE' with invoice number XY-335.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "invoice-XY-335"
+      },
+      {
+        "page": 12,
+        "docType": "packingList",
+        "reason": "Clearly titled 'PACKING LIST' with packing list number XY-335.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "packingList-XY-335"
+      },
+      {
+        "page": 13,
+        "docType": "invoice",
+        "reason": "Clearly titled 'COMMERCIAL INVOICE' with invoice number XY-335.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "invoice-XY-335"
+      },
+      {
+        "page": 14,
+        "docType": "packingList",
+        "reason": "Clearly titled 'PACKING LIST' with packing list number XY-335.",
+        "score": 100,
+        "docNum": "XY-335",
+        "groupId": "packingList-XY-335"
+      }
+    ],
+    "totalPages": 14,
+    "error": ""
+  },
+  "splitPdfs": [
+    {
+      "groupId": "invoice-XY-335",
+      "docType": "invoice",
+      "pageNums": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "pdf": {
+        "fileName": "splitPdf.01.invoice-XY-335.invoice.pdf",
+        "fileSize": 1165499,
+        "path": "9148cbe23fe62c725018d8769414d25b21cf0dab4247d942d389ba4d00e3382096ecfa827de0c8dc8fa1ddffb9a280a2eba3dfa29fd3fb8138495a6edd154d666ec8fc92d16e9748a949056759c1746c2ded586c468bea1451f40c61be45541ff87214db3ef65d7d52c4611e2cb65686fcc23d8f8b6da12114e8ebccb7360319b5b0c10ce267a0d1f38cf8e95de83e4bd69fdcb83099e92b4e5ae54044707bd54b27b35c112583f6ae297ca08b61df77e4857d0b52795aa17b82/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/9d/38639c-5f59-4ea0-996a-410bfc0102a9/splitPdf.01.invoice-XY-335.invoice.pdf",
+        "token": "9148cbe23fe62c725018d8769414d25b21cf0dab4247d942d389ba4d00e3382096ecfa827de0c8dc8fa1ddffb9a280a2eba3dfa29fd3fb8138495a6edd154d666ec8fc92d16e9748a949056759c1746c2ded586c468bea1451f40c61be45541ff87214db3ef65d7d52c4611e2cb65686fcc23d8f8b6da12114e8ebccb7360319b5b0c10ce267a0d1f38cf8e95de83e4bd69fdcb83099e92b4e5ae54044707bd54b27b35c112583f6ae297ca08b61df77e4857d0b52795aa17b82",
+        "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/9148cbe23fe62c725018d8769414d25b21cf0dab4247d942d389ba4d00e3382096ecfa827de0c8dc8fa1ddffb9a280a2eba3dfa29fd3fb8138495a6edd154d666ec8fc92d16e9748a949056759c1746c2ded586c468bea1451f40c61be45541ff87214db3ef65d7d52c4611e2cb65686fcc23d8f8b6da12114e8ebccb7360319b5b0c10ce267a0d1f38cf8e95de83e4bd69fdcb83099e92b4e5ae54044707bd54b27b35c112583f6ae297ca08b61df77e4857d0b52795aa17b82/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/9d/38639c-5f59-4ea0-996a-410bfc0102a9/splitPdf.01.invoice-XY-335.invoice.pdf"
+      }
+    },
+    {
+      "groupId": "packingList-XY-335",
+      "docType": "packingList",
+      "pageNums": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14
+      ],
+      "pdf": {
+        "fileName": "splitPdf.02.packingList-XY-335.packingList.pdf",
+        "fileSize": 975297,
+        "path": "c617d28a9c2fdca6531fefc849039bb605abc81f767aeb047c46eb8aaef025febbe2cf5eb0dbc38f6ba711c9ca31209088f7b4aa96eb3c75c83fb2d59a4ab82d7ea7576c40acf894213cc51c4329543af5eff595f5643a8ed2c596ceffb507aef36d63f0f823f88a9407f9905b88d4147061868192887f24ec649954567c38f75e193aa21dda1c56f3b68a1f91e78e9c16c64b8baddd748a2fc2f46252573b40d52ec231d2a18c3ddbeef23346e0cc14733a1e827edfa26ca383/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/9d/38639c-5f59-4ea0-996a-410bfc0102a9/splitPdf.02.packingList-XY-335.packingList.pdf",
+        "token": "c617d28a9c2fdca6531fefc849039bb605abc81f767aeb047c46eb8aaef025febbe2cf5eb0dbc38f6ba711c9ca31209088f7b4aa96eb3c75c83fb2d59a4ab82d7ea7576c40acf894213cc51c4329543af5eff595f5643a8ed2c596ceffb507aef36d63f0f823f88a9407f9905b88d4147061868192887f24ec649954567c38f75e193aa21dda1c56f3b68a1f91e78e9c16c64b8baddd748a2fc2f46252573b40d52ec231d2a18c3ddbeef23346e0cc14733a1e827edfa26ca383",
+        "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/c617d28a9c2fdca6531fefc849039bb605abc81f767aeb047c46eb8aaef025febbe2cf5eb0dbc38f6ba711c9ca31209088f7b4aa96eb3c75c83fb2d59a4ab82d7ea7576c40acf894213cc51c4329543af5eff595f5643a8ed2c596ceffb507aef36d63f0f823f88a9407f9905b88d4147061868192887f24ec649954567c38f75e193aa21dda1c56f3b68a1f91e78e9c16c64b8baddd748a2fc2f46252573b40d52ec231d2a18c3ddbeef23346e0cc14733a1e827edfa26ca383/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/9d/38639c-5f59-4ea0-996a-410bfc0102a9/splitPdf.02.packingList-XY-335.packingList.pdf"
+      }
+    }
+  ]
+}
