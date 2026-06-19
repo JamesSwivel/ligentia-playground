@@ -1,0 +1,249 @@
+{
+  "dateOfIssue": "2024-12-30",
+  "issueFrom": {
+    "companyName": "MONTI APPAREL COMPANY LIMITED",
+    "rawAddressLines": "MONTI APPAREL COMPANY LIMITED\n3507,35/F, King Palace Plaza, 52A, Sha Tsui Road, Tsuen Wan, NT, Hong Kong\n香港新界荃湾沙咀道52A号皇廷广场35楼3507\nTEL:00852-23084000 FAX:00852-23084001",
+    "addr1": "3507, 35/F, King Palace Plaza",
+    "addr2": "52A, Sha Tsui Road",
+    "addr3": "Tsuen Wan, NT",
+    "addr4": "Hong Kong",
+    "addressSingleLine": "3507, 35/F, King Palace Plaza, 52A, Sha Tsui Road, Tsuen Wan, NT, Hong Kong",
+    "state": "New Territories",
+    "stateCode": "",
+    "zip": "",
+    "country": "Hong Kong",
+    "countryCode": "HK",
+    "email": "",
+    "phone": "00852-23084000",
+    "fax": "00852-23084001",
+    "contactPerson": "",
+    "taxID": ""
+  },
+  "issueTo": {
+    "companyName": "Nisbets Limited",
+    "rawAddressLines": "Nisbets Limited\nFourth Way, Avonmouth\nBristol\nBS11 8TB",
+    "addr1": "Fourth Way, Avonmouth",
+    "addr2": "Bristol",
+    "addr3": "BS11 8TB",
+    "addr4": "",
+    "addressSingleLine": "Fourth Way, Avonmouth, Bristol, BS11 8TB",
+    "state": "Bristol",
+    "stateCode": "",
+    "zip": "BS11 8TB",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "email": "",
+    "phone": "",
+    "fax": "",
+    "contactPerson": "",
+    "taxID": ""
+  },
+  "invoiceDate": "2024-12-30",
+  "invoiceNum": "831A",
+  "invoiceCurrency": "USD",
+  "totalLineItems": 15,
+  "totalQty": 2225,
+  "totalAmount": 5394.75,
+  "incoterms": "FOB",
+  "countryOfOrigin": "KH",
+  "invoiceItems": [
+    {
+      "lineNum": 1,
+      "qty": 300,
+      "code": "A203-L",
+      "desc": "Whites Skull Cap White Polycotton - Size L",
+      "remark": "Chefware under",
+      "unitPrice": 1.01,
+      "amount": 303.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": "L"
+      }
+    },
+    {
+      "lineNum": 2,
+      "qty": 125,
+      "code": "A211-L",
+      "desc": "Whites Vegas Chefs Jacket Short Sleeve White Polycotton - Size L",
+      "remark": "",
+      "unitPrice": 4.43,
+      "amount": 553.75,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": "L"
+      }
+    },
+    {
+      "lineNum": 3,
+      "qty": 300,
+      "code": "A212",
+      "desc": "Whites Bakers Cap White - One Size",
+      "remark": "",
+      "unitPrice": 1.02,
+      "amount": 306.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": "ONE SIZE"
+      }
+    },
+    {
+      "lineNum": 4,
+      "qty": 100,
+      "code": "A275",
+      "desc": "Whites Bib Apron Polycotton Black/White Check",
+      "remark": "",
+      "unitPrice": 2.22,
+      "amount": 222.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 5,
+      "qty": 100,
+      "code": "A438-XL",
+      "desc": "Whites Vegas Chefs Jacket Long Sleeve Black Polycotton - Size XL",
+      "remark": "",
+      "unitPrice": 5.12,
+      "amount": 512.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": "XL"
+      }
+    },
+    {
+      "lineNum": 6,
+      "qty": 100,
+      "code": "A439-L",
+      "desc": "Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size L",
+      "remark": "",
+      "unitPrice": 3.81,
+      "amount": 381.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": "L"
+      }
+    },
+    {
+      "lineNum": 7,
+      "qty": 100,
+      "code": "A439-XL",
+      "desc": "Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size XL",
+      "remark": "",
+      "unitPrice": 3.81,
+      "amount": 381.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": "XL"
+      }
+    },
+    {
+      "lineNum": 8,
+      "qty": 100,
+      "code": "A535",
+      "desc": "Whites Bib Apron Blue/White Butchers Stripe with Pocket - 28-36\",\",A53",
+      "remark": "",
+      "unitPrice": 2.8,
+      "amount": 280.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 9,
+      "qty": 100,
+      "code": "A540",
+      "desc": "Whites Bib Apron Polycotton Green",
+      "remark": "",
+      "unitPrice": 2.01,
+      "amount": 201.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 10,
+      "qty": 200,
+      "code": "A580",
+      "desc": "EDLP Whites Water Resistant Apron Blue/White Stripe",
+      "remark": "",
+      "unitPrice": 1.57,
+      "amount": 314.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": ""
+      }
+    },
+    {
+      "lineNum": 11,
+      "qty": 100,
+      "code": "A582-5XL",
+      "desc": "Whites Vegas Chefs Trousers Black - Size 5XL",
+      "remark": "",
+      "unitPrice": 4.55,
+      "amount": 455.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": "5XL"
+      }
+    },
+    {
+      "lineNum": 12,
+      "qty": 100,
+      "code": "A582-M",
+      "desc": "Whites Vegas Chefs Trousers Black Polycotton - Size M",
+      "remark": "",
+      "unitPrice": 4.03,
+      "amount": 403.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": "M"
+      }
+    },
+    {
+      "lineNum": 13,
+      "qty": 100,
+      "code": "B250-M",
+      "desc": "Whites Boston Short Sleeved White Jacket - Size M",
+      "remark": "",
+      "unitPrice": 3.55,
+      "amount": 355.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": "M"
+      }
+    },
+    {
+      "lineNum": 14,
+      "qty": 300,
+      "code": "B252",
+      "desc": "Whites Comfy Hat White - One Size",
+      "remark": "",
+      "unitPrice": 1.1,
+      "amount": 330.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": "ONE SIZE"
+      }
+    },
+    {
+      "lineNum": 15,
+      "qty": 100,
+      "code": "BB477-M",
+      "desc": "Nisbets Essentials Chef Trousers - Size M",
+      "remark": "",
+      "unitPrice": 3.98,
+      "amount": 398.0,
+      "PORefNum": "5170408",
+      "extra": {
+        "size": "M"
+      }
+    }
+  ],
+  "isMultipleInvoices": false,
+  "multipleInvoices": [],
+  "error": ""
+}

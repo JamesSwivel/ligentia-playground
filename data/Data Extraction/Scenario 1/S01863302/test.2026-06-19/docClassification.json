@@ -1,0 +1,137 @@
+{
+  "res": {
+    "id": "2ff76a7e-bfdb-43f9-8278-c9e022d844ee",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "2ff76a7e-bfdb-43f9-8278-c9e022d844ee",
+    "fileName": "CIV-KHS24120099_docPouch_invoice_packlist.pdf",
+    "fileSize": 525983,
+    "fileExt": ".pdf",
+    "datetime": "2026-06-19T20:48:48"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 525983,
+      "path": "9a556a6bf3bd46b56f3054e1f96c281546edbe900f44fd63d47089bab4760afa97ac4df77d65aaca1be5799988334e5312b7f6272fc79053551cd439b1e82963f4c82320b45da839e99650adac8987ee0ca85df1f1adf7b02f7d9fbd7fc24337c936d2f82af8ef88a53c837c8cc6ba5fa425548a85c59939001e1635a1e3478efb9f89dc881eef642b0fbde04cf30952c2e7d813a47f45d889caf90881008b78d7c83d38776854373d3e8bfa2cdea90f72682c85cf5341ab26ff/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/2f/f76a7e-bfdb-43f9-8278-c9e022d844ee/upload.pdf",
+      "token": "9a556a6bf3bd46b56f3054e1f96c281546edbe900f44fd63d47089bab4760afa97ac4df77d65aaca1be5799988334e5312b7f6272fc79053551cd439b1e82963f4c82320b45da839e99650adac8987ee0ca85df1f1adf7b02f7d9fbd7fc24337c936d2f82af8ef88a53c837c8cc6ba5fa425548a85c59939001e1635a1e3478efb9f89dc881eef642b0fbde04cf30952c2e7d813a47f45d889caf90881008b78d7c83d38776854373d3e8bfa2cdea90f72682c85cf5341ab26ff",
+      "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/9a556a6bf3bd46b56f3054e1f96c281546edbe900f44fd63d47089bab4760afa97ac4df77d65aaca1be5799988334e5312b7f6272fc79053551cd439b1e82963f4c82320b45da839e99650adac8987ee0ca85df1f1adf7b02f7d9fbd7fc24337c936d2f82af8ef88a53c837c8cc6ba5fa425548a85c59939001e1635a1e3478efb9f89dc881eef642b0fbde04cf30952c2e7d813a47f45d889caf90881008b78d7c83d38776854373d3e8bfa2cdea90f72682c85cf5341ab26ff/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/2f/f76a7e-bfdb-43f9-8278-c9e022d844ee/upload.pdf"
+    },
+    "nPages": 6
+  },
+  "result": {
+    "classification": [
+      {
+        "page": 1,
+        "docType": "invoice",
+        "reason": "This is the first page of a commercial invoice from Monti Apparel Company Limited, clearly labeled 'INVOICE' with reference number 832A.",
+        "score": 100,
+        "docNum": "832A",
+        "groupId": "invoice-832A"
+      },
+      {
+        "page": 2,
+        "docType": "invoice",
+        "reason": "This is the second and final page of invoice number 832A, showing continuation of line items and the total amount.",
+        "score": 100,
+        "docNum": "832A",
+        "groupId": "invoice-832A"
+      },
+      {
+        "page": 3,
+        "docType": "invoice",
+        "reason": "A standalone commercial invoice labeled 'INVOICE' with reference number 831A.",
+        "score": 100,
+        "docNum": "831A",
+        "groupId": "invoice-831A"
+      },
+      {
+        "page": 4,
+        "docType": "invoice",
+        "reason": "A standalone commercial invoice labeled 'INVOICE' with reference number 830B.",
+        "score": 100,
+        "docNum": "830B",
+        "groupId": "invoice-830B"
+      },
+      {
+        "page": 5,
+        "docType": "packingList",
+        "reason": "This is the first page of a 'PACKING LIST' showing container details, line items, quantities, and weights for multiple invoices.",
+        "score": 100,
+        "docNum": "12/28UK",
+        "groupId": "packingList-12/28UK"
+      },
+      {
+        "page": 6,
+        "docType": "packingList",
+        "reason": "The second and final page of the packing list with reference number 12/28UK, showing total package counts and weight.",
+        "score": 100,
+        "docNum": "12/28UK",
+        "groupId": "packingList-12/28UK"
+      }
+    ],
+    "totalPages": 6,
+    "error": ""
+  },
+  "splitPdfs": [
+    {
+      "groupId": "invoice-832A",
+      "docType": "invoice",
+      "pageNums": [
+        1,
+        2
+      ],
+      "pdf": {
+        "fileName": "splitPdf.03.invoice-832A.invoice.pdf",
+        "fileSize": 145552,
+        "path": "80a44da538e7e0a15dc6694b7c21421d733db10c511d44fb855bf6423aa8b422a46b9ddafd8b66ea9d5847817148d936c1567e7fc04d68c9833679724b3ef8ad3aa4c3f40bf8581e78c8b770627206ea7242a1e40a43ee414901594494c5c6edb5fd58381a433d40c649ff62272e6539397dd23e73ae7cd584156ec9b593ca49d7561c5b144782446167639d4d443c58643735cb054b46563f52d2ebbe1e553a2447f3da24ff19544a5339b8d1b4f075089c4a3492dc2990c119/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/2f/f76a7e-bfdb-43f9-8278-c9e022d844ee/splitPdf.03.invoice-832A.invoice.pdf",
+        "token": "80a44da538e7e0a15dc6694b7c21421d733db10c511d44fb855bf6423aa8b422a46b9ddafd8b66ea9d5847817148d936c1567e7fc04d68c9833679724b3ef8ad3aa4c3f40bf8581e78c8b770627206ea7242a1e40a43ee414901594494c5c6edb5fd58381a433d40c649ff62272e6539397dd23e73ae7cd584156ec9b593ca49d7561c5b144782446167639d4d443c58643735cb054b46563f52d2ebbe1e553a2447f3da24ff19544a5339b8d1b4f075089c4a3492dc2990c119",
+        "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/80a44da538e7e0a15dc6694b7c21421d733db10c511d44fb855bf6423aa8b422a46b9ddafd8b66ea9d5847817148d936c1567e7fc04d68c9833679724b3ef8ad3aa4c3f40bf8581e78c8b770627206ea7242a1e40a43ee414901594494c5c6edb5fd58381a433d40c649ff62272e6539397dd23e73ae7cd584156ec9b593ca49d7561c5b144782446167639d4d443c58643735cb054b46563f52d2ebbe1e553a2447f3da24ff19544a5339b8d1b4f075089c4a3492dc2990c119/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/2f/f76a7e-bfdb-43f9-8278-c9e022d844ee/splitPdf.03.invoice-832A.invoice.pdf"
+      }
+    },
+    {
+      "groupId": "invoice-831A",
+      "docType": "invoice",
+      "pageNums": [
+        3
+      ],
+      "pdf": {
+        "fileName": "splitPdf.02.invoice-831A.invoice.pdf",
+        "fileSize": 59895,
+        "path": "153cd2361ee6fb820a3f25269e76bf8143dbde3036d2ce54ccee92f23cd4515b30020fe8db3079e3e37878cb87ef5404da6c14c1ee6c96c7ba93a5c12e4f99552e468be6aa26fba3f7a92bced88d01ddc966bff4adc1649b4d22117ed4dc11fd62b8fadca9f9c98f1603cee787d08e541640cee056d1d1e5d5354e5ec99018a83fb05a23b4b466c4d5ed134fb3e5d3f66dd7ea166fbf83a21fc6f3ec3c4c4bbe072e6b64c554a66dac6b335965ef3eeded3b7cbef39381677895/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/2f/f76a7e-bfdb-43f9-8278-c9e022d844ee/splitPdf.02.invoice-831A.invoice.pdf",
+        "token": "153cd2361ee6fb820a3f25269e76bf8143dbde3036d2ce54ccee92f23cd4515b30020fe8db3079e3e37878cb87ef5404da6c14c1ee6c96c7ba93a5c12e4f99552e468be6aa26fba3f7a92bced88d01ddc966bff4adc1649b4d22117ed4dc11fd62b8fadca9f9c98f1603cee787d08e541640cee056d1d1e5d5354e5ec99018a83fb05a23b4b466c4d5ed134fb3e5d3f66dd7ea166fbf83a21fc6f3ec3c4c4bbe072e6b64c554a66dac6b335965ef3eeded3b7cbef39381677895",
+        "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/153cd2361ee6fb820a3f25269e76bf8143dbde3036d2ce54ccee92f23cd4515b30020fe8db3079e3e37878cb87ef5404da6c14c1ee6c96c7ba93a5c12e4f99552e468be6aa26fba3f7a92bced88d01ddc966bff4adc1649b4d22117ed4dc11fd62b8fadca9f9c98f1603cee787d08e541640cee056d1d1e5d5354e5ec99018a83fb05a23b4b466c4d5ed134fb3e5d3f66dd7ea166fbf83a21fc6f3ec3c4c4bbe072e6b64c554a66dac6b335965ef3eeded3b7cbef39381677895/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/2f/f76a7e-bfdb-43f9-8278-c9e022d844ee/splitPdf.02.invoice-831A.invoice.pdf"
+      }
+    },
+    {
+      "groupId": "invoice-830B",
+      "docType": "invoice",
+      "pageNums": [
+        4
+      ],
+      "pdf": {
+        "fileName": "splitPdf.01.invoice-830B.invoice.pdf",
+        "fileSize": 83487,
+        "path": "bd9790c2ea1ebba83e8ecc6ec6f34227d8ef749c98edca1909bbb4eb2f081a008005b9e94404acbe4d83547bd3272c9b5cd4ef6188e311b44668b6911ffb42a9048741ae34e3d5c100d2c2a6405e568424ac3a3e2348ccbaecfcf8402da339eabbee5b64889d4b975906da37502a06a955ac6135beeb47163fe8bc825e6559d5fef02287f50da99717eb56eee4b255be6503671cabddf036ea9da6d115e79fbd55a5fec5f8c0c14a4133e553dc3ceeb46ed1ffbc68c9d704c862/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/2f/f76a7e-bfdb-43f9-8278-c9e022d844ee/splitPdf.01.invoice-830B.invoice.pdf",
+        "token": "bd9790c2ea1ebba83e8ecc6ec6f34227d8ef749c98edca1909bbb4eb2f081a008005b9e94404acbe4d83547bd3272c9b5cd4ef6188e311b44668b6911ffb42a9048741ae34e3d5c100d2c2a6405e568424ac3a3e2348ccbaecfcf8402da339eabbee5b64889d4b975906da37502a06a955ac6135beeb47163fe8bc825e6559d5fef02287f50da99717eb56eee4b255be6503671cabddf036ea9da6d115e79fbd55a5fec5f8c0c14a4133e553dc3ceeb46ed1ffbc68c9d704c862",
+        "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/bd9790c2ea1ebba83e8ecc6ec6f34227d8ef749c98edca1909bbb4eb2f081a008005b9e94404acbe4d83547bd3272c9b5cd4ef6188e311b44668b6911ffb42a9048741ae34e3d5c100d2c2a6405e568424ac3a3e2348ccbaecfcf8402da339eabbee5b64889d4b975906da37502a06a955ac6135beeb47163fe8bc825e6559d5fef02287f50da99717eb56eee4b255be6503671cabddf036ea9da6d115e79fbd55a5fec5f8c0c14a4133e553dc3ceeb46ed1ffbc68c9d704c862/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/2f/f76a7e-bfdb-43f9-8278-c9e022d844ee/splitPdf.01.invoice-830B.invoice.pdf"
+      }
+    },
+    {
+      "groupId": "packingList-12/28UK",
+      "docType": "packingList",
+      "pageNums": [
+        5,
+        6
+      ],
+      "pdf": {
+        "fileName": "splitPdf.04.packingList-12_28UK.packingList.pdf",
+        "fileSize": 235116,
+        "path": "9fdb988ae59143c1f8ce488d9fdde00156043ef75b72259eaed5c03e7b1a53388c24bc73e305530816dd6c8aacab5274bb135c5987569f2a946e3a8a2cca750a321e362d2f062617e099b91286775f05d11b2b4a877d830fd82c2f04215c6d336a50c3ab0e093f00d10674acd218ee4e2562b522bbe9d139d5650eb2a1bf59eb33213b58e9d0d664afdc0c25bfb4784e851e0eb847ced492ecf9564bb511030e572659acb00a7e1fcdb3212504f1bf568151167cadb171f7e1dd/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/2f/f76a7e-bfdb-43f9-8278-c9e022d844ee/splitPdf.04.packingList-12_28UK.packingList.pdf",
+        "token": "9fdb988ae59143c1f8ce488d9fdde00156043ef75b72259eaed5c03e7b1a53388c24bc73e305530816dd6c8aacab5274bb135c5987569f2a946e3a8a2cca750a321e362d2f062617e099b91286775f05d11b2b4a877d830fd82c2f04215c6d336a50c3ab0e093f00d10674acd218ee4e2562b522bbe9d139d5650eb2a1bf59eb33213b58e9d0d664afdc0c25bfb4784e851e0eb847ced492ecf9564bb511030e572659acb00a7e1fcdb3212504f1bf568151167cadb171f7e1dd",
+        "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/9fdb988ae59143c1f8ce488d9fdde00156043ef75b72259eaed5c03e7b1a53388c24bc73e305530816dd6c8aacab5274bb135c5987569f2a946e3a8a2cca750a321e362d2f062617e099b91286775f05d11b2b4a877d830fd82c2f04215c6d336a50c3ab0e093f00d10674acd218ee4e2562b522bbe9d139d5650eb2a1bf59eb33213b58e9d0d664afdc0c25bfb4784e851e0eb847ced492ecf9564bb511030e572659acb00a7e1fcdb3212504f1bf568151167cadb171f7e1dd/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/2f/f76a7e-bfdb-43f9-8278-c9e022d844ee/splitPdf.04.packingList-12_28UK.packingList.pdf"
+      }
+    }
+  ]
+}

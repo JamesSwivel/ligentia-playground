@@ -1,0 +1,183 @@
+{
+  "res": {
+    "id": "3802560b-933c-43b8-a609-db77f2e1ab8a",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "3802560b-933c-43b8-a609-db77f2e1ab8a",
+    "fileName": "docPouch.pdf",
+    "fileSize": 495356,
+    "fileExt": ".pdf",
+    "datetime": "2026-06-19T21:02:16"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 495356,
+      "path": "474ae336700308f4947f61b8f0bbad751be715858aab8391cb48871793d495132f47cd87e4a505186e611a98436edcd2cd9ae9848c04ae30f8beb1427be1e799d7f2b6380ad42239906ac399360b79eab4572a9de9a749457604145b1f1833430482c7929da86094bf4118f70892eb85817759ccfbad649ab53a937bf7c72ec66822a703c19306bff6df043ff9b23f14090d555f97446cb0273a3bd7547c25f92100c7b495c21443422969ce63ce84b246b36b3ea3d79386208b/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/38/02560b-933c-43b8-a609-db77f2e1ab8a/upload.pdf",
+      "token": "474ae336700308f4947f61b8f0bbad751be715858aab8391cb48871793d495132f47cd87e4a505186e611a98436edcd2cd9ae9848c04ae30f8beb1427be1e799d7f2b6380ad42239906ac399360b79eab4572a9de9a749457604145b1f1833430482c7929da86094bf4118f70892eb85817759ccfbad649ab53a937bf7c72ec66822a703c19306bff6df043ff9b23f14090d555f97446cb0273a3bd7547c25f92100c7b495c21443422969ce63ce84b246b36b3ea3d79386208b",
+      "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/474ae336700308f4947f61b8f0bbad751be715858aab8391cb48871793d495132f47cd87e4a505186e611a98436edcd2cd9ae9848c04ae30f8beb1427be1e799d7f2b6380ad42239906ac399360b79eab4572a9de9a749457604145b1f1833430482c7929da86094bf4118f70892eb85817759ccfbad649ab53a937bf7c72ec66822a703c19306bff6df043ff9b23f14090d555f97446cb0273a3bd7547c25f92100c7b495c21443422969ce63ce84b246b36b3ea3d79386208b/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/38/02560b-933c-43b8-a609-db77f2e1ab8a/upload.pdf"
+    },
+    "nPages": 14
+  },
+  "result": {
+    "classification": [
+      {
+        "page": 1,
+        "docType": "invoice",
+        "reason": "The document is titled 'Invoice/Tax Invoice' and contains standard commercial invoice fields such as shipper (Messrs), product code, description, quantity, unit price, and amount.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "invoice-300037724"
+      },
+      {
+        "page": 2,
+        "docType": "invoice",
+        "reason": "This is page 2 of a 5-page commercial invoice, continuing the list of items from the previous page with the same invoice number.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "invoice-300037724"
+      },
+      {
+        "page": 3,
+        "docType": "invoice",
+        "reason": "This is page 3 of a 5-page commercial invoice, continuing the list of items from the previous page with the same invoice number.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "invoice-300037724"
+      },
+      {
+        "page": 4,
+        "docType": "invoice",
+        "reason": "This is page 4 of a 5-page commercial invoice, continuing the list of items from the previous page with the same invoice number.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "invoice-300037724"
+      },
+      {
+        "page": 5,
+        "docType": "invoice",
+        "reason": "This is page 5 of a 5-page commercial invoice, showing the totals, tax summary, and payment terms.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "invoice-300037724"
+      },
+      {
+        "page": 6,
+        "docType": "packingList",
+        "reason": "The document is titled 'Packing List' and lists package numbers, product details, quantities, and weights (net/gross).",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "packingList-300037724"
+      },
+      {
+        "page": 7,
+        "docType": "packingList",
+        "reason": "This is page 2 of a 9-page packing list, continuing the breakdown of shipped items with weights and volumes.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "packingList-300037724"
+      },
+      {
+        "page": 8,
+        "docType": "packingList",
+        "reason": "This is page 3 of a 9-page packing list, continuing the breakdown of shipped items with weights and volumes.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "packingList-300037724"
+      },
+      {
+        "page": 9,
+        "docType": "packingList",
+        "reason": "This is page 4 of a 9-page packing list, continuing the breakdown of shipped items with weights and volumes.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "packingList-300037724"
+      },
+      {
+        "page": 10,
+        "docType": "packingList",
+        "reason": "This is page 5 of a 9-page packing list, continuing the breakdown of shipped items with weights and volumes.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "packingList-300037724"
+      },
+      {
+        "page": 11,
+        "docType": "packingList",
+        "reason": "This is page 6 of a 9-page packing list, continuing the breakdown of shipped items with weights and volumes.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "packingList-300037724"
+      },
+      {
+        "page": 12,
+        "docType": "packingList",
+        "reason": "This is page 7 of a 9-page packing list, continuing the breakdown of shipped items with weights and volumes.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "packingList-300037724"
+      },
+      {
+        "page": 13,
+        "docType": "packingList",
+        "reason": "This is page 8 of a 9-page packing list, continuing the breakdown of shipped items with weights and volumes.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "packingList-300037724"
+      },
+      {
+        "page": 14,
+        "docType": "packingList",
+        "reason": "This is page 9 of a 9-page packing list, showing the grand totals for weight and measurement, and container/seal information.",
+        "score": 100,
+        "docNum": "300037724",
+        "groupId": "packingList-300037724"
+      }
+    ],
+    "totalPages": 14,
+    "error": ""
+  },
+  "splitPdfs": [
+    {
+      "groupId": "invoice-300037724",
+      "docType": "invoice",
+      "pageNums": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "pdf": {
+        "fileName": "splitPdf.01.invoice-300037724.invoice.pdf",
+        "fileSize": 199885,
+        "path": "d195ee3dc703ce974961c780e1bd529d75ac5fcf9467fa4315cfd92e36d414d10df698ff3020edda82f46b2ccfe7dabdd45f7601b7519e44724552f24779c1855b9c17c6b929b2b828baaa7e9f6579f7475d98ebe52890d65dadcc46b98ef4f6ce179f55041c15bf6d13afea2c72b5458b11a8a42dada9c6a6bb1376e8bea40e36b0ec9e204f07fa43309ca8d503de299fc462a6baffb22529f240735c4d385c1607ce70361e91e97ec331d2ea3321bd4f7680f611e79593999a/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/38/02560b-933c-43b8-a609-db77f2e1ab8a/splitPdf.01.invoice-300037724.invoice.pdf",
+        "token": "d195ee3dc703ce974961c780e1bd529d75ac5fcf9467fa4315cfd92e36d414d10df698ff3020edda82f46b2ccfe7dabdd45f7601b7519e44724552f24779c1855b9c17c6b929b2b828baaa7e9f6579f7475d98ebe52890d65dadcc46b98ef4f6ce179f55041c15bf6d13afea2c72b5458b11a8a42dada9c6a6bb1376e8bea40e36b0ec9e204f07fa43309ca8d503de299fc462a6baffb22529f240735c4d385c1607ce70361e91e97ec331d2ea3321bd4f7680f611e79593999a",
+        "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/d195ee3dc703ce974961c780e1bd529d75ac5fcf9467fa4315cfd92e36d414d10df698ff3020edda82f46b2ccfe7dabdd45f7601b7519e44724552f24779c1855b9c17c6b929b2b828baaa7e9f6579f7475d98ebe52890d65dadcc46b98ef4f6ce179f55041c15bf6d13afea2c72b5458b11a8a42dada9c6a6bb1376e8bea40e36b0ec9e204f07fa43309ca8d503de299fc462a6baffb22529f240735c4d385c1607ce70361e91e97ec331d2ea3321bd4f7680f611e79593999a/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/38/02560b-933c-43b8-a609-db77f2e1ab8a/splitPdf.01.invoice-300037724.invoice.pdf"
+      }
+    },
+    {
+      "groupId": "packingList-300037724",
+      "docType": "packingList",
+      "pageNums": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "pdf": {
+        "fileName": "splitPdf.02.packingList-300037724.packingList.pdf",
+        "fileSize": 292793,
+        "path": "e209523e9de30b04e81ca143b4a013b4e51da3ffa9ff0179b426de923810a7ea4f80600e6ef40806330d0ad8ddcf70d7b3bfdcbad8fb89b853bbaf1b20a9fe3dfa312ee94c7d87b3dea95680f3e43db65d8eaf611d209dc0c783706330e97df45f4951f4f2b245e6fd37bea5f9b50993f070b02e81b1738a063a1ad39a6ab916e590b8281cdf5fe945db02b15d6ad4c25fca17dcfde4c4406c533c6cb6e8a7e33b76128d2eda0524cda35d26d9379415644aa96a494bdbdca035/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/38/02560b-933c-43b8-a609-db77f2e1ab8a/splitPdf.02.packingList-300037724.packingList.pdf",
+        "token": "e209523e9de30b04e81ca143b4a013b4e51da3ffa9ff0179b426de923810a7ea4f80600e6ef40806330d0ad8ddcf70d7b3bfdcbad8fb89b853bbaf1b20a9fe3dfa312ee94c7d87b3dea95680f3e43db65d8eaf611d209dc0c783706330e97df45f4951f4f2b245e6fd37bea5f9b50993f070b02e81b1738a063a1ad39a6ab916e590b8281cdf5fe945db02b15d6ad4c25fca17dcfde4c4406c533c6cb6e8a7e33b76128d2eda0524cda35d26d9379415644aa96a494bdbdca035",
+        "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/e209523e9de30b04e81ca143b4a013b4e51da3ffa9ff0179b426de923810a7ea4f80600e6ef40806330d0ad8ddcf70d7b3bfdcbad8fb89b853bbaf1b20a9fe3dfa312ee94c7d87b3dea95680f3e43db65d8eaf611d209dc0c783706330e97df45f4951f4f2b245e6fd37bea5f9b50993f070b02e81b1738a063a1ad39a6ab916e590b8281cdf5fe945db02b15d6ad4c25fca17dcfde4c4406c533c6cb6e8a7e33b76128d2eda0524cda35d26d9379415644aa96a494bdbdca035/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/38/02560b-933c-43b8-a609-db77f2e1ab8a/splitPdf.02.packingList-300037724.packingList.pdf"
+      }
+    }
+  ]
+}
