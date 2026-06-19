@@ -1,4 +1,5 @@
 [ issues ]
 - Multiple invoice pdfs with their own totals but all share the same invoice number
   i.e. invoice number + PO layout
-  
+- For data/Data Extraction/Scenario 1/S01942131/PO1653003 Invoice&PL.PDF
+  - PO is PO1647007 but it has entered as 'PO1653003' in the system?
