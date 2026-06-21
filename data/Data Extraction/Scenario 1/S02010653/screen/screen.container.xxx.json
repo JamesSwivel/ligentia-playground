@@ -1,0 +1,379 @@
+{
+  "screenType": "SUPPLIER",
+  "bookingNum": "SE2107250166",
+  "bookingSummary": {
+    "shipmentNum": "S02010653",
+    "mode": "Sea",
+    "shipmentType": "FCL",
+    "bookingApproved": "Yes",
+    "consignee": "NISBETS LIMITED",
+    "supplier": "Shandong Hongtai Electrical",
+    "vesselName": "MUNICH MAERSK",
+    "pol": "CNTAO",
+    "etd": "2025-08-13",
+    "pod": "GBLGP",
+    "eta": "2025-09-20",
+    "status": "Submitted"
+  },
+  "invoices": [
+    {
+      "invoiceNum": "HT08-800/2025",
+      "currency": "USD"
+    },
+    {
+      "invoiceNum": "HT08-956/2025",
+      "currency": "USD"
+    },
+    {
+      "invoiceNum": "HT08-957/2025",
+      "currency": "USD"
+    },
+    {
+      "invoiceNum": "HT08-958/2025",
+      "currency": "USD"
+    },
+    {
+      "invoiceNum": "HT08-861/2025",
+      "currency": "USD"
+    },
+    {
+      "invoiceNum": "HT08-871-2/2025",
+      "currency": "USD"
+    },
+    {
+      "invoiceNum": "HT08-684-2/2025",
+      "currency": "USD"
+    },
+    {
+      "invoiceNum": "HT08-816-2/2025",
+      "currency": "USD"
+    },
+    {
+      "invoiceNum": "HT08-806/2025",
+      "currency": "USD"
+    }
+  ],
+  "deliveryDate": "",
+  "containers": [
+    {
+      "containerNum": "HAMU416747",
+      "type": "40HC",
+      "qty": 745.0,
+      "pkgs": 41.0,
+      "cbm": 64.6,
+      "kgs": 5730.0
+    },
+    {
+      "containerNum": "HAMU4407072",
+      "type": "40HC",
+      "qty": 61.0,
+      "pkgs": 61.0,
+      "cbm": 64.55,
+      "kgs": 7540.0
+    }
+  ],
+  "availableToPackOrDelivery": [
+    {
+      "PONum": "5181763",
+      "qty": 0.0,
+      "pkgs": -32.0,
+      "cbm": -64.02,
+      "kgs": -4832.0,
+      "warehouse": ""
+    },
+    {
+      "PONum": "5181768",
+      "qty": 0.0,
+      "pkgs": -61.0,
+      "cbm": -64.55,
+      "kgs": -7540.0,
+      "warehouse": ""
+    },
+    {
+      "PONum": "1921934",
+      "qty": 0.0,
+      "pkgs": 0.0,
+      "cbm": 0.0,
+      "kgs": -2.0,
+      "warehouse": ""
+    },
+    {
+      "PONum": "1924097",
+      "qty": 0.0,
+      "pkgs": 0.0,
+      "cbm": 0.0,
+      "kgs": -6.0,
+      "warehouse": ""
+    },
+    {
+      "PONum": "1925863",
+      "qty": 0.0,
+      "pkgs": 0.0,
+      "cbm": 0.0,
+      "kgs": -4.0,
+      "warehouse": ""
+    },
+    {
+      "PONum": "5180647",
+      "qty": 0.0,
+      "pkgs": 0.0,
+      "cbm": 0.0,
+      "kgs": -4.0,
+      "warehouse": ""
+    },
+    {
+      "PONum": "5181084",
+      "qty": 0.0,
+      "pkgs": 0.0,
+      "cbm": 0.0,
+      "kgs": -16.0,
+      "warehouse": ""
+    },
+    {
+      "PONum": "5181778",
+      "qty": 0.0,
+      "pkgs": 0.0,
+      "cbm": 0.0,
+      "kgs": -18.0,
+      "warehouse": ""
+    },
+    {
+      "PONum": "5181958",
+      "qty": 0.0,
+      "pkgs": -9.0,
+      "cbm": -0.58,
+      "kgs": -848.0,
+      "warehouse": ""
+    }
+  ],
+  "bookingTable": {
+    "header": "HAMU416747",
+    "items": [
+      {
+        "orderNum": "5181958",
+        "lot": "2",
+        "itemCode": "AA057",
+        "description": "Polar Floor Protector Shelf for CL108 CT425 G603 G604 G606 U636",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 2.0,
+        "pkgs": 0.0,
+        "packType": "Carton",
+        "cbm": 0.0,
+        "kgs": 4.0,
+        "invoiceNum": "HT08-861/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "5181958",
+        "lot": "1",
+        "itemCode": "AM467",
+        "description": "Polar Up Hinge Left for GD883",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 6.0,
+        "pkgs": 0.0,
+        "packType": "Carton",
+        "cbm": 0.0,
+        "kgs": 6.0,
+        "invoiceNum": "HT08-861/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "5181958",
+        "lot": "2",
+        "itemCode": "AB982",
+        "description": "Polar Water Box for CC663 CD616 CW193-8 DN492 DN494 G592 G593 G594 G695",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 4.0,
+        "pkgs": 0.0,
+        "packType": "Carton",
+        "cbm": 0.0,
+        "kgs": 8.0,
+        "invoiceNum": "HT08-861/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "5181958",
+        "lot": "2",
+        "itemCode": "AC614",
+        "description": "Polar NTC Probe (Pack of 2) for AB090 CB921 CC663 CD080-9 610-6 984CE205-7CF759",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 9.0,
+        "pkgs": 0.0,
+        "packType": "Carton",
+        "cbm": 0.0,
+        "kgs": 7.0,
+        "invoiceNum": "HT08-861/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "5181958",
+        "lot": "2",
+        "itemCode": "AS909",
+        "description": "Polar Up Hinge for PC003 PC004 PC005 PC006",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 2.0,
+        "pkgs": 0.0,
+        "packType": "Carton",
+        "cbm": 0.0,
+        "kgs": 4.0,
+        "invoiceNum": "HT08-861/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "5181958",
+        "lot": "2",
+        "itemCode": "AH301",
+        "description": "Polar Fan (IEC-2P,L=1400+Suction Type) for CC663 CD616 CW193-8 G590-5 GDB79 GD880",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 5.0,
+        "pkgs": 0.0,
+        "packType": "Carton",
+        "cbm": 0.0,
+        "kgs": 8.0,
+        "invoiceNum": "HT08-861/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "1921934",
+        "lot": "1",
+        "itemCode": "AM835",
+        "description": "Polar Glass Clip Fixed Bolt for G609 (B2B)",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 1.0,
+        "pkgs": 0.0,
+        "packType": "Carton",
+        "cbm": 0.0,
+        "kgs": 2.0,
+        "invoiceNum": "HT08-956/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "5181084",
+        "lot": "5",
+        "itemCode": "AH348",
+        "description": "Polar Circuit Fan (IEC-2P,L=900) for CT423 CT424 DA546 DA547 DA548 DA549 DL914",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 14.0,
+        "pkgs": 0.0,
+        "packType": "Carton",
+        "cbm": 0.0,
+        "kgs": 16.0,
+        "invoiceNum": "HT08-684-2/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "5180647",
+        "lot": "2",
+        "itemCode": "AH348",
+        "description": "Polar Circuit Fan (IEC-2P,L=900) for CT423 CT424 DA546 DA547 DA548 DA549 DL914",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 1.0,
+        "pkgs": 0.0,
+        "packType": "Carton",
+        "cbm": 0.0,
+        "kgs": 4.0,
+        "invoiceNum": "HT08-871-2/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "1925863",
+        "lot": "1",
+        "itemCode": "AF853",
+        "description": "Polar Condensate Water Tray for GH269 (B2B)",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 1.0,
+        "pkgs": 0.0,
+        "packType": "Carton",
+        "cbm": 0.0,
+        "kgs": 4.0,
+        "invoiceNum": "HT08-958/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "1924097",
+        "lot": "1",
+        "itemCode": "AN960",
+        "description": "Unit Board for DN492 (B2B)",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 1.0,
+        "pkgs": 0.0,
+        "packType": "Carton",
+        "cbm": 0.0,
+        "kgs": 6.0,
+        "invoiceNum": "HT08-957/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "5181763",
+        "lot": "1",
+        "itemCode": "UA069",
+        "description": "Polar U-Series 3 Door Counter with Glass Doors",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 13.0,
+        "pkgs": 13.0,
+        "packType": "Carton",
+        "cbm": 26.78,
+        "kgs": 1963.0,
+        "invoiceNum": "HT08-800/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "5181763",
+        "lot": "1",
+        "itemCode": "UA048",
+        "description": "Polar U-Series Triple Door Counter Fridge - 417Ltr",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 19.0,
+        "pkgs": 19.0,
+        "packType": "Carton",
+        "cbm": 37.24,
+        "kgs": 2869.0,
+        "invoiceNum": "HT08-800/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      },
+      {
+        "orderNum": "5181778",
+        "lot": "2",
+        "itemCode": "AH348",
+        "description": "Polar Circuit Fan (IEC-2P,L=900) for CT423 CT424 DA546 DA547 DA548 DA549 DL914",
+        "color": "",
+        "marksAndNos": "",
+        "qty": 9.0,
+        "pkgs": 0.0,
+        "packType": "Carton",
+        "cbm": 0.0,
+        "kgs": 18.0,
+        "invoiceNum": "HT08-816-2/2025",
+        "loadSeq": "",
+        "warehouse": ""
+      }
+    ]
+  },
+  "error": ""
+}
