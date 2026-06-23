@@ -35,20 +35,6 @@ If you can identity tax term and its ID, return the whole ID info, e.g. 'VAT:988
 ''  : others
 </containerTypeCode>
 
-<multiplePackingListEntity>
-{
-  "packingListNum": "packing list number",
-  "invoiceNum": "invoice number",
-  "PONum": "PO number",
-  "packingListDate": "packing list date in ISO8601 YYYY-MM-DD format",
-  "totalGrossWeightUnit": "packing list weight unit, e.g. KG, LB, in float",
-  "totalGrossWeight": "packing list total gross weight in float",
-  "totalQty": "packing list total quantity or carton quantity in float",
-  "totalCartonQtyTotal": "packing list total carton quantity in float",
-  "totalCbm": "packing list total volume, mostly in CBM, in float"
-}
-</multiplePackingListEntity>
-
 <packingListItemExtraEntity>
 {
   "size": "infer from item info if there is size label, e.g. size L -> 'L', size m -> 'M', etc.  If found, return the label in uppercase.",
@@ -61,7 +47,7 @@ If you can identity tax term and its ID, return the whole ID info, e.g. 'VAT:988
 
 
 <packingListItemEntity>
-For packing list item entity extraction, there are two cases.
+In a packing list, there are line items for entity extraction. The line items have two cases of layouts:
 
 ## Case 1: standard line item layout
 - For standard, the line item convey only single line item entity
@@ -106,46 +92,9 @@ Return the JSON object below covering both standard and consolidated line item l
 }
 </packingListItemEntity>
 
+<packingListEntity>
+This refers to a complete packing list data, which contain packingListItems, i.e. multiple items, defined in XML 'packingListItemEntity'
 
-<packingListLayout>
-## overview
-- Among the doc pages, you should only look at pages that they contain packing list content.
-- In practice, it is very common that there are multiple packing lists in a single doc.
-- Thus, it is here to define a unit of a packing list by one of the different layout below:
-
-## Packing list layouts
-- 'standard' (standard layout)
-  - This refers to standard and common packing list layout that it has a explicit packing list number.
-  - Explicit means it has explicit label like 'packing# xxxx', 'packing list: yyyy', etc. 
-  - If there is NO explicit label to indicate packing list number, do NOT infer from other labels, e.g. reference number, as packing list number.
-  - In this case, packing list are defined by unique packing list number, e.g.
-    P.1-3 PL-00011, P.4 PL-00012, P.5-10 PL-00013, etc
-  - In this example, the packing lists: 
-    - packing list #1 -> P.1-3  PL-00011 (this is the first packing list)
-    - packing list #2 -> P.4    PL-00012
-    - packing list #3 -> P.5-10 PL-00013
-- 'sharedPackingListNum' (layout using shared packing list number with multiple PO number)
-  - The is one of the edge case that some suppliers may issue a non-standard layout that 
-    the pages has explicit packing list number but the same packing list number is re-used/shared with different PO numbers.
-  - For example:
-    P.1-2 PL-00021 PO#0010, P.5-6 PL-00021 PO# 0011, P.21-30 PL-00022 PO# 0013, etc
-  - In this example, the packing lists:
-    - packing list #1 -> P.1-2 PL-00021 PO#0010, P.5-6 PL-00021 PO# 0011 (this is the first packing list)
-    - packing list #2 -> P.21-30 PL-00022 PO# 0013
-- 'sharedInvoiceNum' (layout with multiple occurrences of invoice number, no explicit packing list number)
-  - The is another edge case that some suppliers may issue a non-standard layout that
-    the pages has no explicit packing list number but the same invoice number is re-used/shared in multiple pages.
-  - For example:
-    P.1-2 INV#1011 PO#9002, P.5-6 INV#1011 PO#9002, P.21-30 INV#1012 PO#9003, etc
-  - In this example
-    - packing list #1 -> P.1-2 INV#1011 PO#9002, P.5-6 INV#1011 PO#9002 (this is the first packing list as it shares the same invoice number '1011')
-    - packing list #2 -> P.21-30 INV#1012 PO#9003
-- 'unknown' (unknown layout)
-  - This refers to unknown layout and thus it cannot determine the correct units of packing list for entity extraction
-  - In this case, it should be considered as error
-</packingListLayout>
-
-<result>
 {
   "dateOfIssue": "document issue date in ISO8601, e.g. YYYY-MM-DD",
   "issueFrom": {
@@ -186,7 +135,6 @@ Return the JSON object below covering both standard and consolidated line item l
     "contactPerson": "contact person",
     "taxID": "refers to taxID entity defined in XML <taxIDEntity>"
   },
-  "packingListLayout": "refer to XML <packingListLayout>",
   "packingListNum": "packing list number",
   "invoiceNum": "invoice number",
   "PONum": "PO number",
@@ -200,9 +148,13 @@ Return the JSON object below covering both standard and consolidated line item l
   "totalCbm": "total CBM (volume) in float",
   "incoterms": "packing list incoterms, e.g. FOB",
   "countryOfOrigin": "primary product country of origin in 2-letter country code ISO3166, e.g. 'HK' for Hong Kong, etc",
-  "packingListItems":  "array of <packingListItemEntity>. Note that 'lineNum' must be sequential and the size of the array should be equal to the header entity 'totalLineItems'",
-  "isMultiplePackingLists": "true if multiple packing lists are found in boolean",
-  "multiplePackingLists": "array of <multiplePackingListEntity> if multiple packing lists are found, otherwise an empty array []",
+  "packingListItems":  "array of <packingListItemEntity>. Note that 'lineNum' must be sequential and the size of the array should be equal to the header entity 'totalLineItems'"
+}
+</packingListEntity>
+
+<result>
+{
+  "packingLists": "array of packingListEntity defined in XML <packingListEntity>, each entity refers to a separated packing list",
   "error": ""
 }
 </result>
@@ -215,24 +167,20 @@ Return the JSON object below covering both standard and consolidated line item l
    - Default value for boolean is false
    - Default value for array type is []
 2. What to read:
-   - Refer to XML <packingListLayout>, read the entire doc, and determine the the packing list layout type and
-     determine how many units of packing list exist.
-   - Since there may be multiple units of packing list, you should always extract entities from the first unit of packing list
-   - If there are multiple units found, populate summary values in <result> key 'multiplePackingLists' and set 'isMultiplePackingLists' as true.
+   - only read package list pages and discover packing lists.
+   - each packing list's entities are populated to an item in <result> 'packingLists' array.
 3. Date parsing:
    - If a date is ambiguous between DD/MM/YYYY and MM/DD/YYYY, 
      infer the correct format from the document's country of origin or stated locale where possible.
 4. What if error:
    - If doc is missing or if doc is not an packing list, put the error reason in <result> 'error' key.
    - All keys in <result> use default values.
-5. What if multiple values for an entity:
-   If more than one value is found for an entity, always get the first one, e.g. if there are two emails, get the first one.
 </extraction_rule>
 
 Please output only the JSON for <result> in Markdown fenced code block, strictly follow the <extraction_rule>. 
 Thus, your output starts exactly with:
 ```json
 {
-  "dateOfIssue": "
+  "packingLists": [
 
 No extra explanations before or after the code block. Ensure valid JSON (no trailing commas)
