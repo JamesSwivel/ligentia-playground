@@ -1,0 +1,156 @@
+{
+  "res": {
+    "id": "693dfa50-7ee2-4a79-93d0-712bb944a259",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "693dfa50-7ee2-4a79-93d0-712bb944a259",
+    "fileName": "IHHF25-01229.PDF",
+    "fileSize": 421852,
+    "fileExt": ".PDF",
+    "datetime": "2026-06-23T16:14:41"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 421852,
+      "path": "57368100034ed80783156aafb89dfacde1164e915d7b782d6cd1adbaa7b9aef3e09c8e290ff634a3e5b94a8418dfdc51f2071312073611b65e08a86f515b5de837fa0cec20cde0cbdff0a5b787a9dcfe83019f62e9435becb8d2325daded48f51761c1b71a7de38e02276b965d0b198f0aa5591a1213a5853c5cafe406c3614425dbf269367a1466b5620f128e9aa05405839d299d1b76d9603a2bbe359cf7e4f296fc3f36f379e99c58035ba101d9ad1b71b87553cd06baf62e/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/69/3dfa50-7ee2-4a79-93d0-712bb944a259/upload.pdf",
+      "token": "57368100034ed80783156aafb89dfacde1164e915d7b782d6cd1adbaa7b9aef3e09c8e290ff634a3e5b94a8418dfdc51f2071312073611b65e08a86f515b5de837fa0cec20cde0cbdff0a5b787a9dcfe83019f62e9435becb8d2325daded48f51761c1b71a7de38e02276b965d0b198f0aa5591a1213a5853c5cafe406c3614425dbf269367a1466b5620f128e9aa05405839d299d1b76d9603a2bbe359cf7e4f296fc3f36f379e99c58035ba101d9ad1b71b87553cd06baf62e",
+      "link": "https://localhost.swivel.dev:8000/download/fileWithToken/57368100034ed80783156aafb89dfacde1164e915d7b782d6cd1adbaa7b9aef3e09c8e290ff634a3e5b94a8418dfdc51f2071312073611b65e08a86f515b5de837fa0cec20cde0cbdff0a5b787a9dcfe83019f62e9435becb8d2325daded48f51761c1b71a7de38e02276b965d0b198f0aa5591a1213a5853c5cafe406c3614425dbf269367a1466b5620f128e9aa05405839d299d1b76d9603a2bbe359cf7e4f296fc3f36f379e99c58035ba101d9ad1b71b87553cd06baf62e/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/69/3dfa50-7ee2-4a79-93d0-712bb944a259/upload.pdf"
+    },
+    "nPages": 11
+  },
+  "result": {
+    "classification": [
+      {
+        "page": 1,
+        "docType": "invoice",
+        "reason": "This is a commercial invoice from Hongkong Sales (Knitwear) Limited, including consignee details, invoice number, and itemized goods with prices.",
+        "score": 100,
+        "docNum": "IHHF25-01229",
+        "groupId": "invoice-IHHF25-01229"
+      },
+      {
+        "page": 2,
+        "docType": "invoice",
+        "reason": "Continuation page of the commercial invoice (Page 2 of 2) containing bank payment instructions and total amount in words.",
+        "score": 100,
+        "docNum": "IHHF25-01229",
+        "groupId": "invoice-IHHF25-01229"
+      },
+      {
+        "page": 3,
+        "docType": "packingList",
+        "reason": "Packing list document (Page 1 of 3) detailing shipment contents by carton, referencing the same invoice number.",
+        "score": 100,
+        "docNum": "IHHF25-01229",
+        "groupId": "packingList-IHHF25-01229"
+      },
+      {
+        "page": 4,
+        "docType": "packingList",
+        "reason": "Continuation of the packing list (Page 2 of 3) providing further carton and item details.",
+        "score": 100,
+        "docNum": "IHHF25-01229",
+        "groupId": "packingList-IHHF25-01229"
+      },
+      {
+        "page": 5,
+        "docType": "packingList",
+        "reason": "Final page of the first packing list (Page 3 of 3) with weight and measurement summaries.",
+        "score": 100,
+        "docNum": "IHHF25-01229",
+        "groupId": "packingList-IHHF25-01229"
+      },
+      {
+        "page": 6,
+        "docType": "packingList",
+        "reason": "New packing list section (Page 1 of 2) for a different item subset under the same invoice reference.",
+        "score": 100,
+        "docNum": "IHHF25-01229",
+        "groupId": "packingList-IHHF25-01229"
+      },
+      {
+        "page": 7,
+        "docType": "packingList",
+        "reason": "Continuation of the packing list section (Page 2 of 2).",
+        "score": 100,
+        "docNum": "IHHF25-01229",
+        "groupId": "packingList-IHHF25-01229"
+      },
+      {
+        "page": 8,
+        "docType": "packingList",
+        "reason": "Another packing list section (Page 1 of 3) for the shipment.",
+        "score": 100,
+        "docNum": "IHHF25-01229",
+        "groupId": "packingList-IHHF25-01229"
+      },
+      {
+        "page": 9,
+        "docType": "packingList",
+        "reason": "Continuation of the packing list (Page 2 of 3).",
+        "score": 100,
+        "docNum": "IHHF25-01229",
+        "groupId": "packingList-IHHF25-01229"
+      },
+      {
+        "page": 10,
+        "docType": "packingList",
+        "reason": "Final page of the packing list section (Page 3 of 3).",
+        "score": 100,
+        "docNum": "IHHF25-01229",
+        "groupId": "packingList-IHHF25-01229"
+      },
+      {
+        "page": 11,
+        "docType": "packingList",
+        "reason": "Single page packing list (Page 1 of 1) for the final item subset.",
+        "score": 100,
+        "docNum": "IHHF25-01229",
+        "groupId": "packingList-IHHF25-01229"
+      }
+    ],
+    "totalPages": 11,
+    "error": ""
+  },
+  "splitPdfs": [
+    {
+      "groupId": "invoice-IHHF25-01229",
+      "docType": "invoice",
+      "pageNums": [
+        1,
+        2
+      ],
+      "pdf": {
+        "fileName": "splitPdf.01.invoice-IHHF25-01229.invoice.pdf",
+        "fileSize": 46654,
+        "path": "95675a7a05618caed8e0ef539aa07168a32969af3a64a520d99aadc50fdbb4d3d43ad19b34a3a053d44aa4036d892fe96ab5d39a93a2b620a6ec62cbcd5f6035cc7a2a1640c1d7304aa37c357ce03bfc38990d03b19334ae9cb85f4b13f179b3390b68ac66e70a1f8538fc606f7c009ce49503f4f5569f2fb92f4bdd22597b4542baf9d2ac57aa5467bb84049f98eebd5c9dc46e279b8f3ab9f164d11bee37df612d98f1d9857ec6cabbdd9d444703af42c000a32165db57b35a/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/69/3dfa50-7ee2-4a79-93d0-712bb944a259/splitPdf.01.invoice-IHHF25-01229.invoice.pdf",
+        "token": "95675a7a05618caed8e0ef539aa07168a32969af3a64a520d99aadc50fdbb4d3d43ad19b34a3a053d44aa4036d892fe96ab5d39a93a2b620a6ec62cbcd5f6035cc7a2a1640c1d7304aa37c357ce03bfc38990d03b19334ae9cb85f4b13f179b3390b68ac66e70a1f8538fc606f7c009ce49503f4f5569f2fb92f4bdd22597b4542baf9d2ac57aa5467bb84049f98eebd5c9dc46e279b8f3ab9f164d11bee37df612d98f1d9857ec6cabbdd9d444703af42c000a32165db57b35a",
+        "link": "https://localhost.swivel.dev:8000/download/fileWithToken/95675a7a05618caed8e0ef539aa07168a32969af3a64a520d99aadc50fdbb4d3d43ad19b34a3a053d44aa4036d892fe96ab5d39a93a2b620a6ec62cbcd5f6035cc7a2a1640c1d7304aa37c357ce03bfc38990d03b19334ae9cb85f4b13f179b3390b68ac66e70a1f8538fc606f7c009ce49503f4f5569f2fb92f4bdd22597b4542baf9d2ac57aa5467bb84049f98eebd5c9dc46e279b8f3ab9f164d11bee37df612d98f1d9857ec6cabbdd9d444703af42c000a32165db57b35a/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/69/3dfa50-7ee2-4a79-93d0-712bb944a259/splitPdf.01.invoice-IHHF25-01229.invoice.pdf"
+      }
+    },
+    {
+      "groupId": "packingList-IHHF25-01229",
+      "docType": "packingList",
+      "pageNums": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "pdf": {
+        "fileName": "splitPdf.02.packingList-IHHF25-01229.packingList.pdf",
+        "fileSize": 374300,
+        "path": "dbb87dcfdd33aa2fd10c3b1442a5b30720d59ae6bd8f18a6453b43221881d1d3045c71470d4b37795aa30d40108bb421624a1b18e6da1bf0a1f547bee8229045af106131767e4eb705f6584cb8ea94c02734aa15de7d65eed3997802b632575defaa218c5516b57560d9c0170716c9df2dfb01e00c5fc07cef7de2d242a7ee54dfb579247108ddce9f891cd850b5d05259eb0099c9d7c55b8f5fdac0ec01ff2f011904b245658d0ec05bfb8eebebe2fa497b5553d6f9ec1d988e/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/69/3dfa50-7ee2-4a79-93d0-712bb944a259/splitPdf.02.packingList-IHHF25-01229.packingList.pdf",
+        "token": "dbb87dcfdd33aa2fd10c3b1442a5b30720d59ae6bd8f18a6453b43221881d1d3045c71470d4b37795aa30d40108bb421624a1b18e6da1bf0a1f547bee8229045af106131767e4eb705f6584cb8ea94c02734aa15de7d65eed3997802b632575defaa218c5516b57560d9c0170716c9df2dfb01e00c5fc07cef7de2d242a7ee54dfb579247108ddce9f891cd850b5d05259eb0099c9d7c55b8f5fdac0ec01ff2f011904b245658d0ec05bfb8eebebe2fa497b5553d6f9ec1d988e",
+        "link": "https://localhost.swivel.dev:8000/download/fileWithToken/dbb87dcfdd33aa2fd10c3b1442a5b30720d59ae6bd8f18a6453b43221881d1d3045c71470d4b37795aa30d40108bb421624a1b18e6da1bf0a1f547bee8229045af106131767e4eb705f6584cb8ea94c02734aa15de7d65eed3997802b632575defaa218c5516b57560d9c0170716c9df2dfb01e00c5fc07cef7de2d242a7ee54dfb579247108ddce9f891cd850b5d05259eb0099c9d7c55b8f5fdac0ec01ff2f011904b245658d0ec05bfb8eebebe2fa497b5553d6f9ec1d988e/log/2026/06/api/v2.erp.upload.AI.LLM.docClassification_0616/69/3dfa50-7ee2-4a79-93d0-712bb944a259/splitPdf.02.packingList-IHHF25-01229.packingList.pdf"
+      }
+    }
+  ]
+}

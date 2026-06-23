@@ -49,16 +49,41 @@ If you can identity tax term and its ID, return the whole ID info, e.g. 'VAT:988
 
 <packingListItemExtraEntity>
 {
-  "size": "infer from item info if there is size label, e.g. size L -> 'L', size m -> 'M', etc.  If found, return the label in uppercase."
+  "size": "infer from item info if there is size label, e.g. size L -> 'L', size m -> 'M', etc.  If found, return the label in uppercase.",
+  "color": "infer from item info and return any color code data",
+  "styleCode": "infer from item info and return any style code data",
+  "styleDesc": "infer from item info and return any relevant raw style description.  This info is useful for downstream custom data extraction",
+  "channel": "channel name if found, e.g. items may be breakdown by 'home shopping', 'wholesale', etc, where some items look repeated but are actually separated by channels"
 }
 </packingListItemExtraEntity>
 
 
 <packingListItemEntity>
+For packing list item entity extraction, there are two cases.
+
+## Case 1: standard line item layout
+- For standard, the line item convey only single line item entity
+
+## Case 2: consolidated line item layout
+- For consolidated layout, the line item looks like a single row but it actually consolidates multiple items.
+- For products like shoes, clothes, etc, it is quite typical to see a single line item with multiple size columns
+  where each columns carry info like QTY, QTY/carton, etc.
+- For example, some line item may has columns:
+  Carton num start, Carton num end, Carton QTY, Size-S, Size-M, Size-L, .... Total QTY
+  In that case, if there are multiple QTYs in the size columns, it is a consolidated line item layout.
+- In that consolidated case, you should:
+  - yield multiple item entities to prevent data loss
+  - the first yield item entity is considered as parent.
+  - other item entities are considered as children, and it will populate the key 'lineNumParent' so that it can refer to the first/parent line item
+  - However, it must be careful that some values carried by the parent must NOT be copied to the children, or the totals/summation will be incorrect downstream.
+    For static values, it can be copied without issue, e.g. PONum, invoiceNum, desc, remark, container info, package num range, etc.
+
+Return the JSON object below covering both standard and consolidated line item layout
 {
   "lineNum": "line number in integer",
-  "PORefNum": "PO reference number",
-  "invoiceRefNum": "invoice reference number",
+  "lineNumParent": "parent line number in case of the consolidated layout line item.  Otherwise it is integer 0",
+  "PONum": "PO number",
+  "invoiceNum": "invoice number",
   "code": "line item's code or number or product code",
   "desc": "line item's item description",
   "remark": "multi-line raw remarks or info apart from item code and description.  This raw info is useful in downstream special data extraction logics.",
