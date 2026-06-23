@@ -66,7 +66,7 @@ If you can identity tax term and its ID, return the whole ID info, e.g. 'VAT:988
   "remark": "multi-line raw remarks or info apart from item code and description.  This raw info is useful in downstream special data extraction logics.",
   "unitPrice": "line item's unit price in float",
   "amount": "line item's amount in float",
-  "PORefNum": "PO reference number",
+  "PONum": "PO number",
   "extra": "refer to schema in XML <invoiceItemExtraEntity>"
 }
 </invoiceItemEntity>
