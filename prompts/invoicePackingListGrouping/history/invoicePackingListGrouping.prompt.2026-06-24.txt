@@ -21,7 +21,7 @@ The format of 'docTypeGroupId' depends on doc type and different layouts (if any
   - A combined invoice has explicit printed list of PI numbers or/and invoice numbers in the invoice header
   - The line items are broken down by either PI or invoice number or PO number
   - 'docTypeGroupId' format: <docType>_<counter>_<layout>_<invoiceNums> 
-  - <invoiceNums> is a list of invoice numbers delimited by comma
+  - <invoiceNums> is list of invoice numbers delimited by comma
 - <counter> is the found invoice counter from 001 to 999 (max)
 
 ### docType 'packingList'
@@ -42,7 +42,7 @@ The format of 'docTypeGroupId' depends on doc type and different layouts (if any
   - A combined packing list has explicit printed list of PI numbers or/and invoice numbers or/and PO numbers in the packing list header
   - The line items are broken down by either PO or PI or invoice number
   - 'docTypeGroupId' format: <docType>_<counter>_<layout>_<nums> 
-  - <nums> is a list of nums, in the precedence of PO numbers > PI numbers > Invoice numbers
+  - <nums> is list of nums, in the precedence of PO numbers > PI numbers > Invoice numbers
 - <counter> is the found packing list from 001 to 999 (max)
 
 </docTypeGroupId>
@@ -66,7 +66,7 @@ The format of 'docTypeGroupId' depends on doc type and different layouts (if any
   "layout": "same as 'layout' in <classificationEntity>",
   "pageNums": "array of page page numbers that they have the same 'docTypeGroupId'",
   "score": "confidence score of 'docTypeGroupId', ranged 0 to 100",
-  "reason": "a short justification for pageNums in the 'docTypeGroupId'" 
+  "reason": "a short justification for pageNums are grouped in the 'docTypeGroupId'" 
 }
 </classificationGroupEntity>
 
@@ -80,14 +80,14 @@ The format of 'docTypeGroupId' depends on doc type and different layouts (if any
 
 <extraction_rule>
 1. Entity default values:
-   - All keys in JSON schema <result> are required keys, which must be filled with values, and null values are NOT allowed!
+   - All keys in JSON schemas are required keys, which must be filled with values, and null values are NOT allowed!
    - Default value for string type is ''
    - Default value for integer and float is 0
    - Default value for boolean is false
    - Default value for array type is []
 2. What to read:
    - Look for doc pages that they are doc types: 'invoice' or 'packingList'
-   - Identify document boundaries within this multi-page doc pouch and assign each page a group id defined in <docTypeGroupId>
+   - Identify document boundaries within this multi-page doc pouch and assign each page a group id define in <docTypeGroupId>
 3. Date parsing:
    - If a date is ambiguous between DD/MM/YYYY and MM/DD/YYYY, 
      infer the correct format from the document's country of origin or stated locale where possible.
