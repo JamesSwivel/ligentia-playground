@@ -18,7 +18,7 @@ The format of 'docTypeGroupId' depends on doc type and different layouts (if any
   - 'docTypeGroupId' format: <docType>_<counter>_<layout>_<invoiceNum>_<PONum>  
 - For 'combined' layout:
   - Some manufacturers/suppliers issue a combined layout of invoice, e.g. some China suppliers
-  - A combined invoice has explicit printed list of PI numbers or/and invoice numbers in the invoice header
+  - A combined invoice has explicit printed list of invoice numbers and/or PO/PI numbers in the invoice header
   - The line items are broken down by either PI or invoice number or PO number
   - 'docTypeGroupId' format: <docType>_<counter>_<layout>_<invoiceNums> 
   - <invoiceNums> is a list of invoice numbers delimited by comma
@@ -35,7 +35,7 @@ The format of 'docTypeGroupId' depends on doc type and different layouts (if any
   - 'docTypeGroupId' format: <docType>_<counter>_<layout>_<packingListNum>_<PONum>  
 - For 'invoicePONum' layout:
   - Packing lists have no explicit printed packing list number
-  - They have explicit printed invoice number + PO number
+  - They have explicit printed header invoice number + PO number
   - 'docTypeGroupId' format: <docType>_<counter>_<layout>_<invoiceNum>_<PONum> 
 - For 'combined' layout:
   - Some manufacturers/suppliers issue a combined layout of packing lists, e.g. some China suppliers
@@ -64,7 +64,7 @@ The format of 'docTypeGroupId' depends on doc type and different layouts (if any
   "docTypeGroupId": "same as 'docTypeGroupId' in <classificationEntity>",
   "docType": "same as 'docType' in <classificationEntity>",
   "layout": "same as 'layout' in <classificationEntity>",
-  "pageNums": "array of page page numbers that they have the same 'docTypeGroupId'",
+  "pageNums": "array of page numbers that they have the same 'docTypeGroupId'",
   "score": "confidence score of 'docTypeGroupId', ranged 0 to 100",
   "reason": "a short justification for pageNums in the 'docTypeGroupId'" 
 }
