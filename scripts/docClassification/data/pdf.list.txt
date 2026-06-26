@@ -1,0 +1,68 @@
+data/Data Extraction/Scenario 1/S01943458/CIV.pdf
+data/Data Extraction/Scenario 1/S01943458/PKL.pdf
+data/Data Extraction/Scenario 1/S01863302/_docPouch.pdf
+data/Data Extraction/Scenario 1/S01863302/PKL-KHS24120099.pdf
+data/Data Extraction/Scenario 1/S01863302/CIV-KHS24120099.pdf
+data/Data Extraction/Scenario 1/S01999830/JXNI2506088 CI.pdf
+data/Data Extraction/Scenario 1/S01999830/JXNI2506088 PL.pdf
+data/Data Extraction/Scenario 1/S01942131/PO1649874 Invoice&PL.PDF
+data/Data Extraction/Scenario 1/S01942131/PO1647007 Invoice&PL.PDF
+data/Data Extraction/Scenario 1/S01942131/PO1653003 Invoice&PL.PDF
+data/Data Extraction/Scenario 1/S01942131/PO1647024W Invoice&PL.pdf
+data/Data Extraction/Scenario 1/S01942131/docPouch.pdf
+data/Data Extraction/Scenario 1/S01942131/PO1654754 Invoice&PL.pdf
+data/Data Extraction/Scenario 1/S01942131/PO1649890W Invoice&PL.pdf
+data/Data Extraction/Scenario 1/S01942131/PO1653023 Invoice&PL.pdf
+data/Data Extraction/Scenario 1/S01889327/CIV.pdf
+data/Data Extraction/Scenario 1/S01889327/docPouch.pdf
+data/Data Extraction/Scenario 1/S01889327/PKL.pdf
+data/Data Extraction/Scenario 1/S01985533/JK5155-551B清关.pdf
+data/Data Extraction/Scenario 1/S01970249/FSCU4750949-HBL 20222008TR PKL.pdf
+data/Data Extraction/Scenario 1/S01970249/FSCU4750949-HBL 20222008TR CIV.pdf
+data/Data Extraction/Scenario 1/S02010653/HT08-800INVOICE&PACKING LIST[3].pdf
+data/Data Extraction/Scenario 1/S02010653/HT08-806INVOICE&PACKING LIST[2].pdf
+data/Data Extraction/Scenario 2/S02017272/IHHF25-01474.PDF
+data/Data Extraction/Scenario 2/S02017272/CIV_pages-0-1_IHHF25-01474[2].PDF
+data/Data Extraction/Scenario 2/S02017272/PKL_pages-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20_IHHF25-01474[2].PDF
+data/Data Extraction/Scenario 2/S02017272/IHHF25-01474[2].PDF
+data/Data Extraction/Scenario 2/S01958829/48CIV.PDF
+data/Data Extraction/Scenario 2/S01958829/48PKL.PDF
+data/Data Extraction/Scenario 2/S02006678/SOKL-028521[3].pdf
+data/Data Extraction/Scenario 2/S02006678/SOKL-028521.pdf
+data/Data Extraction/Scenario 2/S02006678/SOKL-028521[2].pdf
+data/Data Extraction/Scenario 2/S01998835/IHHF25-01229.PDF
+data/Data Extraction/Scenario 2/S02019077/CIV_pages-0_Inv 12221 BL#HLCUTA12407ASXL3[2].PDF
+data/Data Extraction/Scenario 2/S02019077/Inv 12221 - White Stuff[0].PDF
+data/Data Extraction/Scenario 2/S02019077/PKL_pages-1-2-3-4-5-6_Inv 12221 BL#HLCUTA12407ASXL3[2].PDF
+data/Data Extraction/Scenario 2/S02019077/Inv 12221 - White Stuff[2].PDF
+data/Data Extraction/Scenario 2/S01985286/CARL25WS01-702.PDF
+data/Data Extraction/Scenario 2/S01987833/EFOE25060736.PDF
+data/Data Extraction/Scenario 2/S01987833/EFOE25060736[2].PDF
+data/Data Extraction/Scenario 2/S01930761/BV2503-0030 PL.PDF
+data/Data Extraction/Scenario 2/S01930761/BV2503-0030 INV.PDF
+data/Data Extraction/Scenario 3/S02014865/HAMU1222389#-JEANS 2000 LIMITED-EFOE25072945#-PKL.PDF
+data/Data Extraction/Scenario 3/S02014865/HAMU1222389#-JEANS 2000 LIMITED-EFOE25072945#-CIV.PDF
+data/Data Extraction/Scenario 3/S01986032/UETU6385869-SAM FASHION-PNH01986032-CIV.PDF
+data/Data Extraction/Scenario 3/S01986032/UETU6385869-SAM FASHION-PNH01986032-PKL.PDF
+data/Data Extraction/Scenario 3/S01986032/UETU6385869-SAM FASHION-PNH01986032-LDL.PDF
+data/Data Extraction/Scenario 3/S02014866/FANU1075417-ULTIMA ITALIA SRL-EFOE25072805-CIV.PDF
+data/Data Extraction/Scenario 3/S02014866/FANU1075417-ULTIMA ITALIA SRL-EFOE25072805-PKL.PDF
+data/Data Extraction/Scenario 3/S02026754/MSNU7245031&MSDU5109205-E-TEEN COMPANY LIMITED-CNSZX02026754 CIV.PDF
+data/Data Extraction/Scenario 3/S02026754/MSNU7245031&MSDU5109205-E-TEEN COMPANY LIMITED-CNSZX02026754-PKL.PDF
+data/Data Extraction/Scenario 3/S02018316/FANU1569127-COMTRADING-EFOE25073492-44-CIV-SEA.PDF
+data/Data Extraction/Scenario 3/S02018316/FANU1569127-COMTRADING-EFOE25073492-44-PKL-SEA.PDF
+data/Data Extraction/Scenario 3/S01988066/MSNU9633381 - CLASSIC FOOTWEAR - CNNGB01988066 - PKL.PDF
+data/Data Extraction/Scenario 3/S01988066/MSNU9633381 - CLASSIC FOOTWEAR - CNNGB01988066 - CIV.PDF
+data/Data Extraction/Scenario 3/S02006000/UACU5793183-AIT APPAREL-CNSHA02006000-CIV.PDF
+data/Data Extraction/Scenario 3/S02006000/UACU5793183-AIT APPAREL-CNSHA02006000-PKL.PDF
+data/Data Extraction/Scenario 3/S02007375/NYKU0767270 TGBU4676730-EROGLU GIYIM SANAYI TICARET A.S.-AOLEXP25-007596-PKL[2].PDF
+data/Data Extraction/Scenario 3/S02007375/NYKU0767270 TGBU4676730-EROGLU GIYIM SANAYI TICARET A.S.-AOLEXP25-007596-CIV[2].PDF
+data/Data Extraction/Scenario 3/S02019123/SELU4141950-WEIHAI BETTEX INTERNATIONAL TRADING CO-EFOE25080772-CIV-.PDF
+data/Data Extraction/Scenario 3/S02019123/SELU4141950-WEIHAI BETTEX INTERNATIONAL TRADING CO-EFOE25080772- PKL.PDF
+data/Data Extraction/Scenario 4/S02101316/EFOE25113313 PKL.pdf
+data/Data Extraction/Scenario 4/S02101316/EFOE25113313 CIV[2].pdf
+data/Data Extraction/Scenario 4/S02010911/EFOE25071091_250722112319_Commercial Invoice.pdf
+data/Data Extraction/Scenario 4/S02010911/EFOE25071091_250722112319_Packing List.pdf
+data/Data Extraction/Scenario 4/S02097720/INVOICE-SE1811250347.pdf
+data/Data Extraction/Scenario 4/S02082893/OI-25140A CIV.pdf
+data/Data Extraction/Scenario 4/S02098793/CIV_pages-0_CIV.XLSX_converted.pdf
