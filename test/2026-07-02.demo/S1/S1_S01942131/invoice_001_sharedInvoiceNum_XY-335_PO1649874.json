@@ -1,0 +1,127 @@
+{
+  "res": {
+    "id": "2bd13b42-199c-419a-a5bc-a00149261638",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "2bd13b42-199c-419a-a5bc-a00149261638",
+    "fileName": "invoice_001_sharedInvoiceNum_XY-335_PO1649874.pdf",
+    "fileSize": 166841,
+    "fileExt": ".pdf",
+    "datetime": "2026-07-01T23:04:41"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 166841,
+      "path": "44ef422730f1f9a392ca8aa89b38ae5045a09d26e4b4227ff0d1161f5ca2ac8683b6fdd514b3122bd4165d3b76df60b0bc742102b3caab7d50f058402fae42b6034b5b684366ca840b1a1ebfd28403070c9ac277cea0c4e7b7723cdf0d9b4a212c84aae4b47016387f1b3dd12fd1eb2941a50ddc4950865b0dc6ef2908495a94724fc4cabdaa1f113141cb3a64012fea29527e7e53696fdd4de9c39850f62e5aa6e92d66013aab3c193917b8f8e6c71578e0dbf0167a10fbab2c/log/2026/07/api/v2.AI.LLM.gemini.query/2b/d13b42-199c-419a-a5bc-a00149261638/upload.pdf",
+      "token": "44ef422730f1f9a392ca8aa89b38ae5045a09d26e4b4227ff0d1161f5ca2ac8683b6fdd514b3122bd4165d3b76df60b0bc742102b3caab7d50f058402fae42b6034b5b684366ca840b1a1ebfd28403070c9ac277cea0c4e7b7723cdf0d9b4a212c84aae4b47016387f1b3dd12fd1eb2941a50ddc4950865b0dc6ef2908495a94724fc4cabdaa1f113141cb3a64012fea29527e7e53696fdd4de9c39850f62e5aa6e92d66013aab3c193917b8f8e6c71578e0dbf0167a10fbab2c",
+      "link": "https://localhost.swivel.dev:8000/download/fileWithToken/44ef422730f1f9a392ca8aa89b38ae5045a09d26e4b4227ff0d1161f5ca2ac8683b6fdd514b3122bd4165d3b76df60b0bc742102b3caab7d50f058402fae42b6034b5b684366ca840b1a1ebfd28403070c9ac277cea0c4e7b7723cdf0d9b4a212c84aae4b47016387f1b3dd12fd1eb2941a50ddc4950865b0dc6ef2908495a94724fc4cabdaa1f113141cb3a64012fea29527e7e53696fdd4de9c39850f62e5aa6e92d66013aab3c193917b8f8e6c71578e0dbf0167a10fbab2c/log/2026/07/api/v2.AI.LLM.gemini.query/2b/d13b42-199c-419a-a5bc-a00149261638/upload.pdf"
+    }
+  },
+  "result": {
+    "error": "",
+    "jsonData": {
+      "dateOfIssue": "2025-05-12",
+      "issueFrom": {
+        "companyName": "NINGBO XINYI IMPORT AND EXPORT CO.,LTD",
+        "rawAddressLines": "6-8, No. 312. lane 645, Renmin Road, jiangbei District, Ningbo city, Zhejiang province",
+        "addr1": "6-8, No. 312. lane 645, Renmin Road",
+        "addr2": "jiangbei District",
+        "addr3": "Ningbo city",
+        "addr4": "Zhejiang province",
+        "addressSingleLine": "6-8, No. 312. lane 645, Renmin Road, jiangbei District, Ningbo city, Zhejiang province",
+        "state": "Zhejiang province",
+        "stateCode": "ZJ",
+        "zip": "",
+        "country": "China",
+        "countryCode": "CN",
+        "email": "",
+        "phone": "",
+        "fax": "",
+        "contactPerson": "",
+        "taxID": ""
+      },
+      "issueTo": {
+        "companyName": "HOBBY CRAFT TRADING LIMITED",
+        "rawAddressLines": "7 ENTERPRISE WAY, AVIATION PARK, CHRISTCHURCH, DORSET, BH23 6HG, UK",
+        "addr1": "7 ENTERPRISE WAY",
+        "addr2": "AVIATION PARK",
+        "addr3": "CHRISTCHURCH, DORSET",
+        "addr4": "BH23 6HG",
+        "addressSingleLine": "7 ENTERPRISE WAY, AVIATION PARK, CHRISTCHURCH, DORSET, BH23 6HG, UK",
+        "state": "DORSET",
+        "stateCode": "",
+        "zip": "BH23 6HG",
+        "country": "UK",
+        "countryCode": "GB",
+        "email": "",
+        "phone": "",
+        "fax": "",
+        "contactPerson": "",
+        "taxID": ""
+      },
+      "invoiceDate": "2025-05-12",
+      "invoiceNum": "XY-335",
+      "invoiceCurrency": "USD",
+      "totalLineItems": 3,
+      "totalQty": 5256,
+      "totalAmount": 5769.36,
+      "incoterms": "FOB",
+      "countryOfOrigin": "CN",
+      "invoiceItems": [
+        {
+          "lineNum": 1,
+          "qty": 1296,
+          "code": "6710191000",
+          "desc": "X24 Xmas Cupcake Toppers 6pk Wreaths/10.5X6.5CM",
+          "remark": "",
+          "unitPrice": 0.9,
+          "amount": 1166.4,
+          "PONum": "PO1647007",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 2,
+          "qty": 1536,
+          "code": "6707001000",
+          "desc": "X24 Wood Hanging Stars 10pk Natural/5.5CM",
+          "remark": "",
+          "unitPrice": 0.74,
+          "amount": 1136.64,
+          "PONum": "PO1647007",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 3,
+          "qty": 2424,
+          "code": "6707041000",
+          "desc": "X24 PYO Snow Village 6pcs 0/0",
+          "remark": "",
+          "unitPrice": 1.43,
+          "amount": 3466.32,
+          "PONum": "PO1647007",
+          "extra": {
+            "size": ""
+          }
+        }
+      ],
+      "isMultipleInvoices": false,
+      "multipleInvoices": [],
+      "error": ""
+    },
+    "stats": {
+      "inputToken": 2694,
+      "outputToken": 1033,
+      "totalToken": 6985,
+      "inputCacheToken": 0,
+      "outputThoughtToken": 3258,
+      "outputToolUseToken": 0,
+      "elapsedMs": 25406
+    }
+  }
+}

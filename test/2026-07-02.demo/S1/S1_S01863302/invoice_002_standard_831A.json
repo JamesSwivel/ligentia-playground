@@ -1,0 +1,283 @@
+{
+  "res": {
+    "id": "f3e26a9b-5d53-488f-a97d-c70b0917b747",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "f3e26a9b-5d53-488f-a97d-c70b0917b747",
+    "fileName": "invoice_002_standard_831A.pdf",
+    "fileSize": 60051,
+    "fileExt": ".pdf",
+    "datetime": "2026-07-01T22:43:46"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 60051,
+      "path": "22d8f59064ba781aa16db09da13558c399faeeb3afd0d97543247652e039c130df2caf389c6f040aed91a9b03bf478dd63d806ef2bd5a5251e7da2cbaf4f286dce3f9350e1eabe16a099ac5f25617f17dc13b0be10eb74d787f413d23f48189d5558f2443bf5a3ce175be587ff9337e118e31585fa9d3e2a5d5c4539d00439cedc5b5eabdea44d1c5a40d3206328f8f041b393ddc88c1fc2091ab363c95353381fee1507aa537872b4f7dbf1b681d57547baf2997743b88d8386/log/2026/07/api/v2.AI.LLM.gemini.query/f3/e26a9b-5d53-488f-a97d-c70b0917b747/upload.pdf",
+      "token": "22d8f59064ba781aa16db09da13558c399faeeb3afd0d97543247652e039c130df2caf389c6f040aed91a9b03bf478dd63d806ef2bd5a5251e7da2cbaf4f286dce3f9350e1eabe16a099ac5f25617f17dc13b0be10eb74d787f413d23f48189d5558f2443bf5a3ce175be587ff9337e118e31585fa9d3e2a5d5c4539d00439cedc5b5eabdea44d1c5a40d3206328f8f041b393ddc88c1fc2091ab363c95353381fee1507aa537872b4f7dbf1b681d57547baf2997743b88d8386",
+      "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/22d8f59064ba781aa16db09da13558c399faeeb3afd0d97543247652e039c130df2caf389c6f040aed91a9b03bf478dd63d806ef2bd5a5251e7da2cbaf4f286dce3f9350e1eabe16a099ac5f25617f17dc13b0be10eb74d787f413d23f48189d5558f2443bf5a3ce175be587ff9337e118e31585fa9d3e2a5d5c4539d00439cedc5b5eabdea44d1c5a40d3206328f8f041b393ddc88c1fc2091ab363c95353381fee1507aa537872b4f7dbf1b681d57547baf2997743b88d8386/log/2026/07/api/v2.AI.LLM.gemini.query/f3/e26a9b-5d53-488f-a97d-c70b0917b747/upload.pdf"
+    }
+  },
+  "result": {
+    "error": "",
+    "jsonData": {
+      "dateOfIssue": "2024-12-30",
+      "issueFrom": {
+        "companyName": "MONTI APPAREL COMPANY LIMITED",
+        "rawAddressLines": "MONTI APPAREL COMPANY LIMITED\n3507, 35/F, King Palace Plaza, 52A, Sha Tsui Road, Tsuen Wan, NT, Hong Kong\n香港新界荃灣沙咀道52A号皇延广场35樓3507\nTEL:00852-23084000 FAX:00852-23084001",
+        "addr1": "3507, 35/F, King Palace Plaza",
+        "addr2": "52A, Sha Tsui Road, Tsuen Wan",
+        "addr3": "NT",
+        "addr4": "Hong Kong",
+        "addressSingleLine": "3507, 35/F, King Palace Plaza, 52A, Sha Tsui Road, Tsuen Wan, NT, Hong Kong",
+        "state": "New Territories",
+        "stateCode": "",
+        "zip": "",
+        "country": "Hong Kong",
+        "countryCode": "HK",
+        "email": "",
+        "phone": "00852-23084000",
+        "fax": "00852-23084001",
+        "contactPerson": "",
+        "taxID": ""
+      },
+      "issueTo": {
+        "companyName": "Nisbets Limited",
+        "rawAddressLines": "Nisbets Limited\nFourth Way, Avonmouth\nBristol\nBS11 8TB",
+        "addr1": "Fourth Way, Avonmouth",
+        "addr2": "Bristol",
+        "addr3": "",
+        "addr4": "",
+        "addressSingleLine": "Fourth Way, Avonmouth, Bristol, BS11 8TB",
+        "state": "Bristol",
+        "stateCode": "",
+        "zip": "BS11 8TB",
+        "country": "United Kingdom",
+        "countryCode": "GB",
+        "email": "",
+        "phone": "",
+        "fax": "",
+        "contactPerson": "",
+        "taxID": ""
+      },
+      "invoiceDate": "2024-12-30",
+      "invoiceNum": "831A",
+      "invoiceCurrency": "USD",
+      "totalLineItems": 15,
+      "totalQty": 2225,
+      "totalAmount": 5394.75,
+      "incoterms": "FOB",
+      "countryOfOrigin": "KH",
+      "invoiceItems": [
+        {
+          "lineNum": 1,
+          "qty": 300,
+          "code": "A203-L",
+          "desc": "Whites Skull Cap White Polycotton - Size L",
+          "remark": "",
+          "unitPrice": 1.01,
+          "amount": 303,
+          "PONum": "517408",
+          "extra": {
+            "size": "L"
+          }
+        },
+        {
+          "lineNum": 2,
+          "qty": 125,
+          "code": "A211-L",
+          "desc": "Whites Vegas Chefs Jacket Short Sleeve White Polycotton - Size L",
+          "remark": "",
+          "unitPrice": 4.43,
+          "amount": 553.75,
+          "PONum": "517408",
+          "extra": {
+            "size": "L"
+          }
+        },
+        {
+          "lineNum": 3,
+          "qty": 300,
+          "code": "A212",
+          "desc": "Whites Bakers Cap White - One Size",
+          "remark": "",
+          "unitPrice": 1.02,
+          "amount": 306,
+          "PONum": "517408",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 4,
+          "qty": 100,
+          "code": "A275",
+          "desc": "Whites Bib Apron Polycotton Black/White Check",
+          "remark": "",
+          "unitPrice": 2.22,
+          "amount": 222,
+          "PONum": "517408",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 5,
+          "qty": 100,
+          "code": "A438-XL",
+          "desc": "Whites Vegas Chefs Jacket Long Sleeve Black Polycotton - Size XL",
+          "remark": "",
+          "unitPrice": 5.12,
+          "amount": 512,
+          "PONum": "517408",
+          "extra": {
+            "size": "XL"
+          }
+        },
+        {
+          "lineNum": 6,
+          "qty": 100,
+          "code": "A439-L",
+          "desc": "Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size L",
+          "remark": "",
+          "unitPrice": 3.81,
+          "amount": 381,
+          "PONum": "517408",
+          "extra": {
+            "size": "L"
+          }
+        },
+        {
+          "lineNum": 7,
+          "qty": 100,
+          "code": "A439-XL",
+          "desc": "Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size XL",
+          "remark": "",
+          "unitPrice": 3.81,
+          "amount": 381,
+          "PONum": "517408",
+          "extra": {
+            "size": "XL"
+          }
+        },
+        {
+          "lineNum": 8,
+          "qty": 100,
+          "code": "A535",
+          "desc": "Whites Bib Apron Blue/White Butchers Stripe with Pocket - 28-38\", A53",
+          "remark": "",
+          "unitPrice": 2.8,
+          "amount": 280,
+          "PONum": "517408",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 9,
+          "qty": 100,
+          "code": "A540",
+          "desc": "Whites Bib Apron Polycotton Green",
+          "remark": "",
+          "unitPrice": 2.01,
+          "amount": 201,
+          "PONum": "517408",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 10,
+          "qty": 200,
+          "code": "A580",
+          "desc": "EDLP Whites Water Resistant Apron Blue/White Stripe",
+          "remark": "",
+          "unitPrice": 1.57,
+          "amount": 314,
+          "PONum": "517408",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 11,
+          "qty": 100,
+          "code": "A582-5XL",
+          "desc": "Whites Vegas Chefs Trousers Black - Size 5XL",
+          "remark": "",
+          "unitPrice": 4.55,
+          "amount": 455,
+          "PONum": "517408",
+          "extra": {
+            "size": "5XL"
+          }
+        },
+        {
+          "lineNum": 12,
+          "qty": 100,
+          "code": "A582-M",
+          "desc": "Whites Vegas Chefs Trousers Black Polycotton - Size M",
+          "remark": "",
+          "unitPrice": 4.03,
+          "amount": 403,
+          "PONum": "517408",
+          "extra": {
+            "size": "M"
+          }
+        },
+        {
+          "lineNum": 13,
+          "qty": 100,
+          "code": "B250-M",
+          "desc": "Whites Boston Short Sleeved White Jacket - Size M",
+          "remark": "",
+          "unitPrice": 3.55,
+          "amount": 355,
+          "PONum": "517408",
+          "extra": {
+            "size": "M"
+          }
+        },
+        {
+          "lineNum": 14,
+          "qty": 300,
+          "code": "B252",
+          "desc": "Whites Comfy Hat White - One Size",
+          "remark": "",
+          "unitPrice": 1.1,
+          "amount": 330,
+          "PONum": "517408",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 15,
+          "qty": 100,
+          "code": "BB477-M",
+          "desc": "Nisbets Essentials Chef Trousers - Size M",
+          "remark": "",
+          "unitPrice": 3.98,
+          "amount": 398,
+          "PONum": "517408",
+          "extra": {
+            "size": "M"
+          }
+        }
+      ],
+      "isMultipleInvoices": false,
+      "multipleInvoices": [],
+      "error": ""
+    },
+    "stats": {
+      "inputToken": 2694,
+      "outputToken": 2426,
+      "totalToken": 8358,
+      "inputCacheToken": 0,
+      "outputThoughtToken": 3238,
+      "outputToolUseToken": 0,
+      "elapsedMs": 30383
+    }
+  }
+}

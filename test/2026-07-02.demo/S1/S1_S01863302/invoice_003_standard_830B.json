@@ -1,0 +1,569 @@
+{
+  "res": {
+    "id": "d4831675-bfc5-4bb4-9fc3-8f2c27056c79",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "d4831675-bfc5-4bb4-9fc3-8f2c27056c79",
+    "fileName": "invoice_003_standard_830B.pdf",
+    "fileSize": 83643,
+    "fileExt": ".pdf",
+    "datetime": "2026-07-01T22:44:10"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 83643,
+      "path": "cdbf3eb878fd75497c88c851bb5905e94d655dc50309ad06ba7d06cf61f59fde562c503335f2be9f8ebe6f93c3a3a269f7f9646c074c8b1519587ef7d17c9a252ee56e97f982a6596bdadd9d7604aa63916a98cac1d8be0334e3dd82c71cc4a8fffd6303fc4d7e74887d5021231a0d4736bb1d836a8894ec125ef703cc5a2488f82c0829527e19b3ba3f933a72653d489b9fa8fff1f40c05d76125ce1d42f9c164b2bac9176470fba040652b6b9d190a9a8b0b9eb75b2311f9fe/log/2026/07/api/v2.AI.LLM.gemini.query/d4/831675-bfc5-4bb4-9fc3-8f2c27056c79/upload.pdf",
+      "token": "cdbf3eb878fd75497c88c851bb5905e94d655dc50309ad06ba7d06cf61f59fde562c503335f2be9f8ebe6f93c3a3a269f7f9646c074c8b1519587ef7d17c9a252ee56e97f982a6596bdadd9d7604aa63916a98cac1d8be0334e3dd82c71cc4a8fffd6303fc4d7e74887d5021231a0d4736bb1d836a8894ec125ef703cc5a2488f82c0829527e19b3ba3f933a72653d489b9fa8fff1f40c05d76125ce1d42f9c164b2bac9176470fba040652b6b9d190a9a8b0b9eb75b2311f9fe",
+      "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/cdbf3eb878fd75497c88c851bb5905e94d655dc50309ad06ba7d06cf61f59fde562c503335f2be9f8ebe6f93c3a3a269f7f9646c074c8b1519587ef7d17c9a252ee56e97f982a6596bdadd9d7604aa63916a98cac1d8be0334e3dd82c71cc4a8fffd6303fc4d7e74887d5021231a0d4736bb1d836a8894ec125ef703cc5a2488f82c0829527e19b3ba3f933a72653d489b9fa8fff1f40c05d76125ce1d42f9c164b2bac9176470fba040652b6b9d190a9a8b0b9eb75b2311f9fe/log/2026/07/api/v2.AI.LLM.gemini.query/d4/831675-bfc5-4bb4-9fc3-8f2c27056c79/upload.pdf"
+    }
+  },
+  "result": {
+    "error": "",
+    "jsonData": {
+      "dateOfIssue": "2024-12-30",
+      "issueFrom": {
+        "companyName": "MONTI APPAREL COMPANY LIMITED",
+        "rawAddressLines": "MONTI APPAREL COMPANY LIMITED\n3507, 35/F, King Palace Plaza, 52A, Sha Tsui Road, Tsuen Wan, NT, Hong Kong\n香港新界荃灣沙咀道52A號皇廷廣場35樓3507\nTEL:00852-23084000 FAX:00852-23084001",
+        "addr1": "3507, 35/F, King Palace Plaza, 52A, Sha Tsui Road",
+        "addr2": "Tsuen Wan, NT",
+        "addr3": "Hong Kong",
+        "addr4": "香港新界荃灣沙咀道52A號皇廷廣場35樓3507",
+        "addressSingleLine": "3507, 35/F, King Palace Plaza, 52A, Sha Tsui Road, Tsuen Wan, NT, Hong Kong 香港新界荃灣沙咀道52A號皇廷廣場35樓3507",
+        "state": "NT",
+        "stateCode": "",
+        "zip": "",
+        "country": "Hong Kong",
+        "countryCode": "HK",
+        "email": "",
+        "phone": "00852-23084000",
+        "fax": "00852-23084001",
+        "contactPerson": "",
+        "taxID": ""
+      },
+      "issueTo": {
+        "companyName": "Nisbets Limited",
+        "rawAddressLines": "Nisbets Limited\nFourth Way, Avonmouth\nBristol\nBS11 8TB",
+        "addr1": "Fourth Way, Avonmouth",
+        "addr2": "Bristol",
+        "addr3": "BS11 8TB",
+        "addr4": "",
+        "addressSingleLine": "Fourth Way, Avonmouth, Bristol, BS11 8TB",
+        "state": "",
+        "stateCode": "",
+        "zip": "BS11 8TB",
+        "country": "United Kingdom",
+        "countryCode": "GB",
+        "email": "",
+        "phone": "",
+        "fax": "",
+        "contactPerson": "",
+        "taxID": ""
+      },
+      "invoiceDate": "2024-12-30",
+      "invoiceNum": "830B",
+      "invoiceCurrency": "USD",
+      "totalLineItems": 37,
+      "totalQty": 15185,
+      "totalAmount": 53080.7,
+      "incoterms": "FOB",
+      "countryOfOrigin": "KH",
+      "invoiceItems": [
+        {
+          "lineNum": 1,
+          "qty": 850,
+          "code": "A439-L",
+          "desc": "Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size L",
+          "remark": "",
+          "unitPrice": 3.81,
+          "amount": 3238.5,
+          "PONum": "5170072",
+          "extra": {
+            "size": "L"
+          }
+        },
+        {
+          "lineNum": 2,
+          "qty": 850,
+          "code": "A439-M",
+          "desc": "Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size M",
+          "remark": "",
+          "unitPrice": 3.81,
+          "amount": 3238.5,
+          "PONum": "5170072",
+          "extra": {
+            "size": "M"
+          }
+        },
+        {
+          "lineNum": 3,
+          "qty": 100,
+          "code": "A439-S",
+          "desc": "Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size S",
+          "remark": "",
+          "unitPrice": 3.81,
+          "amount": 381,
+          "PONum": "5170072",
+          "extra": {
+            "size": "S"
+          }
+        },
+        {
+          "lineNum": 4,
+          "qty": 325,
+          "code": "A439-XL",
+          "desc": "Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size XL",
+          "remark": "",
+          "unitPrice": 3.81,
+          "amount": 1238.25,
+          "PONum": "5170072",
+          "extra": {
+            "size": "XL"
+          }
+        },
+        {
+          "lineNum": 5,
+          "qty": 100,
+          "code": "A439-XS",
+          "desc": "Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size XS",
+          "remark": "",
+          "unitPrice": 3.81,
+          "amount": 381,
+          "PONum": "5170072",
+          "extra": {
+            "size": "XS"
+          }
+        },
+        {
+          "lineNum": 6,
+          "qty": 100,
+          "code": "A439-XXL",
+          "desc": "Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size XXL",
+          "remark": "",
+          "unitPrice": 3.81,
+          "amount": 381,
+          "PONum": "5170072",
+          "extra": {
+            "size": "XXL"
+          }
+        },
+        {
+          "lineNum": 7,
+          "qty": 120,
+          "code": "A928-L",
+          "desc": "Whites Nevada Chefs Jacket White with Black Contrast - Size L",
+          "remark": "",
+          "unitPrice": 6.71,
+          "amount": 805.2,
+          "PONum": "5170072",
+          "extra": {
+            "size": "L"
+          }
+        },
+        {
+          "lineNum": 8,
+          "qty": 180,
+          "code": "B131",
+          "desc": "Whites Short Bistro Apron Black - 750x373mm",
+          "remark": "",
+          "unitPrice": 1.87,
+          "amount": 336.6,
+          "PONum": "5170072",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 9,
+          "qty": 400,
+          "code": "B133",
+          "desc": "Whites Bistro Apron Black - 1000x700mm 39 4x27.5\"",
+          "remark": "",
+          "unitPrice": 2.45,
+          "amount": 980,
+          "PONum": "5170072",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 10,
+          "qty": 1050,
+          "code": "B250-M",
+          "desc": "Whites Boston Short Sleeved White Jacket - Size M",
+          "remark": "",
+          "unitPrice": 3.55,
+          "amount": 3727.5,
+          "PONum": "5170072",
+          "extra": {
+            "size": "M"
+          }
+        },
+        {
+          "lineNum": 11,
+          "qty": 850,
+          "code": "B250-S",
+          "desc": "Whites Boston Short Sleeved White Jacket - Size S",
+          "remark": "",
+          "unitPrice": 3.55,
+          "amount": 3017.5,
+          "PONum": "5170072",
+          "extra": {
+            "size": "S"
+          }
+        },
+        {
+          "lineNum": 12,
+          "qty": 975,
+          "code": "B250-XL",
+          "desc": "Whites Boston Short Sleeved White Jacket - Size XL",
+          "remark": "",
+          "unitPrice": 3.55,
+          "amount": 3461.25,
+          "PONum": "5170072",
+          "extra": {
+            "size": "XL"
+          }
+        },
+        {
+          "lineNum": 13,
+          "qty": 250,
+          "code": "B250-XS",
+          "desc": "Whites Boston Short Sleeved White Jacket - Size XS",
+          "remark": "",
+          "unitPrice": 3.55,
+          "amount": 887.5,
+          "PONum": "5170072",
+          "extra": {
+            "size": "XS"
+          }
+        },
+        {
+          "lineNum": 14,
+          "qty": 300,
+          "code": "B252",
+          "desc": "Whites Comfy Hat White - One Size",
+          "remark": "",
+          "unitPrice": 1.1,
+          "amount": 330,
+          "PONum": "5170072",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 15,
+          "qty": 300,
+          "code": "B255",
+          "desc": "Whites Peaked Hat - White",
+          "remark": "",
+          "unitPrice": 1.1,
+          "amount": 330,
+          "PONum": "5170072",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 16,
+          "qty": 100,
+          "code": "B311-XL",
+          "desc": "Whites Vegas Small Blue & White Check Trousers Polycotton - Size XL",
+          "remark": "",
+          "unitPrice": 6.11,
+          "amount": 611,
+          "PONum": "5170072",
+          "extra": {
+            "size": "XL"
+          }
+        },
+        {
+          "lineNum": 17,
+          "qty": 100,
+          "code": "B311-XXL",
+          "desc": "Whites Vegas Small Blue & White Check Trousers Polycotton - Size XXL",
+          "remark": "",
+          "unitPrice": 6.11,
+          "amount": 611,
+          "PONum": "5170072",
+          "extra": {
+            "size": "XXL"
+          }
+        },
+        {
+          "lineNum": 18,
+          "qty": 300,
+          "code": "B390",
+          "desc": "Whites Nevada Chefs Bandana Black",
+          "remark": "",
+          "unitPrice": 2.36,
+          "amount": 708,
+          "PONum": "5170072",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 19,
+          "qty": 200,
+          "code": "B426",
+          "desc": "Whites Bib Apron Polycotton Charcoal",
+          "remark": "",
+          "unitPrice": 2.07,
+          "amount": 414,
+          "PONum": "5170072",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 20,
+          "qty": 75,
+          "code": "B998-XL",
+          "desc": "Southside Chefs Jacket - Size XL",
+          "remark": "",
+          "unitPrice": 6.73,
+          "amount": 504.75,
+          "PONum": "5170072",
+          "extra": {
+            "size": "XL"
+          }
+        },
+        {
+          "lineNum": 21,
+          "qty": 25,
+          "code": "BA002-M",
+          "desc": "Whites Vegas Big Check Trousers Black & White Polycotton - Size M",
+          "remark": "",
+          "unitPrice": 6.77,
+          "amount": 169.25,
+          "PONum": "5170072",
+          "extra": {
+            "size": "M"
+          }
+        },
+        {
+          "lineNum": 22,
+          "qty": 160,
+          "code": "BB465",
+          "desc": "Southside Waist Apron Denim Blue (Tan Ties) - 700x430mm",
+          "remark": "",
+          "unitPrice": 2.64,
+          "amount": 422.4,
+          "PONum": "5170072",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 23,
+          "qty": 100,
+          "code": "BB466",
+          "desc": "Whites Bib Apron Polycotton Red",
+          "remark": "",
+          "unitPrice": 2.01,
+          "amount": 201,
+          "PONum": "5170072",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 24,
+          "qty": 1900,
+          "code": "BB475",
+          "desc": "Nisbets Essentials Bib Apron Polycotton Black (Pack 2)",
+          "remark": "",
+          "unitPrice": 2.92,
+          "amount": 5548,
+          "PONum": "5170072",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 25,
+          "qty": 600,
+          "code": "BB476",
+          "desc": "Nisbets Essentials Chef Skull Cap Black - One Size (Pack 2)",
+          "remark": "",
+          "unitPrice": 1.64,
+          "amount": 984,
+          "PONum": "5170072",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 26,
+          "qty": 1650,
+          "code": "BB477-L",
+          "desc": "Nisbets Essentials Chef Trousers - Size L",
+          "remark": "",
+          "unitPrice": 3.98,
+          "amount": 6567,
+          "PONum": "5170072",
+          "extra": {
+            "size": "L"
+          }
+        },
+        {
+          "lineNum": 27,
+          "qty": 1225,
+          "code": "BB477-M",
+          "desc": "Nisbets Essentials Chef Trousers - Size M",
+          "remark": "",
+          "unitPrice": 3.98,
+          "amount": 4875.5,
+          "PONum": "5170072",
+          "extra": {
+            "size": "M"
+          }
+        },
+        {
+          "lineNum": 28,
+          "qty": 775,
+          "code": "BB477-S",
+          "desc": "Nisbets Essentials Chef Trousers - Size S",
+          "remark": "",
+          "unitPrice": 3.98,
+          "amount": 3084.5,
+          "PONum": "5170072",
+          "extra": {
+            "size": "S"
+          }
+        },
+        {
+          "lineNum": 29,
+          "qty": 575,
+          "code": "BB477-XL",
+          "desc": "Nisbets Essentials Chef Trousers - Size XL",
+          "remark": "",
+          "unitPrice": 3.98,
+          "amount": 2288.5,
+          "PONum": "5170072",
+          "extra": {
+            "size": "XL"
+          }
+        },
+        {
+          "lineNum": 30,
+          "qty": 200,
+          "code": "BB477-XXL",
+          "desc": "Nisbets Essentials Chef Trousers - Size XXL",
+          "remark": "",
+          "unitPrice": 3.98,
+          "amount": 796,
+          "PONum": "5170072",
+          "extra": {
+            "size": "XXL"
+          }
+        },
+        {
+          "lineNum": 31,
+          "qty": 125,
+          "code": "BB700-M",
+          "desc": "Whites Cargo Pants - Size M",
+          "remark": "",
+          "unitPrice": 5.88,
+          "amount": 735,
+          "PONum": "5170072",
+          "extra": {
+            "size": "M"
+          }
+        },
+        {
+          "lineNum": 32,
+          "qty": 50,
+          "code": "BB700-S",
+          "desc": "Whites Cargo Pants - Size S",
+          "remark": "",
+          "unitPrice": 5.88,
+          "amount": 294,
+          "PONum": "5170072",
+          "extra": {
+            "size": "S"
+          }
+        },
+        {
+          "lineNum": 33,
+          "qty": 50,
+          "code": "BB700-XL",
+          "desc": "Whites Cargo Pants - Size XL",
+          "remark": "",
+          "unitPrice": 5.88,
+          "amount": 294,
+          "PONum": "5170072",
+          "extra": {
+            "size": "XL"
+          }
+        },
+        {
+          "lineNum": 34,
+          "qty": 50,
+          "code": "BB702-L",
+          "desc": "Southside Band Collar Jacket White - Size L",
+          "remark": "",
+          "unitPrice": 5.4,
+          "amount": 270,
+          "PONum": "5170072",
+          "extra": {
+            "size": "L"
+          }
+        },
+        {
+          "lineNum": 35,
+          "qty": 50,
+          "code": "BB702-M",
+          "desc": "Southside Band Collar Jacket White - Size M",
+          "remark": "",
+          "unitPrice": 5.4,
+          "amount": 270,
+          "PONum": "5170072",
+          "extra": {
+            "size": "M"
+          }
+        },
+        {
+          "lineNum": 36,
+          "qty": 25,
+          "code": "BB712-L",
+          "desc": "Southside Band Collar Jacket Charcoal - Size L",
+          "remark": "",
+          "unitPrice": 5.4,
+          "amount": 135,
+          "PONum": "5170072",
+          "extra": {
+            "size": "L"
+          }
+        },
+        {
+          "lineNum": 37,
+          "qty": 100,
+          "code": "DL711-S",
+          "desc": "Whites Chicago Short Sleeve - Size S",
+          "remark": "",
+          "unitPrice": 5.64,
+          "amount": 564,
+          "PONum": "5170072",
+          "extra": {
+            "size": "S"
+          }
+        }
+      ],
+      "isMultipleInvoices": false,
+      "multipleInvoices": [],
+      "error": ""
+    },
+    "stats": {
+      "inputToken": 2694,
+      "outputToken": 5228,
+      "totalToken": 11685,
+      "inputCacheToken": 0,
+      "outputThoughtToken": 3763,
+      "outputToolUseToken": 0,
+      "elapsedMs": 50230
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "res": {
+    "id": "115b6bce-3e94-4301-b3c2-1d3dc7f7a940",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "115b6bce-3e94-4301-b3c2-1d3dc7f7a940",
+    "fileName": "_docPouch.pdf",
+    "fileSize": 344316,
+    "fileExt": ".pdf",
+    "datetime": "2026-07-01T22:01:24"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 344316,
+      "path": "cca887b17cbc499a291c1a6d228965b8b53a0054d0371423b4b7ab4b36d6668660e0ea8dcd5e67691052e9fd3ed8665457f5a8310a4ee6301dfb05bb81ef8e49c2be58c86f526389e094fa2a33c380c1b4ab9295679f2f5bcfdd77d7e72193a6f29fbe94aede7894c30f14861952d1d6f7b635bb24e1d3fb041e5fd0918cf4f61feeb5a6ce7153398c73f9334d279f9213283653e13e5c39d0d6865a2f04ece5593bf6259013a33a64e43c560f4851a31aae9eac5e15ed01a08a/log/2026/07/api/v2.AI.LLM.gemini.query/11/5b6bce-3e94-4301-b3c2-1d3dc7f7a940/upload.pdf",
+      "token": "cca887b17cbc499a291c1a6d228965b8b53a0054d0371423b4b7ab4b36d6668660e0ea8dcd5e67691052e9fd3ed8665457f5a8310a4ee6301dfb05bb81ef8e49c2be58c86f526389e094fa2a33c380c1b4ab9295679f2f5bcfdd77d7e72193a6f29fbe94aede7894c30f14861952d1d6f7b635bb24e1d3fb041e5fd0918cf4f61feeb5a6ce7153398c73f9334d279f9213283653e13e5c39d0d6865a2f04ece5593bf6259013a33a64e43c560f4851a31aae9eac5e15ed01a08a",
+      "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/cca887b17cbc499a291c1a6d228965b8b53a0054d0371423b4b7ab4b36d6668660e0ea8dcd5e67691052e9fd3ed8665457f5a8310a4ee6301dfb05bb81ef8e49c2be58c86f526389e094fa2a33c380c1b4ab9295679f2f5bcfdd77d7e72193a6f29fbe94aede7894c30f14861952d1d6f7b635bb24e1d3fb041e5fd0918cf4f61feeb5a6ce7153398c73f9334d279f9213283653e13e5c39d0d6865a2f04ece5593bf6259013a33a64e43c560f4851a31aae9eac5e15ed01a08a/log/2026/07/api/v2.AI.LLM.gemini.query/11/5b6bce-3e94-4301-b3c2-1d3dc7f7a940/upload.pdf"
+    }
+  },
+  "result": {
+    "error": "",
+    "jsonData": {
+      "classifications": [
+        {
+          "pageNum": 1,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "BV2503-0030",
+          "docTypeGroupId": "invoice_001_standard_BV2503-0030",
+          "score": 100,
+          "reason": "Explicit invoice header with unique invoice number BV2503-0030."
+        },
+        {
+          "pageNum": 2,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "BV2503-0030",
+          "docTypeGroupId": "invoice_001_standard_BV2503-0030",
+          "score": 100,
+          "reason": "Continuation page of the invoice BV2503-0030 (Page 2 of 2)."
+        },
+        {
+          "pageNum": 3,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "BV2503-0030,PO00066797",
+          "docTypeGroupId": "packingList_001_invoicePONum_BV2503-0030_PO00066797",
+          "score": 100,
+          "reason": "Packing list identified by invoice number and PO number in the header without a distinct packing list number."
+        },
+        {
+          "pageNum": 4,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "BV2503-0030,PO00066798",
+          "docTypeGroupId": "packingList_002_invoicePONum_BV2503-0030_PO00066798",
+          "score": 100,
+          "reason": "Packing list identified by invoice number and a different PO number (PO00066798) in the header."
+        },
+        {
+          "pageNum": 5,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "BV2503-0030,PO00066799",
+          "docTypeGroupId": "packingList_003_invoicePONum_BV2503-0030_PO00066799",
+          "score": 100,
+          "reason": "Packing list identified by invoice number and a different PO number (PO00066799) in the header."
+        }
+      ],
+      "classificationGroups": [
+        {
+          "docTypeGroupId": "invoice_001_standard_BV2503-0030",
+          "docType": "invoice",
+          "layout": "standard",
+          "pageNums": [
+            1,
+            2
+          ],
+          "score": 100,
+          "reason": "Pages belong to the same invoice document with number BV2503-0030."
+        },
+        {
+          "docTypeGroupId": "packingList_001_invoicePONum_BV2503-0030_PO00066797",
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "pageNums": [
+            3
+          ],
+          "score": 100,
+          "reason": "Distinct packing list for PO00066797 under invoice BV2503-0030."
+        },
+        {
+          "docTypeGroupId": "packingList_002_invoicePONum_BV2503-0030_PO00066798",
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "pageNums": [
+            4
+          ],
+          "score": 100,
+          "reason": "Distinct packing list for PO00066798 under invoice BV2503-0030."
+        },
+        {
+          "docTypeGroupId": "packingList_003_invoicePONum_BV2503-0030_PO00066799",
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "pageNums": [
+            5
+          ],
+          "score": 100,
+          "reason": "Distinct packing list for PO00066799 under invoice BV2503-0030."
+        }
+      ]
+    },
+    "stats": {
+      "inputToken": 4106,
+      "outputToken": 1145,
+      "totalToken": 9003,
+      "inputCacheToken": 0,
+      "outputThoughtToken": 3752,
+      "outputToolUseToken": 0,
+      "elapsedMs": 34104
+    }
+  }
+}

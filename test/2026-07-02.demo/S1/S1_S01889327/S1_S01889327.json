@@ -1,0 +1,198 @@
+{
+  "res": {
+    "id": "77e59faa-ba68-4629-8ce4-23239ca1f809",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "77e59faa-ba68-4629-8ce4-23239ca1f809",
+    "fileName": "_docPouch.pdf",
+    "fileSize": 492791,
+    "fileExt": ".pdf",
+    "datetime": "2026-07-01T21:29:11"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 492791,
+      "path": "f30c8ec5dead5a0814056771a70a227a7d457ee81891e1cf8e472afc3778a5ac509005a61ae6c5f47e7289418738eda292f62426cec8dbbd31c2905f51d698d8327e771e180eb99340e71d8299afe5d6b95bfa83a2a03931098db24463191ddb36643b96cda3276c45859a4cbcedd3718389fcfa7b62c83da2996666298aa4fd07c342c3bf8dd90aae8946ab95c26e59b1a26a24b48d0dc87c3111afe133e303687e10b98b49433aae218d6e0d3c647dfdc66202aaa124f80585/log/2026/07/api/v2.AI.LLM.gemini.query/77/e59faa-ba68-4629-8ce4-23239ca1f809/upload.pdf",
+      "token": "f30c8ec5dead5a0814056771a70a227a7d457ee81891e1cf8e472afc3778a5ac509005a61ae6c5f47e7289418738eda292f62426cec8dbbd31c2905f51d698d8327e771e180eb99340e71d8299afe5d6b95bfa83a2a03931098db24463191ddb36643b96cda3276c45859a4cbcedd3718389fcfa7b62c83da2996666298aa4fd07c342c3bf8dd90aae8946ab95c26e59b1a26a24b48d0dc87c3111afe133e303687e10b98b49433aae218d6e0d3c647dfdc66202aaa124f80585",
+      "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/f30c8ec5dead5a0814056771a70a227a7d457ee81891e1cf8e472afc3778a5ac509005a61ae6c5f47e7289418738eda292f62426cec8dbbd31c2905f51d698d8327e771e180eb99340e71d8299afe5d6b95bfa83a2a03931098db24463191ddb36643b96cda3276c45859a4cbcedd3718389fcfa7b62c83da2996666298aa4fd07c342c3bf8dd90aae8946ab95c26e59b1a26a24b48d0dc87c3111afe133e303687e10b98b49433aae218d6e0d3c647dfdc66202aaa124f80585/log/2026/07/api/v2.AI.LLM.gemini.query/77/e59faa-ba68-4629-8ce4-23239ca1f809/upload.pdf"
+    }
+  },
+  "result": {
+    "error": "",
+    "jsonData": {
+      "classifications": [
+        {
+          "pageNum": 1,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "300037724",
+          "docTypeGroupId": "invoice_001_standard_300037724",
+          "score": 100,
+          "reason": "Header explicitly identifies as 'Invoice/Tax Invoice' with invoice number 300037724."
+        },
+        {
+          "pageNum": 2,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "300037724",
+          "docTypeGroupId": "invoice_001_standard_300037724",
+          "score": 100,
+          "reason": "Header explicitly identifies as 'Invoice/Tax Invoice' with invoice number 300037724, page 2 of 5."
+        },
+        {
+          "pageNum": 3,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "300037724",
+          "docTypeGroupId": "invoice_001_standard_300037724",
+          "score": 100,
+          "reason": "Header explicitly identifies as 'Invoice/Tax Invoice' with invoice number 300037724, page 3 of 5."
+        },
+        {
+          "pageNum": 4,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "300037724",
+          "docTypeGroupId": "invoice_001_standard_300037724",
+          "score": 100,
+          "reason": "Header explicitly identifies as 'Invoice/Tax Invoice' with invoice number 300037724, page 4 of 5."
+        },
+        {
+          "pageNum": 5,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "300037724",
+          "docTypeGroupId": "invoice_001_standard_300037724",
+          "score": 100,
+          "reason": "Final page of invoice 300037724 showing grand total amounts."
+        },
+        {
+          "pageNum": 6,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "300037724,5173737",
+          "docTypeGroupId": "packingList_001_invoicePONum_300037724_5173737",
+          "score": 100,
+          "reason": "Header identifies as 'Packing List' using invoice number 300037724 and referencing PO#5173737."
+        },
+        {
+          "pageNum": 7,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "300037724,5173737",
+          "docTypeGroupId": "packingList_001_invoicePONum_300037724_5173737",
+          "score": 100,
+          "reason": "Continuation of Packing List with invoice number 300037724."
+        },
+        {
+          "pageNum": 8,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "300037724,5173737",
+          "docTypeGroupId": "packingList_001_invoicePONum_300037724_5173737",
+          "score": 100,
+          "reason": "Continuation of Packing List with invoice number 300037724."
+        },
+        {
+          "pageNum": 9,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "300037724,5173737",
+          "docTypeGroupId": "packingList_001_invoicePONum_300037724_5173737",
+          "score": 100,
+          "reason": "Continuation of Packing List with invoice number 300037724."
+        },
+        {
+          "pageNum": 10,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "300037724,5173737",
+          "docTypeGroupId": "packingList_001_invoicePONum_300037724_5173737",
+          "score": 100,
+          "reason": "Continuation of Packing List with invoice number 300037724."
+        },
+        {
+          "pageNum": 11,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "300037724,5173737",
+          "docTypeGroupId": "packingList_001_invoicePONum_300037724_5173737",
+          "score": 100,
+          "reason": "Continuation of Packing List with invoice number 300037724."
+        },
+        {
+          "pageNum": 12,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "300037724,5173737",
+          "docTypeGroupId": "packingList_001_invoicePONum_300037724_5173737",
+          "score": 100,
+          "reason": "Continuation of Packing List with invoice number 300037724."
+        },
+        {
+          "pageNum": 13,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "300037724,5173737",
+          "docTypeGroupId": "packingList_001_invoicePONum_300037724_5173737",
+          "score": 100,
+          "reason": "Continuation of Packing List with invoice number 300037724."
+        },
+        {
+          "pageNum": 14,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "300037724,5173737",
+          "docTypeGroupId": "packingList_001_invoicePONum_300037724_5173737",
+          "score": 100,
+          "reason": "Final page of Packing List for invoice 300037724 showing grand totals for weights and measurements."
+        }
+      ],
+      "classificationGroups": [
+        {
+          "docTypeGroupId": "invoice_001_standard_300037724",
+          "docType": "invoice",
+          "layout": "standard",
+          "pageNums": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score": 100,
+          "reason": "These pages form a single invoice identified by number 300037724."
+        },
+        {
+          "docTypeGroupId": "packingList_001_invoicePONum_300037724_5173737",
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "pageNums": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "score": 100,
+          "reason": "These pages form a single packing list which uses the invoice number 300037724 and relates to PO#5173737."
+        }
+      ]
+    },
+    "stats": {
+      "inputToken": 8894,
+      "outputToken": 2075,
+      "totalToken": 15765,
+      "inputCacheToken": 0,
+      "outputThoughtToken": 4796,
+      "outputToolUseToken": 0,
+      "elapsedMs": 40179
+    }
+  }
+}

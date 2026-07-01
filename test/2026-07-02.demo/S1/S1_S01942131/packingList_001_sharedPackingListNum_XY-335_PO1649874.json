@@ -1,0 +1,181 @@
+{
+  "res": {
+    "id": "bc3138ac-67dc-4e75-8cd4-6d06a9b0c60b",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "bc3138ac-67dc-4e75-8cd4-6d06a9b0c60b",
+    "fileName": "packingList_001_sharedPackingListNum_XY-335_PO1649874.pdf",
+    "fileSize": 139608,
+    "fileExt": ".pdf",
+    "datetime": "2026-07-01T23:05:06"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 139608,
+      "path": "41f1b6f43a753baa959eebf13928588af4f49f0d35edd5a9793aa21638a9374ef752be8f1067356289351a52956f9edbd2c5aee6d8dd06ce1974602594d796655897203a040687f81fff02410bd7f46f9a5109adec8cd150443e152530ef67e7811e2b227fca6af37be3bf60f6c2ff0fbbe91d061a62587a7776f881760c44627c00459dc81198acce7846a4659640d21573fdc8d3742393939ded578fed6e8c2db42b9e4a8478f6dd6a7185cfc512d4f9b6a79ddc14ab9d0c3b/log/2026/07/api/v2.AI.LLM.gemini.query/bc/3138ac-67dc-4e75-8cd4-6d06a9b0c60b/upload.pdf",
+      "token": "41f1b6f43a753baa959eebf13928588af4f49f0d35edd5a9793aa21638a9374ef752be8f1067356289351a52956f9edbd2c5aee6d8dd06ce1974602594d796655897203a040687f81fff02410bd7f46f9a5109adec8cd150443e152530ef67e7811e2b227fca6af37be3bf60f6c2ff0fbbe91d061a62587a7776f881760c44627c00459dc81198acce7846a4659640d21573fdc8d3742393939ded578fed6e8c2db42b9e4a8478f6dd6a7185cfc512d4f9b6a79ddc14ab9d0c3b",
+      "link": "https://localhost.swivel.dev:8000/download/fileWithToken/41f1b6f43a753baa959eebf13928588af4f49f0d35edd5a9793aa21638a9374ef752be8f1067356289351a52956f9edbd2c5aee6d8dd06ce1974602594d796655897203a040687f81fff02410bd7f46f9a5109adec8cd150443e152530ef67e7811e2b227fca6af37be3bf60f6c2ff0fbbe91d061a62587a7776f881760c44627c00459dc81198acce7846a4659640d21573fdc8d3742393939ded578fed6e8c2db42b9e4a8478f6dd6a7185cfc512d4f9b6a79ddc14ab9d0c3b/log/2026/07/api/v2.AI.LLM.gemini.query/bc/3138ac-67dc-4e75-8cd4-6d06a9b0c60b/upload.pdf"
+    }
+  },
+  "result": {
+    "error": "",
+    "jsonData": {
+      "dateOfIssue": "2025-05-12",
+      "issueFrom": {
+        "companyName": "NINGBO XINYI IMPORT AND EXPORT CO.,LTD",
+        "rawAddressLines": "NINGBO XINYI IMPORT AND EXPORT CO.,LTD\n6-8, No. 312. lane 645, Renmin Road, jiangbei District, Ningbo city, Zhejiang province",
+        "addr1": "6-8, No. 312. lane 645",
+        "addr2": "Renmin Road, jiangbei District",
+        "addr3": "Ningbo city",
+        "addr4": "Zhejiang province",
+        "addressSingleLine": "6-8, No. 312. lane 645, Renmin Road, jiangbei District, Ningbo city, Zhejiang province, China",
+        "state": "Zhejiang province",
+        "stateCode": "ZJ",
+        "zip": "",
+        "country": "China",
+        "countryCode": "CN",
+        "email": "",
+        "phone": "",
+        "fax": "",
+        "contactPerson": "",
+        "taxID": ""
+      },
+      "issueTo": {
+        "companyName": "HOBBY CRAFT TRADING LIMITED",
+        "rawAddressLines": "HOBBY CRAFT TRADING LIMITED,\n7 ENTERPRISE WAY,AVIATION PARK,\nCHRISTCHURCH,DORSET,BH23 6HG,UK",
+        "addr1": "7 ENTERPRISE WAY,AVIATION PARK",
+        "addr2": "CHRISTCHURCH, DORSET",
+        "addr3": "BH23 6HG",
+        "addr4": "UK",
+        "addressSingleLine": "7 ENTERPRISE WAY,AVIATION PARK, CHRISTCHURCH, DORSET, BH23 6HG, UK",
+        "state": "Dorset",
+        "stateCode": "",
+        "zip": "BH23 6HG",
+        "country": "United Kingdom",
+        "countryCode": "GB",
+        "email": "",
+        "phone": "",
+        "fax": "",
+        "contactPerson": "",
+        "taxID": ""
+      },
+      "packingListLayout": "standard",
+      "packingListNum": "XY-335",
+      "invoiceNum": "",
+      "PONum": "PO1647007",
+      "packingListDate": "2025-05-12",
+      "grossWeightUnit": "KG",
+      "totalGrossWeight": 1349.5,
+      "totalNetWeight": 1236,
+      "totalLineItems": 3,
+      "totalQty": 5256,
+      "totalCartonQty": 118,
+      "totalCbm": 9.392,
+      "incoterms": "",
+      "countryOfOrigin": "CN",
+      "packingListItems": [
+        {
+          "lineNum": 1,
+          "lineNumParent": 0,
+          "PONum": "PO1647007",
+          "invoiceNum": "",
+          "code": "6710191000",
+          "desc": "X24 Xmas Cupcake Toppers 6pk Wreaths/10.5X6.5CM",
+          "remark": "",
+          "qty": 1296,
+          "qtyPerCarton": 144,
+          "cartonQty": 9,
+          "grossWeight": 49.5,
+          "netWeight": 45,
+          "cbm": 0.564,
+          "containerType": "",
+          "containerTypeCode": "",
+          "containerNum": "",
+          "containerSealNum": "",
+          "packageStartNum": 0,
+          "packageEndNum": 0,
+          "totalPackages": 0,
+          "extra": {
+            "size": "10.5X6.5CM",
+            "color": "",
+            "styleCode": "",
+            "styleDesc": "X24 Xmas Cupcake Toppers 6pk Wreaths",
+            "channel": ""
+          }
+        },
+        {
+          "lineNum": 2,
+          "lineNumParent": 0,
+          "PONum": "PO1647007",
+          "invoiceNum": "",
+          "code": "6707001000",
+          "desc": "X24 Wood Hanging Stars 10pk Natural/5.5CM",
+          "remark": "",
+          "qty": 1536,
+          "qtyPerCarton": 192,
+          "cartonQty": 8,
+          "grossWeight": 88,
+          "netWeight": 80,
+          "cbm": 0.496,
+          "containerType": "",
+          "containerTypeCode": "",
+          "containerNum": "",
+          "containerSealNum": "",
+          "packageStartNum": 0,
+          "packageEndNum": 0,
+          "totalPackages": 0,
+          "extra": {
+            "size": "5.5CM",
+            "color": "Natural",
+            "styleCode": "",
+            "styleDesc": "X24 Wood Hanging Stars 10pk",
+            "channel": ""
+          }
+        },
+        {
+          "lineNum": 3,
+          "lineNumParent": 0,
+          "PONum": "PO1647007",
+          "invoiceNum": "",
+          "code": "6707041000",
+          "desc": "X24 PYO Snow Village 6pcs 0/0",
+          "remark": "",
+          "qty": 2424,
+          "qtyPerCarton": 24,
+          "cartonQty": 101,
+          "grossWeight": 1212,
+          "netWeight": 1111,
+          "cbm": 8.332,
+          "containerType": "",
+          "containerTypeCode": "",
+          "containerNum": "",
+          "containerSealNum": "",
+          "packageStartNum": 0,
+          "packageEndNum": 0,
+          "totalPackages": 0,
+          "extra": {
+            "size": "",
+            "color": "",
+            "styleCode": "",
+            "styleDesc": "X24 PYO Snow Village 6pcs",
+            "channel": ""
+          }
+        }
+      ],
+      "isMultiplePackingLists": false,
+      "multiplePackingLists": [],
+      "error": ""
+    },
+    "stats": {
+      "inputToken": 4310,
+      "outputToken": 1621,
+      "totalToken": 8863,
+      "inputCacheToken": 0,
+      "outputThoughtToken": 2932,
+      "outputToolUseToken": 0,
+      "elapsedMs": 26494
+    }
+  }
+}

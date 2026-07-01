@@ -1,0 +1,53 @@
+#################################################################
+### S2_S01930761
+#################################################################
+data/Data Extraction/Scenario 2/S01930761/BV2503-0030 INV.PDF
+P1-2    BV2503-0030
+
+data/Data Extraction/Scenario 2/S01930761/BV2503-0030 PL.PDF
+P1      BV2503-0030 PO00066797
+P2      BV2503-0030 PO00066798
+P3      BV2503-0030 PO00066799
+
+data/Data Extraction/Scenario 2/S01930761/_docPouch.pdf
+P1-2    invoice_001_standard_BV2503-0030
+P3      packingList_001_invoicePONum_BV2503-0030_PO00066797
+P4      packingList_002_invoicePONum_BV2503-0030_PO00066798
+P5      packingList_003_invoicePONum_BV2503-0030_PO00066799
+
+#################################################################
+### S2_S01958829
+#################################################################
+data/Data Extraction/Scenario 2/S01958829/48CIV.PDF
+P1      FE-20154-25
+
+data/Data Extraction/Scenario 2/S01958829/48PKL.PDF
+P1      FE-20154-25 WHST240558MB
+P2      FE-20154-25 WHST240559MB
+
+data/Data Extraction/Scenario 2/S01958829/_docPouch.pdf
+P1      invoice_001_standard_FE-20154-25
+P2      packingList_001_invoicePONum_FE-20154-25_WHST240558MB
+P3      packingList_002_invoicePONum_FE-20154-25_WHST240559MB
+
+
+#################################################################
+### S2_S01987833
+#################################################################
+data/Data Extraction/Scenario 2/S01987833/EFOE25060736.PDF
+P1      TATM-220109
+
+data/Data Extraction/Scenario 2/S01987833/EFOE25060736[2].PDF
+P1      TATM-220109 PO00067845
+P2      TATM-220109 PO00067846
+P3      TATM-220109 PO00067562
+P4      TATM-220109 PO00067563
+P5      TATM-220109 PO00067558
+
+data/Data Extraction/Scenario 2/S01987833/_docPouch.pdf
+P1      invoice_001_combined_TATM-220109
+P2      packingList_001_invoicePONum_TATM-220109_PO00067845
+P3      packingList_002_invoicePONum_TATM-220109_PO00067846
+P4      packingList_003_invoicePONum_TATM-220109_PO00067562
+P5      packingList_004_invoicePONum_TATM-220109_PO00067563
+P6      packingList_005_invoicePONum_TATM-220109_PO00067558

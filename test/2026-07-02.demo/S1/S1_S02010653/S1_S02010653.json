@@ -1,0 +1,195 @@
+{
+  "res": {
+    "id": "299344e9-c223-476d-aa18-3f082fa26bc5",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "299344e9-c223-476d-aa18-3f082fa26bc5",
+    "fileName": "_docPouch.pdf",
+    "fileSize": 47525,
+    "fileExt": ".pdf",
+    "datetime": "2026-07-01T21:53:50"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 47525,
+      "path": "fea0ef5e6ed7298edfa8e15de52dead41cc609c3c25dcaffb6b912cbb84d3797d4a5d0cc79c1326a56484d03cf39dff11807cceb40cb56a836571c967e956b198b13b79cad5b3481bc47af2686746b5808cb5441e865d3cbb430f44238178b0556175bf19db46c050a1216ec6cf0b093a7c8339242a60649f3abc73570711f4dbbc67441f5f5976325a7f180b07a265da711a06212e734fb8f982c0f93d9cda8ef351f16e7c167c43efaf9df77485c61136b059943358f6c00f8/log/2026/07/api/v2.AI.LLM.gemini.query/29/9344e9-c223-476d-aa18-3f082fa26bc5/upload.pdf",
+      "token": "fea0ef5e6ed7298edfa8e15de52dead41cc609c3c25dcaffb6b912cbb84d3797d4a5d0cc79c1326a56484d03cf39dff11807cceb40cb56a836571c967e956b198b13b79cad5b3481bc47af2686746b5808cb5441e865d3cbb430f44238178b0556175bf19db46c050a1216ec6cf0b093a7c8339242a60649f3abc73570711f4dbbc67441f5f5976325a7f180b07a265da711a06212e734fb8f982c0f93d9cda8ef351f16e7c167c43efaf9df77485c61136b059943358f6c00f8",
+      "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/fea0ef5e6ed7298edfa8e15de52dead41cc609c3c25dcaffb6b912cbb84d3797d4a5d0cc79c1326a56484d03cf39dff11807cceb40cb56a836571c967e956b198b13b79cad5b3481bc47af2686746b5808cb5441e865d3cbb430f44238178b0556175bf19db46c050a1216ec6cf0b093a7c8339242a60649f3abc73570711f4dbbc67441f5f5976325a7f180b07a265da711a06212e734fb8f982c0f93d9cda8ef351f16e7c167c43efaf9df77485c61136b059943358f6c00f8/log/2026/07/api/v2.AI.LLM.gemini.query/29/9344e9-c223-476d-aa18-3f082fa26bc5/upload.pdf"
+    }
+  },
+  "result": {
+    "error": "",
+    "jsonData": {
+      "classifications": [
+        {
+          "pageNum": 1,
+          "docType": "invoice",
+          "layout": "combined",
+          "docNum": "HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025",
+          "docTypeGroupId": "invoice_001_combined_HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025",
+          "score": 95,
+          "reason": "Explicitly titled 'INVOICE' with multiple invoice and PI numbers listed in the header."
+        },
+        {
+          "pageNum": 2,
+          "docType": "invoice",
+          "layout": "combined",
+          "docNum": "HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025",
+          "docTypeGroupId": "invoice_001_combined_HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025",
+          "score": 95,
+          "reason": "Continuation of the invoice started on page 1."
+        },
+        {
+          "pageNum": 3,
+          "docType": "invoice",
+          "layout": "combined",
+          "docNum": "HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025",
+          "docTypeGroupId": "invoice_001_combined_HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025",
+          "score": 95,
+          "reason": "Continuation of the invoice started on page 1."
+        },
+        {
+          "pageNum": 4,
+          "docType": "invoice",
+          "layout": "combined",
+          "docNum": "HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025",
+          "docTypeGroupId": "invoice_001_combined_HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025",
+          "score": 95,
+          "reason": "Final page of the combined invoice containing the total."
+        },
+        {
+          "pageNum": 5,
+          "docType": "packingList",
+          "layout": "combined",
+          "docNum": "HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025,5181763,1921934,1924097,1925863,5181958,5180647,5181084,5181778",
+          "docTypeGroupId": "packingList_001_combined_5181763,1921934,1924097,1925863,5181958,5180647,5181084,5181778",
+          "score": 95,
+          "reason": "Explicitly titled 'Packing List' with multiple PO numbers and PI/Invoice numbers listed in the header."
+        },
+        {
+          "pageNum": 6,
+          "docType": "packingList",
+          "layout": "combined",
+          "docNum": "HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025,5181763,1921934,1924097,1925863,5181958,5180647,5181084,5181778",
+          "docTypeGroupId": "packingList_001_combined_5181763,1921934,1924097,1925863,5181958,5180647,5181084,5181778",
+          "score": 95,
+          "reason": "Continuation of the packing list started on page 5."
+        },
+        {
+          "pageNum": 7,
+          "docType": "packingList",
+          "layout": "combined",
+          "docNum": "HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025,5181763,1921934,1924097,1925863,5181958,5180647,5181084,5181778",
+          "docTypeGroupId": "packingList_001_combined_5181763,1921934,1924097,1925863,5181958,5180647,5181084,5181778",
+          "score": 95,
+          "reason": "Continuation of the packing list started on page 5."
+        },
+        {
+          "pageNum": 8,
+          "docType": "packingList",
+          "layout": "combined",
+          "docNum": "HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025,5181763,1921934,1924097,1925863,5181958,5180647,5181084,5181778",
+          "docTypeGroupId": "packingList_001_combined_5181763,1921934,1924097,1925863,5181958,5180647,5181084,5181778",
+          "score": 95,
+          "reason": "Final page of the combined packing list containing the summary totals."
+        },
+        {
+          "pageNum": 9,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "HT08-806/2025",
+          "docTypeGroupId": "invoice_002_standard_HT08-806/2025",
+          "score": 98,
+          "reason": "Explicitly titled 'INVOICE' with a single, unique invoice number HT08-806/2025."
+        },
+        {
+          "pageNum": 10,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "HT08-806/2025,5181768",
+          "docTypeGroupId": "packingList_002_invoicePONum_HT08-806/2025_5181768",
+          "score": 98,
+          "reason": "Explicitly titled 'Packing List' and identified by the associated Invoice number HT08-806/2025 and PO number 5181768."
+        },
+        {
+          "pageNum": 11,
+          "docType": "unknown",
+          "layout": "",
+          "docNum": "",
+          "docTypeGroupId": "unknown",
+          "score": 100,
+          "reason": "The page is blank."
+        }
+      ],
+      "classificationGroups": [
+        {
+          "docTypeGroupId": "invoice_001_combined_HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025",
+          "docType": "invoice",
+          "layout": "combined",
+          "pageNums": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "score": 95,
+          "reason": "Four pages form a single combined invoice defined by the set of invoice numbers in the header."
+        },
+        {
+          "docTypeGroupId": "packingList_001_combined_5181763,1921934,1924097,1925863,5181958,5180647,5181084,5181778",
+          "docType": "packingList",
+          "layout": "combined",
+          "pageNums": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "score": 95,
+          "reason": "Four pages form a single combined packing list defined by the set of purchase order numbers in the header."
+        },
+        {
+          "docTypeGroupId": "invoice_002_standard_HT08-806/2025",
+          "docType": "invoice",
+          "layout": "standard",
+          "pageNums": [
+            9
+          ],
+          "score": 98,
+          "reason": "A single-page standard invoice."
+        },
+        {
+          "docTypeGroupId": "packingList_002_invoicePONum_HT08-806/2025_5181768",
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "pageNums": [
+            10
+          ],
+          "score": 98,
+          "reason": "A single-page packing list identified by its header invoice and PO numbers."
+        },
+        {
+          "docTypeGroupId": "unknown",
+          "docType": "unknown",
+          "layout": "",
+          "pageNums": [
+            11
+          ],
+          "score": 100,
+          "reason": "A blank page."
+        }
+      ]
+    },
+    "stats": {
+      "inputToken": 7298,
+      "outputToken": 3482,
+      "totalToken": 14129,
+      "inputCacheToken": 0,
+      "outputThoughtToken": 3349,
+      "outputToolUseToken": 0,
+      "elapsedMs": 36197
+    }
+  }
+}

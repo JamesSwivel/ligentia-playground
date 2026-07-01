@@ -1,0 +1,136 @@
+{
+  "res": {
+    "id": "c2583f19-8bb8-4151-9afd-bacd5ea47e6a",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "c2583f19-8bb8-4151-9afd-bacd5ea47e6a",
+    "fileName": "_docPouch.pdf",
+    "fileSize": 523418,
+    "fileExt": ".pdf",
+    "datetime": "2026-07-01T21:21:24"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 523418,
+      "path": "21018b0b9a2aea761471c1dd6bf6949b9402edf4f5b1a4c77b018d46a4e0364ff172f71eb5465e0075d4c06948b76a7f9d678277f4f2191e06b4aecd7417722b0649f6908c8db96a762a4179c4d1f73f7df143ec277127db07566f3ba118c6413fb04fff3383e3d889c69259f4a2ee4b5f45dfd6a9bad5b9dc463f275454ebbee57d250667606cdf62024d9b909626b302ec04bb572f8f9fab94b2340766e34bc239c3e4b3b4ecc8733be6643b10868fec36ac467cf352caa1fc/log/2026/07/api/v2.AI.LLM.gemini.query/c2/583f19-8bb8-4151-9afd-bacd5ea47e6a/upload.pdf",
+      "token": "21018b0b9a2aea761471c1dd6bf6949b9402edf4f5b1a4c77b018d46a4e0364ff172f71eb5465e0075d4c06948b76a7f9d678277f4f2191e06b4aecd7417722b0649f6908c8db96a762a4179c4d1f73f7df143ec277127db07566f3ba118c6413fb04fff3383e3d889c69259f4a2ee4b5f45dfd6a9bad5b9dc463f275454ebbee57d250667606cdf62024d9b909626b302ec04bb572f8f9fab94b2340766e34bc239c3e4b3b4ecc8733be6643b10868fec36ac467cf352caa1fc",
+      "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/21018b0b9a2aea761471c1dd6bf6949b9402edf4f5b1a4c77b018d46a4e0364ff172f71eb5465e0075d4c06948b76a7f9d678277f4f2191e06b4aecd7417722b0649f6908c8db96a762a4179c4d1f73f7df143ec277127db07566f3ba118c6413fb04fff3383e3d889c69259f4a2ee4b5f45dfd6a9bad5b9dc463f275454ebbee57d250667606cdf62024d9b909626b302ec04bb572f8f9fab94b2340766e34bc239c3e4b3b4ecc8733be6643b10868fec36ac467cf352caa1fc/log/2026/07/api/v2.AI.LLM.gemini.query/c2/583f19-8bb8-4151-9afd-bacd5ea47e6a/upload.pdf"
+    }
+  },
+  "result": {
+    "error": "",
+    "jsonData": {
+      "classifications": [
+        {
+          "pageNum": 1,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "832A",
+          "docTypeGroupId": "invoice_001_standard_832A",
+          "score": 100,
+          "reason": "Explicitly labeled as INVOICE with number 832A. Page 1 of 2."
+        },
+        {
+          "pageNum": 2,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "832A",
+          "docTypeGroupId": "invoice_001_standard_832A",
+          "score": 100,
+          "reason": "Explicitly labeled as INVOICE with number 832A. Page 2 of 2."
+        },
+        {
+          "pageNum": 3,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "831A",
+          "docTypeGroupId": "invoice_002_standard_831A",
+          "score": 100,
+          "reason": "Explicitly labeled as INVOICE with number 831A. Page 1 of 1."
+        },
+        {
+          "pageNum": 4,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "830B",
+          "docTypeGroupId": "invoice_003_standard_830B",
+          "score": 100,
+          "reason": "Explicitly labeled as INVOICE with number 830B. Page 1 of 1."
+        },
+        {
+          "pageNum": 5,
+          "docType": "packingList",
+          "layout": "combined",
+          "docNum": "830B,831A,832A,5170072,5170408,5170790",
+          "docTypeGroupId": "packingList_001_combined_5170072,5170408,5170790",
+          "score": 100,
+          "reason": "Explicitly labeled as PACKING LIST. Line items are broken down by multiple PO and Invoice numbers (5170072/830B, 5170408/831A, 5170790/832A)."
+        },
+        {
+          "pageNum": 6,
+          "docType": "packingList",
+          "layout": "combined",
+          "docNum": "830B,831A,832A,5170072,5170408,5170790",
+          "docTypeGroupId": "packingList_001_combined_5170072,5170408,5170790",
+          "score": 100,
+          "reason": "Explicitly labeled as PACKING LIST. Continuation of combined packing list 12/28UK."
+        }
+      ],
+      "classificationGroups": [
+        {
+          "docTypeGroupId": "invoice_001_standard_832A",
+          "docType": "invoice",
+          "layout": "standard",
+          "pageNums": [
+            1,
+            2
+          ],
+          "score": 100,
+          "reason": "These pages belong to a single invoice with header number 832A."
+        },
+        {
+          "docTypeGroupId": "invoice_002_standard_831A",
+          "docType": "invoice",
+          "layout": "standard",
+          "pageNums": [
+            3
+          ],
+          "score": 100,
+          "reason": "This page is a standalone invoice with header number 831A."
+        },
+        {
+          "docTypeGroupId": "invoice_003_standard_830B",
+          "docType": "invoice",
+          "layout": "standard",
+          "pageNums": [
+            4
+          ],
+          "score": 100,
+          "reason": "This page is a standalone invoice with header number 830B."
+        },
+        {
+          "docTypeGroupId": "packingList_001_combined_5170072,5170408,5170790",
+          "docType": "packingList",
+          "layout": "combined",
+          "pageNums": [
+            5,
+            6
+          ],
+          "score": 100,
+          "reason": "These pages belong to a combined packing list containing multiple PO and Invoice references in the line items."
+        }
+      ]
+    },
+    "stats": {
+      "inputToken": 4638,
+      "outputToken": 1174,
+      "totalToken": 8709,
+      "inputCacheToken": 0,
+      "outputThoughtToken": 2897,
+      "outputToolUseToken": 0,
+      "elapsedMs": 27219
+    }
+  }
+}

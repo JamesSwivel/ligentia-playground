@@ -1,0 +1,75 @@
+#################################################################
+### S1_S01863302 
+#################################################################
+data/Data Extraction/Scenario 1/S01863302/CIV-KHS24120099.pdf
+P1-2    832A 
+P3      831A 
+P4      830B
+
+data/Data Extraction/Scenario 1/S01863302/PKL-KHS24120099.pdf
+P1-2    12/29UK 
+
+data/Data Extraction/Scenario 1/S01863302/_docPouch.pdf
+P1-2    invoice_001_standard_832A
+P3      invoice_002_standard_831A
+P4      invoice_003_standard_830B
+P5-6    packingList_001_combined_5170072,5170408,5170790
+
+#################################################################
+### S1_S01889327 
+#################################################################
+data/Data Extraction/Scenario 1/S01889327/CIV.pdf
+300037724 P1-5
+
+data/Data Extraction/Scenario 1/S01889327/PKL.pdf
+
+data/Data Extraction/Scenario 1/S01889327/_docPouch.pdf
+P1-5    invoice_001_standard_300037724
+P6-14   packingList_001_invoicePONum_300037724_5173737
+
+#################################################################
+### S1_S01942131
+#################################################################
+NOTE:
+- Shared invoice number layout
+- Shared packing list number layout
+
+data/Data Extraction/Scenario 1/S01942131/PO1647007 Invoice&PL.PDF
+data/Data Extraction/Scenario 1/S01942131/PO1647024W Invoice&PL.pdf
+data/Data Extraction/Scenario 1/S01942131/PO1649874 Invoice&PL.PDF
+data/Data Extraction/Scenario 1/S01942131/PO1649890W Invoice&PL.pdf
+data/Data Extraction/Scenario 1/S01942131/PO1653003 Invoice&PL.PDF (this one is taken out from test as it has wrong repeated PO1647007)
+data/Data Extraction/Scenario 1/S01942131/PO1653023 Invoice&PL.pdf
+data/Data Extraction/Scenario 1/S01942131/PO1654754 Invoice&PL.pdf
+
+data/Data Extraction/Scenario 1/S01942131/_docPouch_takeOut_PO1653003.pdf
+P1      invoice_001_sharedInvoiceNum_XY-335_PO1649874
+P2      packingList_001_sharedPackingListNum_XY-335_PO1649874
+P3      invoice_002_sharedInvoiceNum_XY-335_PO1647024W
+P4      packingList_002_sharedPackingListNum_XY-335_PO1647024W
+P5      invoice_003_sharedInvoiceNum_XY-335_PO1649874
+P6      packingList_003_sharedPackingListNum_XY-335_PO1649874
+P7      invoice_004_sharedInvoiceNum_XY-335_PO1649890W
+P8      packingList_004_sharedPackingListNum_XY-335_PO1649890W
+P9      invoice_005_sharedInvoiceNum_XY-335_PO1653023
+P10     packingList_005_sharedPackingListNum_XY-335_PO1653023
+P11     invoice_006_sharedInvoiceNum_XY-335_PO1654754
+P12     packingList_006_sharedPackingListNum_XY-335_PO1654754
+
+
+#################################################################
+### S1_S02010653
+#################################################################
+NOTE:
+- Combined invoice layout
+- Combined packing list layout
+data/Data Extraction/Scenario 1/S02010653/HT08-800INVOICE&PACKING LIST[3].pdf
+data/Data Extraction/Scenario 1/S02010653/HT08-806INVOICE&PACKING LIST[2].pdf
+
+data/Data Extraction/Scenario 1/S02010653/_docPouch.pdf
+P1-4    invoice_001_combined_HT08-800/2025,HT08-956/2025,HT08-957/2025,HT08-958/2025,HT08-861/2025,HT08-671-2/2025,HT08-684-2/2025,HT08-816-2/2025
+P5-8    packingList_001_combined_5181763,1921934,1924097,1925863,5181958,5180647,5181084,5181778
+P9      invoice_002_standard_HT08-806/2025
+P10     packingList_002_invoicePONum_HT08-806/2025_5181768
+P11     unknown (correct)
+

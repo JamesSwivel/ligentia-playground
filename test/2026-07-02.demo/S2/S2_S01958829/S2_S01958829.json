@@ -1,0 +1,97 @@
+{
+  "res": {
+    "id": "e0b1966d-958d-49ec-acbe-5963f109e5b7",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "e0b1966d-958d-49ec-acbe-5963f109e5b7",
+    "fileName": "_docPouch.pdf",
+    "fileSize": 312750,
+    "fileExt": ".pdf",
+    "datetime": "2026-07-01T22:04:58"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 312750,
+      "path": "16490a8257398115944d2ed4d42efc7d3866772619d8be73e488b275456be542c6274af25069379511f0bb1d36c684ce87992af1e82256eaa6d1dc8665673314c022c4d60d4d810989b488cd90046440d5779e17a48dd531ee02ad68897f6f9876cba949c87b1236295b37a7ac8799248395c84b615daf277af8ad5966ebccd8389cb1eabdfb52244892f8034a892d6609b6c5f358fcad90c2f3a37f62f26f27795d50deb85cde8e3a52b1f492e614cb6422feb956620579d047/log/2026/07/api/v2.AI.LLM.gemini.query/e0/b1966d-958d-49ec-acbe-5963f109e5b7/upload.pdf",
+      "token": "16490a8257398115944d2ed4d42efc7d3866772619d8be73e488b275456be542c6274af25069379511f0bb1d36c684ce87992af1e82256eaa6d1dc8665673314c022c4d60d4d810989b488cd90046440d5779e17a48dd531ee02ad68897f6f9876cba949c87b1236295b37a7ac8799248395c84b615daf277af8ad5966ebccd8389cb1eabdfb52244892f8034a892d6609b6c5f358fcad90c2f3a37f62f26f27795d50deb85cde8e3a52b1f492e614cb6422feb956620579d047",
+      "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/16490a8257398115944d2ed4d42efc7d3866772619d8be73e488b275456be542c6274af25069379511f0bb1d36c684ce87992af1e82256eaa6d1dc8665673314c022c4d60d4d810989b488cd90046440d5779e17a48dd531ee02ad68897f6f9876cba949c87b1236295b37a7ac8799248395c84b615daf277af8ad5966ebccd8389cb1eabdfb52244892f8034a892d6609b6c5f358fcad90c2f3a37f62f26f27795d50deb85cde8e3a52b1f492e614cb6422feb956620579d047/log/2026/07/api/v2.AI.LLM.gemini.query/e0/b1966d-958d-49ec-acbe-5963f109e5b7/upload.pdf"
+    }
+  },
+  "result": {
+    "error": "",
+    "jsonData": {
+      "classifications": [
+        {
+          "pageNum": 1,
+          "docType": "invoice",
+          "layout": "standard",
+          "docNum": "FE-20154-25",
+          "docTypeGroupId": "invoice_001_standard_FE-20154-25",
+          "score": 100,
+          "reason": "The document is explicitly titled 'INVOICE' with a unique invoice number FE-20154-25 in the header."
+        },
+        {
+          "pageNum": 2,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "FE-20154-25,WHST240558MB",
+          "docTypeGroupId": "packingList_001_invoicePONum_FE-20154-25_WHST240558MB",
+          "score": 100,
+          "reason": "The document is titled 'PACKING LIST' and lacks a dedicated packing list number, identifying instead via invoice number FE-20154-25 and PO reference WHST240558MB."
+        },
+        {
+          "pageNum": 3,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "FE-20154-25,WHST240559MB",
+          "docTypeGroupId": "packingList_002_invoicePONum_FE-20154-25_WHST240559MB",
+          "score": 100,
+          "reason": "The document is titled 'PACKING LIST' and identifies via invoice number FE-20154-25 and a distinct PO reference WHST240559MB."
+        }
+      ],
+      "classificationGroups": [
+        {
+          "docTypeGroupId": "invoice_001_standard_FE-20154-25",
+          "docType": "invoice",
+          "layout": "standard",
+          "pageNums": [
+            1
+          ],
+          "score": 100,
+          "reason": "Page 1 is a standalone invoice document."
+        },
+        {
+          "docTypeGroupId": "packingList_001_invoicePONum_FE-20154-25_WHST240558MB",
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "pageNums": [
+            2
+          ],
+          "score": 100,
+          "reason": "Page 2 is a specific packing list associated with PO reference WHST240558MB."
+        },
+        {
+          "docTypeGroupId": "packingList_002_invoicePONum_FE-20154-25_WHST240559MB",
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "pageNums": [
+            3
+          ],
+          "score": 100,
+          "reason": "Page 3 is a separate packing list associated with PO reference WHST240559MB."
+        }
+      ]
+    },
+    "stats": {
+      "inputToken": 3042,
+      "outputToken": 791,
+      "totalToken": 6840,
+      "inputCacheToken": 0,
+      "outputThoughtToken": 3007,
+      "outputToolUseToken": 0,
+      "elapsedMs": 22807
+    }
+  }
+}

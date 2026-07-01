@@ -1,0 +1,154 @@
+{
+  "res": {
+    "id": "255d4dda-52df-419d-a0c6-67276207fcf9",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "255d4dda-52df-419d-a0c6-67276207fcf9",
+    "fileName": "_docPouch.pdf",
+    "fileSize": 2998731,
+    "fileExt": ".pdf",
+    "datetime": "2026-07-01T22:13:31"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 2998731,
+      "path": "e41b997bde351949a2112ef6cef507d84db7558385dc0e4278f3096c46ebf91f4e9236d302cf443b0abd851ff23c9269edba5677842432c9f6d4ac2591e8e5686a0d6dd8439edbf981abfa861b4432eda47cc0af344bdf9144d6e118f1ebe280d4672c966b839fc450d4dbe70e50005cbe9540e81b9284956de9344a7a116c3ac55a5caca6b114dae43cff6c8256f9b4340e58354785d92a23f67a318a53e8f2d6a96fa08435c0071d598d30757d9dc8faa37bb29e936501361e/log/2026/07/api/v2.AI.LLM.gemini.query/25/5d4dda-52df-419d-a0c6-67276207fcf9/upload.pdf",
+      "token": "e41b997bde351949a2112ef6cef507d84db7558385dc0e4278f3096c46ebf91f4e9236d302cf443b0abd851ff23c9269edba5677842432c9f6d4ac2591e8e5686a0d6dd8439edbf981abfa861b4432eda47cc0af344bdf9144d6e118f1ebe280d4672c966b839fc450d4dbe70e50005cbe9540e81b9284956de9344a7a116c3ac55a5caca6b114dae43cff6c8256f9b4340e58354785d92a23f67a318a53e8f2d6a96fa08435c0071d598d30757d9dc8faa37bb29e936501361e",
+      "link": "https://aiocr-llm-api-staging.swivel.dev/download/fileWithToken/e41b997bde351949a2112ef6cef507d84db7558385dc0e4278f3096c46ebf91f4e9236d302cf443b0abd851ff23c9269edba5677842432c9f6d4ac2591e8e5686a0d6dd8439edbf981abfa861b4432eda47cc0af344bdf9144d6e118f1ebe280d4672c966b839fc450d4dbe70e50005cbe9540e81b9284956de9344a7a116c3ac55a5caca6b114dae43cff6c8256f9b4340e58354785d92a23f67a318a53e8f2d6a96fa08435c0071d598d30757d9dc8faa37bb29e936501361e/log/2026/07/api/v2.AI.LLM.gemini.query/25/5d4dda-52df-419d-a0c6-67276207fcf9/upload.pdf"
+    }
+  },
+  "result": {
+    "error": "",
+    "jsonData": {
+      "classifications": [
+        {
+          "pageNum": 1,
+          "docType": "invoice",
+          "layout": "combined",
+          "docNum": "TATM-220109",
+          "docTypeGroupId": "invoice_001_combined_TATM-220109",
+          "score": 100,
+          "reason": "The document is titled 'COMMERCIAL INVOICE' with a unique invoice number TATM-220109. It lists multiple PO numbers in the header and breaks down line items by PO number, fitting the combined layout."
+        },
+        {
+          "pageNum": 2,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "TATM-220109,PO00067845",
+          "docTypeGroupId": "packingList_001_invoicePONum_TATM-220109_PO00067845",
+          "score": 100,
+          "reason": "The document is titled 'PACKING LIST' and identifies by both an invoice number (TATM-220109) and a specific PO number (PO00067845) in the header, with no separate packing list number."
+        },
+        {
+          "pageNum": 3,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "TATM-220109,PO00067846",
+          "docTypeGroupId": "packingList_002_invoicePONum_TATM-220109_PO00067846",
+          "score": 100,
+          "reason": "The document is titled 'PACKING LIST' and identifies by both an invoice number (TATM-220109) and a specific PO number (PO00067846) in the header, with no separate packing list number."
+        },
+        {
+          "pageNum": 4,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "TATM-220109,PO00067562",
+          "docTypeGroupId": "packingList_003_invoicePONum_TATM-220109_PO00067562",
+          "score": 100,
+          "reason": "The document is titled 'PACKING LIST' and identifies by both an invoice number (TATM-220109) and a specific PO number (PO00067562) in the header, with no separate packing list number."
+        },
+        {
+          "pageNum": 5,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "TATM-220109,PO00067563",
+          "docTypeGroupId": "packingList_004_invoicePONum_TATM-220109_PO00067563",
+          "score": 100,
+          "reason": "The document is titled 'PACKING LIST' and identifies by both an invoice number (TATM-220109) and a specific PO number (PO00067563) in the header, with no separate packing list number."
+        },
+        {
+          "pageNum": 6,
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "docNum": "TATM-220109,PO00067558",
+          "docTypeGroupId": "packingList_005_invoicePONum_TATM-220109_PO00067558",
+          "score": 100,
+          "reason": "The document is titled 'PACKING LIST' and identifies by both an invoice number (TATM-220109) and a specific PO number (PO00067558) in the header, with no separate packing list number."
+        }
+      ],
+      "classificationGroups": [
+        {
+          "docTypeGroupId": "invoice_001_combined_TATM-220109",
+          "docType": "invoice",
+          "layout": "combined",
+          "pageNums": [
+            1
+          ],
+          "score": 100,
+          "reason": "Single page commercial invoice with multiple PO references and line item breakdown."
+        },
+        {
+          "docTypeGroupId": "packingList_001_invoicePONum_TATM-220109_PO00067845",
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "pageNums": [
+            2
+          ],
+          "score": 100,
+          "reason": "Packing list uniquely identifying the shipment for PO00067845 under invoice TATM-220109."
+        },
+        {
+          "docTypeGroupId": "packingList_002_invoicePONum_TATM-220109_PO00067846",
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "pageNums": [
+            3
+          ],
+          "score": 100,
+          "reason": "Packing list uniquely identifying the shipment for PO00067846 under invoice TATM-220109."
+        },
+        {
+          "docTypeGroupId": "packingList_003_invoicePONum_TATM-220109_PO00067562",
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "pageNums": [
+            4
+          ],
+          "score": 100,
+          "reason": "Packing list uniquely identifying the shipment for PO00067562 under invoice TATM-220109."
+        },
+        {
+          "docTypeGroupId": "packingList_004_invoicePONum_TATM-220109_PO00067563",
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "pageNums": [
+            5
+          ],
+          "score": 100,
+          "reason": "Packing list uniquely identifying the shipment for PO00067563 under invoice TATM-220109."
+        },
+        {
+          "docTypeGroupId": "packingList_005_invoicePONum_TATM-220109_PO00067558",
+          "docType": "packingList",
+          "layout": "invoicePONum",
+          "pageNums": [
+            6
+          ],
+          "score": 100,
+          "reason": "Packing list uniquely identifying the shipment for PO00067558 under invoice TATM-220109."
+        }
+      ]
+    },
+    "stats": {
+      "inputToken": 4638,
+      "outputToken": 1717,
+      "totalToken": 13276,
+      "inputCacheToken": 0,
+      "outputThoughtToken": 6921,
+      "outputToolUseToken": 0,
+      "elapsedMs": 49625
+    }
+  }
+}
