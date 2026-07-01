@@ -1,0 +1,114 @@
+{
+  "res": {
+    "id": "b192c2e1-0995-4e5e-9312-5e8a23053f0c",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "b192c2e1-0995-4e5e-9312-5e8a23053f0c",
+    "fileName": "invoice_001_standard_FE-20154-25.pdf",
+    "fileSize": 142941,
+    "fileExt": ".pdf",
+    "datetime": "2026-07-02T00:01:56"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 142941,
+      "path": "74e4ff9ae10f4eb694449774682e28ca838cb8c05a5a67f0137e42e644999c8e621218a08cb0439ba605ac167446278f2aba33922f9fe716c84938728945af689ef090e12547e67233bda0bd7ef8e73c34adf4931c3383b2517e5e20e180c626427928928f4e40d6f0c84b75a90a8d4ff0ec95cc20a630522f0aeb99d2801ad2a43706c874265f23005aa1202755899bb4a0b3f5a1552c4d38023f70750d1e2835d0c66fca82fe444e2067d0baa04f97413e4f38a2d451d8e108/log/2026/07/api/v2.AI.LLM.gemini.query/b1/92c2e1-0995-4e5e-9312-5e8a23053f0c/upload.pdf",
+      "token": "74e4ff9ae10f4eb694449774682e28ca838cb8c05a5a67f0137e42e644999c8e621218a08cb0439ba605ac167446278f2aba33922f9fe716c84938728945af689ef090e12547e67233bda0bd7ef8e73c34adf4931c3383b2517e5e20e180c626427928928f4e40d6f0c84b75a90a8d4ff0ec95cc20a630522f0aeb99d2801ad2a43706c874265f23005aa1202755899bb4a0b3f5a1552c4d38023f70750d1e2835d0c66fca82fe444e2067d0baa04f97413e4f38a2d451d8e108",
+      "link": "https://localhost.swivel.dev:8000/download/fileWithToken/74e4ff9ae10f4eb694449774682e28ca838cb8c05a5a67f0137e42e644999c8e621218a08cb0439ba605ac167446278f2aba33922f9fe716c84938728945af689ef090e12547e67233bda0bd7ef8e73c34adf4931c3383b2517e5e20e180c626427928928f4e40d6f0c84b75a90a8d4ff0ec95cc20a630522f0aeb99d2801ad2a43706c874265f23005aa1202755899bb4a0b3f5a1552c4d38023f70750d1e2835d0c66fca82fe444e2067d0baa04f97413e4f38a2d451d8e108/log/2026/07/api/v2.AI.LLM.gemini.query/b1/92c2e1-0995-4e5e-9312-5e8a23053f0c/upload.pdf"
+    }
+  },
+  "result": {
+    "error": "",
+    "jsonData": {
+      "dateOfIssue": "2025-04-29",
+      "issueFrom": {
+        "companyName": "flex (far east) ltd.",
+        "rawAddressLines": "HIVE ON SEVEN,7/F, CHEUNG HING INDUSTRIAL BUILDING,12P SMITHFIELD, KENNEDY TOWN,HONG KONG\nTEL. : 852 -3741 2816",
+        "addr1": "HIVE ON SEVEN,7/F",
+        "addr2": "CHEUNG HING INDUSTRIAL BUILDING,12P SMITHFIELD",
+        "addr3": "KENNEDY TOWN",
+        "addr4": "",
+        "addressSingleLine": "HIVE ON SEVEN,7/F, CHEUNG HING INDUSTRIAL BUILDING,12P SMITHFIELD, KENNEDY TOWN, HONG KONG",
+        "state": "",
+        "stateCode": "",
+        "zip": "",
+        "country": "HONG KONG",
+        "countryCode": "HK",
+        "email": "",
+        "phone": "852 -3741 2816",
+        "fax": "",
+        "contactPerson": "",
+        "taxID": ""
+      },
+      "issueTo": {
+        "companyName": "WHITE STUFF LIMITED",
+        "rawAddressLines": "WHITE STUFF LIMITED\nCANTERBURY COURT,KENNINGTON PARK, 1-3,\nBRIXTON ROAD\nLONDON SW9, 6DE\nUNITED KINGDOM\nVAT NO.: GB 974 972 851",
+        "addr1": "CANTERBURY COURT,KENNINGTON PARK, 1-3",
+        "addr2": "BRIXTON ROAD",
+        "addr3": "LONDON SW9, 6DE",
+        "addr4": "",
+        "addressSingleLine": "CANTERBURY COURT, KENNINGTON PARK, 1-3, BRIXTON ROAD, LONDON SW9, 6DE, UNITED KINGDOM",
+        "state": "",
+        "stateCode": "",
+        "zip": "SW9, 6DE",
+        "country": "UNITED KINGDOM",
+        "countryCode": "GB",
+        "email": "",
+        "phone": "",
+        "fax": "",
+        "contactPerson": "",
+        "taxID": "VAT: GB 974 972 851"
+      },
+      "invoiceDate": "2025-04-29",
+      "invoiceNum": "FE-20154-25",
+      "invoiceCurrency": "USD",
+      "totalLineItems": 2,
+      "totalQty": 1495,
+      "totalAmount": 18328.7,
+      "incoterms": "FOB",
+      "countryOfOrigin": "KH",
+      "invoiceItems": [
+        {
+          "lineNum": 1,
+          "qty": 1295,
+          "code": "444423",
+          "desc": "LADIE'S 95% VISCOSE LIVAECO 5% ELASTANE KNITTED DRESS [ TALLIE JERSEY DRESS ]",
+          "remark": "Our PO No.: WHST240558MB",
+          "unitPrice": 12.26,
+          "amount": 15876.7,
+          "PONum": "PO00066932",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 2,
+          "qty": 200,
+          "code": "444423",
+          "desc": "LADIE'S 95% VISCOSE LIVAECO 5% ELASTANE KNITTED DRESS [ TALLIE JERSEY DRESS ]",
+          "remark": "Our PO No.: WHST240559MB",
+          "unitPrice": 12.26,
+          "amount": 2452,
+          "PONum": "PO00066932",
+          "extra": {
+            "size": ""
+          }
+        }
+      ],
+      "isMultipleInvoices": false,
+      "multipleInvoices": [],
+      "error": ""
+    },
+    "stats": {
+      "inputToken": 2694,
+      "outputToken": 1030,
+      "totalToken": 6351,
+      "inputCacheToken": 0,
+      "outputThoughtToken": 2627,
+      "outputToolUseToken": 0,
+      "elapsedMs": 22707
+    }
+  }
+}

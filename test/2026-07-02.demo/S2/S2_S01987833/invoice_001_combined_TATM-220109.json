@@ -1,0 +1,166 @@
+{
+  "res": {
+    "id": "f328e078-1616-4d9d-9321-93033db15cec",
+    "reqId": "string"
+  },
+  "upload": {
+    "id": "f328e078-1616-4d9d-9321-93033db15cec",
+    "fileName": "invoice_001_combined_TATM-220109.pdf",
+    "fileSize": 483764,
+    "fileExt": ".pdf",
+    "datetime": "2026-07-02T00:12:04"
+  },
+  "doc": {
+    "fileUrl": {
+      "fileName": "upload.pdf",
+      "fileSize": 483764,
+      "path": "fc759131320eb99cf93d36d6fa4236bf4ca1d80b15a779e696aa54bf52efefe02140cbb15a93e5b6789ca658506f33dd2c75126a402cf2ac367b977c941ad6f5bf4556407255d85029baee3f0dd0e1ab9442c44e14549554582a7d4cf4a691f6962ec221b908060f5ea7c9d7b12aa4aa1e85e24b80641036e9d880218d8d642370b4626ecc2f2ddbc195db6b2ad63fb1a9246d1594df264264125ac7667e67ccf4a62dd77275bc025e4fb2526ac0a206f64d1a4671f2cb1fe632/log/2026/07/api/v2.AI.LLM.gemini.query/f3/28e078-1616-4d9d-9321-93033db15cec/upload.pdf",
+      "token": "fc759131320eb99cf93d36d6fa4236bf4ca1d80b15a779e696aa54bf52efefe02140cbb15a93e5b6789ca658506f33dd2c75126a402cf2ac367b977c941ad6f5bf4556407255d85029baee3f0dd0e1ab9442c44e14549554582a7d4cf4a691f6962ec221b908060f5ea7c9d7b12aa4aa1e85e24b80641036e9d880218d8d642370b4626ecc2f2ddbc195db6b2ad63fb1a9246d1594df264264125ac7667e67ccf4a62dd77275bc025e4fb2526ac0a206f64d1a4671f2cb1fe632",
+      "link": "https://localhost.swivel.dev:8000/download/fileWithToken/fc759131320eb99cf93d36d6fa4236bf4ca1d80b15a779e696aa54bf52efefe02140cbb15a93e5b6789ca658506f33dd2c75126a402cf2ac367b977c941ad6f5bf4556407255d85029baee3f0dd0e1ab9442c44e14549554582a7d4cf4a691f6962ec221b908060f5ea7c9d7b12aa4aa1e85e24b80641036e9d880218d8d642370b4626ecc2f2ddbc195db6b2ad63fb1a9246d1594df264264125ac7667e67ccf4a62dd77275bc025e4fb2526ac0a206f64d1a4671f2cb1fe632/log/2026/07/api/v2.AI.LLM.gemini.query/f3/28e078-1616-4d9d-9321-93033db15cec/upload.pdf"
+    }
+  },
+  "result": {
+    "error": "",
+    "jsonData": {
+      "dateOfIssue": "2025-06-17",
+      "issueFrom": {
+        "companyName": "TUSKER APPAREL TRADING AND MARKETING W.L.L.",
+        "rawAddressLines": "TUSKER APPAREL TRADING AND MARKETING W.L.L.\nSHOP NO.16, BLDG NO.15B, ROAD NO.3304,\nBLOCK NO.633, AL MA'AMEER, P.O. BOX:32886\nKINGDOM OF BAHRAIN.",
+        "addr1": "SHOP NO.16, BLDG NO.15B",
+        "addr2": "ROAD NO.3304, BLOCK NO.633",
+        "addr3": "AL MA'AMEER",
+        "addr4": "P.O. BOX:32886",
+        "addressSingleLine": "SHOP NO.16, BLDG NO.15B, ROAD NO.3304, BLOCK NO.633, AL MA'AMEER, P.O. BOX:32886, KINGDOM OF BAHRAIN.",
+        "state": "",
+        "stateCode": "",
+        "zip": "32886",
+        "country": "KINGDOM OF BAHRAIN",
+        "countryCode": "BH",
+        "email": "",
+        "phone": "",
+        "fax": "",
+        "contactPerson": "",
+        "taxID": ""
+      },
+      "issueTo": {
+        "companyName": "WHITE STUFF LIMITED",
+        "rawAddressLines": "WHITE STUFF LIMITED\nCANTERBURY COURT, KENNINGTON PARK, 1-3,\nBRIXTON ROAD,\nLONDON SW9, 6DE,\nUNITED KINGDOM.",
+        "addr1": "CANTERBURY COURT, KENNINGTON PARK",
+        "addr2": "1-3, BRIXTON ROAD",
+        "addr3": "LONDON SW9, 6DE",
+        "addr4": "",
+        "addressSingleLine": "CANTERBURY COURT, KENNINGTON PARK, 1-3, BRIXTON ROAD, LONDON SW9, 6DE, UNITED KINGDOM.",
+        "state": "",
+        "stateCode": "",
+        "zip": "SW9 6DE",
+        "country": "UNITED KINGDOM",
+        "countryCode": "GB",
+        "email": "",
+        "phone": "",
+        "fax": "",
+        "contactPerson": "",
+        "taxID": ""
+      },
+      "invoiceDate": "2025-06-17",
+      "invoiceNum": "TATM-220109",
+      "invoiceCurrency": "USD",
+      "totalLineItems": 6,
+      "totalQty": 18925,
+      "totalAmount": 215799.92,
+      "incoterms": "FOB",
+      "countryOfOrigin": "BD",
+      "invoiceItems": [
+        {
+          "lineNum": 1,
+          "qty": 3373,
+          "code": "444228",
+          "desc": "TIA EMB CRD SKIRT-AW25-D1",
+          "remark": "READYMADE GARMENTS\nMILLMADE 98% ORGANIC COTTON 2% SPANDEX WOVEN LADIES SKIRT\nMILLMADE 87% ORGANIC COTTON 13% LENZING TENCEL WOVEN LADIES SKIRT\nHS CODE : 6204.52.00",
+          "unitPrice": 13.1,
+          "amount": 44186.3,
+          "PONum": "PO00067845 HS",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 2,
+          "qty": 3066,
+          "code": "444417",
+          "desc": "CORAL CORD SKIRT-AW25-D1",
+          "remark": "READYMADE GARMENTS\nMILLMADE 98% ORGANIC COTTON 2% SPANDEX WOVEN LADIES SKIRT\nMILLMADE 87% ORGANIC COTTON 13% LENZING TENCEL WOVEN LADIES SKIRT\nHS CODE : 6204.52.00",
+          "unitPrice": 14.3,
+          "amount": 43843.8,
+          "PONum": "PO00067846 HS",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 3,
+          "qty": 4652,
+          "code": "444227",
+          "desc": "TIA CORD SKIRT-AW25-D1",
+          "remark": "READYMADE GARMENTS\nMILLMADE 98% ORGANIC COTTON 2% SPANDEX WOVEN LADIES SKIRT\nMILLMADE 87% ORGANIC COTTON 13% LENZING TENCEL WOVEN LADIES SKIRT\nHS CODE : 6204.52.00",
+          "unitPrice": 10.33,
+          "amount": 48055.16,
+          "PONum": "PO00067562 HS",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 4,
+          "qty": 600,
+          "code": "444227",
+          "desc": "TIA CORD SKIRT-AW25-D1",
+          "remark": "READYMADE GARMENTS\nMILLMADE 98% ORGANIC COTTON 2% SPANDEX WOVEN LADIES SKIRT\nMILLMADE 87% ORGANIC COTTON 13% LENZING TENCEL WOVEN LADIES SKIRT\nHS CODE : 6204.52.00",
+          "unitPrice": 10.33,
+          "amount": 6198,
+          "PONum": "PO00067563 WS",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 5,
+          "qty": 4712,
+          "code": "444227",
+          "desc": "TIA CORD SKIRT-AW25-D1",
+          "remark": "READYMADE GARMENTS\nMILLMADE 98% ORGANIC COTTON 2% SPANDEX WOVEN LADIES SKIRT\nMILLMADE 87% ORGANIC COTTON 13% LENZING TENCEL WOVEN LADIES SKIRT\nHS CODE : 6204.52.00",
+          "unitPrice": 10.33,
+          "amount": 48674.96,
+          "PONum": "PO00067563 HS",
+          "extra": {
+            "size": ""
+          }
+        },
+        {
+          "lineNum": 6,
+          "qty": 2522,
+          "code": "444229",
+          "desc": "TIA CORD SKIRT-8W-AW25-D1",
+          "remark": "READYMADE GARMENTS\nMILLMADE 98% ORGANIC COTTON 2% SPANDEX WOVEN LADIES SKIRT\nMILLMADE 87% ORGANIC COTTON 13% LENZING TENCEL WOVEN LADIES SKIRT\nHS CODE : 6204.52.00",
+          "unitPrice": 9.85,
+          "amount": 24841.7,
+          "PONum": "PO00067558 HS",
+          "extra": {
+            "size": ""
+          }
+        }
+      ],
+      "isMultipleInvoices": false,
+      "multipleInvoices": [],
+      "error": ""
+    },
+    "stats": {
+      "inputToken": 2694,
+      "outputToken": 1931,
+      "totalToken": 9302,
+      "inputCacheToken": 0,
+      "outputThoughtToken": 4677,
+      "outputToolUseToken": 0,
+      "elapsedMs": 36216
+    }
+  }
+}
