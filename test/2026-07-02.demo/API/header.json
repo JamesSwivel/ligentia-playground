@@ -1,0 +1,34 @@
+{
+  "cbm": 127.410,
+  "bookingId": 682381,
+  "bookingNumber": "SE1208210132",
+  "clientId": 17799,
+  "clientName": "Pepco",
+  "vendorName": "KWUNG'S WISDOM (HONG KONG) CO., LIMITED",
+  "vendorClientId": 39171,
+  "vendorCargoWiseCode": "KWUWISHKKWN",
+  "supplierName": "NINGBO KWUNG'S WISDOM ART AND DESIGN CO., LTD",
+  "motherVesselName": "TOKYO TRIUMPH",
+  "motherVesselCarrierName": "COSCO",
+  "motherVesselCarrierCode": "COSCO_WW",
+  "etd": "2021-09-09T00:00:00",
+  "pol": {
+    "portCode": "CNSHA",
+    "countryCode": "CN"
+  },
+  "mot": "Sea",
+  "status": "SAApproved",
+  "deliveryMode": "FCL",
+  "cwRef": "S00972587",
+  "isReadOnly": false,
+  "isFumigated": false,
+  "containers": "40HC x 2",
+  "incoTerm": "CIF",
+  "incoTermPort": {
+    "portCode": "CNSHA",
+    "countryCode": "CN"
+  },
+  "shipmentStatus": "Created",
+  "bookingApproved": true,
+  "createdByUserId": 12413
+}
