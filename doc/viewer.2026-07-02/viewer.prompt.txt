@@ -1,0 +1,64 @@
+### Overview
+- Build a vanilla HTML/JavaScript web viewer
+- Light | Dark | System theme (default is system)
+- user preference remembered in localStorage, e.g. selected theme
+- Support doc type to view: invoice | packing list | doc classification | raw JSON
+- For raw JSON display, it should use Monaco library
+
+
+### Functions
+## File upload and 
+- The first page is upload area, accepts only JSON file
+- auto detect doc type, if the key exists
+  - result.jsonData.invoiceDate -> invoice doc type
+  - result.jsonData.packingListDate -> packing list doc type
+  - result.jsonData.classificationGroups array -> doc classification
+  - unknown type -> JSON doc type
+
+## Viewer
+- After upload, display the content according to doc type
+- For known types, the view should always display data within result.jsonData
+- For unknow type, the viewer will display raw JSON 
+- Most view contains header and detail items data.  
+- If the data has detail items, it should display like a table, and the rows has alternating colors for easier viewing
+- If table is displayed, it has basic functions
+  - export icon: export as CSV
+  - sorting (simple): it allow a single column sorting toggles: ascending/descending/original order. 
+    - For ascending/descending, it has a small badge to indicate which column is being sorted. 
+    - For the original order, no badge is needed.
+  - sorting (advanced): it allow a multiple column sorting, and each column is allowed to toggle: ascending/descending/original order. 
+    - for example, advanced users can sort item columns: 'code' (ascending), 'amount' (descending)
+  - filtering: it allows user to select single/multiple column, enter the corresponding values, and filter the rows to display
+  - sorting reset: to reset the sorting to the original order, but keep filter if previously selected
+  - filtering reset: to reset the filtering to the original data, but keep sorting if previously selected
+  - reset all: reset both sorting and filtering
+ 
+
+# Doc type: invoice
+- JSON schema example: refer to test/2026-07-02.demo/S2/S2_S01930761/invoice_001_standard_BV2503-0030.json
+- Invoice has header and detail item info
+- For detail item:
+  - if refers to result.jsonData.invoiceItems[]
+  - result.jsonData.invoiceItems[].extra is extra info that should be displayed like an icon/badge. When click it, pops up a dialog box to display the extra props.  The props are dynamic.
+
+
+# Doc type: packing list
+- JSON schema example: test/2026-07-02.demo/S2/S2_S01930761/packingList_001_invoicePONum_BV2503-0030_PO00066797.json
+- Packing list doc has header and detail item info
+- For detail item:
+  - if refers to result.jsonData.packingListItems[]
+  - result.jsonData.packingListItems[].extra is extra info that should be displayed like an icon/badge. When click it, pops up a dialog box to display the extra props.  The props are dynamic.
+
+# Doc type: unknown type but a JSON
+- Simply display in Monaco viewer (just view not edit)
+- Allow standard functions: expand, collapse, etc
+
+
+
+  
+
+
+
+
+
+

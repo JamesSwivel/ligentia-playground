@@ -1,0 +1,106 @@
+/* Theme tokens. app.css must reference only these custom properties, never hardcode colors. */
+
+:root,
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-elevated: #ffffff;
+  --fg: #16181d;
+  --fg-muted: #5b6270;
+  --panel-bg: #f5f5f7;
+  --border: #d9d9df;
+  --row-bg: #ffffff;
+  --row-alt-bg: #f2f3f6;
+  --row-hover-bg: #eaf0ff;
+  --accent: #2f6fed;
+  --accent-fg: #ffffff;
+  --badge-bg: #eef2ff;
+  --badge-fg: #2f4bb0;
+  --badge-border: #c7d2fe;
+  --danger: #c0392b;
+  --danger-bg: #fdecea;
+  --warning-bg: #fff8e1;
+  --warning-fg: #8a6100;
+  --input-bg: #ffffff;
+  --input-border: #c7cad1;
+  --shadow: 0 8px 24px rgba(20, 22, 30, 0.16);
+  --overlay-bg: rgba(15, 17, 22, 0.45);
+  --dropzone-border: #b7bccb;
+  --dropzone-bg: #fafbfc;
+  --dropzone-active-bg: #eaf0ff;
+  --chip-bg: #eef1f6;
+  --chip-fg: #33384a;
+  --link: #2f6fed;
+}
+
+[data-theme="dark"] {
+  --bg: #16181d;
+  --bg-elevated: #1c1f26;
+  --fg: #e8e8ec;
+  --fg-muted: #9aa0ad;
+  --panel-bg: #1f2229;
+  --border: #33363f;
+  --row-bg: #1a1d23;
+  --row-alt-bg: #20232b;
+  --row-hover-bg: #262c3d;
+  --accent: #6f9bff;
+  --accent-fg: #0d1220;
+  --badge-bg: #262b3a;
+  --badge-fg: #a9bbff;
+  --badge-border: #3a4468;
+  --danger: #ff6b5e;
+  --danger-bg: #3a2220;
+  --warning-bg: #3a3320;
+  --warning-fg: #f0cf6a;
+  --input-bg: #14161b;
+  --input-border: #3a3d47;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --overlay-bg: rgba(0, 0, 0, 0.6);
+  --dropzone-border: #454955;
+  --dropzone-bg: #1a1d23;
+  --dropzone-active-bg: #22283a;
+  --chip-bg: #262b34;
+  --chip-fg: #d3d6df;
+  --link: #6f9bff;
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-theme="system"] {
+    --bg: #16181d;
+    --bg-elevated: #1c1f26;
+    --fg: #e8e8ec;
+    --fg-muted: #9aa0ad;
+    --panel-bg: #1f2229;
+    --border: #33363f;
+    --row-bg: #1a1d23;
+    --row-alt-bg: #20232b;
+    --row-hover-bg: #262c3d;
+    --accent: #6f9bff;
+    --accent-fg: #0d1220;
+    --badge-bg: #262b3a;
+    --badge-fg: #a9bbff;
+    --badge-border: #3a4468;
+    --danger: #ff6b5e;
+    --danger-bg: #3a2220;
+    --warning-bg: #3a3320;
+    --warning-fg: #f0cf6a;
+    --input-bg: #14161b;
+    --input-border: #3a3d47;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --overlay-bg: rgba(0, 0, 0, 0.6);
+    --dropzone-border: #454955;
+    --dropzone-bg: #1a1d23;
+    --dropzone-active-bg: #22283a;
+    --chip-bg: #262b34;
+    --chip-fg: #d3d6df;
+    --link: #6f9bff;
+  }
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}

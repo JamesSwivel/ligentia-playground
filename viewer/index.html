@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Doc Result Viewer</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/app.css" />
+</head>
+<body class="screen-upload">
+
+<header class="app-header">
+  <h1 class="app-header__title">Doc Result Viewer<span id="doc-type-label" class="app-header__doctype"></span></h1>
+  <div class="app-header__actions">
+    <button id="start-over-btn" class="btn app-header__start-over" type="button">Upload another file</button>
+    <div id="theme-toggle" class="theme-toggle" role="group" aria-label="Theme">
+      <button type="button" data-theme-value="light" aria-pressed="false">Light</button>
+      <button type="button" data-theme-value="dark" aria-pressed="false">Dark</button>
+      <button type="button" data-theme-value="system" aria-pressed="false">System</button>
+    </div>
+  </div>
+</header>
+
+<main id="upload-screen" class="screen">
+  <div id="dropzone" class="dropzone">
+    <p class="dropzone__title">Drop a result JSON file here, or click to choose one</p>
+    <p class="dropzone__hint">Only .json files are accepted. The doc type (invoice, packing list, doc classification, or raw JSON) is auto-detected.</p>
+    <button type="button" class="btn btn--primary">Choose file…</button>
+  </div>
+  <input id="file-input" type="file" accept=".json,application/json" hidden />
+  <div id="upload-error" class="upload-error" hidden></div>
+</main>
+
+<main id="viewer-screen" class="screen">
+  <div id="header-section"></div>
+  <div id="detail-section"></div>
+  <div id="raw-section"></div>
+</main>
+
+<div id="modal-root"></div>
+
+<script>
+  // Monaco AMD loader base path, pinned version for reproducibility.
+  // Actual `require(['vs/editor/editor.main'])` call is deferred/lazy inside
+  // js/monaco.js and only fires for the "unknown" (raw JSON) doc type.
+</script>
+<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs/loader.js"></script>
+<script>
+  require.config({ paths: { vs: "https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs" } });
+</script>
+
+<script src="js/modal.js"></script>
+<script src="js/csv.js"></script>
+<script src="js/table.js"></script>
+<script src="js/kv-section.js"></script>
+<script src="js/detect.js"></script>
+<script src="js/monaco.js"></script>
+<script src="js/render-invoice.js"></script>
+<script src="js/render-packingList.js"></script>
+<script src="js/render-classification.js"></script>
+<script src="js/render-raw.js"></script>
+<script src="js/upload.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
