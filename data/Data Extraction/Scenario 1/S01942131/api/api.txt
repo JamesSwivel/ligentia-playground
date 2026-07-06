@@ -1,0 +1,106 @@
+URL:
+https://supplier.uat1.ligentix.net/shipments/container-stuffing/Sea/LCL/SE0704250334
+
+Summary: bookingSearch+SummaryInformation
+Invoices: shipment/Details -> {"invoices"}
+Containers: shipment/Details -> {"containers"}
+Available to pack: shipment/Details -> {"bookingPurchaseOrders"}
+container info: shipment/Details -> {"containers":[{containerLines}]}
+
+API calls relating to booking/shipment info:
+GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/SE0704250334
+{
+    "cbm": 28.149,
+    "bookingId": 1440312,
+    "bookingNumber": "SE0704250334",
+    "clientId": 6793,
+    "clientName": "HOBBYCRAFT GROUP LTD",
+    "vendorName": "NINGBO XINYI IMPORT AND EXPORT CO LTD",
+    "vendorClientId": 44785,
+    "vendorCargoWiseCode": "NINXINCNSHA2",
+    "supplierName": "NINGBO XINYI IMPORT AND EXPORT CO LTD",
+    "motherVesselName": "EMMA MAERSK",
+    "motherVesselCarrierName": "HAPAG-LLOYD AG",
+    "motherVesselCarrierCode": "HAPLLO_WW",
+    "etd": "2025-05-17T08:00:00",
+    "pol": {
+        "portCode": "CNNGB",
+        "countryCode": "CN"
+    },
+    "mot": "Sea",
+    "status": "SAApproved",
+    "deliveryMode": "LCL",
+    "cwRef": "S01942131",
+    "isReadOnly": false,
+    "isFumigated": false,
+    "containers": "",
+    "incoTerm": "FOB",
+    "incoTermPort": {
+        "portCode": "CNNGB",
+        "countryCode": "CN"
+    },
+    "shipmentStatus": "Created",
+    "bookingApproved": true,
+    "createdByUserId": 17831
+}
+
+GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/SummaryInformation/SE0704250334
+{
+    "cwShipmentNumber": "S01942131",
+    "bookingNumber": "SE0704250334",
+    "hasCustomsDeclaration": false,
+    "consignee": "HOBBYCRAFT  LTD",
+    "vesselName": "EMMA MAERSK",
+    "vesselNames": [
+        "EMMA MAERSK"
+    ],
+    "outerPacks": 483,
+    "outerPacksPackageType": "CTN",
+    "documentedVolume": 28.145,
+    "totalVolume": 28.145,
+    "totalVolumeUnit": "M3",
+    "documentedWeight": 4029.350,
+    "totalWeight": 4029.350,
+    "totalWeightUnit": "KG",
+    "pol": "CNNGB",
+    "pod": "GBLGP",
+    "etd": "2025-05-17T08:00:00",
+    "eta": "2025-06-25T22:05:00",
+    "supplierName": "NINGBO XINYI IMPORT AND EXPORT CO LTD",
+    "vendorClientId": 44785,
+    "containers": [
+        {
+            "containerNumber": "HAMU4144464",
+            "containerType": "40HC"
+        }
+    ],
+    "packingLines": [
+        {
+            "containerNumber": "HAMU4144464",
+            "packQty": 483,
+            "packType": "CTN",
+            "volume": 28.145,
+            "volumeUnit": "M3",
+            "weight": 4029.350,
+            "weightUnit": "KG",
+            "referenceNumber": "",
+            "goodsDescription": "",
+            "marksAndNos": "",
+            "importReferenceNumber": ""
+        }
+    ],
+    "transportLegs": [
+        {
+            "legOrder": 1,
+            "vesselName": "EMMA MAERSK",
+            "carrier": "HAPAG-LLOYD AG",
+            "pol": "CNNGB",
+            "pod": "GBLGP",
+            "voyageFlightNo": "520W"
+        }
+    ]
+}
+
+GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Details/SE0704250334
+
+(searchBooking.res.json)

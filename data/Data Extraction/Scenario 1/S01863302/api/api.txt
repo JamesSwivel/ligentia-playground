@@ -1,0 +1,115 @@
+URL:
+https://supplier.uat1.ligentix.net/shipments/container-stuffing/Sea/FCL/SE0612240084
+
+Summary: bookingSearch+SummaryInformation
+Invoices: shipment/Details -> {"invoices"}
+Containers: shipment/Details -> {"containers"}
+Available to delivery: shipment/Details -> {"bookingPurchaseOrders"}
+Delivered to CFS: shipment/Details -> {"cfsDeliveredOrders"}
+
+API calls relating to booking/shipment info:
+GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/SE0612240084
+{
+    "cbm": 0.000,
+    "bookingId": 1353002,
+    "bookingNumber": "SE0612240084",
+    "clientId": 44187,
+    "clientName": "Nisbets PLC",
+    "vendorName": "Monti Apparel Company Limited",
+    "vendorClientId": 44289,
+    "vendorCargoWiseCode": "MONAPPKHKOS1",
+    "supplierName": "Monti Apparel Company Limited",
+    "motherVesselName": "CMA CGM TROCADERO",
+    "motherVesselCarrierName": "HAPAG-LLOYD AG",
+    "motherVesselCarrierCode": "HAPLLO_WW",
+    "etd": "2024-12-29T00:00:00",
+    "pol": {
+        "portCode": "KHSHV",
+        "countryCode": "KH"
+    },
+    "mot": "Sea",
+    "status": "SAApproved",
+    "deliveryMode": "FCL",
+    "cwRef": "S01863302",
+    "isReadOnly": false,
+    "isFumigated": false,
+    "containers": "40GP x 1",
+    "incoTerm": "FOB",
+    "incoTermPort": {
+        "portCode": "KHSHV",
+        "countryCode": "KH"
+    },
+    "shipmentStatus": "Created",
+    "bookingApproved": true,
+    "createdByUserId": 17181
+}
+
+GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/SummaryInformation/SE0612240084
+{
+    "cwShipmentNumber": "S01863302",
+    "bookingNumber": "SE0612240084",
+    "hasCustomsDeclaration": true,
+    "consignee": "NISBETS LIMITED",
+    "vesselName": "LEVERKUSEN EXPRESS",
+    "vesselNames": [
+        "NAWATA BHUM",
+        "LEVERKUSEN EXPRESS"
+    ],
+    "outerPacks": 1158,
+    "outerPacksPackageType": "CTN",
+    "documentedVolume": 56.000,
+    "totalVolume": 56.000,
+    "totalVolumeUnit": "M3",
+    "documentedWeight": 22057.300,
+    "totalWeight": 22057.300,
+    "totalWeightUnit": "KG",
+    "pol": "KHSHV",
+    "pod": "GBSOU",
+    "etd": "2024-12-29T00:00:00",
+    "eta": "2025-02-22T13:00:00",
+    "supplierName": "Monti Apparel Company Limited",
+    "vendorClientId": 44289,
+    "containers": [
+        {
+            "containerNumber": "CAAU6980806",
+            "containerType": "40HCSUB"
+        }
+    ],
+    "packingLines": [
+        {
+            "containerNumber": "CAAU6980806",
+            "packQty": 1158,
+            "packType": "CTN",
+            "volume": 56.000,
+            "volumeUnit": "M3",
+            "weight": 22057.300,
+            "weightUnit": "KG",
+            "referenceNumber": "",
+            "goodsDescription": "Whites Vegas Chefs Jacket Short Sle",
+            "marksAndNos": "",
+            "importReferenceNumber": ""
+        }
+    ],
+    "transportLegs": [
+        {
+            "legOrder": 1,
+            "vesselName": "NAWATA BHUM",
+            "carrier": "HAPAG-LLOYD AG",
+            "pol": "KHSHV",
+            "pod": "SGSIN",
+            "voyageFlightNo": "272S"
+        },
+        {
+            "legOrder": 2,
+            "vesselName": "LEVERKUSEN EXPRESS",
+            "carrier": "HAPAG-LLOYD AG",
+            "pol": "SGSIN",
+            "pod": "GBSOU",
+            "voyageFlightNo": "001W"
+        }
+    ]
+}
+
+GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Details/SE0612240084
+
+(searchBooking.res.json)
