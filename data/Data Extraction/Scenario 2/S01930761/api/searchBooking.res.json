@@ -1,0 +1,3087 @@
+{
+    "cwShipmentNumber": "S01930761",
+    "deliveryMode": "FCL",
+    "modeOfTransport": "Sea",
+    "consigneeId": 23677,
+    "invoices": [
+        {
+            "invoiceOrderNumber": 1,
+            "invoiceNumber": "BV2503-0030",
+            "invoiceDate": "2025-03-26T00:00:00",
+            "currencyCode": "USD"
+        }
+    ],
+    "bookingPurchaseOrders": [
+        {
+            "orderNumber": "PO00066797",
+            "linkedOrderNumber": "PO00066797",
+            "deliveryDueDate": null,
+            "supplierId": null,
+            "businessUnit": null,
+            "bookingItems": [
+                {
+                    "bookingItemId": 11310754,
+                    "bookingItemIdPublic": "816e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066797",
+                    "linkedOrderNumber": "PO00066797",
+                    "lot": "1",
+                    "itemCode": "444427",
+                    "productDescription": "KYLIE CARDIGANBLUE MLT/L",
+                    "totalUnits": 439,
+                    "remainingUnits": 0,
+                    "totalCartons": 40,
+                    "remainingCartons": 0,
+                    "totalCBM": 2.880,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 396.760,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 69.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.800,
+                    "poItemPrice": 13.8000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": "6110209900"
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "92.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20000",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "L",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310755,
+                    "bookingItemIdPublic": "826e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066797",
+                    "linkedOrderNumber": "PO00066797",
+                    "lot": "1",
+                    "itemCode": "444427",
+                    "productDescription": "KYLIE CARDIGANBLUE MLT/M",
+                    "totalUnits": 541,
+                    "remainingUnits": 0,
+                    "totalCartons": 34,
+                    "remainingCartons": 0,
+                    "totalCBM": 2.448,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 428.540,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 69.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.800,
+                    "poItemPrice": 13.8000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": "6110209900"
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "92.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20001",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "M",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310756,
+                    "bookingItemIdPublic": "836e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066797",
+                    "linkedOrderNumber": "PO00066797",
+                    "lot": "1",
+                    "itemCode": "444427",
+                    "productDescription": "KYLIE CARDIGANBLUE MLT/S",
+                    "totalUnits": 290,
+                    "remainingUnits": 0,
+                    "totalCartons": 18,
+                    "remainingCartons": 0,
+                    "totalCBM": 1.300,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 207.400,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 69.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.800,
+                    "poItemPrice": 13.8000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": "6110209900"
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "92.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20002",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "S",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310757,
+                    "bookingItemIdPublic": "846e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066797",
+                    "linkedOrderNumber": "PO00066797",
+                    "lot": "1",
+                    "itemCode": "444427",
+                    "productDescription": "KYLIE CARDIGANBLUE MLT/XL",
+                    "totalUnits": 241,
+                    "remainingUnits": 0,
+                    "totalCartons": 22,
+                    "remainingCartons": 0,
+                    "totalCBM": 1.584,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 232.900,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 69.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.800,
+                    "poItemPrice": 13.8000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": "6110209900"
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "92.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20003",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "XL",
+                    "outerPackType": ""
+                }
+            ]
+        },
+        {
+            "orderNumber": "PO00066798",
+            "linkedOrderNumber": "PO00066798",
+            "deliveryDueDate": null,
+            "supplierId": null,
+            "businessUnit": null,
+            "bookingItems": [
+                {
+                    "bookingItemId": 11310758,
+                    "bookingItemIdPublic": "856e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/L",
+                    "totalUnits": 315,
+                    "remainingUnits": 0,
+                    "totalCartons": 17,
+                    "remainingCartons": 0,
+                    "totalCBM": 1.220,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 178.500,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.600,
+                    "poItemPrice": 13.6000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20000",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "L",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310759,
+                    "bookingItemIdPublic": "866e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/M",
+                    "totalUnits": 398,
+                    "remainingUnits": 0,
+                    "totalCartons": 20,
+                    "remainingCartons": 0,
+                    "totalCBM": 1.440,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 200.800,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.600,
+                    "poItemPrice": 13.6000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20001",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "M",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310760,
+                    "bookingItemIdPublic": "876e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/S",
+                    "totalUnits": 212,
+                    "remainingUnits": 0,
+                    "totalCartons": 11,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.792,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 105.600,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.600,
+                    "poItemPrice": 13.6000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20002",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "S",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310761,
+                    "bookingItemIdPublic": "886e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/XL",
+                    "totalUnits": 177,
+                    "remainingUnits": 0,
+                    "totalCartons": 10,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.720,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 112.300,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.600,
+                    "poItemPrice": 13.6000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20003",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "XL",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310762,
+                    "bookingItemIdPublic": "896e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/L",
+                    "totalUnits": 63,
+                    "remainingUnits": 0,
+                    "totalCartons": 3,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.220,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 31.500,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.600,
+                    "poItemPrice": 13.6000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30000",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "L",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310763,
+                    "bookingItemIdPublic": "8a6e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/M",
+                    "totalUnits": 120,
+                    "remainingUnits": 0,
+                    "totalCartons": 6,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.430,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 60.600,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.600,
+                    "poItemPrice": 13.6000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30001",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "M",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310764,
+                    "bookingItemIdPublic": "8b6e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/S",
+                    "totalUnits": 71,
+                    "remainingUnits": 0,
+                    "totalCartons": 4,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.252,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 38.670,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.600,
+                    "poItemPrice": 13.6000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30002",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "S",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310765,
+                    "bookingItemIdPublic": "8c6e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/XL",
+                    "totalUnits": 46,
+                    "remainingUnits": 0,
+                    "totalCartons": 3,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.216,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 29.400,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.600,
+                    "poItemPrice": 13.6000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30003",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "XL",
+                    "outerPackType": ""
+                }
+            ]
+        },
+        {
+            "orderNumber": "PO00066799",
+            "linkedOrderNumber": "PO00066799",
+            "deliveryDueDate": null,
+            "supplierId": null,
+            "businessUnit": null,
+            "bookingItems": [
+                {
+                    "bookingItemId": 11310766,
+                    "bookingItemIdPublic": "8d6e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/L",
+                    "totalUnits": 715,
+                    "remainingUnits": 0,
+                    "totalCartons": 40,
+                    "remainingCartons": 0,
+                    "totalCBM": 2.880,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 394.850,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 12.200,
+                    "poItemPrice": 12.2000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20000",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "L",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310767,
+                    "bookingItemIdPublic": "8e6e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/M",
+                    "totalUnits": 991,
+                    "remainingUnits": 0,
+                    "totalCartons": 50,
+                    "remainingCartons": 0,
+                    "totalCBM": 3.600,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 476.400,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 12.200,
+                    "poItemPrice": 12.2000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20001",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "M",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310768,
+                    "bookingItemIdPublic": "8f6e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/S",
+                    "totalUnits": 836,
+                    "remainingUnits": 0,
+                    "totalCartons": 42,
+                    "remainingCartons": 0,
+                    "totalCBM": 3.024,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 361.620,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 12.200,
+                    "poItemPrice": 12.2000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20002",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "S",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310769,
+                    "bookingItemIdPublic": "906e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/XL",
+                    "totalUnits": 314,
+                    "remainingUnits": 0,
+                    "totalCartons": 18,
+                    "remainingCartons": 0,
+                    "totalCBM": 1.296,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 187.380,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 12.200,
+                    "poItemPrice": 12.2000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20003",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "XL",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310770,
+                    "bookingItemIdPublic": "916e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/L",
+                    "totalUnits": 63,
+                    "remainingUnits": 0,
+                    "totalCartons": 3,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.220,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 29.900,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 12.200,
+                    "poItemPrice": 12.2000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30000",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "L",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310771,
+                    "bookingItemIdPublic": "926e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/M",
+                    "totalUnits": 120,
+                    "remainingUnits": 0,
+                    "totalCartons": 6,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.430,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 57.600,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 12.200,
+                    "poItemPrice": 12.2000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30001",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "M",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310772,
+                    "bookingItemIdPublic": "936e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/S",
+                    "totalUnits": 71,
+                    "remainingUnits": 0,
+                    "totalCartons": 4,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.290,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 36.700,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 12.200,
+                    "poItemPrice": 12.2000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30002",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "S",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 11310773,
+                    "bookingItemIdPublic": "946e3eb2-38fa-ef11-9447-005056817216",
+                    "bookingId": 1418870,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/XL",
+                    "totalUnits": 46,
+                    "remainingUnits": 0,
+                    "totalCartons": 3,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.210,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 27.100,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 55.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "BLUE MLT",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 12.200,
+                    "poItemPrice": 12.2000,
+                    "buyingAgentCode": "",
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30003",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "XL",
+                    "outerPackType": ""
+                }
+            ]
+        }
+    ],
+    "bookings": [
+        {
+            "bookingNumber": "SE0603250103",
+            "originalCWShipmentNumber": null,
+            "supplierName": "NEO-CONCEPT (HOLDINGS)  CAMBODIA",
+            "containers": "20GP x 1",
+            "cbm": 25.452,
+            "purchaseOrders": [
+                {
+                    "orderNumber": "PO00066797",
+                    "linkedOrderNumber": null,
+                    "deliveryDueDate": "2025-05-27T00:00:00",
+                    "supplierId": 89675,
+                    "businessUnit": "WC01011",
+                    "bookingItems": null
+                },
+                {
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": null,
+                    "deliveryDueDate": "2025-05-27T00:00:00",
+                    "supplierId": 89675,
+                    "businessUnit": "WC01011",
+                    "bookingItems": null
+                },
+                {
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": null,
+                    "deliveryDueDate": "2025-05-27T00:00:00",
+                    "supplierId": 89675,
+                    "businessUnit": "WC01011",
+                    "bookingItems": null
+                }
+            ]
+        }
+    ],
+    "cfsDeliveredOrders": [],
+    "isReadOnly": false,
+    "allBookingsSAApproved": true,
+    "hasCargoWiseATHEvent": true,
+    "cfsDeliveredDate": null,
+    "portDeliveredDate": null,
+    "canBeUncombined": false,
+    "dontAllowInvoiceReuse": false,
+    "onlyAllowOneInvoice": false,
+    "shipmentType": "Full",
+    "id": 801747,
+    "shipmentState": "Submitted",
+    "containers": [
+        {
+            "containerNumber": "BSIU2314733",
+            "type": {
+                "name": "20GP",
+                "maxCBM": 0,
+                "maxKG": 0,
+                "cargowiseCode": null
+            },
+            "unitsUsed": 6069,
+            "cartonsUsed": 354,
+            "cbmUsed": 25.452,
+            "kgsUsed": 3594.520,
+            "isFumigated": null,
+            "containerLines": [
+                {
+                    "bookingItemId": 11310766,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/L",
+                    "units": 715,
+                    "cartons": 40,
+                    "cbm": 2.880,
+                    "kgs": 394.850,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 12.2000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003019,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "L",
+                    "bookedItemPrice": 12.2000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20000",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310772,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/S",
+                    "units": 71,
+                    "cartons": 4,
+                    "cbm": 0.290,
+                    "kgs": 36.700,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 12.2000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003018,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "S",
+                    "bookedItemPrice": 12.2000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30002",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310771,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/M",
+                    "units": 120,
+                    "cartons": 6,
+                    "cbm": 0.430,
+                    "kgs": 57.600,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 12.2000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003017,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "M",
+                    "bookedItemPrice": 12.2000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30001",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310770,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/L",
+                    "units": 63,
+                    "cartons": 3,
+                    "cbm": 0.220,
+                    "kgs": 29.900,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 12.2000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003016,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "L",
+                    "bookedItemPrice": 12.2000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30000",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310773,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/XL",
+                    "units": 46,
+                    "cartons": 3,
+                    "cbm": 0.210,
+                    "kgs": 27.100,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 12.2000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003015,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "XL",
+                    "bookedItemPrice": 12.2000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30003",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310768,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/S",
+                    "units": 836,
+                    "cartons": 42,
+                    "cbm": 3.024,
+                    "kgs": 361.620,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 12.2000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003014,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "S",
+                    "bookedItemPrice": 12.2000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20002",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310767,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/M",
+                    "units": 991,
+                    "cartons": 50,
+                    "cbm": 3.600,
+                    "kgs": 476.400,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 12.2000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003013,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "M",
+                    "bookedItemPrice": 12.2000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20001",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310769,
+                    "orderNumber": "PO00066799",
+                    "linkedOrderNumber": "PO00066799",
+                    "lot": "1",
+                    "itemCode": "444094",
+                    "productDescription": "TARA TEXTURE TANKBLUE MLT/XL",
+                    "units": 314,
+                    "cartons": 18,
+                    "cbm": 1.296,
+                    "kgs": 187.380,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 12.2000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003002,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "XL",
+                    "bookedItemPrice": 12.2000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20003",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310764,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/S",
+                    "units": 71,
+                    "cartons": 4,
+                    "cbm": 0.252,
+                    "kgs": 38.670,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.6000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003012,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "S",
+                    "bookedItemPrice": 13.6000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30002",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310763,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/M",
+                    "units": 120,
+                    "cartons": 6,
+                    "cbm": 0.430,
+                    "kgs": 60.600,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.6000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003011,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "M",
+                    "bookedItemPrice": 13.6000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30001",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310762,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/L",
+                    "units": 63,
+                    "cartons": 3,
+                    "cbm": 0.220,
+                    "kgs": 31.500,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.6000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003010,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "L",
+                    "bookedItemPrice": 13.6000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30000",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310765,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/XL",
+                    "units": 46,
+                    "cartons": 3,
+                    "cbm": 0.216,
+                    "kgs": 29.400,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.6000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "WSALE"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003009,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "XL",
+                    "bookedItemPrice": 13.6000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "30003",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310760,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/S",
+                    "units": 212,
+                    "cartons": 11,
+                    "cbm": 0.792,
+                    "kgs": 105.600,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.6000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003008,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "S",
+                    "bookedItemPrice": 13.6000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20002",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310759,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/M",
+                    "units": 398,
+                    "cartons": 20,
+                    "cbm": 1.440,
+                    "kgs": 200.800,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.6000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003007,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "M",
+                    "bookedItemPrice": 13.6000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20001",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310758,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/L",
+                    "units": 315,
+                    "cartons": 17,
+                    "cbm": 1.220,
+                    "kgs": 178.500,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.6000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003006,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "L",
+                    "bookedItemPrice": 13.6000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20000",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310761,
+                    "orderNumber": "PO00066798",
+                    "linkedOrderNumber": "PO00066798",
+                    "lot": "1",
+                    "itemCode": "444092",
+                    "productDescription": "KYLIE WAISTCOATBLUE MLT/XL",
+                    "units": 177,
+                    "cartons": 10,
+                    "cbm": 0.720,
+                    "kgs": 112.300,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 55.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.6000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": ""
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "75.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003005,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "XL",
+                    "bookedItemPrice": 13.6000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20003",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310755,
+                    "orderNumber": "PO00066797",
+                    "linkedOrderNumber": "PO00066797",
+                    "lot": "1",
+                    "itemCode": "444427",
+                    "productDescription": "KYLIE CARDIGANBLUE MLT/M",
+                    "units": 541,
+                    "cartons": 34,
+                    "cbm": 2.448,
+                    "kgs": 428.540,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 69.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.8000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": "6110209900"
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "92.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003004,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "M",
+                    "bookedItemPrice": 13.8000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20001",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310754,
+                    "orderNumber": "PO00066797",
+                    "linkedOrderNumber": "PO00066797",
+                    "lot": "1",
+                    "itemCode": "444427",
+                    "productDescription": "KYLIE CARDIGANBLUE MLT/L",
+                    "units": 439,
+                    "cartons": 40,
+                    "cbm": 2.880,
+                    "kgs": 396.760,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 69.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.8000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": "6110209900"
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "92.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003003,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "L",
+                    "bookedItemPrice": 13.8000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20000",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310756,
+                    "orderNumber": "PO00066797",
+                    "linkedOrderNumber": "PO00066797",
+                    "lot": "1",
+                    "itemCode": "444427",
+                    "productDescription": "KYLIE CARDIGANBLUE MLT/S",
+                    "units": 290,
+                    "cartons": 18,
+                    "cbm": 1.300,
+                    "kgs": 207.400,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 69.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.8000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": "6110209900"
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "92.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003021,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "S",
+                    "bookedItemPrice": 13.8000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20002",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 11310757,
+                    "orderNumber": "PO00066797",
+                    "linkedOrderNumber": "PO00066797",
+                    "lot": "1",
+                    "itemCode": "444427",
+                    "productDescription": "KYLIE CARDIGANBLUE MLT/XL",
+                    "units": 241,
+                    "cartons": 22,
+                    "cbm": 1.584,
+                    "kgs": 232.900,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "BV2503-0030",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 69.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "BLUE MLT",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.8000,
+                    "customDataFields": [
+                        {
+                            "id": 192,
+                            "name": "End_Customer",
+                            "value": "HSHOP"
+                        },
+                        {
+                            "id": 193,
+                            "name": "Story",
+                            "value": "WSTRN HRLM"
+                        },
+                        {
+                            "id": 194,
+                            "name": "Shipment_sample_approved",
+                            "value": "No"
+                        },
+                        {
+                            "id": 195,
+                            "name": "Commodity_Code",
+                            "value": "6110209900"
+                        },
+                        {
+                            "id": 428,
+                            "name": "EUR RRP",
+                            "value": "92.00000000000000000000"
+                        }
+                    ],
+                    "orderLineId": 12003020,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "XL",
+                    "bookedItemPrice": 13.8000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "WC01011",
+                    "lineNum": "20003",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                }
+            ],
+            "sortOrder": 1,
+            "isVirtual": false
+        }
+    ],
+    "shipmentSettings": {
+        "invoiceSettings": {
+            "required": true,
+            "allowDefault": true,
+            "postToCargoWise": true,
+            "dontAllowInvoiceReuse": false,
+            "onlyAllowOneInvoice": false,
+            "showInvoiceDate": false,
+            "maxCharacters": null,
+            "allowedCurrencies": []
+        },
+        "validationSettings": {
+            "preventOrdersOnMultipleBKs": false,
+            "allowZerosShipmentContainer": false,
+            "allowZeroPkgWeightCbm": true,
+            "denyZeroPOTotalPkgWeightCbm": false,
+            "mandatoryLoadSequence": false,
+            "poGroupValidations": null
+        },
+        "shipmentCombineSettings": {
+            "allowCombineShipmentsFromDifferentSuppliers": false,
+            "combinedShipmentsSupplierOverride": null
+        },
+        "shipmentCreationSettings": {
+            "deliveryModesToAutoPack": [],
+            "additionalShipmentPropertyMapping": []
+        },
+        "customEventHandlers": [],
+        "shipmentGroupSettings": {
+            "createPackingStatus": 0,
+            "creationPolCountryCodes": []
+        },
+        "bookingItemDisplaySettings": [
+            {
+                "containerOnly": false,
+                "name": "lot",
+                "show": true,
+                "displayName": "Lot",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "itemCode",
+                "show": true,
+                "displayName": "Item code",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "productDescription",
+                "show": true,
+                "displayName": "Description",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "colour",
+                "show": true,
+                "displayName": "Colour",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "poItemMarks",
+                "show": true,
+                "displayName": "Marks & nos",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "units",
+                "show": true,
+                "displayName": "Qty",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "cartons",
+                "show": true,
+                "displayName": "Pkgs",
+                "canEdit": false
+            },
+            {
+                "containerOnly": true,
+                "name": "packType",
+                "show": true,
+                "displayName": "Pack type",
+                "canEdit": false
+            },
+            {
+                "containerOnly": true,
+                "name": "subPackType",
+                "show": false,
+                "displayName": "Sub pack type",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "cbm",
+                "show": true,
+                "displayName": "CBM",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "kgs",
+                "show": true,
+                "displayName": "Gross weight (Kgs)",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "netWeightKgs",
+                "show": false,
+                "displayName": "Net weight (Kgs)",
+                "canEdit": false
+            },
+            {
+                "containerOnly": true,
+                "name": "invoice",
+                "show": true,
+                "displayName": "Invoice",
+                "canEdit": false
+            },
+            {
+                "containerOnly": true,
+                "name": "loadSequence",
+                "show": true,
+                "displayName": "Load seq",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "warehouse",
+                "show": true,
+                "displayName": "Warehouse",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "businessUnit",
+                "show": false,
+                "displayName": "Business unit",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "buyerName",
+                "show": false,
+                "displayName": "Buyer name",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "lineNum",
+                "show": false,
+                "displayName": "Line no.",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "size",
+                "show": false,
+                "displayName": "Size",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "destination",
+                "show": false,
+                "displayName": "Destination",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "vendorItemCode",
+                "show": false,
+                "displayName": "Vendor item code",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "outerPackType",
+                "show": false,
+                "displayName": "Outer pack type",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "bookedItemPrice",
+                "show": false,
+                "displayName": "Booked item Price",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "supplierReference",
+                "show": false,
+                "displayName": "Reference",
+                "canEdit": false
+            }
+        ],
+        "customFieldSettings": [],
+        "declarationOfOriginSettings": {
+            "enabled": false,
+            "countriesToInclude": null
+        },
+        "containerPackingSettings": {
+            "defaultPackType": null,
+            "packTypesWithMandatorySubPackType": null
+        },
+        "shipmentConfirmationPermissions": {
+            "preventSupplierConfirmationViaPortal": false,
+            "customSupplierMessageTemplate": null,
+            "supplierRedirectURL": null
+        }
+    }
+}

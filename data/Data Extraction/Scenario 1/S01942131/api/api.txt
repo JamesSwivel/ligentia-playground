@@ -3,9 +3,10 @@ https://supplier.uat1.ligentix.net/shipments/container-stuffing/Sea/LCL/SE070425
 
 Summary: bookingSearch+SummaryInformation
 Invoices: shipment/Details -> {"invoices"}
-Containers: shipment/Details -> {"containers"}
-Available to pack: shipment/Details -> {"bookingPurchaseOrders"}
-container info: shipment/Details -> {"containers":[{containerLines}]}
+Containers: SummaryInformation -> "containers" | "packingLines"
+Available to delivery: shipment/Details -> {"bookingPurchaseOrders"}
+-> Each Unpacked PO: -> "bookingItems"
+Delivered to CFS: shipment/Details -> {"cfsDeliveredOrders"}
 
 API calls relating to booking/shipment info:
 GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/SE0704250334

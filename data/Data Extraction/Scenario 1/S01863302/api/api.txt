@@ -3,9 +3,32 @@ https://supplier.uat1.ligentix.net/shipments/container-stuffing/Sea/FCL/SE061224
 
 Summary: bookingSearch+SummaryInformation
 Invoices: shipment/Details -> {"invoices"}
-Containers: shipment/Details -> {"containers"}
-Available to delivery: shipment/Details -> {"bookingPurchaseOrders"}
-Delivered to CFS: shipment/Details -> {"cfsDeliveredOrders"}
+Containers: SummaryInformation -> "containers" | "packingLines"
+Available to pack: shipment/Details -> {"bookingPurchaseOrders"}
+container info: shipment/Details -> {"containers":[{containerLines}]}
+
+Summary:
+Shipment number	- S01863302                         bookingSearch > "cwRef" | SummaryInformation > "cwShipmentNumber"
+Mode - Sea                                          bookingSearch > "mot"
+Shipment type - FCL                                 bookingSearch > "deliveryMode"
+Booking approved - Yes                              bookingSearch > "bookingApproved"
+Consignee - NISBETS LIMITED                         SummaryInformation > "consignee"
+Supplier - Monti Apparel Company Limited            SummaryInformation > "supplierName"
+Vessel name	- NAWATA BHUM / LEVERKUSEN EXPRESS      SummaryInformation > "vesselNames"
+POL	- KHSHV                                         SummaryInformation > "pol"
+ETD	- 12/29/2024                                    SummaryInformation > "etd"
+POD	- GBSOU                                         SummaryInformation > "pod"
+ETA	- 02/22/2025                                    SummaryInformation > "eta"
+Status - Submitted
+
+Invoices:
+(Invoice number - Currency)
+832A - USD
+831A - USD
+830B - USD
+
+Containers:
+CAAU6980806
 
 API calls relating to booking/shipment info:
 GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/SE0612240084

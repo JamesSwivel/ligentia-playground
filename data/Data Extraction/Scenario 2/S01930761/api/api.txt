@@ -1,0 +1,115 @@
+URL:
+https://supplier.uat1.ligentix.net/shipments/container-stuffing/Sea/FCL/SE0603250103
+
+Summary: bookingSearch+SummaryInformation
+Invoices: shipment/Details -> {"invoices"}
+Containers: SummaryInformation -> "containers" | "packingLines"
+Available to pack: shipment/Details -> {"bookingPurchaseOrders"}
+container info: shipment/Details -> {"containers":[{containerLines}]}
+
+API calls relating to booking/shipment info:
+GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/SE0603250103
+{
+    "cbm": 25.452,
+    "bookingId": 1418870,
+    "bookingNumber": "SE0603250103",
+    "clientId": 23677,
+    "clientName": "WHITE STUFF",
+    "vendorName": "NEO-CONCEPT (HOLDINGS)  CAMBODIA",
+    "vendorClientId": 89675,
+    "vendorCargoWiseCode": "NEOCONHKHKG",
+    "supplierName": "NEO-CONCEPT (HOLDINGS)  CAMBODIA",
+    "motherVesselName": "MADISON MAERSK",
+    "motherVesselCarrierName": "HAPAG-LLOYD AG",
+    "motherVesselCarrierCode": "HAPLLO_WW",
+    "etd": "2025-03-23T00:00:00",
+    "pol": {
+        "portCode": "KHSHV",
+        "countryCode": "KH"
+    },
+    "mot": "Sea",
+    "status": "SAApproved",
+    "deliveryMode": "FCL",
+    "cwRef": "S01930761",
+    "isReadOnly": false,
+    "isFumigated": false,
+    "containers": "20GP x 1",
+    "incoTerm": "FOB",
+    "incoTermPort": {
+        "portCode": "KHSHV",
+        "countryCode": "KH"
+    },
+    "shipmentStatus": "Created",
+    "bookingApproved": true,
+    "createdByUserId": 28459
+}
+
+GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Details/SE0603250103
+{
+    "cwShipmentNumber": "S01930761",
+    "bookingNumber": "SE0603250103",
+    "hasCustomsDeclaration": true,
+    "consignee": "WHITE STUFF LTD",
+    "vesselName": "MADISON MAERSK",
+    "vesselNames": [
+        "NORDBALTIC",
+        "MADISON MAERSK"
+    ],
+    "outerPacks": 354,
+    "outerPacksPackageType": "CTN",
+    "documentedVolume": 25.452,
+    "totalVolume": 25.452,
+    "totalVolumeUnit": "M3",
+    "documentedWeight": 3594.520,
+    "totalWeight": 3594.520,
+    "totalWeightUnit": "KG",
+    "pol": "KHSHV",
+    "pod": "GBLGP",
+    "etd": "2025-03-23T00:00:00",
+    "eta": "2025-05-11T14:00:00",
+    "supplierName": "NEO-CONCEPT (HOLDINGS)  CAMBODIA",
+    "vendorClientId": 89675,
+    "containers": [
+        {
+            "containerNumber": "BSIU2314733",
+            "containerType": "20GP"
+        }
+    ],
+    "packingLines": [
+        {
+            "containerNumber": "BSIU2314733",
+            "packQty": 354,
+            "packType": "CTN",
+            "volume": 25.452,
+            "volumeUnit": "M3",
+            "weight": 3594.520,
+            "weightUnit": "KG",
+            "referenceNumber": "",
+            "goodsDescription": "KYLIE CARDIGANBLUE MLT/L",
+            "marksAndNos": "",
+            "importReferenceNumber": ""
+        }
+    ],
+    "transportLegs": [
+        {
+            "legOrder": 1,
+            "vesselName": "NORDBALTIC",
+            "carrier": "HAPAG-LLOYD AG",
+            "pol": "KHSHV",
+            "pod": "CNYTN",
+            "voyageFlightNo": "2513N"
+        },
+        {
+            "legOrder": 2,
+            "vesselName": "MADISON MAERSK",
+            "carrier": "HAPAG-LLOYD AG",
+            "pol": "CNYTN",
+            "pod": "GBLGP",
+            "voyageFlightNo": "514W"
+        }
+    ]
+}
+
+GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/SummaryInformation/SE0603250103
+
+(searchBooking.res.json)
