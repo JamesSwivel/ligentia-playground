@@ -2,7 +2,7 @@ URL:
 https://supplier.uat1.ligentix.net/shipments/container-stuffing/Sea/FCL/SE0612240084
 
 Summary: bookingSearch+SummaryInformation
-Invoices: shipment/Details -> {"invoices"}
+Invoices: shipment/Details -> {"invoices"} | shipment/Details > "containers"
 Containers: SummaryInformation -> "containers" | "packingLines"
 Available to pack: shipment/Details -> {"bookingPurchaseOrders"}
 container info: shipment/Details -> {"containers":[{containerLines}]}
@@ -28,7 +28,12 @@ Invoices:
 830B - USD
 
 Containers:
-CAAU6980806
+Container number - CAAU6980806                      SummaryInformation > "containers"."containerNumber"
+Type - 40HCSUB                                      SummaryInformation > "containers"."containerType"
+QTY - 40360                                         shipment/Details > "containers"."unitsUsed"
+PKGS - 1158                                         shipment/Details > "containers"."cartonsUsed"
+CBM - 56                                            shipment/Details > "containers"."cbmUsed"
+KGS - 22057.3                                       shipment/Details > "containers"."kgsUsed"
 
 API calls relating to booking/shipment info:
 GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/SE0612240084
