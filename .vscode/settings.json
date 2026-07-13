@@ -3,6 +3,7 @@
         "Incoterms",
         "ligentix",
         "Nums",
-        "pkgs"
+        "pkgs",
+        "recaptcha"
     ]
 }
