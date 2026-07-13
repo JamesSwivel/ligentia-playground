@@ -1,0 +1,102 @@
+Master data endpoints (supplier, customer list etc.)
+
+# Shipment search /shipments/search
+
+- Supplier
+-> search "hong kong"
+(Use https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/suppliers to get all suppliers)
+GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/suppliers?searchTerm=hong%20kong&maxResults=3
+Response: 
+[
+    {
+        "id": null,
+        "name": "Hong Kong Bailishi Industrial Ltd"
+    },
+    ...
+]
+- Customer
+-> Fetched on page load
+GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/customers
+Response:
+[
+    {
+        "id": 44464,
+        "name": "ADM Group Ltd"
+    },
+    ...
+]
+- Delivery Mode
+-> Fetched on page load
+GET https://supplier.uat1.ligentix.net/Api/Shipments/shipmentSearch/deliveryModes
+Response:
+[
+    {
+        "id": "LCL",
+        "name": "LCL"
+    },
+    ...
+]
+- POL
+-> Fetched on page load
+GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/pols
+Response:
+[
+    {
+        "id": null,
+        "name": "_NXGG"
+    },
+    ...
+]
+- Vessel
+-> Fetched on page load
+GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/vesselNames
+Response:
+[
+    {
+        "id": null,
+        "name": "\tMAERSK SAN CLEMENTE"
+    },
+    ...
+]
+
+- Container type information
+GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/ContainerTypes/Sea
+Response:
+[
+    {
+        "name": "20FR",
+        "maxCBM": 35,
+        "maxKG": 21700,
+        "cargowiseCode": "20GP"
+    },
+    ...
+]
+
+- Currency
+- Unsure what the number is for
+GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Currencies/26317
+[
+    {
+        "currencyCode": "USD",
+        "sortOrder": 1
+    },
+    ...
+]
+
+- Pack types
+GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/PackTypes
+[
+    {
+        "packTypeCode": "CTN",
+        "name": "Carton",
+        "sortOrder": 1
+    },
+    ...
+]
+
+Save and submit:
+PUT https://supplier.uat1.ligentix.net/Api/Shipments/shipment/SubmitShipment
+Request:
+(same as shipment/detail endpoint json)
+Response:
+{"isSuccess":true,"errors":null}

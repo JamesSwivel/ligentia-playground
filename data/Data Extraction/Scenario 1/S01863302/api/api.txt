@@ -35,6 +35,10 @@ PKGS - 1158                                         shipment/Details > "containe
 CBM - 56                                            shipment/Details > "containers"."cbmUsed"
 KGS - 22057.3                                       shipment/Details > "containers"."kgsUsed"
 
+Available to pack:
+PO total
+5170072 -> "bookingPurchaseOrders"["orderNumber"]
+
 API calls relating to booking/shipment info:
 GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/SE0612240084
 {

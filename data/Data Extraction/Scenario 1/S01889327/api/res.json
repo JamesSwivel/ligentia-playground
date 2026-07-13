@@ -1,0 +1,4437 @@
+{
+    "cwShipmentNumber": "S01889327",
+    "deliveryMode": "FCL",
+    "modeOfTransport": "Sea",
+    "consigneeId": 44187,
+    "invoices": [
+        {
+            "invoiceOrderNumber": 1,
+            "invoiceNumber": "300037724",
+            "invoiceDate": "2025-02-03T00:00:00",
+            "currencyCode": "GBP"
+        }
+    ],
+    "bookingPurchaseOrders": [
+        {
+            "orderNumber": "5173737",
+            "linkedOrderNumber": "5173737",
+            "deliveryDueDate": null,
+            "supplierId": null,
+            "businessUnit": null,
+            "bookingItems": [
+                {
+                    "bookingItemId": 10819450,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG003",
+                    "productDescription": "Royal Porcelain Classic Coupe Plate White - 210mm 8 1/4\" (Box 12)",
+                    "totalUnits": 96,
+                    "remainingUnits": 0,
+                    "totalCartons": 24,
+                    "remainingCartons": 0,
+                    "totalCBM": 1.104,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 468.000,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 11.400,
+                    "poItemPrice": 11.4000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "468.288000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "1",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819451,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG004",
+                    "productDescription": "Royal Porcelain Classic Coupe Plate White - 240mm 9 1/2\" (Box 12)",
+                    "totalUnits": 36,
+                    "remainingUnits": 0,
+                    "totalCartons": 18,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.828,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 239.540,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 12.000,
+                    "poItemPrice": 12.0000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "248.976000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "2",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819452,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG005",
+                    "productDescription": "Royal Porcelain Classic Coupe Plate White - 260mm 10 1/4\" (Box 12)",
+                    "totalUnits": 138,
+                    "remainingUnits": 0,
+                    "totalCartons": 69,
+                    "remainingCartons": 0,
+                    "totalCBM": 2.415,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 1245.590,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 17.400,
+                    "poItemPrice": 17.4000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "1211.640000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "3",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819453,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG009",
+                    "productDescription": "Royal Porcelain Classic Wide Rim Plate White - 260mm 10 1/4\" (Box 12)",
+                    "totalUnits": 42,
+                    "remainingUnits": 0,
+                    "totalCartons": 21,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.735,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 392.700,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 15.000,
+                    "poItemPrice": 15.0000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "394.632000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "4",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819454,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG024",
+                    "productDescription": "Royal Porcelain Classic Cup White - 180ml 6.3oz (Box 12)",
+                    "totalUnits": 72,
+                    "remainingUnits": 0,
+                    "totalCartons": 12,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.696,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 151.440,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 7.200,
+                    "poItemPrice": 7.2000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "145.872000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "5",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819455,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG026",
+                    "productDescription": "Royal Porcelain Classic Espresso Cup White - 90ml 3oz (Box 12)",
+                    "totalUnits": 42,
+                    "remainingUnits": 0,
+                    "totalCartons": 7,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.336,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 88.900,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 9.000,
+                    "poItemPrice": 9.0000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "87.612000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "6",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819456,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG039",
+                    "productDescription": "Royal Porcelain Classic Contemporary Teapot White - 300ml 10.5oz (Box 12)",
+                    "totalUnits": 64,
+                    "remainingUnits": 0,
+                    "totalCartons": 16,
+                    "remainingCartons": 0,
+                    "totalCBM": 1.232,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 285.180,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 25.200,
+                    "poItemPrice": 25.2000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "268.160000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "7",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819457,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG056",
+                    "productDescription": "Royal Porcelain Classic Oatmeal Bowl White - 165mm 6 1/2\" (Box 12)",
+                    "totalUnits": 184,
+                    "remainingUnits": 0,
+                    "totalCartons": 46,
+                    "remainingCartons": 0,
+                    "totalCBM": 2.576,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 788.440,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 7.800,
+                    "poItemPrice": 7.8000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "779.056000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "8",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819458,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG060",
+                    "productDescription": "Royal Porcelain Classic Oval Bowl White - 200x143mm 8\" (Box 6)",
+                    "totalUnits": 68,
+                    "remainingUnits": 0,
+                    "totalCartons": 17,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.731,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 246.570,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 8.400,
+                    "poItemPrice": 8.4000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "229.432000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "9",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819459,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG061",
+                    "productDescription": "Royal Porcelain Classic Oval Bowl White - 255x180mm 10\" (Box 6)",
+                    "totalUnits": 44,
+                    "remainingUnits": 0,
+                    "totalCartons": 22,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.660,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 239.800,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 9.000,
+                    "poItemPrice": 9.0000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "229.328000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "10",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819460,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG062",
+                    "productDescription": "Royal Porcelain Classic Soup Plate White - 235mm 9 1/4\" (Box 12)",
+                    "totalUnits": 76,
+                    "remainingUnits": 0,
+                    "totalCartons": 38,
+                    "remainingCartons": 0,
+                    "totalCBM": 1.330,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 624.720,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 15.000,
+                    "poItemPrice": 15.0000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "627.000000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "11",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819461,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG066",
+                    "productDescription": "Royal Porcelain Classic Dipping Dish White - 80mm 3\" (Box 12)",
+                    "totalUnits": 230,
+                    "remainingUnits": 0,
+                    "totalCartons": 23,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.552,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 197.800,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 4.800,
+                    "poItemPrice": 4.8000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "211.600000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "12",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819462,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG079",
+                    "productDescription": "Royal Porcelain Classic Rounded Square Plate White - 160mm 6 1/4\" (Box 12)",
+                    "totalUnits": 18,
+                    "remainingUnits": 0,
+                    "totalCartons": 3,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.096,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 56.880,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 12.000,
+                    "poItemPrice": 12.0000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "53.964000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "13",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819463,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG080",
+                    "productDescription": "Royal Porcelain Classic Rounded Square Plate White - 190mm 7 1/4\" (Box 12)",
+                    "totalUnits": 60,
+                    "remainingUnits": 0,
+                    "totalCartons": 15,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.555,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 291.900,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 13.800,
+                    "poItemPrice": 13.8000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "278.040000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "14",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819464,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG083",
+                    "productDescription": "Royal Porcelain Classic Rounded Square Plate White - 270mm 10\" (Box 12)",
+                    "totalUnits": 100,
+                    "remainingUnits": 0,
+                    "totalCartons": 100,
+                    "remainingCartons": 0,
+                    "totalCBM": 1.600,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 1106.000,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 18.000,
+                    "poItemPrice": 18.0000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "1026.200000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "15",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819465,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG108",
+                    "productDescription": "Royal Porcelain Classic Square Bowl White - 250mm 10\" (Box 2)",
+                    "totalUnits": 39,
+                    "remainingUnits": 0,
+                    "totalCartons": 13,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.676,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 174.200,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 10.100,
+                    "poItemPrice": 10.1000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "162.240000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "16",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819466,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG124",
+                    "productDescription": "Royal Porcelain Classic Teapot with Lid White - 600ml 21oz (Box 2)",
+                    "totalUnits": 186,
+                    "remainingUnits": 0,
+                    "totalCartons": 31,
+                    "remainingCartons": 0,
+                    "totalCBM": 1.271,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 180.420,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 5.300,
+                    "poItemPrice": 5.3000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "164.424000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "17",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819467,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG134",
+                    "productDescription": "Royal Porcelain Classic Soy Sauce Dish White - 70mm 2 3/4\" (Box 12)",
+                    "totalUnits": 330,
+                    "remainingUnits": 0,
+                    "totalCartons": 33,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.792,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 212.520,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 3.600,
+                    "poItemPrice": 3.6000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "225.060000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "18",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819468,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG136",
+                    "productDescription": "Royal Porcelain Classic Soy Sauce Dish White - 100mm 4\" (Box 48)",
+                    "totalUnits": 12,
+                    "remainingUnits": 0,
+                    "totalCartons": 6,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.180,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 66.620,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 19.200,
+                    "poItemPrice": 19.2000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "62.760000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "19",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819469,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG244",
+                    "productDescription": "Royal Porcelain Maxadura Mug - 280ml 10oz (Box 12)",
+                    "totalUnits": 132,
+                    "remainingUnits": 0,
+                    "totalCartons": 33,
+                    "remainingCartons": 0,
+                    "totalCBM": 2.541,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 509.020,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 12.600,
+                    "poItemPrice": 12.6000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "556.248000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "20",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819470,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG261",
+                    "productDescription": "Royal Porcelain Maxadura Teapot - 350ml 12.3oz (Box 2)",
+                    "totalUnits": 150,
+                    "remainingUnits": 0,
+                    "totalCartons": 25,
+                    "remainingCartons": 0,
+                    "totalCBM": 1.025,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 150.000,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 6.500,
+                    "poItemPrice": 6.5000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "148.800000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "21",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819471,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "FB648",
+                    "productDescription": "Royal Bone Ascot Wide Rim Flat Profile Plate - 275mm (Box 6)",
+                    "totalUnits": 84,
+                    "remainingUnits": 0,
+                    "totalCartons": 21,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.882,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 369.600,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 18.000,
+                    "poItemPrice": 18.0000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "357.840000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "22",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819472,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "FB650",
+                    "productDescription": "Royal Bone Ascot Wide Rim Flat Profile Plate - 175mm (Box 12)",
+                    "totalUnits": 42,
+                    "remainingUnits": 0,
+                    "totalCartons": 7,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.259,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 118.830,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 19.800,
+                    "poItemPrice": 19.8000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "114.660000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "23",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819473,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "GT912",
+                    "productDescription": "Royal Porcelain Maxadura Wide Rim Bowl - 250mm (Box 12)",
+                    "totalUnits": 8,
+                    "remainingUnits": 0,
+                    "totalCartons": 8,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.128,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 76.960,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 18.600,
+                    "poItemPrice": 18.6000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "64.448000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "24",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819474,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "GT927",
+                    "productDescription": "Royal Porcelain Classic Elegant Tea Cup White - 210ml 7.4oz (Box 12)",
+                    "totalUnits": 124,
+                    "remainingUnits": 0,
+                    "totalCartons": 31,
+                    "remainingCartons": 0,
+                    "totalCBM": 1.674,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 341.000,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 11.400,
+                    "poItemPrice": 11.4000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "311.488000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "25",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819475,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "GT928",
+                    "productDescription": "Royal Porcelain Classic Saucer for Elegant Tea Cup (GT927) - 145mm (Box 12)",
+                    "totalUnits": 120,
+                    "remainingUnits": 0,
+                    "totalCartons": 20,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.640,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 271.200,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 7.800,
+                    "poItemPrice": 7.8000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "265.920000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "26",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819476,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "GT939",
+                    "productDescription": "Royal Porcelain Classic Stacking Bowl White - 110mm 4 1/4\" (Box 12)",
+                    "totalUnits": 20,
+                    "remainingUnits": 0,
+                    "totalCartons": 5,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.270,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 68.300,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 19.800,
+                    "poItemPrice": 19.8000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "62.480000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "27",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                },
+                {
+                    "bookingItemId": 10819477,
+                    "bookingItemIdPublic": null,
+                    "bookingId": 1357096,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "GT945",
+                    "productDescription": "Royal Porcelain Classic Mug White - 350ml 12.3oz (Box 12)",
+                    "totalUnits": 12,
+                    "remainingUnits": 0,
+                    "totalCartons": 3,
+                    "remainingCartons": 0,
+                    "totalCBM": 0.231,
+                    "remainingCBM": 0.000,
+                    "totalKGS": 45.980,
+                    "remainingKGS": 0.000,
+                    "itemPrice": 0.00,
+                    "warehouse": "",
+                    "poItemMarks": null,
+                    "colour": "",
+                    "vendorItemCode": "",
+                    "bookedItemPrice": 15.600,
+                    "poItemPrice": 15.6000,
+                    "buyingAgentCode": "ROW",
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "45.072000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "countryOfOrigin": null,
+                    "countryOfManufacture": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "28",
+                    "style": null,
+                    "destination": "",
+                    "supplierReference": null,
+                    "size": "",
+                    "outerPackType": ""
+                }
+            ]
+        }
+    ],
+    "bookings": [
+        {
+            "bookingNumber": "SE1212240411",
+            "originalCWShipmentNumber": null,
+            "supplierName": "Royal Porcelain",
+            "containers": "20GP x 1",
+            "cbm": 26.015,
+            "purchaseOrders": [
+                {
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": null,
+                    "deliveryDueDate": "2025-04-02T00:00:00",
+                    "supplierId": 44530,
+                    "businessUnit": "",
+                    "bookingItems": null
+                }
+            ]
+        }
+    ],
+    "cfsDeliveredOrders": [],
+    "isReadOnly": false,
+    "allBookingsSAApproved": true,
+    "hasCargoWiseATHEvent": true,
+    "cfsDeliveredDate": null,
+    "portDeliveredDate": null,
+    "canBeUncombined": false,
+    "dontAllowInvoiceReuse": false,
+    "onlyAllowOneInvoice": false,
+    "shipmentType": "Full",
+    "id": 758815,
+    "shipmentState": "Submitted",
+    "containers": [
+        {
+            "containerNumber": "TGBU2357055",
+            "type": {
+                "name": "20GP",
+                "maxCBM": 0,
+                "maxKG": 0,
+                "cargowiseCode": null
+            },
+            "unitsUsed": 2529,
+            "cartonsUsed": 667,
+            "cbmUsed": 26.015,
+            "kgsUsed": 9008.110,
+            "isFumigated": null,
+            "containerLines": [
+                {
+                    "bookingItemId": 10819477,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "GT945",
+                    "productDescription": "Royal Porcelain Classic Mug White - 350ml 12.3oz (Box 12)",
+                    "units": 12,
+                    "cartons": 3,
+                    "cbm": 0.231,
+                    "kgs": 45.980,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 15.6000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "45.072000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291295,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 15.6000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "28",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819474,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "GT927",
+                    "productDescription": "Royal Porcelain Classic Elegant Tea Cup White - 210ml 7.4oz (Box 12)",
+                    "units": 124,
+                    "cartons": 31,
+                    "cbm": 1.674,
+                    "kgs": 341.000,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 11.4000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "311.488000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291296,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 11.4000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "25",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819473,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "GT912",
+                    "productDescription": "Royal Porcelain Maxadura Wide Rim Bowl - 250mm (Box 12)",
+                    "units": 8,
+                    "cartons": 8,
+                    "cbm": 0.128,
+                    "kgs": 76.960,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 18.6000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "64.448000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291297,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 18.6000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "24",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819472,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "FB650",
+                    "productDescription": "Royal Bone Ascot Wide Rim Flat Profile Plate - 175mm (Box 12)",
+                    "units": 42,
+                    "cartons": 7,
+                    "cbm": 0.259,
+                    "kgs": 118.830,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 19.8000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "114.660000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291298,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 19.8000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "23",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819471,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "FB648",
+                    "productDescription": "Royal Bone Ascot Wide Rim Flat Profile Plate - 275mm (Box 6)",
+                    "units": 84,
+                    "cartons": 21,
+                    "cbm": 0.882,
+                    "kgs": 369.600,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 18.0000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "357.840000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291299,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 18.0000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "22",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819470,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG261",
+                    "productDescription": "Royal Porcelain Maxadura Teapot - 350ml 12.3oz (Box 2)",
+                    "units": 150,
+                    "cartons": 25,
+                    "cbm": 1.025,
+                    "kgs": 150.000,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 6.5000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "148.800000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291300,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 6.5000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "21",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819469,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG244",
+                    "productDescription": "Royal Porcelain Maxadura Mug - 280ml 10oz (Box 12)",
+                    "units": 132,
+                    "cartons": 33,
+                    "cbm": 2.541,
+                    "kgs": 509.020,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 12.6000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "556.248000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291301,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 12.6000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "20",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819468,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG136",
+                    "productDescription": "Royal Porcelain Classic Soy Sauce Dish White - 100mm 4\" (Box 48)",
+                    "units": 12,
+                    "cartons": 6,
+                    "cbm": 0.180,
+                    "kgs": 66.620,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 19.2000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "62.760000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291302,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 19.2000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "19",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819467,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG134",
+                    "productDescription": "Royal Porcelain Classic Soy Sauce Dish White - 70mm 2 3/4\" (Box 12)",
+                    "units": 330,
+                    "cartons": 33,
+                    "cbm": 0.792,
+                    "kgs": 212.520,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 3.6000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "225.060000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291303,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 3.6000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "18",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819466,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG124",
+                    "productDescription": "Royal Porcelain Classic Teapot with Lid White - 600ml 21oz (Box 2)",
+                    "units": 186,
+                    "cartons": 31,
+                    "cbm": 1.271,
+                    "kgs": 180.420,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 5.3000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "164.424000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291304,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 5.3000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "17",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819465,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG108",
+                    "productDescription": "Royal Porcelain Classic Square Bowl White - 250mm 10\" (Box 2)",
+                    "units": 39,
+                    "cartons": 13,
+                    "cbm": 0.676,
+                    "kgs": 174.200,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 10.1000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "162.240000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291305,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 10.1000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "16",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819464,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG083",
+                    "productDescription": "Royal Porcelain Classic Rounded Square Plate White - 270mm 10\" (Box 12)",
+                    "units": 100,
+                    "cartons": 100,
+                    "cbm": 1.600,
+                    "kgs": 1106.000,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 18.0000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "1026.200000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291306,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 18.0000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "15",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819463,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG080",
+                    "productDescription": "Royal Porcelain Classic Rounded Square Plate White - 190mm 7 1/4\" (Box 12)",
+                    "units": 60,
+                    "cartons": 15,
+                    "cbm": 0.555,
+                    "kgs": 291.900,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 13.8000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "278.040000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291307,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 13.8000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "14",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819462,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG079",
+                    "productDescription": "Royal Porcelain Classic Rounded Square Plate White - 160mm 6 1/4\" (Box 12)",
+                    "units": 18,
+                    "cartons": 3,
+                    "cbm": 0.096,
+                    "kgs": 56.880,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 12.0000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "53.964000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291308,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 12.0000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "13",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819461,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG066",
+                    "productDescription": "Royal Porcelain Classic Dipping Dish White - 80mm 3\" (Box 12)",
+                    "units": 230,
+                    "cartons": 23,
+                    "cbm": 0.552,
+                    "kgs": 197.800,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 4.8000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "211.600000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291309,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 4.8000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "12",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819460,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG062",
+                    "productDescription": "Royal Porcelain Classic Soup Plate White - 235mm 9 1/4\" (Box 12)",
+                    "units": 76,
+                    "cartons": 38,
+                    "cbm": 1.330,
+                    "kgs": 624.720,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 15.0000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "627.000000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291310,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 15.0000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "11",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819459,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG061",
+                    "productDescription": "Royal Porcelain Classic Oval Bowl White - 255x180mm 10\" (Box 6)",
+                    "units": 44,
+                    "cartons": 22,
+                    "cbm": 0.660,
+                    "kgs": 239.800,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 9.0000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "229.328000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291311,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 9.0000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "10",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819458,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG060",
+                    "productDescription": "Royal Porcelain Classic Oval Bowl White - 200x143mm 8\" (Box 6)",
+                    "units": 68,
+                    "cartons": 17,
+                    "cbm": 0.731,
+                    "kgs": 246.570,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 8.4000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "229.432000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291312,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 8.4000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "9",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819457,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG056",
+                    "productDescription": "Royal Porcelain Classic Oatmeal Bowl White - 165mm 6 1/2\" (Box 12)",
+                    "units": 184,
+                    "cartons": 46,
+                    "cbm": 2.576,
+                    "kgs": 788.440,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 7.8000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "779.056000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291313,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 7.8000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "8",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819456,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG039",
+                    "productDescription": "Royal Porcelain Classic Contemporary Teapot White - 300ml 10.5oz (Box 12)",
+                    "units": 64,
+                    "cartons": 16,
+                    "cbm": 1.232,
+                    "kgs": 285.180,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 25.2000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "268.160000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291314,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 25.2000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "7",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819455,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG026",
+                    "productDescription": "Royal Porcelain Classic Espresso Cup White - 90ml 3oz (Box 12)",
+                    "units": 42,
+                    "cartons": 7,
+                    "cbm": 0.336,
+                    "kgs": 88.900,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 9.0000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "87.612000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291315,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 9.0000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "6",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819454,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG024",
+                    "productDescription": "Royal Porcelain Classic Cup White - 180ml 6.3oz (Box 12)",
+                    "units": 72,
+                    "cartons": 12,
+                    "cbm": 0.696,
+                    "kgs": 151.440,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 7.2000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "145.872000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291316,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 7.2000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "5",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819453,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG009",
+                    "productDescription": "Royal Porcelain Classic Wide Rim Plate White - 260mm 10 1/4\" (Box 12)",
+                    "units": 42,
+                    "cartons": 21,
+                    "cbm": 0.735,
+                    "kgs": 392.700,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 15.0000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "394.632000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291317,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 15.0000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "4",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819452,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG005",
+                    "productDescription": "Royal Porcelain Classic Coupe Plate White - 260mm 10 1/4\" (Box 12)",
+                    "units": 138,
+                    "cartons": 69,
+                    "cbm": 2.415,
+                    "kgs": 1245.590,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 17.4000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "1211.640000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291318,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 17.4000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "3",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819451,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG004",
+                    "productDescription": "Royal Porcelain Classic Coupe Plate White - 240mm 9 1/2\" (Box 12)",
+                    "units": 36,
+                    "cartons": 18,
+                    "cbm": 0.828,
+                    "kgs": 239.540,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 12.0000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "248.976000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291319,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 12.0000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "2",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819476,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "GT939",
+                    "productDescription": "Royal Porcelain Classic Stacking Bowl White - 110mm 4 1/4\" (Box 12)",
+                    "units": 20,
+                    "cartons": 5,
+                    "cbm": 0.270,
+                    "kgs": 68.300,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 19.8000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "62.480000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291320,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 19.8000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "27",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819475,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "GT928",
+                    "productDescription": "Royal Porcelain Classic Saucer for Elegant Tea Cup (GT927) - 145mm (Box 12)",
+                    "units": 120,
+                    "cartons": 20,
+                    "cbm": 0.640,
+                    "kgs": 271.200,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 7.8000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "265.920000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291321,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 7.8000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "26",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                },
+                {
+                    "bookingItemId": 10819450,
+                    "orderNumber": "5173737",
+                    "linkedOrderNumber": "5173737",
+                    "lot": "1",
+                    "itemCode": "CG003",
+                    "productDescription": "Royal Porcelain Classic Coupe Plate White - 210mm 8 1/4\" (Box 12)",
+                    "units": 96,
+                    "cartons": 24,
+                    "cbm": 1.104,
+                    "kgs": 468.000,
+                    "netWeightKgs": null,
+                    "invoice": {
+                        "invoiceOrderNumber": 0,
+                        "invoiceNumber": "300037724",
+                        "invoiceDate": null,
+                        "currencyCode": null
+                    },
+                    "itemPrice": 0.00,
+                    "batchCode": "",
+                    "propertyMarks": "",
+                    "loadSeq": "",
+                    "loadType": null,
+                    "warehouse": "",
+                    "colour": "",
+                    "poItemMarks": null,
+                    "packTypeCode": "CTN",
+                    "poItemPrice": 11.4000,
+                    "customDataFields": [
+                        {
+                            "id": 398,
+                            "name": "Line Weight",
+                            "value": "468.288000000"
+                        },
+                        {
+                            "id": 399,
+                            "name": "Destination DC",
+                            "value": "4THWAY"
+                        },
+                        {
+                            "id": 400,
+                            "name": "Commodity Code",
+                            "value": "6911100090"
+                        },
+                        {
+                            "id": 401,
+                            "name": "Cancelled",
+                            "value": ""
+                        },
+                        {
+                            "id": 402,
+                            "name": "Cancel Date",
+                            "value": ""
+                        },
+                        {
+                            "id": 478,
+                            "name": "Brand Category",
+                            "value": "Tableware"
+                        }
+                    ],
+                    "orderLineId": 11291322,
+                    "parentOrderLineId": null,
+                    "vendorItemCode": "",
+                    "size": "",
+                    "bookedItemPrice": 11.4000,
+                    "buyingAgentCode": null,
+                    "cfsDeliveredOrderLineId": null,
+                    "countryOfManufacture": null,
+                    "countryOfOrigin": null,
+                    "buyerName": "",
+                    "businessUnit": "",
+                    "lineNum": "1",
+                    "destination": "",
+                    "supplierReference": null,
+                    "style": null,
+                    "subPackType": null,
+                    "outerPackType": "",
+                    "bookingNumber": null,
+                    "bookingItemIdPublic": null
+                }
+            ],
+            "sortOrder": 1,
+            "isVirtual": false
+        }
+    ],
+    "shipmentSettings": {
+        "invoiceSettings": {
+            "required": true,
+            "allowDefault": true,
+            "postToCargoWise": false,
+            "dontAllowInvoiceReuse": false,
+            "onlyAllowOneInvoice": false,
+            "showInvoiceDate": false,
+            "maxCharacters": null,
+            "allowedCurrencies": []
+        },
+        "validationSettings": {
+            "preventOrdersOnMultipleBKs": false,
+            "allowZerosShipmentContainer": false,
+            "allowZeroPkgWeightCbm": true,
+            "denyZeroPOTotalPkgWeightCbm": false,
+            "mandatoryLoadSequence": false,
+            "poGroupValidations": null
+        },
+        "shipmentCombineSettings": {
+            "allowCombineShipmentsFromDifferentSuppliers": false,
+            "combinedShipmentsSupplierOverride": null
+        },
+        "shipmentCreationSettings": {
+            "deliveryModesToAutoPack": [],
+            "additionalShipmentPropertyMapping": []
+        },
+        "customEventHandlers": [],
+        "shipmentGroupSettings": {
+            "createPackingStatus": 0,
+            "creationPolCountryCodes": []
+        },
+        "bookingItemDisplaySettings": [
+            {
+                "containerOnly": false,
+                "name": "lot",
+                "show": true,
+                "displayName": "Lot",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "itemCode",
+                "show": true,
+                "displayName": "Item code",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "productDescription",
+                "show": true,
+                "displayName": "Description",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "colour",
+                "show": true,
+                "displayName": "Colour",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "poItemMarks",
+                "show": true,
+                "displayName": "Marks & nos",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "units",
+                "show": true,
+                "displayName": "Qty",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "cartons",
+                "show": true,
+                "displayName": "Pkgs",
+                "canEdit": false
+            },
+            {
+                "containerOnly": true,
+                "name": "packType",
+                "show": true,
+                "displayName": "Pack type",
+                "canEdit": false
+            },
+            {
+                "containerOnly": true,
+                "name": "subPackType",
+                "show": false,
+                "displayName": "Sub pack type",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "cbm",
+                "show": true,
+                "displayName": "CBM",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "kgs",
+                "show": true,
+                "displayName": "Gross weight (Kgs)",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "netWeightKgs",
+                "show": false,
+                "displayName": "Net weight (Kgs)",
+                "canEdit": false
+            },
+            {
+                "containerOnly": true,
+                "name": "invoice",
+                "show": true,
+                "displayName": "Invoice",
+                "canEdit": false
+            },
+            {
+                "containerOnly": true,
+                "name": "loadSequence",
+                "show": true,
+                "displayName": "Load seq",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "warehouse",
+                "show": true,
+                "displayName": "Warehouse",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "businessUnit",
+                "show": false,
+                "displayName": "Business unit",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "buyerName",
+                "show": false,
+                "displayName": "Buyer name",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "lineNum",
+                "show": false,
+                "displayName": "Line no.",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "size",
+                "show": false,
+                "displayName": "Size",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "destination",
+                "show": false,
+                "displayName": "Destination",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "vendorItemCode",
+                "show": false,
+                "displayName": "Vendor item code",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "outerPackType",
+                "show": false,
+                "displayName": "Outer pack type",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "bookedItemPrice",
+                "show": false,
+                "displayName": "Booked item Price",
+                "canEdit": false
+            },
+            {
+                "containerOnly": false,
+                "name": "supplierReference",
+                "show": false,
+                "displayName": "Reference",
+                "canEdit": false
+            }
+        ],
+        "customFieldSettings": [],
+        "declarationOfOriginSettings": {
+            "enabled": false,
+            "countriesToInclude": null
+        },
+        "containerPackingSettings": {
+            "defaultPackType": null,
+            "packTypesWithMandatorySubPackType": null
+        },
+        "shipmentConfirmationPermissions": {
+            "preventSupplierConfirmationViaPortal": false,
+            "customSupplierMessageTemplate": null,
+            "supplierRedirectURL": null
+        }
+    }
+}
