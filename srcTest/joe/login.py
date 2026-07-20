@@ -7,12 +7,15 @@
 import asyncio
 import json
 import re
-import os.path
+import os
+from pathlib import Path
 import swivel.common as U
 from playwright.async_api import async_playwright
 from dotenv import dotenv_values
 
-config = dotenv_values(".env")
+script_dir = Path(__file__).resolve().parent
+env_file = script_dir / ".env"
+config = dotenv_values(env_file)
 
 
 async def main():
