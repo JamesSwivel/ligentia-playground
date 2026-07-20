@@ -599,7 +599,7 @@
     "./winEnv",
     "**/node_modules",
     "**/__pycache__",
-    "**/.*"
+    "**/.*", ".venv"
   ],
   "python.experiments.optOutFrom": ["pythonTerminalEnvVarActivation"],
   // "python.autoComplete.extraPaths": [
@@ -626,5 +626,5 @@
     // "xdata-staging.ddns.net"
   ],
   "indentRainbow.includedLanguages": [],
-  "python-envs.defaultEnvManager": "ms-python.python:venv"
+  "python-envs.defaultEnvManager": "ms-python.python:pyenv"
 }
