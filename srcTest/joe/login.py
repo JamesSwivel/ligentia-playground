@@ -16,7 +16,9 @@ from dotenv import dotenv_values
 script_dir = Path(__file__).resolve().parent
 env_file = script_dir / ".env"
 config = dotenv_values(env_file)
-
+session_file = script_dir / "temp/session.json"
+state_file = script_dir / "temp/state.json"
+jwt_file = script_dir / "temp/jwt.txt"
 
 async def main():
     funcName = main.__name__
@@ -58,26 +60,30 @@ async def main():
                 # supplier_wildcard = "**/supplier.ligentix.net/"
                 # regex_identity = r"^.*identity\.ligentix\.net\/.*$"
 
+        # Supplier URL: https://supplier.(uat1.)ligentix.net/
         main_supplier_url = f"https://supplier.{hostname}/"
+        # Login URL: https://supplier.(uat1.)ligentix.net/login - Following regex used to detect if the URL is not the login URL
         regex_notlogin = re.compile(r"^((?!supplier\.{}\/login).)*$".format(re.escape(hostname)))
+        # Callback URL: https://supplier.(uat1.)ligentix.net/signin-callback?...
         regex_signin_callback = re.compile(r"^.*supplier\.{}\/signin-callback.*$".format(re.escape(hostname)))
         supplier_wildcard = f"**/supplier.{hostname}/"
+        # Identity URL: https://identity.(uat1.)ligentix.net/
         regex_identity = re.compile(r"^.*identity\.{}\/.*$".format(re.escape(hostname)))
 
-        # print(regex_notlogin.pattern)
-        # print(regex_signin_callback.pattern)
-        # print(regex_identity.pattern)
+        # U.logD(regex_notlogin.pattern)
+        # U.logD(regex_signin_callback.pattern)
+        # U.logD(regex_identity.pattern)
 
         async with async_playwright() as p:
             session_storage = ""
             try:
-                if os.path.isfile("session.json") and os.path.isfile("state.json"):
-                    print("loading existing browser data")
-                    with open("session.json", "r+") as f:
+                if os.path.isfile(session_file) and os.path.isfile(state_file):
+                    U.logI("loading existing browser data")
+                    with open(session_file, "r+") as f:
                         session_storage = f.read()
-                        print(session_storage)
-                    browser = await p.chromium.launch(headless=False)
-                    context = await browser.new_context(storage_state="state.json")
+                        U.logD(session_storage)
+                    browser = await p.chromium.launch()
+                    context = await browser.new_context(storage_state=state_file)
                     page = await context.new_page()
                     await context.add_init_script(
                         """(storage => {
@@ -94,46 +100,44 @@ async def main():
                         + "')"
                     )
                 else:
-                    print("no existing browser data")
+                    U.logI("no existing browser data")
                     browser = await p.chromium.launch()
                     context = await browser.new_context()
                     page = await context.new_page()
             except Exception as e:
-                print(f"Error loading browser data, please delete all json file and try again ({e})")
-            print("page loading...")
+                U.logD(f"Error loading browser data, please delete all json file and try again ({e})")
+            U.logI("page loading...")
             # Flow:
             # Base URL -> /login ->
             # Case A: /signin-callback -> /
             # Case B: identity.* -> require login
             # Direction: can't use if else on wait_for_url, so check the redirected URL after /login
             await page.goto(main_supplier_url, wait_until="commit")
-            print("page loaded")
+            U.logI("page loaded")
             # Wait for the /login redirect
             await page.wait_for_url("**/login", wait_until="commit")
-            print(page.url)
+            U.logD(page.url) # https://supplier.(uat1.)ligentix.net/login
             # Use regex to wait for a URL that isn't the login page
             await page.wait_for_url(regex_notlogin, wait_until="commit")
-            print(page.url)
+            U.logD(page.url) # Either the Callback URL or Identity URL
             # Todo: regex to check whether the redirected URL is case 1 or 2
             if re.match(regex_signin_callback, page.url):
                 # if await page.wait_for_url("**/supplier.uat1.ligentix.net/signin-callback**", timeout=120000):
-                print("Case A: callback")
+                U.logI("Case A: callback")
                 await page.wait_for_url(supplier_wildcard, timeout=240000)
 
                 session_storage = await page.evaluate("() => JSON.stringify(sessionStorage)")
-                storage = await context.storage_state(path="state.json")  # contains cookies and local storage
-                print(session_storage)
-                with open("session.json", "w+") as f:
-                    f.write(session_storage)
-                print("Session storage and cookies saved!")
+                storage = await context.storage_state(path=state_file)  # contains cookies and local storage
+                U.logD(session_storage)
+                await save_session(session_storage)
+                await extract_jwt()
                 # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
                 await context.close()
                 await browser.close()
             elif re.match(regex_identity, page.url):
                 # elif await page.wait_for_url("**/identity.uat1.ligentix.net/**", timeout=120000):
-                print("Case B: login required")
-                #     print("login screen loaded")
-                #     print(config.get("UAT_USER"))
+                U.logI("Case B: login required")
+                U.logD("Auto-filling credentials and logging in...")
                 await page.get_by_placeholder("Username").fill(username)  # type: ignore
                 await page.get_by_placeholder("Password").fill(password)  # type: ignore
                 await page.get_by_label("Remember me next time").check()
@@ -141,24 +145,38 @@ async def main():
 
                 # await page.wait_for_url("**/supplier.uat1.ligentix.net/", timeout=240000)
                 await page.wait_for_url("**ligentix.net", timeout=60000)
-                print(page.url)
+                U.logD(page.url)
                 # still on identity page -> captcha required
                 if re.match(regex_identity, page.url):
-                    print("Case C: recaptcha required")
+                    U.logI("Case C: recaptcha required")
                     # send alert
+                    raise Exception("recaptcha required.")
                 else:
                     await page.wait_for_url(supplier_wildcard, timeout=240000)
                     session_storage = await page.evaluate("() => JSON.stringify(sessionStorage)")
-                    storage = await context.storage_state(path="state.json")  # contains cookies and local storage
-                    print(session_storage)
-                    with open("session.json", "w+") as f:
-                        f.write(session_storage)
-                    print("Session storage and cookies saved!")
+                    storage = await context.storage_state(path=state_file)  # contains cookies and local storage
+                    U.logD(session_storage)
+                    await save_session(session_storage)
+                    # Extract JWT
+                    await extract_jwt()
                 # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
                 await context.close()
                 await browser.close()
     except Exception as e:
         U.logPrefixE(funcName, e, __file__)
 
+async def save_session(session_storage_data):
+    with open(session_file, "w+") as f:
+        f.write(session_storage_data)
+    U.logI("Session storage and cookies saved!")
+
+async def extract_jwt():
+    with open(session_file, "r+") as f:
+        temp = json.load(f)
+        token = temp["oidc.user:https://identity.uat1.ligentix.net/:shipping-confirmation-portal-app"]
+        temp2 = json.loads(token).get("access_token")
+        U.logI(f"JWT Bearer = {temp2}")
+        with open(jwt_file, "w+") as f:
+            f.write(temp2)
 
 asyncio.run(main())
