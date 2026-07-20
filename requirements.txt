@@ -1,0 +1,4 @@
+## - 1.0.58: readfile() utf-9 fix
+swivel-common@git+ssh://lib-py-common.github.com/swivelsoftware/lib-py-common.git@1.0.58
+
+pandas~=3.0.3
