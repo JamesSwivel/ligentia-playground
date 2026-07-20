@@ -92,11 +92,11 @@ async def main():
                     )
                 else:
                     print("no existing browser data")
-                    browser = await p.chromium.launch(headless=False)
+                    browser = await p.chromium.launch()
                     context = await browser.new_context()
                     page = await context.new_page()
-            except:
-                print("Error loading browser data, please delete all json file and try again")
+            except Exception as e:
+                print(f"Error loading browser data, please delete all json file and try again ({e})")
             print("page loading...")
             # Flow:
             # Base URL -> /login ->
