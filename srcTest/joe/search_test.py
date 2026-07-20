@@ -1,16 +1,15 @@
 import aiohttp
 import asyncio
 import json
+from pathlib import Path
 
+script_dir = Path(__file__).resolve().parent
+jwt_file = script_dir / "temp/jwt.txt"
 
 async def main():
     JWT = ""
-    with open("session.json", "r+") as f:
-        temp = json.load(f)
-        token = temp["oidc.user:https://identity.uat1.ligentix.net/:shipping-confirmation-portal-app"]
-        temp2 = json.loads(token).get("access_token")
-        print(temp2)
-        JWT = temp2
+    with open(jwt_file, "r+") as f:
+        JWT = f.read()
     headers = {"Authorization": f"Bearer {JWT}"}
     async with aiohttp.ClientSession(headers=headers) as session:
         async with session.get("https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/SE1208210132") as resp:
