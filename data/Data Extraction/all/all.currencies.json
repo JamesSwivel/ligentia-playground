@@ -1,0 +1,90 @@
+[
+  {
+    "currencyCode": "USD",
+    "sortOrder": 1
+  },
+  {
+    "currencyCode": "GBP",
+    "sortOrder": 2
+  },
+  {
+    "currencyCode": "EUR",
+    "sortOrder": 3
+  },
+  {
+    "currencyCode": "HKD",
+    "sortOrder": 4
+  },
+  {
+    "currencyCode": "CNY",
+    "sortOrder": 5
+  },
+  {
+    "currencyCode": "AED",
+    "sortOrder": 6
+  },
+  {
+    "currencyCode": "CAD",
+    "sortOrder": 7
+  },
+  {
+    "currencyCode": "AUD",
+    "sortOrder": 8
+  },
+  {
+    "currencyCode": "ZAR",
+    "sortOrder": 9
+  },
+  {
+    "currencyCode": "INR",
+    "sortOrder": 10
+  },
+  {
+    "currencyCode": "JPY",
+    "sortOrder": 11
+  },
+  {
+    "currencyCode": "SGD",
+    "sortOrder": 12
+  },
+  {
+    "currencyCode": "THB",
+    "sortOrder": 13
+  },
+  {
+    "currencyCode": "NZD",
+    "sortOrder": 14
+  },
+  {
+    "currencyCode": "MXN",
+    "sortOrder": 15
+  },
+  {
+    "currencyCode": "KES",
+    "sortOrder": 16
+  },
+  {
+    "currencyCode": "IDR",
+    "sortOrder": 17
+  },
+  {
+    "currencyCode": "CHF",
+    "sortOrder": 18
+  },
+  {
+    "currencyCode": "MYR",
+    "sortOrder": 19
+  },
+  {
+    "currencyCode": "TWD",
+    "sortOrder": 20
+  },
+  {
+    "currencyCode": "SAR",
+    "sortOrder": 21
+  },
+  {
+    "currencyCode": "XXX",
+    "sortOrder": 22
+  }
+]

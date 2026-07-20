@@ -1,0 +1,147 @@
+[
+  {
+    "packTypeCode": "CTN",
+    "name": "Carton",
+    "sortOrder": 1
+  },
+  {
+    "packTypeCode": "PLT",
+    "name": "Pallet",
+    "sortOrder": 2
+  },
+  {
+    "packTypeCode": "PKG",
+    "name": "Package",
+    "sortOrder": 3
+  },
+  {
+    "packTypeCode": "PCE",
+    "name": "Piece",
+    "sortOrder": 4
+  },
+  {
+    "packTypeCode": "BOX",
+    "name": "Box",
+    "sortOrder": 5
+  },
+  {
+    "packTypeCode": "GOH",
+    "name": "Goods On Hangers",
+    "sortOrder": 6
+  },
+  {
+    "packTypeCode": "CAS",
+    "name": "Case",
+    "sortOrder": 7
+  },
+  {
+    "packTypeCode": "RLL",
+    "name": "Roll",
+    "sortOrder": 8
+  },
+  {
+    "packTypeCode": "BAG",
+    "name": "Bag",
+    "sortOrder": 9
+  },
+  {
+    "packTypeCode": "BLC",
+    "name": "Bale, Compressed",
+    "sortOrder": 10
+  },
+  {
+    "packTypeCode": "CRT",
+    "name": "Crate",
+    "sortOrder": 11
+  },
+  {
+    "packTypeCode": "DRM",
+    "name": "Drum",
+    "sortOrder": 12
+  },
+  {
+    "packTypeCode": "BND",
+    "name": "Bundle",
+    "sortOrder": 13
+  },
+  {
+    "packTypeCode": "SKD",
+    "name": "Skid",
+    "sortOrder": 14
+  },
+  {
+    "packTypeCode": "UNT",
+    "name": "Unit",
+    "sortOrder": 15
+  },
+  {
+    "packTypeCode": "IBC",
+    "name": "IBC",
+    "sortOrder": 16
+  },
+  {
+    "packTypeCode": "REL",
+    "name": "Reel",
+    "sortOrder": 17
+  },
+  {
+    "packTypeCode": "BLU",
+    "name": "Bale, Uncompressed",
+    "sortOrder": 18
+  },
+  {
+    "packTypeCode": "PIK",
+    "name": "PICKS",
+    "sortOrder": 19
+  },
+  {
+    "packTypeCode": "PAI",
+    "name": "Pail",
+    "sortOrder": 20
+  },
+  {
+    "packTypeCode": "COI",
+    "name": "Coil",
+    "sortOrder": 21
+  },
+  {
+    "packTypeCode": "SET",
+    "name": "SET",
+    "sortOrder": 22
+  },
+  {
+    "packTypeCode": "ENV",
+    "name": "Envelope",
+    "sortOrder": 23
+  },
+  {
+    "packTypeCode": "CYL",
+    "name": "Cylinder",
+    "sortOrder": 24
+  },
+  {
+    "packTypeCode": "BOT",
+    "name": "Bottle",
+    "sortOrder": 25
+  },
+  {
+    "packTypeCode": "KEG",
+    "name": "Keg",
+    "sortOrder": 26
+  },
+  {
+    "packTypeCode": "TOT",
+    "name": "Tote",
+    "sortOrder": 27
+  },
+  {
+    "packTypeCode": "CRD",
+    "name": "Cradle",
+    "sortOrder": 28
+  },
+  {
+    "packTypeCode": "TUB",
+    "name": "Tube",
+    "sortOrder": 29
+  }
+]

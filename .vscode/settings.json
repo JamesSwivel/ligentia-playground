@@ -270,6 +270,7 @@
     "mhutchie",
     "MICROCONTROLLER",
     "minorticks",
+    "mktemp",
     "moviepy",
     "MSDS",
     "multisave",
@@ -517,6 +518,7 @@
     "upserted",
     "upserting",
     "urandom",
+    "urlencode",
     "urllib",
     "usebackq",
     "Usec",
@@ -599,7 +601,8 @@
     "./winEnv",
     "**/node_modules",
     "**/__pycache__",
-    "**/.*", ".venv"
+    "**/.*",
+    ".venv"
   ],
   "python.experiments.optOutFrom": ["pythonTerminalEnvVarActivation"],
   // "python.autoComplete.extraPaths": [

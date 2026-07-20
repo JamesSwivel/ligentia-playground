@@ -1,0 +1,42 @@
+{
+  "results": [
+    {
+      "id": 812460,
+      "bookingNumber": "SE0704250334",
+      "cwShipmentNumber": "S01942131",
+      "consolId": "C00598467",
+      "supplier": {
+        "id": 44785,
+        "cargoWiseCode": "NINXINCNSHA2",
+        "name": "NINGBO XINYI IMPORT AND EXPORT CO LTD"
+      },
+      "consignee": {
+        "id": 6793,
+        "cargoWiseCode": "HOBBYCGBCCH",
+        "name": "HOBBYCRAFT GROUP LTD"
+      },
+      "pol": {
+        "portCode": "CNNGB",
+        "countryCode": "CN"
+      },
+      "pod": {
+        "portCode": "GBSOU",
+        "countryCode": "GB"
+      },
+      "eta": "2025-06-25T00:00:00",
+      "etd": "2025-05-16T21:30:00",
+      "deliveryMode": "LCL",
+      "modeOfTransport": "Sea",
+      "motherVesselName": "EMMA MAERSK",
+      "motherVesselCarrierName": "HAPAG-LLOYD AG",
+      "motherVesselCarrierCode": "HAPLLO_WW",
+      "dateCreated": "0001-01-01T00:00:00",
+      "shipmentState": "Submitted",
+      "hasATH": true,
+      "shipmentGroupRef": "A838574",
+      "containers": ""
+    }
+  ],
+  "currentPage": 1,
+  "totalPages": 1
+}

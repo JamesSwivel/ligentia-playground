@@ -1,0 +1,212 @@
+[
+  {
+    "name": "20FR",
+    "maxCBM": 35,
+    "maxKG": 21700,
+    "cargowiseCode": "20GP"
+  },
+  {
+    "name": "20GOH",
+    "maxCBM": 35,
+    "maxKG": 21700,
+    "cargowiseCode": "20GP"
+  },
+  {
+    "name": "20GP",
+    "maxCBM": 35,
+    "maxKG": 21700,
+    "cargowiseCode": "20GP"
+  },
+  {
+    "name": "20HAZ",
+    "maxCBM": 35,
+    "maxKG": 21700,
+    "cargowiseCode": "20GP"
+  },
+  {
+    "name": "20HC",
+    "maxCBM": 35,
+    "maxKG": 21700,
+    "cargowiseCode": "20GP"
+  },
+  {
+    "name": "20HCSUB",
+    "maxCBM": 39,
+    "maxKG": 36000,
+    "cargowiseCode": "20GP"
+  },
+  {
+    "name": "20NOR",
+    "maxCBM": 35,
+    "maxKG": 21700,
+    "cargowiseCode": "20GP"
+  },
+  {
+    "name": "20OT",
+    "maxCBM": 35,
+    "maxKG": 21700,
+    "cargowiseCode": "20GP"
+  },
+  {
+    "name": "20PBF",
+    "maxCBM": 35,
+    "maxKG": 21700,
+    "cargowiseCode": "20GP"
+  },
+  {
+    "name": "20RE",
+    "maxCBM": 35,
+    "maxKG": 21700,
+    "cargowiseCode": "20GP"
+  },
+  {
+    "name": "40FR",
+    "maxCBM": 68,
+    "maxKG": 21700,
+    "cargowiseCode": "40GP"
+  },
+  {
+    "name": "40GOH",
+    "maxCBM": 68,
+    "maxKG": 21700,
+    "cargowiseCode": "40GP"
+  },
+  {
+    "name": "40GP",
+    "maxCBM": 68,
+    "maxKG": 21700,
+    "cargowiseCode": "40GP"
+  },
+  {
+    "name": "40HAZ",
+    "maxCBM": 68,
+    "maxKG": 21700,
+    "cargowiseCode": "40GP"
+  },
+  {
+    "name": "40HC",
+    "maxCBM": 78,
+    "maxKG": 26500,
+    "cargowiseCode": "40HC"
+  },
+  {
+    "name": "40HCGOH",
+    "maxCBM": 78,
+    "maxKG": 26500,
+    "cargowiseCode": "40HC"
+  },
+  {
+    "name": "40HCGOHSUB",
+    "maxCBM": 78,
+    "maxKG": 26500,
+    "cargowiseCode": "40HC"
+  },
+  {
+    "name": "40HCHAZ",
+    "maxCBM": 78,
+    "maxKG": 26500,
+    "cargowiseCode": "40HC"
+  },
+  {
+    "name": "40HCNOR",
+    "maxCBM": 78,
+    "maxKG": 26500,
+    "cargowiseCode": "40HC"
+  },
+  {
+    "name": "40HCOT",
+    "maxCBM": 78,
+    "maxKG": 26500,
+    "cargowiseCode": "40HC"
+  },
+  {
+    "name": "40HCSUB",
+    "maxCBM": 78,
+    "maxKG": 26500,
+    "cargowiseCode": "40HC"
+  },
+  {
+    "name": "40NOR",
+    "maxCBM": 68,
+    "maxKG": 21700,
+    "cargowiseCode": "40GP"
+  },
+  {
+    "name": "40HPBF",
+    "maxCBM": 78,
+    "maxKG": 26500,
+    "cargowiseCode": "40HC"
+  },
+  {
+    "name": "40HPBFSUB",
+    "maxCBM": 78,
+    "maxKG": 26500,
+    "cargowiseCode": "40HC"
+  },
+  {
+    "name": "40OT",
+    "maxCBM": 68,
+    "maxKG": 21700,
+    "cargowiseCode": "40GP"
+  },
+  {
+    "name": "40PBF",
+    "maxCBM": 68,
+    "maxKG": 21700,
+    "cargowiseCode": "40GP"
+  },
+  {
+    "name": "40RE",
+    "maxCBM": 68,
+    "maxKG": 21700,
+    "cargowiseCode": "40GP"
+  },
+  {
+    "name": "40REHC",
+    "maxCBM": 73,
+    "maxKG": 39000,
+    "cargowiseCode": "40HC"
+  },
+  {
+    "name": "40RK",
+    "maxCBM": 78,
+    "maxKG": 26500,
+    "cargowiseCode": "40GP"
+  },
+  {
+    "name": "40RKSUB",
+    "maxCBM": 78,
+    "maxKG": 26500,
+    "cargowiseCode": "40GP"
+  },
+  {
+    "name": "45HC",
+    "maxCBM": 88,
+    "maxKG": 26500,
+    "cargowiseCode": "45HC"
+  },
+  {
+    "name": "45HCSUB",
+    "maxCBM": 88,
+    "maxKG": 26500,
+    "cargowiseCode": "45HC"
+  },
+  {
+    "name": "RTRK",
+    "maxCBM": 91,
+    "maxKG": 24000,
+    "cargowiseCode": "UNDEFINED"
+  },
+  {
+    "name": "40RA",
+    "maxCBM": 68,
+    "maxKG": 21700,
+    "cargowiseCode": "40GP"
+  },
+  {
+    "name": "45PBF",
+    "maxCBM": 88,
+    "maxKG": 26500,
+    "cargowiseCode": "45HC"
+  }
+]
