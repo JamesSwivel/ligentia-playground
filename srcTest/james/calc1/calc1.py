@@ -5,6 +5,7 @@ import os
 import swivel.common as U
 import pandas as pd
 
+## This is scenario #1
 S1_S01863302_res_json_file = "data/Data Extraction/Scenario 1/S01863302/api/searchBooking.res.json"
 
 U.logD(f"reading: {S1_S01863302_res_json_file}")
