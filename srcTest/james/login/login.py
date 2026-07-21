@@ -25,12 +25,6 @@ async def main():
     funcName = main.__name__
     prefix = funcName
     try:
-        # main_supplier_url = ""
-        # regex_notlogin = ""
-        # regex_signin_callback = ""
-        # supplier_wildcard = ""
-        # regex_identity = ""
-
         username = ""
         password = ""
         hostname = ""
@@ -45,10 +39,10 @@ async def main():
                 hostname = config.get("UAT_HOST")
 
                 # main_supplier_url = "https://supplier.uat1.ligentix.net/"
-                # regex_notlogin = r"^((?!supplier\.uat1\.ligentix\.net\/login).)*$"
-                # regex_signin_callback = r"^.*supplier\.uat1\.ligentix\.net\/signin-callback.*$"
+                # regex_NotLogin = r"^((?!supplier\.uat1\.ligentix\.net/login).)*$"
+                # regex_signin_callback = r"^.*supplier\.uat1\.ligentix\.net/signin-callback.*$"
                 # supplier_wildcard = "**/supplier.uat1.ligentix.net/"
-                # regex_identity = r"^.*identity\.uat1\.ligentix\.net\/.*$"
+                # regex_identity = r"^.*identity\.uat1\.ligentix\.net/.*$"
 
             case 2:
                 username = config.get("PROD_USER")
@@ -56,31 +50,28 @@ async def main():
                 hostname = config.get("PROD_HOST")
 
                 # main_supplier_url = "https://supplier.ligentix.net/"
-                # regex_notlogin = r"^((?!supplier\.ligentix\.net\/login).)*$"
-                # regex_signin_callback = r"^.*supplier\.ligentix\.net\/signin-callback.*$"
+                # regex_NotLogin = r"^((?!supplier\.ligentix\.net/login).)*$"
+                # regex_signin_callback = r"^.*supplier\.ligentix\.net/signin-callback.*$"
                 # supplier_wildcard = "**/supplier.ligentix.net/"
-                # regex_identity = r"^.*identity\.ligentix\.net\/.*$"
+                # regex_identity = r"^.*identity\.ligentix\.net/.*$"
 
         if username is None or password is None or hostname is None:
             raise Exception("invalid username/password/hostname")
 
-        # Supplier URL: https://supplier.(uat1.)ligentix.net/
+        ## Supplier URL: https://supplier.(uat1.)ligentix.net/
         main_supplier_url = f"https://supplier.{hostname}/"
 
-        # Login URL: https://supplier.(uat1.)ligentix.net/login - Following regex used to detect if the URL is not the login URL
+        ## Login URL: https://supplier.(uat1.)ligentix.net/login \
+        ## regex used to detect if the URL is not the login URL
         regex_NotLogin = re.compile(rf"^(?!.*supplier\.{re.escape(hostname)}/login).*$")
 
-        # Callback URL: https://supplier.(uat1.)ligentix.net/signin-callback?...
+        ## Callback URL: https://supplier.(uat1.)ligentix.net/signin-callback?...
         regex_signin_callback = re.compile(rf"^.*supplier\.{re.escape(hostname)}/signin-callback.*$")
 
         supplier_wildcard = f"**/supplier.{hostname}/"
 
         # Identity URL: https://identity.(uat1.)ligentix.net/
         regex_identity = re.compile(rf"^.*identity\.{re.escape(hostname)}/.*$")
-
-        # U.logD(regex_notlogin.pattern)
-        # U.logD(regex_signin_callback.pattern)
-        # U.logD(regex_identity.pattern)
 
         async with async_playwright() as p:
             session_storage = ""
