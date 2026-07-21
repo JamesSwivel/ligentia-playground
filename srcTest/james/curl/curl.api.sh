@@ -2,32 +2,63 @@
 
 ############################################################################
 ##
-## NOTE:
-## - Get booking order by shipment number
-##   GET https://supplier.uat1.ligentix.net/Api/Shipments/shipmentSearch/shipment
-##     ?pageNumber=1&itemsPerPage=10&cwRefSearchTerm=S01863302&orderByFieldName=etd&orderByDirection=ask\
-## - Get booking order
-##   GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/SE0612240084
-##   GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/SummaryInformation/SE0612240084
-##   GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Details/SE0612240084
-## - Get suppliers
-##   GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/suppliers
-## - Get customers
-##   GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/customers
-## - Get delivery modes
-##   GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/deliveryModes
-## - Get POLs
-##   GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/pols
-## - Get container types
-##   GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/ContainerTypes/Sea
-## - Get vessel names
-##   GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/vesselNames
-## - Get package types
-##   GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/PackTypes
-## - Get currencies
-##   GET https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Currencies/26317
+## - Opening Suppliers > Shipment > Search
+##   - APP URL:
+##     https://supplier.ligentix.net/shipments/search
+##   - ✅ Get customers
+##     GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/customers
+##   - ✅ Get POLs
+##     GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/pols
+##   - ✅ Get vessel names
+##     GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/vesselNames
+##   - ✅ Get delivery modes
+##     GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/deliveryModes
+##   - ✅ Search booking order by shipment number
+##     GET https://supplier.uat1.ligentix.net/Api/Shipments/shipmentSearch/shipment
+##     query params:
+##     - default: 
+##       ?pageNumber=1&itemsPerPage=10&orderByFieldName=etd&orderByDirection=asc
+##     - by shipment ref:
+##       ??pageNumber=1&itemsPerPage=100&cwRefSearchTerm=S01863302&orderByFieldName=etd&orderByDirection=asc
+##    - When entering search criteria
+##      - Get suppliers
+##        ✅ GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/suppliers
+##               ?searchTerm=argion&maxResults=3 (without this return all suppliers)
+##
+## - Opening a booking, e.g. SE0612240084
+##   - App URL: 
+##     https://supplier.uat1.ligentix.net/shipments/container-stuffing/Sea/FCL/SE0612240084
+##   - Invoke GET
+##     https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/SE0612240084
+##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Details/SE0612240084
+##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/SummaryInformation/SE0612240084
+##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/ContainerTypes/Sea
+##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Currencies/44187
+##     NOTE: but don't know what is 44187
+##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/PackTypes
+##
 ##
 ############################################################################
+
+############################################################################
+##   
+## When opening Booking: SE0612240084
+## - App URL: 
+##   https://supplier.uat1.ligentix.net/shipments/container-stuffing/Sea/FCL/SE0612240084
+## - Invoke GET
+##   https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/SE0612240084
+##   https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Details/SE0612240084
+##   https://supplier.uat1.ligentix.net/Api/Shipments/shipment/SummaryInformation/SE0612240084
+##   https://supplier.uat1.ligentix.net/Api/Shipments/shipment/ContainerTypes/Sea
+##   https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Currencies/44187
+##   https://supplier.uat1.ligentix.net/Api/Shipments/shipment/PackTypes
+##
+## 
+##
+##
+##
+##
+
 
 export BASE_URL_PROD_=https://supplier.ligentix.net
 export BASE_URL=$BASE_URL_PROD_
