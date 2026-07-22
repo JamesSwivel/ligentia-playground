@@ -225,10 +225,6 @@ async def main():
                     await context.close()
                     await browser.close()
             except Exception as e:
-                # Handle it HERE, while browser/context/page are still alive.
-                # Letting it escape the `async with` block would run Playwright's
-                # __aexit__ (which stops the driver and tears down the browser)
-                # before the dump ever runs, causing "page already closed".
                 U.logPrefixE(funcName, e, __file__)
                 if page is not None:
                     await dumpPageErrors(page, e)
@@ -241,7 +237,7 @@ async def dumpPageErrors(page: PwPage, inputE: Exception):
     funcName = dumpPageErrors.__name__
     prefix = funcName
     try:
-        await dumpPageScreen(page, BrowseDataDir / f"wait-for-ligentix-timeout.00.png")
+        await dumpPageScreen(page, BrowseDataDir / f"wait-for-ligentix.00.png")
         if isinstance(inputE, PwTimeoutError):
             U.logPrefixE(prefix, f"Page Timed out: {page.url}")
         else:
@@ -252,7 +248,7 @@ async def dumpPageErrors(page: PwPage, inputE: Exception):
                 if current_page.is_closed():
                     U.logW(f"{prefix} cannot capture screenshot on page[{index}]")
                 else:
-                    await dumpPageScreen(current_page, BrowseDataDir / f"wait-for-ligentix-timeout.{index+1:02d}.png")
+                    await dumpPageScreen(current_page, BrowseDataDir / f"wait-for-ligentix.{index+1:02d}.png")
             except Exception as e2:
                 U.logPrefixE(prefix, e2)
 
