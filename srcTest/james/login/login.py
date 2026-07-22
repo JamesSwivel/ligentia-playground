@@ -9,18 +9,34 @@
 import asyncio
 import json
 import re
+import sys
 import os
 from pathlib import Path
 import swivel.common as U
-from playwright.async_api import async_playwright
+from playwright.async_api import async_playwright, Page as PwPage, TimeoutError as PwTimeoutError
 from dotenv import dotenv_values
 
-script_dir = Path(__file__).resolve().parent
-env_file = script_dir / ".env"
-config = dotenv_values(env_file)
-session_file = script_dir / "temp/session.json"
-state_file = script_dir / "temp/state.json"
-jwt_file = script_dir / "temp/jwt.txt"
+### Load <scriptDir>/.env
+ScriptDir = Path(__file__).resolve().parent
+U.logW(f"ScriptDir={ScriptDir}")
+
+EnvFile = ScriptDir / ".env"
+EnvConfig = dotenv_values(EnvFile)
+
+## Determine project root and working directories
+ProjectRootDir = ScriptDir.parent.parent.parent
+U.logW(f"ProjectRootDir={ProjectRootDir}")
+LogDir = ProjectRootDir / "log"
+U.logW(f"LogDir={LogDir}")
+DataDir = ProjectRootDir / "data"
+U.logW(f"DataDir={DataDir}")
+BrowseDataDir = DataDir / "browser"
+U.logW(f"BrowseDataDir={BrowseDataDir}")
+
+## Browser state files
+SessionFile = BrowseDataDir / "session.json"
+StateFile = BrowseDataDir / "state.json"
+JwtFile = BrowseDataDir / "jwt.txt"
 
 
 async def main():
@@ -36,9 +52,9 @@ async def main():
             case 0:
                 return
             case 1:
-                username = config.get("UAT_USER")
-                password = config.get("UAT_PASSWORD")
-                hostname = config.get("UAT_HOST")
+                username = EnvConfig.get("UAT_USER")
+                password = EnvConfig.get("UAT_PASSWORD")
+                hostname = EnvConfig.get("UAT_HOST")
 
                 # main_supplier_url = "https://supplier.uat1.ligentix.net/"
                 # regex_NotLogin = r"^((?!supplier\.uat1\.ligentix\.net/login).)*$"
@@ -47,9 +63,9 @@ async def main():
                 # regex_identity = r"^.*identity\.uat1\.ligentix\.net/.*$"
 
             case 2:
-                username = config.get("PROD_USER")
-                password = config.get("PROD_PASSWORD")
-                hostname = config.get("PROD_HOST")
+                username = EnvConfig.get("PROD_USER")
+                password = EnvConfig.get("PROD_PASSWORD")
+                hostname = EnvConfig.get("PROD_HOST")
 
                 # main_supplier_url = "https://supplier.ligentix.net/"
                 # regex_NotLogin = r"^((?!supplier\.ligentix\.net/login).)*$"
@@ -78,14 +94,14 @@ async def main():
         async with async_playwright() as p:
             session_storage = ""
             try:
-                if os.path.isfile(session_file) and os.path.isfile(state_file):
-                    U.logI(f"Loading session SessionStorage: {session_file}")
-                    U.logI(f"Loading cookies and LocalStorage: {state_file}")
-                    with open(session_file, "r+") as f:
+                if os.path.isfile(SessionFile) and os.path.isfile(StateFile):
+                    U.logI(f"Loading session SessionStorage: {SessionFile}")
+                    U.logI(f"Loading cookies and LocalStorage: {StateFile}")
+                    with open(SessionFile, "r+") as f:
                         session_storage = f.read()
                         U.logD(session_storage)
                     browser = await p.chromium.launch()
-                    context = await browser.new_context(storage_state=state_file)
+                    context = await browser.new_context(storage_state=StateFile)
                     page = await context.new_page()
                     await context.add_init_script(
                         """(storage => {
@@ -137,7 +153,7 @@ async def main():
                 await page.wait_for_url(supplier_wildcard, timeout=240000)
 
                 session_storage = await page.evaluate("() => JSON.stringify(sessionStorage)")
-                storage = await context.storage_state(path=state_file)  # contains cookies and local storage
+                storage = await context.storage_state(path=StateFile)  # contains cookies and local storage
                 U.logD(session_storage)
                 await save_session(session_storage)
                 await extract_jwt()
@@ -158,7 +174,7 @@ async def main():
 
                 U.logD(f"Waiting page: **ligentix.net ...")
                 # await page.wait_for_url("**ligentix.net", timeout=60000 * 2)
-                await page.wait_for_url("**://*.ligentix.net/**", timeout=60000 * 2)
+                await page.wait_for_url("**://*.ligentix.net/**", timeout=30000)
                 U.logI(f"Loaded page: {page.url}")
 
                 # still on identity page -> captcha required
@@ -172,7 +188,7 @@ async def main():
                     U.logI(f"Loaded page: {page.url}")
 
                     session_storage = await page.evaluate("() => JSON.stringify(sessionStorage)")
-                    storage = await context.storage_state(path=state_file)  # contains cookies and local storage
+                    storage = await context.storage_state(path=StateFile)  # contains cookies and local storage
                     U.logD(session_storage)
                     await save_session(session_storage)
                     # Extract JWT
@@ -182,21 +198,60 @@ async def main():
                 await browser.close()
     except Exception as e:
         U.logPrefixE(funcName, e, __file__)
+        await dumpPageErrors(page, e)
+
+
+async def dumpPageErrors(page: PwPage, inputE: Exception):
+    funcName = dumpPageErrors.__name__
+    prefix = funcName
+    try:
+        await dumpPageScreen(page, BrowseDataDir / f"wait-for-ligentix-timeout.00.png")
+        if isinstance(inputE, PwTimeoutError):
+            U.logPrefixE(prefix, f"Page Timed out: {page.url}")
+        else:
+            U.logPrefixE(prefix, f"Page URL: {page.url}")
+        for index, current_page in enumerate(page.context.pages):
+            U.logPrefixE(prefix, f"Open page[{index}]: url={current_page.url}, closed={current_page.is_closed()}")
+            try:
+                if current_page.is_closed():
+                    U.logW(f"{prefix} cannot capture screenshot on page[{index}]")
+                else:
+                    await dumpPageScreen(current_page, BrowseDataDir / f"wait-for-ligentix-timeout.{index+1:02d}.png")
+            except Exception as e2:
+                U.logPrefixE(prefix, e2)
+
+    except Exception as e:
+        U.logPrefixE(prefix, e)
+
+
+async def dumpPageScreen(page: PwPage, imageFile: Path):
+    funcName = dumpPageScreen.__name__
+    prefix = funcName
+    try:
+        prefix = f"{prefix}[{page.url}]"
+        await page.screenshot(
+            path=imageFile,
+            full_page=True,
+        )
+        U.logW(f"{prefix} {imageFile}")
+
+    except Exception as e:
+        U.logPrefixE(prefix, e)
 
 
 async def save_session(session_storage_data):
-    with open(session_file, "w+") as f:
+    with open(SessionFile, "w+") as f:
         f.write(session_storage_data)
     U.logI("Session storage and cookies saved!")
 
 
 async def extract_jwt():
-    with open(session_file, "r+") as f:
+    with open(SessionFile, "r+") as f:
         temp = json.load(f)
         token = temp["oidc.user:https://identity.uat1.ligentix.net/:shipping-confirmation-portal-app"]
         temp2 = json.loads(token).get("access_token")
         U.logI(f"JWT Bearer = {temp2}")
-        with open(jwt_file, "w+") as f:
+        with open(JwtFile, "w+") as f:
             f.write(temp2)
 
 
