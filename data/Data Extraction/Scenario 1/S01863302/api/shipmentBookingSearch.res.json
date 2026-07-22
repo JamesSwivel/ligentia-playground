@@ -1,0 +1,34 @@
+{
+  "cbm": 0.000,
+  "bookingId": 1353002,
+  "bookingNumber": "SE0612240084",
+  "clientId": 44187,
+  "clientName": "Nisbets PLC",
+  "vendorName": "Monti Apparel Company Limited",
+  "vendorClientId": 44289,
+  "vendorCargoWiseCode": "MONAPPKHKOS1",
+  "supplierName": "Monti Apparel Company Limited",
+  "motherVesselName": "CMA CGM TROCADERO",
+  "motherVesselCarrierName": "HAPAG-LLOYD AG",
+  "motherVesselCarrierCode": "HAPLLO_WW",
+  "etd": "2024-12-29T00:00:00",
+  "pol": {
+    "portCode": "KHSHV",
+    "countryCode": "KH"
+  },
+  "mot": "Sea",
+  "status": "SAApproved",
+  "deliveryMode": "FCL",
+  "cwRef": "S01863302",
+  "isReadOnly": false,
+  "isFumigated": false,
+  "containers": "40GP x 1",
+  "incoTerm": "FOB",
+  "incoTermPort": {
+    "portCode": "KHSHV",
+    "countryCode": "KH"
+  },
+  "shipmentStatus": "Created",
+  "bookingApproved": true,
+  "createdByUserId": 17181
+}

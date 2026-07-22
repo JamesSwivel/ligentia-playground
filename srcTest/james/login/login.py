@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # Flow:
 # login first to save the authentication state
 # > https://playwright.dev/python/docs/auth

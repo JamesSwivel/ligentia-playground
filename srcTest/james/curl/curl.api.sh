@@ -1,5 +1,11 @@
 #!/usr/bin/bash
 
+## -E  # ERR traps are inherited by functions and subshells
+## -e  # exit when an unhandled command fails
+## -u  # error on unset variables
+## -o pipefail  # a pipeline fails if any command in it fails
+#set -Eeuo pipefail
+
 ############################################################################
 ##
 ## - Opening Suppliers > Shipment > Search
@@ -339,8 +345,13 @@ allCurrencies() {
 }
 
 shipmentSearch() {
-    local shipmentNum="$1"
+    local shipmentNum="${1-}"
     local resTmpFile
+
+    if [[ -z $shipmentNum ]]; then
+      logE "missing shipmentNum"
+      return 1
+    fi
 
     resTmpFile=$(mktemp) || return 1
     
@@ -372,6 +383,124 @@ shipmentSearch() {
     return $curl_exit_code
 }
 
+
+shipmentBookingSearch() {
+    local orderNum="${1-}"
+    local resTmpFile
+
+    if [[ -z $orderNum ]]; then
+      logE "missing orderNum"
+      return 1
+    fi
+
+    resTmpFile=$(mktemp) || return 1
+    
+    URL="${BASE_URL%/}/Api/Shipments/bookingSearch/$orderNum"
+    logW "invoking $URL ..."
+    HTTP_STATUS=$(
+        curl -sS --get \
+            "$URL" \
+            -H "Authorization: Bearer $JWT_TOKEN" \
+            -H "Accept: application/json" \
+            --data-urlencode "pageNumber=1" \
+            --data-urlencode "cwRefSearchTerm=$shipmentNum" \
+            --output "$resTmpFile" \
+            --write-out "%{http_code}"
+    )
+    local curl_exit_code=$?
+
+    if (( curl_exit_code == 0 )); then
+      if [[ $HTTP_STATUS == "200" ]]; then
+        logW "http status OK: 200"
+        cat "$resTmpFile"
+        rm -f "$resTmpFile"
+        return 0
+      fi
+    fi
+
+    rm -f "$resTmpFile"
+    logE "curl failed: exitCode=$curl_exit_code, httpStatus=$HTTP_STATUS"
+    return $curl_exit_code
+}
+
+shipmentDetails() {
+    local orderNum="${1-}"
+    local resTmpFile
+
+    if [[ -z $orderNum ]]; then
+      logE "missing orderNum"
+      return 1
+    fi
+
+    resTmpFile=$(mktemp) || return 1
+    
+    URL="${BASE_URL%/}/Api/Shipments/shipment/Details/$orderNum"
+    logW "invoking $URL ..."
+    HTTP_STATUS=$(
+        curl -sS --get \
+            "$URL" \
+            -H "Authorization: Bearer $JWT_TOKEN" \
+            -H "Accept: application/json" \
+            --data-urlencode "pageNumber=1" \
+            --data-urlencode "cwRefSearchTerm=$shipmentNum" \
+            --output "$resTmpFile" \
+            --write-out "%{http_code}"
+    )
+    local curl_exit_code=$?
+
+    if (( curl_exit_code == 0 )); then
+      if [[ $HTTP_STATUS == "200" ]]; then
+        logW "http status OK: 200"
+        cat "$resTmpFile"
+        rm -f "$resTmpFile"
+        return 0
+      fi
+    fi
+
+    rm -f "$resTmpFile"
+    logE "curl failed: exitCode=$curl_exit_code, httpStatus=$HTTP_STATUS"
+    return $curl_exit_code
+}
+
+
+shipmentSummary() {
+    local orderNum="${1-}"
+    local resTmpFile
+
+    if [[ -z $orderNum ]]; then
+      logE "missing orderNum"
+      return 1
+    fi
+
+    resTmpFile=$(mktemp) || return 1
+    
+    URL="${BASE_URL%/}/Api/Shipments/shipment/SummaryInformation/$orderNum"
+    logW "invoking $URL ..."
+    HTTP_STATUS=$(
+        curl -sS --get \
+            "$URL" \
+            -H "Authorization: Bearer $JWT_TOKEN" \
+            -H "Accept: application/json" \
+            --data-urlencode "pageNumber=1" \
+            --data-urlencode "cwRefSearchTerm=$shipmentNum" \
+            --output "$resTmpFile" \
+            --write-out "%{http_code}"
+    )
+    local curl_exit_code=$?
+
+    if (( curl_exit_code == 0 )); then
+      if [[ $HTTP_STATUS == "200" ]]; then
+        logW "http status OK: 200"
+        cat "$resTmpFile"
+        rm -f "$resTmpFile"
+        return 0
+      fi
+    fi
+
+    rm -f "$resTmpFile"
+    logE "curl failed: exitCode=$curl_exit_code, httpStatus=$HTTP_STATUS"
+    return $curl_exit_code
+}
 # if jsonStr=$(shipmentSearch S01942131); then
 #   echo "$jsonStr" | jq .
 # fi
