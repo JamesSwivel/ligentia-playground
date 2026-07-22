@@ -1,23 +1,13 @@
-import sys
-import asyncio
-import json
-import re
-import os
-from pydantic import BaseModel, Field
-from pathlib import Path
+from pydantic import BaseModel, Field, AfterValidator, BeforeValidator
 from typing import Literal, Annotated
 from typing_extensions import TypedDict
-import swivel.common as U
 from datetime import datetime
 from decimal import Decimal
 from .common import *
-
-from datetime import datetime
-
-from pydantic import BaseModel
+from localLib.utils.modelValidators import ModelValidators
 
 
-class TShipmentSearch(BaseModel):
+class TShipmentSearchItem(BaseModel):
     id: Annotated[int, Field(description="Unique identifier of the shipment")]
     bookingNumber: Annotated[str, Field(description="Booking number")]
     cwShipmentNumber: Annotated[str, Field(description="CargoWise shipment number")]
@@ -43,5 +33,13 @@ class TShipmentSearch(BaseModel):
     shipmentState: Annotated[str, Field(description="State of the shipment")]
     hasATH: Annotated[bool, Field(description="Whether the shipment has an ATH event")]
 
-    shipmentGroupRef: Annotated[str, Field("", description="Reference of the shipment group")]
+    shipmentGroupRef: Annotated[
+        str,
+        Field("", description="Reference of the shipment group"),
+        BeforeValidator(ModelValidators.toEmptyStrOnNull),
+    ]
     containers: Annotated[str, Field(description="Container numbers")]
+
+
+class TShipmentSearch(BaseModel):
+    results: Annotated[list[TShipmentSearchItem], Field(description="search results")]

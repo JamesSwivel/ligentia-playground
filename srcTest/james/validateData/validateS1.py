@@ -15,14 +15,14 @@ import swivel.common as U
 ## Change to project root dir
 ########################################################
 scriptDir = f"{os.path.dirname(__file__)}"
-projRootDir = f"{os.path.dirname(__file__)}/../.."
+projRootDir = f"{os.path.dirname(__file__)}/../../.."
 os.chdir(projRootDir)
 
 ########################################################
 ## Explicitly appends the search paths, where self-developed modules/packages are resided
 ## This helps consistent imports, without using relative paths.
 ########################################################
-importDirs = ["./src/lib", scriptDir, f"{scriptDir}/localLib"]
+importDirs = ["./src/lib", scriptDir]
 sysDirsToAppend: list[str] = []
 for importDir in importDirs:
     if os.path.exists(importDir) and os.path.isdir(importDir):
@@ -32,7 +32,9 @@ for importDir in importDirs:
 if len(sysDirsToAppend) == 0:
     raise Exception(f"import dirs not found, targetPaths={importDirs}")
 
+
 from localLib.types import *
+from localLib.utils import TypeHelper
 
 Bookings: dict[str, TBookingScenarios] = {
     "S01863302": {
@@ -61,6 +63,19 @@ async def loadScenarioData(shipmentNum: str):
         jsonBaseDir = f"{scenarioBaseDir}/{shipmentNum}/api"
 
         currencyJsonFile = f"{jsonBaseDir}/currencies.res.json"
+        currency = U.readFile(currencyJsonFile, "json")
+
+        jsonFile = f"{jsonBaseDir}/shipmentBookingSearch.res.json"
+        shipmentBookingSearch = TypeHelper.toBaseModel(TShipmentBookingSearch, Path(jsonFile))
+
+        jsonFile = f"{jsonBaseDir}/shipmentDetails.res.json"
+        shipmentDetail = TypeHelper.toBaseModel(TShipmentDetail, Path(jsonFile))
+
+        jsonFile = f"{jsonBaseDir}/shipmentSearch.res.json"
+        shipmentSearch = TypeHelper.toBaseModel(TShipmentSearch, Path(jsonFile))
+
+        jsonFile = f"{jsonBaseDir}/shipmentSummary.res.json"
+        shipmentSummary = TypeHelper.toBaseModel(TShipmentSummary, Path(jsonFile))
 
     except Exception as e:
         U.throwPrefix(prefix, e)
@@ -71,6 +86,7 @@ async def main():
     prefix = funcName
     try:
         U.logW(f"{prefix} hello")
+        await loadScenarioData("S01863302")
     except Exception as e:
         U.throwPrefix(prefix, e)
 

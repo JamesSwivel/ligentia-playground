@@ -1,13 +1,6 @@
-import sys
-import asyncio
-import json
-import re
-import os
 from pydantic import BaseModel, Field
-from pathlib import Path
 from typing import Literal, Annotated
 from typing_extensions import TypedDict
-import swivel.common as U
 
 
 class TPort(BaseModel):
