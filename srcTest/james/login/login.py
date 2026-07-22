@@ -92,6 +92,22 @@ async def main():
         # Identity URL: https://identity.(uat1.)ligentix.net/
         regex_identity = re.compile(rf"^.*identity\.{re.escape(hostname)}/.*$")
 
+        popup_index = 0
+
+        async def dump_new_page(new_page: PwPage):
+            # Fires the instant a new tab/window is opened in the context (e.g. a
+            # recaptcha/verification popup). Screenshot it right away, since a
+            # transient popup like that can close again before dumpPageErrors's
+            # own page.context.pages loop ever gets a chance to see it.
+            nonlocal popup_index
+            popup_index += 1
+            U.logI(f"New page/tab opened in context (index={popup_index}): {new_page.url}")
+            try:
+                await new_page.wait_for_load_state("domcontentloaded", timeout=5000)
+            except Exception:
+                pass
+            await dumpPageScreen(new_page, BrowseDataDir / f"popup.{popup_index:02d}.png")
+
         async with async_playwright() as p:
             try:
                 session_storage = ""
@@ -127,6 +143,8 @@ async def main():
                 except Exception as e:
                     U.logE(f"Error loading browser data, please delete all json file and try again ({e})")
                     raise Exception("Failed opening browser")
+
+                context.on("page", dump_new_page)
 
                 # Flow:
                 # Base URL -> /login ->
@@ -182,6 +200,18 @@ async def main():
                     # still on identity page -> captcha required
                     if re.match(regex_identity, page.url):
                         U.logI("Case C: recaptcha required")
+                        # Wait (bounded, not a blind sleep) for the reCAPTCHA widget to actually
+                        # render before we dump a screenshot of it. If this times out, the widget
+                        # was never served at all (e.g. withheld by bot detection) rather than
+                        # just slow to load.
+                        try:
+                            await page.wait_for_selector('iframe[title="reCAPTCHA"]', state="visible", timeout=8000)
+                            U.logI("reCAPTCHA widget rendered")
+                        except PwTimeoutError:
+                            U.logW(
+                                "reCAPTCHA widget did NOT render within 8s "
+                                "(likely withheld by bot detection, not just slow to load)"
+                            )
                         # send alert
                         raise Exception("recaptcha required.")
                     else:
@@ -199,6 +229,10 @@ async def main():
                     await context.close()
                     await browser.close()
             except Exception as e:
+                # Handle it HERE, while browser/context/page are still alive.
+                # Letting it escape the `async with` block would run Playwright's
+                # __aexit__ (which stops the driver and tears down the browser)
+                # before the dump ever runs, causing "page already closed".
                 U.logPrefixE(funcName, e, __file__)
                 if page is not None:
                     await dumpPageErrors(page, e)
