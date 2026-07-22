@@ -157,7 +157,8 @@ async def main():
                 await page.get_by_role("button", name="Login to Ligentix").click()
 
                 U.logD(f"Waiting page: **ligentix.net ...")
-                await page.wait_for_url("**ligentix.net", timeout=60000)
+                # await page.wait_for_url("**ligentix.net", timeout=60000 * 2)
+                await page.wait_for_url("**://*.ligentix.net/**", timeout=60000 * 2)
                 U.logI(f"Loaded page: {page.url}")
 
                 # still on identity page -> captcha required
