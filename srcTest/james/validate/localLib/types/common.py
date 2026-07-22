@@ -19,10 +19,3 @@ class TCwParty(BaseModel):
     id: Annotated[int, Field(description="Unique identifier of the CargoWise party")]
     cargoWiseCode: Annotated[str, Field(description="CargoWise code of the party")]
     name: Annotated[str, Field(description="Name of the party")]
-
-
-class TBookingScenarios(TypedDict):
-    env: Literal["UAT", "PROD"]
-    scenario: str
-    bookingNumber: str
-    cwShipmentNumber: str

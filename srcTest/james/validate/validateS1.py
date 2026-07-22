@@ -37,11 +37,33 @@ from localLib.types import *
 Bookings: dict[str, TBookingScenarios] = {
     "S01863302": {
         "env": "UAT",
-        "scenario": "1",
+        "scenarioId": "1",
         "bookingNumber": "SE0612240084",
         "cwShipmentNumber": "S01863302",
     }
 }
+
+
+async def loadScenarioData(shipmentNum: str):
+    funcName = loadScenarioData.__name__
+    prefix = funcName
+    try:
+        if not shipmentNum in Bookings:
+            raise Exception(f"shipmentNum not found: {shipmentNum}")
+        booking = Bookings[shipmentNum]
+
+        scenarioId = booking["scenarioId"]
+        if not scenarioId in SCENARIO_BASE_DIRS:
+            raise Exception(f"invalid scenarioId: {scenarioId}")
+        scenarioBaseDir = SCENARIO_BASE_DIRS[scenarioId]
+
+        ## load JSON file
+        jsonBaseDir = f"{scenarioBaseDir}/{shipmentNum}/api"
+
+        currencyJsonFile = f"{jsonBaseDir}/currencies.res.json"
+
+    except Exception as e:
+        U.throwPrefix(prefix, e)
 
 
 async def main():
