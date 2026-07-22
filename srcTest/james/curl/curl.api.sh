@@ -506,6 +506,37 @@ shipmentSummary() {
     logE "curl failed: exitCode=$curl_exit_code, httpStatus=$HTTP_STATUS"
     return $curl_exit_code
 }
-# if jsonStr=$(shipmentSearch S01942131); then
-#   echo "$jsonStr" | jq .
-# fi
+
+## #################################################################################
+## ## First, search booking number from shipment number
+## #################################################################################
+##
+## ## Scenario 1
+## shipmentNum=S01863302       ## bookingNumber SE0612240084 
+## shipmentNum=S01889327       ## bookingNumber SE1212240411
+##
+## if jsonStr=$(shipmentSearch $shipmentNum); then
+##   echo "$jsonStr" | jq .
+## fi
+## echo "$jsonStr" | jq . > "data/Data Extraction/Scenario 1/$shipmentNum/api/shipmentSearch.res.json"
+## 
+## ## currencies
+## if clientId="$(jq -er '.results[0].consignee.id // empty' <<< "$jsonStr")" && [[ -n "$clientId" ]] && 
+##    bookingNum="$(jq -er '.results[0].bookingNumber // empty' <<< "$jsonStr")" && [[ -n "$bookingNum" ]]; then
+##  if jsonStr=$(allCurrenciesByClientId "$clientId"); then
+##    echo "$jsonStr" | jq .
+##  fi
+## fi
+## echo "$jsonStr" | jq . > "data/Data Extraction/Scenario 1/$shipmentNum/api/currencies.res.json"
+##
+## ## shipment booking search
+## if [[ -n "bookingNum" ]]; then
+##   if jsonStr=$(shipmentBookingSearch $bookingNum); then 
+##     echo "$jsonStr" | jq .
+##   fi
+## fi
+## echo "$jsonStr" | jq . > "data/Data Extraction/Scenario 1/$shipmentNum/api/shipmentBookingSearch.res.json"
+##
+##
+##
+##

@@ -1,0 +1,34 @@
+{
+  "cbm": 26.015,
+  "bookingId": 1357096,
+  "bookingNumber": "SE1212240411",
+  "clientId": 44187,
+  "clientName": "Nisbets PLC",
+  "vendorName": "Royal Porcelain",
+  "vendorClientId": 44530,
+  "vendorCargoWiseCode": "ROYPORTHBKK1",
+  "supplierName": "Royal Porcelain",
+  "motherVesselName": "ONE TRIBUTE",
+  "motherVesselCarrierName": "HAPAG-LLOYD AG",
+  "motherVesselCarrierCode": "HAPLLO_WW",
+  "etd": "2025-01-25T14:00:00",
+  "pol": {
+    "portCode": "THLCH",
+    "countryCode": "TH"
+  },
+  "mot": "Sea",
+  "status": "SAApproved",
+  "deliveryMode": "FCL",
+  "cwRef": "S01889327",
+  "isReadOnly": false,
+  "isFumigated": false,
+  "containers": "20GP x 1",
+  "incoTerm": "FOB",
+  "incoTermPort": {
+    "portCode": "THLCH",
+    "countryCode": "TH"
+  },
+  "shipmentStatus": "Created",
+  "bookingApproved": true,
+  "createdByUserId": 17627
+}
