@@ -39,7 +39,7 @@
 ##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Details/SE0612240084
 ##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/SummaryInformation/SE0612240084
 ##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/ContainerTypes/Sea
-##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Currencies/44187
+##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Currencies/44187 (44187 is the client id)
 ##     NOTE: but don't know what is 44187
 ##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/PackTypes
 ##
@@ -312,13 +312,18 @@ allPackageTypes() {
 }
 
 
-allCurrencies() {
-    local shipmentNum="$1"
+allCurrenciesByClientId() {
+    local clientId="${1-}"
     local resTmpFile
+
+    if [[ -z $clientId ]]; then
+      logE "missing clientId"
+      return 1
+    fi
 
     resTmpFile=$(mktemp) || return 1
     
-    URL="${BASE_URL%/}/Api/Shipments/shipment/Currencies/26317"
+    URL="${BASE_URL%/}/Api/Shipments/shipment/Currencies/$clientId"
     logW "invoking $URL ..."
     HTTP_STATUS=$(
         curl -sS --get \
@@ -385,17 +390,17 @@ shipmentSearch() {
 
 
 shipmentBookingSearch() {
-    local orderNum="${1-}"
+    local bookingNum="${1-}"
     local resTmpFile
 
-    if [[ -z $orderNum ]]; then
-      logE "missing orderNum"
+    if [[ -z $bookingNum ]]; then
+      logE "missing bookingNum"
       return 1
     fi
 
     resTmpFile=$(mktemp) || return 1
     
-    URL="${BASE_URL%/}/Api/Shipments/bookingSearch/$orderNum"
+    URL="${BASE_URL%/}/Api/Shipments/bookingSearch/$bookingNum"
     logW "invoking $URL ..."
     HTTP_STATUS=$(
         curl -sS --get \
@@ -424,17 +429,17 @@ shipmentBookingSearch() {
 }
 
 shipmentDetails() {
-    local orderNum="${1-}"
+    local bookingNum="${1-}"
     local resTmpFile
 
-    if [[ -z $orderNum ]]; then
-      logE "missing orderNum"
+    if [[ -z $bookingNum ]]; then
+      logE "missing bookingNum"
       return 1
     fi
 
     resTmpFile=$(mktemp) || return 1
     
-    URL="${BASE_URL%/}/Api/Shipments/shipment/Details/$orderNum"
+    URL="${BASE_URL%/}/Api/Shipments/shipment/Details/$bookingNum"
     logW "invoking $URL ..."
     HTTP_STATUS=$(
         curl -sS --get \
@@ -464,17 +469,17 @@ shipmentDetails() {
 
 
 shipmentSummary() {
-    local orderNum="${1-}"
+    local bookingNum="${1-}"
     local resTmpFile
 
-    if [[ -z $orderNum ]]; then
-      logE "missing orderNum"
+    if [[ -z $bookingNum ]]; then
+      logE "missing bookingNum"
       return 1
     fi
 
     resTmpFile=$(mktemp) || return 1
     
-    URL="${BASE_URL%/}/Api/Shipments/shipment/SummaryInformation/$orderNum"
+    URL="${BASE_URL%/}/Api/Shipments/shipment/SummaryInformation/$bookingNum"
     logW "invoking $URL ..."
     HTTP_STATUS=$(
         curl -sS --get \

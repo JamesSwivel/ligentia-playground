@@ -1,15 +1,29 @@
-## - 1.0.58: readfile() utf-9 fix
-swivel-common@git+ssh://lib-py-common.github.com/swivelsoftware/lib-py-common.git@1.0.58
+##
+## ## First, update pyenv (otherwise you will not see 3.13.14)
+## pyenv update
+## ## Install Python 3.13.14
+## pyenv install 3.13.14
+## ## Delete existing virtualenv
+## pyenv virtualenv-delete xxxx
+## ## Create a new virtualenv using 3.13.14
+## pyenv virtualenv 3.13.14 xxxx
+##
 
-pandas~=3.0.3
+## - 1.0.57: study wheel
+## - 1.0.58: readfile() utf-9 fix  
+## - 1.0.1: major upgrade of dependent packages and should use Python 3.13.14
+swivel-common@git+ssh://lib-py-common.github.com/swivelsoftware/lib-py-common.git@1.1.0
+
+## .env
+## NOTE: swivel common comes with python-dotenv
+#python-dotenv~=1.2.2
 
 ## async http request
 ## NOTE: swivel common comes with aiohttp
 #aiohttp~=3.14.1
 
+pandas~=3.0.3
+
 ## playwright pytest
 pytest-playwright~=0.8.0
 
-## .env
-## NOTE: swivel common comes with python-dotenv
-#python-dotenv~=1.2.2
