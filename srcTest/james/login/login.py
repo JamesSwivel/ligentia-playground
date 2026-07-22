@@ -199,11 +199,7 @@ async def main():
 
                     # still on identity page -> captcha required
                     if re.match(regex_identity, page.url):
-                        U.logI("Case C: recaptcha required")
-                        # Wait (bounded, not a blind sleep) for the reCAPTCHA widget to actually
-                        # render before we dump a screenshot of it. If this times out, the widget
-                        # was never served at all (e.g. withheld by bot detection) rather than
-                        # just slow to load.
+                        U.logI("Case C: recaptcha may be required")
                         try:
                             await page.wait_for_selector('iframe[title="reCAPTCHA"]', state="visible", timeout=8000)
                             U.logI("reCAPTCHA widget rendered")
