@@ -71,7 +71,7 @@ export BASE_URL=$BASE_URL_PROD_
 export BASE_URL_UAT_=https://supplier.uat1.ligentix.net
 export BASE_URL=$BASE_URL_UAT_
 
-JWT_TOKEN=$(cat srcTest/james/login/temp/jwt.txt)
+JWT_TOKEN=$(cat data/browser/jwt.txt)
 export JWT_TOKEN
 
 log() {
