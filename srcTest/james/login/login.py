@@ -42,6 +42,7 @@ JwtFile = BrowseDataDir / "jwt.txt"
 async def main():
     funcName = main.__name__
     prefix = funcName
+    page = None
     try:
         username = ""
         password = ""
@@ -92,113 +93,122 @@ async def main():
         regex_identity = re.compile(rf"^.*identity\.{re.escape(hostname)}/.*$")
 
         async with async_playwright() as p:
-            session_storage = ""
             try:
-                if os.path.isfile(SessionFile) and os.path.isfile(StateFile):
-                    U.logI(f"Loading session SessionStorage: {SessionFile}")
-                    U.logI(f"Loading cookies and LocalStorage: {StateFile}")
-                    with open(SessionFile, "r+") as f:
-                        session_storage = f.read()
-                        U.logD(session_storage)
-                    browser = await p.chromium.launch()
-                    context = await browser.new_context(storage_state=StateFile)
-                    page = await context.new_page()
-                    await context.add_init_script(
-                        """(storage => {
-                        if (window.location.hostname === """
-                        + hostname  # type: ignore
-                        + """) {
-                            const entries = JSON.parse(storage)
-                            for (const [key, value] of Object.entries(entries)) {
-                                window.sessionStorage.setItem(key, value)
+                session_storage = ""
+                try:
+                    if os.path.isfile(SessionFile) and os.path.isfile(StateFile):
+                        U.logI(f"Loading session SessionStorage: {SessionFile}")
+                        U.logI(f"Loading cookies and LocalStorage: {StateFile}")
+                        with open(SessionFile, "r+") as f:
+                            session_storage = f.read()
+                            U.logD(session_storage)
+                        browser = await p.chromium.launch()
+                        context = await browser.new_context(storage_state=StateFile)
+                        page = await context.new_page()
+                        await context.add_init_script(
+                            """(storage => {
+                            if (window.location.hostname === """
+                            + hostname  # type: ignore
+                            + """) {
+                                const entries = JSON.parse(storage)
+                                for (const [key, value] of Object.entries(entries)) {
+                                    window.sessionStorage.setItem(key, value)
+                                }
                             }
-                        }
-                    })('"""
-                        + session_storage
-                        + "')"
-                    )
-                else:
-                    U.logW("Browser Session/LocalStorage + Cookies NOT found!")
-                    browser = await p.chromium.launch()
-                    context = await browser.new_context()
-                    page = await context.new_page()
-            except Exception as e:
-                U.logE(f"Error loading browser data, please delete all json file and try again ({e})")
-                raise Exception("Failed opening browser")
+                        })('"""
+                            + session_storage
+                            + "')"
+                        )
+                    else:
+                        U.logW("Browser Session/LocalStorage + Cookies NOT found!")
+                        browser = await p.chromium.launch()
+                        context = await browser.new_context()
+                        page = await context.new_page()
+                except Exception as e:
+                    U.logE(f"Error loading browser data, please delete all json file and try again ({e})")
+                    raise Exception("Failed opening browser")
 
-            # Flow:
-            # Base URL -> /login ->
-            # Case A: /signin-callback -> /
-            # Case B: identity.* -> require login
-            # Direction: can't use if else on wait_for_url, so check the redirected URL after /login
-            U.logI(f"Loading page: {main_supplier_url} ...")
-            await page.goto(main_supplier_url, wait_until="commit")
+                # Flow:
+                # Base URL -> /login ->
+                # Case A: /signin-callback -> /
+                # Case B: identity.* -> require login
+                # Direction: can't use if else on wait_for_url, so check the redirected URL after /login
+                U.logI(f"Loading page: {main_supplier_url} ...")
+                await page.goto(main_supplier_url, wait_until="commit")
 
-            ## Wait for the redirect to /login
-            ## e.g. https://supplier.(uat1.)ligentix.net/login
-            U.logI("Waiting page: **/login ...")
-            await page.wait_for_url("**/login", wait_until="commit")
-            U.logI(f"Loaded page: {page.url}")
-
-            ## Use regex to wait for a URL that isn't the login page
-            ## i.e.either the Callback URL or Identity URL
-            U.logI(f"Waiting page: (NOT login page) ...")
-            await page.wait_for_url(regex_NotLogin, wait_until="commit")
-            U.logI(f"Loaded page: {page.url}")
-
-            # Todo: regex to check whether the redirected URL is case 1 or 2
-            if re.match(regex_signin_callback, page.url):
-                # if await page.wait_for_url("**/supplier.uat1.ligentix.net/signin-callback**", timeout=120000):
-                U.logI("Case A: callback")
-                await page.wait_for_url(supplier_wildcard, timeout=240000)
-
-                session_storage = await page.evaluate("() => JSON.stringify(sessionStorage)")
-                storage = await context.storage_state(path=StateFile)  # contains cookies and local storage
-                U.logD(session_storage)
-                await save_session(session_storage)
-                await extract_jwt()
-                # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
-                await context.close()
-                await browser.close()
-
-            elif re.match(regex_identity, page.url):
-                # elif await page.wait_for_url("**/identity.uat1.ligentix.net/**", timeout=120000):
-                U.logI("Case B: login required")
-                U.logD("Auto-filling credentials and logging in...")
-                await page.get_by_placeholder("Username").fill(username)  # type: ignore
-                await page.get_by_placeholder("Password").fill(password)  # type: ignore
-                await page.get_by_label("Remember me next time").check()
-
-                U.logI("Click button: Login to Ligentix")
-                await page.get_by_role("button", name="Login to Ligentix").click()
-
-                U.logD(f"Waiting page: **ligentix.net ...")
-                # await page.wait_for_url("**ligentix.net", timeout=60000 * 2)
-                await page.wait_for_url("**://*.ligentix.net/**", timeout=30000)
+                ## Wait for the redirect to /login
+                ## e.g. https://supplier.(uat1.)ligentix.net/login
+                U.logI("Waiting page: **/login ...")
+                await page.wait_for_url("**/login", wait_until="commit")
                 U.logI(f"Loaded page: {page.url}")
 
-                # still on identity page -> captcha required
-                if re.match(regex_identity, page.url):
-                    U.logI("Case C: recaptcha required")
-                    # send alert
-                    raise Exception("recaptcha required.")
-                else:
-                    U.logD(f"Waiting page: {supplier_wildcard} ...")
+                ## Use regex to wait for a URL that isn't the login page
+                ## i.e.either the Callback URL or Identity URL
+                U.logI(f"Waiting page: (NOT login page) ...")
+                await page.wait_for_url(regex_NotLogin, wait_until="commit")
+                U.logI(f"Loaded page: {page.url}")
+
+                # Todo: regex to check whether the redirected URL is case 1 or 2
+                if re.match(regex_signin_callback, page.url):
+                    # if await page.wait_for_url("**/supplier.uat1.ligentix.net/signin-callback**", timeout=120000):
+                    U.logI("Case A: callback")
                     await page.wait_for_url(supplier_wildcard, timeout=240000)
-                    U.logI(f"Loaded page: {page.url}")
 
                     session_storage = await page.evaluate("() => JSON.stringify(sessionStorage)")
                     storage = await context.storage_state(path=StateFile)  # contains cookies and local storage
                     U.logD(session_storage)
                     await save_session(session_storage)
-                    # Extract JWT
                     await extract_jwt()
-                # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
-                await context.close()
-                await browser.close()
+                    # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
+                    await context.close()
+                    await browser.close()
+
+                elif re.match(regex_identity, page.url):
+                    # elif await page.wait_for_url("**/identity.uat1.ligentix.net/**", timeout=120000):
+                    U.logI("Case B: login required")
+                    U.logD("Auto-filling credentials and logging in...")
+                    await page.get_by_placeholder("Username").fill(username)  # type: ignore
+                    await page.get_by_placeholder("Password").fill(password)  # type: ignore
+                    await page.get_by_label("Remember me next time").check()
+
+                    U.logI("Click button: Login to Ligentix")
+                    await page.get_by_role("button", name="Login to Ligentix").click()
+
+                    U.logD(f"Waiting page: **ligentix.net ...")
+                    # await page.wait_for_url("**ligentix.net", timeout=60000 * 2)
+                    await page.wait_for_url("**://*.ligentix.net/**", timeout=30000)
+                    U.logI(f"Loaded page: {page.url}")
+
+                    # still on identity page -> captcha required
+                    if re.match(regex_identity, page.url):
+                        U.logI("Case C: recaptcha required")
+                        # send alert
+                        raise Exception("recaptcha required.")
+                    else:
+                        U.logD(f"Waiting page: {supplier_wildcard} ...")
+                        await page.wait_for_url(supplier_wildcard, timeout=240000)
+                        U.logI(f"Loaded page: {page.url}")
+
+                        session_storage = await page.evaluate("() => JSON.stringify(sessionStorage)")
+                        storage = await context.storage_state(path=StateFile)  # contains cookies and local storage
+                        U.logD(session_storage)
+                        await save_session(session_storage)
+                        # Extract JWT
+                        await extract_jwt()
+                    # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
+                    await context.close()
+                    await browser.close()
+            except Exception as e:
+                # Handle it HERE, while browser/context/page are still alive.
+                # Letting it escape the `async with` block would run Playwright's
+                # __aexit__ (which stops the driver and tears down the browser)
+                # before the dump ever runs, causing "page already closed".
+                U.logPrefixE(funcName, e, __file__)
+                if page is not None:
+                    await dumpPageErrors(page, e)
+
     except Exception as e:
         U.logPrefixE(funcName, e, __file__)
-        await dumpPageErrors(page, e)
 
 
 async def dumpPageErrors(page: PwPage, inputE: Exception):
