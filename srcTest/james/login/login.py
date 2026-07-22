@@ -199,10 +199,6 @@ async def main():
                     await context.close()
                     await browser.close()
             except Exception as e:
-                # Handle it HERE, while browser/context/page are still alive.
-                # Letting it escape the `async with` block would run Playwright's
-                # __aexit__ (which stops the driver and tears down the browser)
-                # before the dump ever runs, causing "page already closed".
                 U.logPrefixE(funcName, e, __file__)
                 if page is not None:
                     await dumpPageErrors(page, e)
