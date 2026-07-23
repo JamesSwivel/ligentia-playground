@@ -36,13 +36,21 @@ if len(sysDirsToAppend) == 0:
 from localLib.types import *
 from localLib.utils import TypeHelper
 
-Bookings: dict[str, TBookingScenarios] = {
+BookingsMetaData: dict[str, TBookingScenarioDirMeta] = {
     "S01863302": {
         "env": "UAT",
         "scenarioId": "1",
         "bookingNumber": "SE0612240084",
         "cwShipmentNumber": "S01863302",
-    }
+        "data": None,
+    },
+    "S01889327": {
+        "env": "UAT",
+        "scenarioId": "1",
+        "bookingNumber": "SE1212240411",
+        "cwShipmentNumber": "S01889327",
+        "data": None,
+    },
 }
 
 
@@ -50,11 +58,13 @@ async def loadScenarioData(shipmentNum: str):
     funcName = loadScenarioData.__name__
     prefix = funcName
     try:
-        if not shipmentNum in Bookings:
+        U.logW(f"{prefix} >>>> Opening scenario shipment: {shipmentNum} ...")
+        if not shipmentNum in BookingsMetaData:
             raise Exception(f"shipmentNum not found: {shipmentNum}")
-        booking = Bookings[shipmentNum]
+        bookingMetaData = BookingsMetaData[shipmentNum]
+        bookingMetaData["data"] = None
 
-        scenarioId = booking["scenarioId"]
+        scenarioId = bookingMetaData["scenarioId"]
         if not scenarioId in SCENARIO_BASE_DIRS:
             raise Exception(f"invalid scenarioId: {scenarioId}")
         scenarioBaseDir = SCENARIO_BASE_DIRS[scenarioId]
@@ -62,20 +72,33 @@ async def loadScenarioData(shipmentNum: str):
         ## load JSON file
         jsonBaseDir = f"{scenarioBaseDir}/{shipmentNum}/api"
 
-        currencyJsonFile = f"{jsonBaseDir}/currencies.res.json"
-        currency = U.readFile(currencyJsonFile, "json")
+        jsonFile = f"{jsonBaseDir}/currencies.res.json"
+        U.logD(f"{prefix} reading {jsonFile} ...")
+        currency = U.readFile(jsonFile, "json")
 
         jsonFile = f"{jsonBaseDir}/shipmentBookingSearch.res.json"
+        U.logD(f"{prefix} reading {jsonFile} ...")
         shipmentBookingSearch = TypeHelper.toBaseModel(TShipmentBookingSearch, Path(jsonFile))
 
         jsonFile = f"{jsonBaseDir}/shipmentDetails.res.json"
+        U.logD(f"{prefix} reading {jsonFile} ...")
         shipmentDetail = TypeHelper.toBaseModel(TShipmentDetail, Path(jsonFile))
 
         jsonFile = f"{jsonBaseDir}/shipmentSearch.res.json"
+        U.logD(f"{prefix} reading {jsonFile} ...")
         shipmentSearch = TypeHelper.toBaseModel(TShipmentSearch, Path(jsonFile))
 
         jsonFile = f"{jsonBaseDir}/shipmentSummary.res.json"
+        U.logD(f"{prefix} reading {jsonFile} ...")
         shipmentSummary = TypeHelper.toBaseModel(TShipmentSummary, Path(jsonFile))
+
+        bookingMetaData["data"] = {
+            "isValid": True,
+            "shipmentSearch": shipmentSearch,
+            "shipmentBookingSearch": shipmentBookingSearch,
+            "shipmentSummary": shipmentSummary,
+            "shipmentDetail": shipmentDetail,
+        }
 
     except Exception as e:
         U.throwPrefix(prefix, e)
@@ -85,8 +108,10 @@ async def main():
     funcName = main.__name__
     prefix = funcName
     try:
-        U.logW(f"{prefix} hello")
-        await loadScenarioData("S01863302")
+        shipmentNumList1 = ["S01863302", "S01889327"]
+        for shipmentNum in shipmentNumList1:
+            await loadScenarioData(shipmentNum)
+
     except Exception as e:
         U.throwPrefix(prefix, e)
 

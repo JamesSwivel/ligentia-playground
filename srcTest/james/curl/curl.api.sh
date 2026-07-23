@@ -512,8 +512,8 @@ shipmentSummary() {
 ## #################################################################################
 ##
 ## ## Scenario 1
-## shipmentNum=S01863302       ## bookingNumber SE0612240084 
-## shipmentNum=S01889327       ## bookingNumber SE1212240411
+## shipmentNum=S01863302       ## bookingNum=SE0612240084 
+## shipmentNum=S01889327       ## bookingNum=SE1212240411
 ##
 ## if jsonStr=$(shipmentSearch $shipmentNum); then
 ##   echo "$jsonStr" | jq .
@@ -537,6 +537,20 @@ shipmentSummary() {
 ## fi
 ## echo "$jsonStr" | jq . > "data/Data Extraction/Scenario 1/$shipmentNum/api/shipmentBookingSearch.res.json"
 ##
+## ## shipment summary
+## if [[ -n "bookingNum" ]]; then
+##   if jsonStr=$(shipmentSummary $bookingNum); then 
+##     echo "$jsonStr" | jq .
+##   fi
+## fi
+## echo "$jsonStr" | jq . > "data/Data Extraction/Scenario 1/$shipmentNum/api/shipmentSummary.res.json"
 ##
+## ## shipment details
+## if [[ -n "bookingNum" ]]; then
+##   if jsonStr=$(shipmentDetails $bookingNum); then 
+##     echo "$jsonStr" | jq .
+##   fi
+## fi
+## echo "$jsonStr" | jq . > "data/Data Extraction/Scenario 1/$shipmentNum/api/shipmentDetails.res.json"
 ##
 ##

@@ -1,0 +1,64 @@
+{
+  "cwShipmentNumber": "S01889327",
+  "bookingNumber": "SE1212240411",
+  "hasCustomsDeclaration": true,
+  "consignee": "NISBETS LIMITED",
+  "vesselName": "AL JMELIYAH",
+  "vesselNames": [
+    "GABRIELA A",
+    "AL JMELIYAH"
+  ],
+  "outerPacks": 667,
+  "outerPacksPackageType": "CTN",
+  "documentedVolume": 26.015,
+  "totalVolume": 26.015,
+  "totalVolumeUnit": "M3",
+  "documentedWeight": 9008.110,
+  "totalWeight": 9008.110,
+  "totalWeightUnit": "KG",
+  "pol": "THLCH",
+  "pod": "GBSOU",
+  "etd": "2025-01-25T14:00:00",
+  "eta": "2025-03-11T11:30:00",
+  "supplierName": "Royal Porcelain",
+  "vendorClientId": 44530,
+  "containers": [
+    {
+      "containerNumber": "TGBU2357055",
+      "containerType": "20GP"
+    }
+  ],
+  "packingLines": [
+    {
+      "containerNumber": "TGBU2357055",
+      "packQty": 667,
+      "packType": "CTN",
+      "volume": 26.015,
+      "volumeUnit": "M3",
+      "weight": 9008.110,
+      "weightUnit": "KG",
+      "referenceNumber": "",
+      "goodsDescription": "Royal Porcelain Cla ic Coupe Plate",
+      "marksAndNos": "",
+      "importReferenceNumber": ""
+    }
+  ],
+  "transportLegs": [
+    {
+      "legOrder": 1,
+      "vesselName": "GABRIELA A",
+      "carrier": "HAPAG-LLOYD AG",
+      "pol": "THLCH",
+      "pod": "SGSIN",
+      "voyageFlightNo": "037S"
+    },
+    {
+      "legOrder": 2,
+      "vesselName": "AL JMELIYAH",
+      "carrier": "HAPAG-LLOYD AG",
+      "pol": "SGSIN",
+      "pod": "GBSOU",
+      "voyageFlightNo": "030W"
+    }
+  ]
+}
