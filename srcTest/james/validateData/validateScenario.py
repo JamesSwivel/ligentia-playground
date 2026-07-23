@@ -47,6 +47,9 @@ async def main():
         for shipmentNum in shipmentNumList1:
             ScenarioCheckHelper.checkSearchHeaders(shipmentNum)
 
+        for shipmentNum in shipmentNumList1:
+            ScenarioCheckHelper.checkShipmentDetail(shipmentNum)
+
     except Exception as e:
         U.throwPrefix(prefix, e)
 

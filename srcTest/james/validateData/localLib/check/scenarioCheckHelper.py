@@ -13,10 +13,13 @@ from .bookingsMeta import BookingsMetaData
 
 class ScenarioCheckHelper:
 
-    class TCheckStats(TypedDict):
+    class TCheckHeaderStats(TypedDict):
         search: int
         bookingSummary: int
         bookingDetail: int
+
+    class TCheckBookingDetailStats(TypedDict):
+        invoicePoSupplier: int
 
     @classmethod
     def checkSearchHeaders(cls, input: TBookingScenarioDirMeta | str):
@@ -38,12 +41,12 @@ class ScenarioCheckHelper:
             if data is None or not data["isValid"]:
                 raise Exception(f"invalid scenario data")
 
-            stats: ScenarioCheckHelper.TCheckStats = {
+            stats: ScenarioCheckHelper.TCheckHeaderStats = {
                 "search": 0,
                 "bookingSummary": 0,
                 "bookingDetail": 0,
             }
-            statsTotalExpected: ScenarioCheckHelper.TCheckStats = {
+            statsTotalExpected: ScenarioCheckHelper.TCheckHeaderStats = {
                 "search": 0,
                 "bookingSummary": 0,
                 "bookingDetail": 0,
@@ -144,7 +147,102 @@ class ScenarioCheckHelper:
         funcName = cls.checkShipmentDetail.__name__
         prefix = funcName
         try:
-            pass
+            if isinstance(input, str):
+                if not input in BookingsMetaData:
+                    raise Exception(f"invalid shipmentNum: {input}")
+                scenarioData = BookingsMetaData[input]
+            else:
+                scenarioData = input
+
+            shipmentNum = scenarioData["cwShipmentNumber"]
+            bookingNum = scenarioData["bookingNumber"]
+            prefix = f"{prefix}[{shipmentNum}:{bookingNum}]"
+            U.logW(f"{prefix} >>>> checking scenario booking detail")
+            data = scenarioData["data"]
+            if data is None or not data["isValid"]:
+                raise Exception(f"invalid scenario data")
+
+            stats: ScenarioCheckHelper.TCheckBookingDetailStats = {
+                "invoicePoSupplier": 0,
+            }
+            statsTotalExpected: ScenarioCheckHelper.TCheckBookingDetailStats = {
+                "invoicePoSupplier": 0,
+            }
+
+            ##################################################
+            ## Step 1: invoices
+            ##################################################
+            shipmentSearch = data["shipmentSearch"].results[0]
+            shipmentBookingSearch = data["shipmentBookingSearch"]
+            shipmentSummary = data["shipmentSummary"]
+            shipmentDetail = data["shipmentDetail"]
+
+            invoiceNumbers = [i.invoiceNumber for i in shipmentDetail.invoices]
+            invoiceNumbersUnique = list(set(invoiceNumbers))
+            if len(invoiceNumbers) == 0:
+                raise Exception(f"zero invoices")
+            if len(invoiceNumbers) != len(invoiceNumbersUnique):
+                raise Exception(
+                    f"invoice number counts mismatch. nInvoiceNumbers={len(invoiceNumbers)}, nInvoiceNumbersUnique={len(invoiceNumbersUnique)} "
+                )
+            U.logD(f"{prefix} invoiceNumbers={invoiceNumbers}")
+            stats["invoicePoSupplier"] += 1
+            statsTotalExpected["invoicePoSupplier"] += 1
+
+            ##################################################
+            ## Step 2: PO numbers
+            ##################################################
+            orderNumbers = [po.orderNumber for po in shipmentDetail.bookingPurchaseOrders]
+            orderNumbersUnique = list(set(orderNumbers))
+            if len(orderNumbers) == 0:
+                raise Exception(f"zero nOrderNumbers")
+            if len(orderNumbers) != len(orderNumbersUnique):
+                raise Exception(
+                    f"bookingPurchaseOrders' order number counts mismatch. nOrderNumbers={len(orderNumbers)}, nOrderNumbersUnique={len(orderNumbersUnique)} "
+                )
+            U.logD(f"{prefix} bookingPurchaseOrders' orderNumbers={orderNumbers}")
+            stats["invoicePoSupplier"] += 1
+            statsTotalExpected["invoicePoSupplier"] += 1
+
+            ##################################################
+            ## Step 3: bookings
+            ##################################################
+            nBookings = len(shipmentDetail.bookings)
+            if nBookings == 0:
+                raise Exception(f"zero bookings")
+            if nBookings != 1:
+                raise Exception(f"bookings is not single")
+            bookingsOrderNumbers = [po.orderNumber for po in shipmentDetail.bookings[0].purchaseOrders]
+            bookingsOrderNumbersUnique = list(set(bookingsOrderNumbers))
+            if len(bookingsOrderNumbers) == 0:
+                raise Exception(f"zero nBookingsOrderNumbers")
+            if len(bookingsOrderNumbers) != len(bookingsOrderNumbersUnique):
+                raise Exception(
+                    f"bookings' order number counts mismatch. nBookingsOrderNumbers={len(bookingsOrderNumbers)}, nBookingsOrderNumbersUnique={len(bookingsOrderNumbersUnique)} "
+                )
+            U.logD(f"{prefix} bookings' bookingsOrderNumbers={bookingsOrderNumbers}")
+
+            if orderNumbers != bookingsOrderNumbers:
+                U.logPrefixE(prefix, f"order numbers mismatch: orderNumbers != bookingsOrderNumbers")
+            stats["invoicePoSupplier"] += 1
+            statsTotalExpected["invoicePoSupplier"] += 1
+
+            supplierIds = list(
+                set([po.supplierId for po in shipmentDetail.bookings[0].purchaseOrders if po.supplierId is not None])
+            )
+            if len(supplierIds) == 0:
+                raise Exception(f"zero supplierIds")
+            if len(supplierIds) != 1:
+                raise Exception(f"not single supplierIds")
+            supplerId = supplierIds[0]
+            if supplerId != shipmentBookingSearch.vendorClientId:
+                raise Exception(f"supplerId mismatch: detail bookings vs bookingSearch")
+            stats["invoicePoSupplier"] += 1
+            statsTotalExpected["invoicePoSupplier"] += 1
+
+            ## dump summary
+            statsOut = {k: f"{v:2d}/{statsTotalExpected[k]:2d}" for k, v in stats.items()}
+            U.logW(f"{prefix} ==== booking details stats: {statsOut}")
 
         except Exception as e:
             U.throwPrefix(prefix, e)
