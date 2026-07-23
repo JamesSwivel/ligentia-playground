@@ -1,1 +1,9 @@
-CLI tools
+
+2026-07-24 FRI
+
+2026-07-23 THUR
+- Validate S1 
+  - shipmentNum=S01863302       ## bookingNumber SE0612240084 
+  - shipmentNum=S01889327       ## bookingNumber SE1212240411
+- Initial API Repo setup
+  - Ping
