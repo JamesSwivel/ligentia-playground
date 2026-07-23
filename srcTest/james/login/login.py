@@ -117,7 +117,7 @@ async def main():
                         U.logI(f"Loading cookies and LocalStorage: {StateFile}")
                         with open(SessionFile, "r+") as f:
                             session_storage = f.read()
-                            U.logD(session_storage)
+                            # U.logD(session_storage)
                         browser = await p.chromium.launch()
                         context = await browser.new_context(storage_state=StateFile)
                         page = await context.new_page()
@@ -169,14 +169,14 @@ async def main():
                 # Todo: regex to check whether the redirected URL is case 1 or 2
                 if re.match(regex_signin_callback, page.url):
                     # if await page.wait_for_url("**/supplier.uat1.ligentix.net/signin-callback**", timeout=120000):
-                    U.logI("Case A: callback")
+                    U.logI("Case A: callback and wait for dashboard home page")
                     await page.wait_for_url(supplier_wildcard, timeout=240000)
 
                     session_storage = await page.evaluate("() => JSON.stringify(sessionStorage)")
                     storage = await context.storage_state(path=StateFile)  # contains cookies and local storage
-                    U.logD(session_storage)
-                    await save_session(session_storage)
-                    await extract_jwt()
+                    U.logW(f"LocalStorage + cookies: {StateFile}")
+                    await saveSessionStorage(session_storage)
+                    await saveJwt()
                     # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
                     await context.close()
                     await browser.close()
@@ -212,15 +212,15 @@ async def main():
                         raise Exception("recaptcha required.")
                     else:
                         U.logD(f"Waiting page: {supplier_wildcard} ...")
-                        await page.wait_for_url(supplier_wildcard, timeout=240000)
+                        await page.wait_for_url(supplier_wildcard, timeout=60000)
                         U.logI(f"Loaded page: {page.url}")
 
                         session_storage = await page.evaluate("() => JSON.stringify(sessionStorage)")
                         storage = await context.storage_state(path=StateFile)  # contains cookies and local storage
-                        U.logD(session_storage)
-                        await save_session(session_storage)
-                        # Extract JWT
-                        await extract_jwt()
+                        U.logW(f"LocalStorage + cookies: {StateFile}")
+                        await saveSessionStorage(session_storage)
+                        await saveJwt()
+
                     # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
                     await context.close()
                     await browser.close()
@@ -238,10 +238,7 @@ async def dumpPageErrors(page: PwPage, inputE: Exception):
     prefix = funcName
     try:
         await dumpPageScreen(page, BrowseDataDir / f"wait-for-ligentix.00.png")
-        if isinstance(inputE, PwTimeoutError):
-            U.logPrefixE(prefix, f"Page Timed out: {page.url}")
-        else:
-            U.logPrefixE(prefix, f"Page URL: {page.url}")
+        U.logPrefixE(prefix, f"Page URL: {page.url}")
         for index, current_page in enumerate(page.context.pages):
             U.logPrefixE(prefix, f"Open page[{index}]: url={current_page.url}, closed={current_page.is_closed()}")
             try:
@@ -271,20 +268,21 @@ async def dumpPageScreen(page: PwPage, imageFile: Path):
         U.logPrefixE(prefix, e)
 
 
-async def save_session(session_storage_data):
+async def saveSessionStorage(session_storage_data):
     with open(SessionFile, "w+") as f:
         f.write(session_storage_data)
-    U.logI("Session storage and cookies saved!")
+    U.logW(f"SessionStorage: {SessionFile}")
 
 
-async def extract_jwt():
+async def saveJwt():
     with open(SessionFile, "r+") as f:
         temp = json.load(f)
         token = temp["oidc.user:https://identity.uat1.ligentix.net/:shipping-confirmation-portal-app"]
         temp2 = json.loads(token).get("access_token")
-        U.logI(f"JWT Bearer = {temp2}")
+        # U.logI(f"JWT Bearer = {temp2}")
         with open(JwtFile, "w+") as f:
             f.write(temp2)
+        U.logW(f"JWT: {JwtFile}")
 
 
 asyncio.run(main())

@@ -1,0 +1,25 @@
+xdata@CNL1040:[~/.../swivel/ligentia/james/ligentia-playground]: srcTest/james/login/login.py
+12026-07-23 09:41:17.924`W`ScriptDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground/srcTest/james/login
+2026-07-23 09:41:17.925`W`ProjectRootDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground
+2026-07-23 09:41:17.925`W`LogDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground/log
+2026-07-23 09:41:17.925`W`DataDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground/data
+2026-07-23 09:41:17.925`W`BrowseDataDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser
+1. UAT | 2. PROD | 0. Exit >  
+2026-07-23 09:41:18.564`W`Browser Session/LocalStorage + Cookies NOT found!
+2026-07-23 09:41:18.676`I`Loading page: https://supplier.uat1.ligentix.net/ ...
+2026-07-23 09:41:21.293`I`Waiting page: **/login ...
+2026-07-23 09:41:47.430`I`Loaded page: https://supplier.uat1.ligentix.net/login
+2026-07-23 09:41:47.430`I`Waiting page: (NOT login page) ...
+2026-07-23 09:41:49.552`I`Loaded page: https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D80be64562b7247d394f5949a235bfa7f%26code_challenge%3DE8sFxXv5M-0lW4oK61sy8Q_ewobyzfN4VqcxvdTGHJQ%26code_challenge_method%3DS256%26response_mode%3Dquery
+2026-07-23 09:41:49.552`I`Case B: login required
+2026-07-23 09:41:49.552`D`Auto-filling credentials and logging in...
+2026-07-23 09:41:51.186`I`Click button: Login to Ligentix
+2026-07-23 09:41:51.237`D`Waiting page: **ligentix.net ...
+2026-07-23 09:41:58.311`I`Loaded page: https://identity.uat1.ligentix.net/Account/Login
+2026-07-23 09:41:58.311`I`Case C: recaptcha may be required
+2026-07-23 09:41:58.340`I`reCAPTCHA widget rendered
+2026-07-23 09:41:58.341`E`|main: srcTest/james/login/login.py#212 | recaptcha required.
+2026-07-23 09:41:58.578`W`dumpPageScreen[https://identity.uat1.ligentix.net/Account/Login] /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/wait-for-ligentix.00.png
+2026-07-23 09:41:58.578`E`|dumpPageErrors| Page URL: https://identity.uat1.ligentix.net/Account/Login
+2026-07-23 09:41:58.578`E`|dumpPageErrors| Open page[0]: url=https://identity.uat1.ligentix.net/Account/Login, closed=False
+2026-07-23 09:41:58.761`W`dumpPageScreen[https://identity.uat1.ligentix.net/Account/Login] /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/wait-for-ligentix.01.png
