@@ -1,0 +1,6 @@
+## symlinks are NOT tracked
+/data_symlink
+/wal_archive_symlink
+/redis_data_symlink
+
+!.gitignore

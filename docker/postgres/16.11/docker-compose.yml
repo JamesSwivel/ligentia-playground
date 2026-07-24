@@ -1,0 +1,271 @@
+## [ build image - Dockerfile ]
+## docker build .                                     ## Raw Docker build (not linked to docker compose.yml)
+## docker compose -p ligentia-playground build --no-cache    ## Builds image using docker compose.yml configuration and disables Docker layer cache
+## docker compose -p ligentia-playground build               ## (Similar to above but uses Docker layer cache to speed up build)
+
+## [ run the docker container]
+## To run the container
+## docker compose -p ligentia-playground up -d
+##
+## [ Docker basic commands on WSL2 ]
+## - Check WSL2 instance and docker desktop instance
+##   $ wsl -l -v
+##     NAME              STATE           VERSION
+##   * Ubuntu-22.04      Running         2
+##     docker-desktop    Running         2     <-- after rebooted, it is seen
+##   NOTE:
+##   - dockerd (docker engine) actually runs on docker-desktop WSL2 instance
+##
+##  - Basic commands
+##    $ docker image ls                                  ## list all images
+##    $ docker ps -a                                     ## list all containers
+##
+##    $ docker run -it -d --name <name>       \
+##         -e ENV_VAR=XXX                     \
+##         -p <external_port>:<internal_port> \
+##         -v <host_dir>:<container_dir>      \
+##         <image>                                       ## run a container in detached mode
+##    $ docker start <container_id or name>              ## start a stopped container
+##    $ docker stop <container_id or name>               ## stop a container
+##    $ docker restart <container_id or name>            ## restart a container
+##    $ docker rm <container_id or name>                 ## remove a stopped container
+##    $ docker rm -f <container_id or name>              ## force stop + remove a stopped container
+##    $ docker logs <container_id or name>               ## view container logs
+##
+##  - For docker compose
+##    $ docker compose -p ligentia-playground up -d             ## start container in detached mode
+##    $ docker compose -p ligentia-playground down              ## stop and remove containers in the compose project
+##    $ docker compose -p ligentia-playground stop              ## stop containers in the compose project
+##    $ docker compose -p ligentia-playground start             ## start containers in the compose project
+##    $ docker compose -p ligentia-playground restart           ## restart containers in the compose project
+##    $ docker compose -p ligentia-playground ps                ## list containers in the compose project
+##
+##  - Image
+##    $ docker image ls                                  ## list all images
+##    $ docker rmi <image_id or name>                    ## remove an image
+##
+##  - Inspect
+##    $ docker inspect ligentia-playground-postgres-1 | grep Mounts -A 30       ## inspect container ligentia-playground-postgres-1 and show mount info
+##    $ docker exec -it ligentia-playground-postgres-1 bash                     ## enter into a running container ligentia-playground-postgres-1 (root user)
+##    $ docker exec -it --user postgres ligentia-playground-postgres-1 bash     ## enter into a running container ligentia-playground-postgres-1 (postgres user)
+##
+##  - Check Postgres logs
+##    $ cd /var/lib/postgresql/18/docker/log && tail -f `ls -rt | tail -n -1`
+##
+## [ Basic postgres SQL ]
+##
+## - env variables for psql or other CLIs
+##   export PGHOST=localhost
+##   export PGPORT=15433
+##   export PGDATABASE=postgres
+##   export PGUSER=postgres
+##   export PGPASSWORD=swivel
+##   export PGPASSFILE=<pwd_file>
+##
+## - check connection info and server
+##   \conninfo
+##   \c
+##   show server_version;
+##   select version();
+##   show data_directory;
+##   show config_file;
+##   show hba_file;
+##   SELECT pg_postmaster_start_time(), now() - pg_postmaster_start_time() AS uptime;
+##   SELECT count(*) AS active_connections FROM pg_stat_activity WHERE state = 'active';
+##
+## - check WAL archive
+##   SHOW archive_mode;
+##   SHOW archive_command;
+##   SHOW archive_timeout;
+##   SELECT * FROM pg_stat_archiver;
+##   -- force generate a WAL
+##   SELECT pg_switch_wal();
+##
+## [ Basic redis ]
+##
+## - env variables for redis-cli
+##   export REDISCLI_AUTH=swivel
+## - use redis-cli to connect to redis server
+##   redis-cli -h localhost -p 16379 --pass swivel
+##   > AUTH swivel                   ## authenticate if not using REDISCLI_AUTH or redis-cli has no --pass option
+##   > INFO server
+##   > INFO clients
+##   > INFO CPU
+##   > INFO memory
+##   > CLIENT LIST
+##   > CONFIG GET dir                ## data directory
+##   > CONFIG GET *pass*             ## get password config
+##
+
+services:
+  postgres:
+    ## Dockerfile copies files and install some utilities
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ## Optional: assign a container name
+    ## - remove this to avoid container name conflict
+    ##container_name: fehd-ims-pg18.1
+    restart: unless-stopped
+    environment:
+      ## For FEHD, use older 16.11 version and data dir is resided in /var/lib/postgresql/16/docker
+      - PGDATA=/var/lib/postgresql/16/docker
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - PGTZ=Asia/Hong_Kong
+      ## POSTGRES_INITDB_ARGS only apply during initial database creation
+      ## - encoding UTF8 is in fact default (can be omitted)
+      ## - locale C.UTF-8
+      - POSTGRES_INITDB_ARGS=--data-checksums --encoding=UTF8 --locale=C.UTF-8
+      ## Timezone settings
+      - TZ=Asia/Hong_Kong
+
+    ports:
+      ## Use external port 15433 (5432 is default for postgreSQL)
+      ## - This avoids conflicting to Postgres running on Windows using port 5432
+      - 127.0.0.1:15433:5432
+
+    volumes:
+      ## For example:
+      ## - Create symlinks in the current dir:
+      ##   cd ~/projects/swivel/fehd/fehd-ims-fastapi/docker/postgres/16.11/dev
+      ##   ln -s ~/postgresData/16/ims/data data_symlink
+      ##   ln -s ~/postgresData/16/ims/wal_archive wal_archive_symlink
+
+      #- ./data_symlink:/var/lib/postgresql/18/docker
+      #- ./wal_archive_symlink:/var/lib/postgresql/18/docker_wal_archive
+
+      ## NOTE:
+      ## - Use older version 16 data dir for FEHD
+      ## - Since WAL files keep adding up, it should use host crontab to keep last 30 days of WAL files and remove older ones, for example
+      ##   find "$HOME/postgresData/16/ims/wal_archive" -type f -mtime +30 -delete
+      ##   NOTE:
+      ##   - '-mtime +30' means files modified more than 30 days ago
+      ##   - If Point-In-Time Recovery (PITR) is required, ensure the retention period is
+      ##     sufficiently long and compatible with the backup retention policy.
+      - ./data_symlink:/var/lib/postgresql/16/docker
+      - ./wal_archive_symlink:/var/lib/postgresql/16/docker_wal_archive
+
+      ## Dockerfile copies conf files
+      # - ./config/postgresql.conf:/etc/postgresql/postgresql.conf:ro
+      # - ./config/pg_hba.conf:/etc/postgresql/pg_hba.conf:ro
+
+    # Make Postgres use the mounted config file.
+    ##command:
+    ##  [
+    ##    "postgres",
+    ##    "-c",
+    ##    "config_file=/etc/postgresql/postgresql.conf",
+    ##    "-c",
+    ##    "hba_file=/etc/postgresql/pg_hba.conf",
+    ##  ]
+
+    ## run as root user to avoid permission issues on mounted volume
+    user: "0:0"
+
+    ## run command
+    ## - ">" will convert new lines to spaces
+    ## - Thus, it means bash -c "cmd1 && cmd2 && cmd3"
+    ## - The following ensures the wal_archive dir has correct permission before starting postgres
+    ## - 'exec' is used to replace the bash process with postgres process, i.e. ensure postgres is PID 1 in the container
+    ## - In the postgres container, postgres:postgres is 999:999
+    command: >
+      bash -c "chown -R postgres:postgres /var/lib/postgresql/16/docker_wal_archive &&
+               chmod u+rwx /var/lib/postgresql/16/docker_wal_archive &&
+               exec docker-entrypoint.sh postgres -c config_file=/etc/postgresql/postgresql.conf -c hba_file=/etc/postgresql/pg_hba.conf"
+
+    # allow clean checkpoint on stop
+    stop_grace_period: 60s
+
+    ## NOTE:
+    ## - Docker Compose monitors healthcheck status automatically
+    ## - States: starting, healthy, unhealthy
+    ## - Use 'docker compose ps' to see health status
+    ## - If healthcheck fails, it is marked as 'unhealthy'
+    ## - However, it needs external tools to monitor this state and preform restart of the service
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -h 127.0.0.1 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+
+    ## share memory size
+    ## - docker default is 64MB which is too small for postgres
+    ## - 1g to 2g is optimal for system with 16GB+ RAM
+    shm_size: "1g"
+
+    ## tmpfs for temp files
+    ## - 134217728 is 128MB
+    ## - However, this should be define with caution.
+    ##   If the query generates temp files exceeding this limit, it may fail.
+    ## - Thus, this should NOT be used if query size is unknown
+    # tmpfs:
+    #   - /var/lib/postgresql/tmp:rw,size=134217728
+
+    ## docker logging
+    ## - docker logs pg17.6
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "10"
+
+  valkey: # renamed from 'redis' — update any depends_on references
+    image: valkey/valkey:8-alpine
+    restart: unless-stopped
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+      ## Timezone settings
+      - TZ=Asia/Hong_Kong
+
+    ports:
+      ## Use external port 16379 (6379 is default for Valkey)
+      ## - This avoids conflicting with Valkey running on host using port 6379
+      - 127.0.0.1:26379:6379
+
+    volumes:
+      ## Mount custom valkey.conf
+      ## - Create valkey.conf in ./config/ directory with your configuration
+      ## - Most Redis 7 config directives are compatible with Valkey.
+      ## - Valkey is compatible with Redis OSS 7.2 and earlier, so Redis 7 data/config is generally safe to migrate.
+      - ./config/redis.conf:/etc/valkey/valkey.conf:ro
+
+      ## Mount persistent data directory
+      ## - Create symlink: ln -s ~/redisData/7/ims redis_data_symlink
+      ## - Or use direct path
+      ## - Existing Redis RDB/AOF data is cross-compatible with Valkey
+      ##   - however, Redis 7.4.x saves data in RDB format v12, while Valkey 8.0 is forked from Redis 7.2
+      ##     is forked from the Redis 7.2 codebase, which only understands up to RDB v11
+      ##   - Thus, it needs to remove the existing Redis data, for example
+      ##     - cd ~/redisData/7/ims && sudo rm -rf appendonlydir/ dump.rdb
+      - ./redis_data_symlink:/data
+
+    ## Run Valkey with custom config file
+    # Use sh -c to substitute environment variable
+    command: >
+      sh -c "valkey-server /etc/valkey/valkey.conf --requirepass \"$$REDIS_PASSWORD\""
+
+    ## Allow graceful shutdown
+    ## - Valkey needs time to save data on shutdown
+    stop_grace_period: 30s
+
+    ## Healthcheck to monitor Valkey availability
+    healthcheck:
+      ## NOTE:
+      ## - If it needs env var expansion, use CMD-SHELL (NOT CMD)
+      ## - use '--no-auth-warning' to suppress warning when using password in healthcheck
+      test:
+        [
+          "CMD-SHELL",
+          'valkey-cli --no-auth-warning -a "$$REDIS_PASSWORD" ping | grep -q PONG',
+        ]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+    ## Docker logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
