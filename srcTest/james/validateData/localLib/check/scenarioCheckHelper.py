@@ -76,6 +76,7 @@ class ScenarioCheckHelper:
                 label="searchHeaders",
                 stats=stats,
                 stats_key="search",
+                description="shipmentSearch vs shipmentBookingSearch headers",
             )
             statsTotalExpected["search"] = expectedCount
 
@@ -94,6 +95,7 @@ class ScenarioCheckHelper:
                 label="bookingSearchVsSummary",
                 stats=stats,
                 stats_key="bookingSummary",
+                description="shipmentBookingSearch vs shipmentSummary headers",
             )
             statsTotalExpected["bookingSummary"] = expectedCount
 
@@ -132,6 +134,7 @@ class ScenarioCheckHelper:
                 label="bookingSearchVsSummary",
                 stats=stats,
                 stats_key="bookingDetail",
+                description="shipmentBookingSearch vs shipmentDetail headers",
             )
             statsTotalExpected["bookingDetail"] = expectedCount
 
@@ -177,6 +180,7 @@ class ScenarioCheckHelper:
             shipmentSummary = data["shipmentSummary"]
             shipmentDetail = data["shipmentDetail"]
 
+            U.logD(f"{prefix} ✅ check: invoice numbers")
             invoiceNumbers = [i.invoiceNumber for i in shipmentDetail.invoices]
             invoiceNumbersUnique = list(set(invoiceNumbers))
             if len(invoiceNumbers) == 0:
@@ -192,6 +196,7 @@ class ScenarioCheckHelper:
             ##################################################
             ## Step 2: PO numbers
             ##################################################
+            U.logD(f"{prefix} ✅ check: PO order numbers")
             orderNumbers = [po.orderNumber for po in shipmentDetail.bookingPurchaseOrders]
             orderNumbersUnique = list(set(orderNumbers))
             if len(orderNumbers) == 0:
@@ -207,6 +212,7 @@ class ScenarioCheckHelper:
             ##################################################
             ## Step 3: bookings
             ##################################################
+            U.logD(f"{prefix} ✅ check: shipment detail bookings")
             nBookings = len(shipmentDetail.bookings)
             if nBookings == 0:
                 raise Exception(f"zero bookings")
@@ -227,6 +233,7 @@ class ScenarioCheckHelper:
             stats["invoicePoSupplier"] += 1
             statsTotalExpected["invoicePoSupplier"] += 1
 
+            U.logD(f"{prefix} ✅ check: shipment detail bookings supplerIds")
             supplierIds = list(
                 set([po.supplierId for po in shipmentDetail.bookings[0].purchaseOrders if po.supplierId is not None])
             )
@@ -237,6 +244,7 @@ class ScenarioCheckHelper:
             supplerId = supplierIds[0]
             if supplerId != shipmentBookingSearch.vendorClientId:
                 raise Exception(f"supplerId mismatch: detail bookings vs bookingSearch")
+            U.logD(f"{prefix} bookings' supplierId={supplerId}")
             stats["invoicePoSupplier"] += 1
             statsTotalExpected["invoicePoSupplier"] += 1
 
@@ -303,9 +311,10 @@ class ScenarioCheckHelper:
         obj1: BaseModel,
         obj2: BaseModel,
         fieldPairs: list[tuple[str, str] | tuple[str, str, Literal["noThrow"]]],
-        label,
-        stats,
-        stats_key,
+        label: str,
+        stats: TCheckHeaderStats,
+        stats_key: str,
+        description: str,
     ):
         """
         field_pairs: list of (path_in_a, path_in_b) strings, dotted for nested attrs.
@@ -314,6 +323,7 @@ class ScenarioCheckHelper:
         funcName = cls.loadScenarioData.__name__
         prefix = funcName
         try:
+            U.logD(f"{prefix} ✅ Check: {description}")
             for fieldPair in fieldPairs:
                 isThrow = True
                 if len(fieldPair) == 2:
@@ -331,7 +341,7 @@ class ScenarioCheckHelper:
                     if isThrow:
                         raise Exception(err)
                     else:
-                        U.logW(f"{prefix} {err}")
+                        U.logE(f"{prefix} {err}")
                 else:
                     stats[stats_key] += 1
 

@@ -1,0 +1,39 @@
+-- ---------------------------------------------------------------------------
+-- 'available to pack' totals per PO number
+-- ---------------------------------------------------------------------------
+SELECT
+    ROW_NUMBER() OVER() as line_num,
+    COUNT(COALESCE((item ->> 'itemCode'), '_u__'))   AS count,
+    cont ->> 'containerNumber' AS container_number,
+    item ->> 'orderNumber' AS order_number,
+    MAX(COALESCE((item ->> 'lot'), '_u_'))    AS lot,
+    item ->> 'itemCode' AS item_code,
+    item ->> 'productDescription' AS product_description,
+    SUM(COALESCE((item ->> 'units')::numeric, 0))   AS qty,
+    SUM(COALESCE((item ->> 'cartons')::numeric, 0)) AS pkgs,
+    MAX(COALESCE((item ->> 'packTypeCode'), '_u_'))     AS pack_type_code,
+    SUM(COALESCE((item ->> 'cbm')::numeric, 0))     AS cbm,
+    SUM(COALESCE((item ->> 'kgs')::numeric, 0))     AS kgs,
+    MAX(COALESCE((item ->'invoice'->>'invoiceNumber'), '_u_'))    AS invoice_number
+FROM scenario AS s
+CROSS JOIN LATERAL json_array_elements(
+    COALESCE(s.shipment_details -> 'containers', '[]'::json)
+) AS cont
+CROSS JOIN LATERAL json_array_elements(
+    COALESCE(cont -> 'containerLines', '[]'::json)
+) AS item
+WHERE s.shipment_num = 'S01863302'
+GROUP BY 
+  cont ->> 'containerNumber',
+  item ->> 'orderNumber',
+  item ->> 'itemCode',
+  item ->> 'productDescription'
+  ;
+ORDER BY 
+  cont ->> 'containerNumber',
+  item ->> 'orderNumber',
+  item ->> 'itemCode';
+
+
+
+

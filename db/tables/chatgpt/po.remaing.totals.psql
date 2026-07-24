@@ -1,0 +1,59 @@
+-- ---------------------------------------------------------------------------
+-- 'available to pack' totals per PO number
+-- ---------------------------------------------------------------------------
+SELECT
+    po ->> 'orderNumber' AS order_number,
+    SUM(COALESCE((item ->> 'remainingUnits')::numeric, 0))   AS remaining_units,
+    SUM(COALESCE((item ->> 'remainingCartons')::numeric, 0)) AS remaining_cartons,
+    SUM(COALESCE((item ->> 'remainingCBM')::numeric, 0))     AS remaining_cbm,
+    SUM(COALESCE((item ->> 'remainingKGS')::numeric, 0))     AS remaining_kgs
+FROM scenario AS s
+CROSS JOIN LATERAL json_array_elements(
+    COALESCE(s.shipment_details -> 'bookingPurchaseOrders', '[]'::json)
+) AS po
+CROSS JOIN LATERAL json_array_elements(
+    COALESCE(po -> 'bookingItems', '[]'::json)
+) AS item
+WHERE s.shipment_num = 'S01863302'
+GROUP BY po ->> 'orderNumber'
+ORDER BY po ->> 'orderNumber';
+
+
+/**
+ order_number | remaining_units | remaining_cartons | remaining_cbm | remaining_kgs
+--------------+-----------------+-------------------+---------------+---------------
+ 5170072      |               0 |              -484 |       -23.340 |    -10187.200
+ 5170408      |               0 |               -40 |        -2.000 |      -602.700
+ 5170790      |               0 |              -634 |       -30.660 |    -11267.400
+ **/
+
+
+
+-- ---------------------------------------------------------------------------
+-- 'available to pack' item detail list
+-- ---------------------------------------------------------------------------
+SELECT
+    po ->> 'orderNumber' AS order_number,
+    item ->> 'itemCode' AS item_code,
+    COALESCE((item ->> 'remainingUnits')::numeric, 0)   AS remaining_units,
+    COALESCE((item ->> 'remainingCartons')::numeric, 0) AS remaining_cartons,
+    COALESCE((item ->> 'remainingCBM')::numeric, 0)     AS remaining_cbm,
+    COALESCE((item ->> 'remainingKGS')::numeric, 0)     AS remaining_kgs
+FROM scenario AS s
+CROSS JOIN LATERAL json_array_elements(
+    COALESCE(s.shipment_details -> 'bookingPurchaseOrders', '[]'::json)
+) AS po
+CROSS JOIN LATERAL json_array_elements(
+    COALESCE(po -> 'bookingItems', '[]'::json)
+) AS item
+WHERE s.shipment_num = 'S01863302'
+ORDER BY po ->> 'orderNumber';
+
+
+/**
+ order_number | remaining_units | remaining_cartons | remaining_cbm | remaining_kgs
+--------------+-----------------+-------------------+---------------+---------------
+ 5170072      |               0 |              -484 |       -23.340 |    -10187.200
+ 5170408      |               0 |               -40 |        -2.000 |      -602.700
+ 5170790      |               0 |              -634 |       -30.660 |    -11267.400
+ **/
