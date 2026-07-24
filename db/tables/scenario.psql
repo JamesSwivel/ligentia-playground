@@ -20,14 +20,19 @@ CREATE TABLE IF NOT EXISTS scenario (
   -- delivery mode, e.g. FCL, LCL
   delivery_mode   varchar(10) NOT NULL,
 
-  currencies_json                  JSON NOT NULL,
+  -- JSON retrieved from API
+  currencies                       JSON NOT NULL,
   shipment_booking_search          JSON NOT NULL,
   shipment_details                 JSON NOT NULL,
   shipment_search                  JSON NOT NULL,
   shipment_summary                 JSON NOT NULL,
 
-  -- screen data
-  screen_js                        JSON NOT NULL,
+  -- JSON extracted by AI screen
+  screen                           JSON NULL,
+
+  -- JSON extracted by AI from pdfs
+  packing_list                      JSON NULL,
+  invoice                           JSON NULL,
 
   -- URL
   booking_url                      TEXT NOT NULL

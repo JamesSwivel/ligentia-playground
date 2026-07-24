@@ -28,11 +28,49 @@ GROUP BY
   item ->> 'orderNumber',
   item ->> 'itemCode',
   item ->> 'productDescription'
-  ;
 ORDER BY 
   cont ->> 'containerNumber',
   item ->> 'orderNumber',
   item ->> 'itemCode';
+
+
+
+
+-- ---------------------------------------------------------------------------
+-- packing list from AI extraction (packing list pdfs)
+-- ---------------------------------------------------------------------------
+SELECT
+    ROW_NUMBER() OVER() as line_num,
+    COUNT(COALESCE((item ->> 'code'), '_u__'))   AS count,
+    item ->> 'containerNum' AS container_number,
+    item ->> 'PONum' AS order_number,
+    -- MAX(COALESCE((item ->> 'lot'), '_u_'))    AS lot,
+    item ->> 'code' AS item_code,
+    item ->> 'desc' AS product_description,
+    SUM(COALESCE((item ->> 'qty')::numeric, 0))   AS qty,
+    SUM(COALESCE((item ->> 'cartonQty')::numeric, 0)) AS pkgs,
+    MAX(COALESCE((item ->> 'packTypeCode'), '_u_'))     AS pack_type_code,
+    SUM(COALESCE((item ->> 'cbm')::numeric, 0))     AS cbm,
+    SUM(COALESCE((item ->> 'grossWeight')::numeric, 0))     AS kgs,
+    MAX(COALESCE((item ->>'invoiceNum'), '_u_'))    AS invoice_number
+FROM scenario AS s
+CROSS JOIN LATERAL json_array_elements(
+    COALESCE(s.packing_list -> 'packingLists', '[]'::json)
+) AS pack
+CROSS JOIN LATERAL json_array_elements(
+    COALESCE(pack -> 'packingListItems', '[]'::json)
+) AS item
+WHERE s.shipment_num = 'S01863302'
+GROUP BY 
+  item ->> 'containerNum',
+  item ->> 'PONum',
+  item ->> 'code',
+  item ->> 'desc'
+ORDER BY 
+  item ->> 'containerNum',
+  item ->> 'PONum',
+  item ->> 'code';
+
 
 
 

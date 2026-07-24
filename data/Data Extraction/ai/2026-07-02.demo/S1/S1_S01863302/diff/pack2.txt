@@ -1,0 +1,121 @@
+ line_num | count | container_number | order_number | item_code |                           product_description                           |  qty   | pkgs | pack_type_code | cbm  |  kgs   | invoice_number 
+----------+-------+------------------+--------------+-----------+-------------------------------------------------------------------------+--------+------+----------------+------+--------+----------------
+       67 |     1 | CAAU6980806      | 5170072      | A439-L    | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size L.       |  850.0 | 34.0 | _u_            | 1.54 |  543.8 | 830B
+       65 |     1 | CAAU6980806      | 5170072      | A439-M    | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size M        |  850.0 | 34.0 | _u_            | 1.54 |  543.8 | 830B
+       69 |     1 | CAAU6980806      | 5170072      | A439-S    | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size S        |  100.0 |  4.0 | _u_            | 0.18 |   88.0 | 830B
+       84 |     1 | CAAU6980806      | 5170072      | A439-XL   | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size XL       |  325.0 | 13.0 | _u_            | 0.59 |  286.0 | 830B
+      100 |     1 | CAAU6980806      | 5170072      | A439-XS   | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size XS       |  100.0 |  4.0 | _u_            | 0.18 |   88.0 | 830B
+       57 |     1 | CAAU6980806      | 5170072      | A439-XXL  | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size XXL      |  100.0 |  4.0 | _u_            | 0.18 |   88.0 | 830B
+       13 |     1 | CAAU6980806      | 5170072      | A928-L    | Whites Nevada Chefs Jacket White with Black Contrast - Size L.          |  120.0 |  3.0 | _u_            | 0.21 |   66.0 | 830B
+        7 |     1 | CAAU6980806      | 5170072      | B131      | Whites Short Bistro Apron Black - 750x373mm                             |  180.0 |  1.0 | _u_            | 0.07 |   20.0 | 830B
+       37 |     1 | CAAU6980806      | 5170072      | B133      | Whites Bistro Apron Black - 1000x700mm 39.4x27.5"                       |  400.0 |  5.0 | _u_            | 0.47 |  100.0 | 830B
+        1 |     1 | CAAU6980806      | 5170072      | B250-M    | Whites Boston Short Sleeved White Jacket - Size M                       | 1050.0 | 42.0 | _u_            |  1.9 | 1008.0 | 830B
+      101 |     1 | CAAU6980806      | 5170072      | B250-S    | Whites Boston Short Sleeved White Jacket - Size S                       |  850.0 | 34.0 | _u_            | 1.54 |  935.0 | 830B
+        4 |     1 | CAAU6980806      | 5170072      | B250-XL   | Whites Boston Short Sleeved White Jacket - Size XL                      |  975.0 | 39.0 | _u_            | 1.77 | 1072.5 | 830B
+      111 |     1 | CAAU6980806      | 5170072      | B250-XS   | Whites Boston Short Sleeved White Jacket - Size XS                      |  250.0 | 10.0 | _u_            | 0.45 |  305.0 | 830B
+       94 |     1 | CAAU6980806      | 5170072      | B252      | Whites Comfy Hat White - One Size                                       |  300.0 |  1.0 | _u_            | 0.07 |   30.5 | 830B
+       96 |     1 | CAAU6980806      | 5170072      | B255      | Whites Peaked Hat - White                                               |  300.0 |  1.0 | _u_            | 0.07 |   15.0 | 830B
+      103 |     1 | CAAU6980806      | 5170072      | B311-XL   | Whites Vegas Small Blue & White Check Trousers Polycotton - Size XL     |  100.0 |  4.0 | _u_            | 0.18 |  102.0 | 830B
+      108 |     1 | CAAU6980806      | 5170072      | B311-XXL  | Whites Vegas Small Blue & White Check Trousers Polycotton - Size XXL    |  100.0 |  4.0 | _u_            | 0.18 |  114.0 | 830B
+       17 |     1 | CAAU6980806      | 5170072      | B390      | Whites Nevada Chefs Bandana Black                                       |  300.0 |  1.0 | _u_            | 0.07 |   20.0 | 830B
+       54 |     1 | CAAU6980806      | 5170072      | B426      | Whites Bib Apron Polycotton Charcoal                                    |  200.0 |  2.0 | _u_            | 0.14 |   30.8 | 830B
+       75 |     1 | CAAU6980806      | 5170072      | B998-XL   | Southside Chefs Jacket - Size XL                                        |   75.0 |  3.0 | _u_            | 0.14 |   22.5 | 830B
+       59 |     1 | CAAU6980806      | 5170072      | BA002-M   | Whites Vegas Big Check Trousers Black & White Polycotton - Size M       |   25.0 |  1.0 | _u_            | 0.05 |   12.5 | 830B
+       27 |     1 | CAAU6980806      | 5170072      | BB465     | Southside Waist Apron Denim Blue (Tan Ties) - 700x430mm                 |  160.0 |  2.0 | _u_            | 0.14 |   30.0 | 830B
+       80 |     1 | CAAU6980806      | 5170072      | BB466     | Whites Bib Apron Polycotton Red                                         |  100.0 |  1.0 | _u_            | 0.07 |   12.5 | 830B
+       79 |     1 | CAAU6980806      | 5170072      | BB475     | Nisbets Essentials Bib Apron Polycotton Black (Pack 2)                  | 1900.0 | 38.0 | _u_            | 2.62 |  836.0 | 830B
+       34 |     1 | CAAU6980806      | 5170072      | BB476     | Nisbets Essentials Chef Skull Cap Black - One Size (Pack 2)             |  600.0 |  4.0 | _u_            | 0.28 |   50.0 | 830B
+      117 |     1 | CAAU6980806      | 5170072      | BB477-L   | Nisbets Essentials Chef Trousers - Size L                               | 1650.0 | 66.0 | _u_            | 2.97 | 1284.0 | 830B
+       82 |     1 | CAAU6980806      | 5170072      | BB477-M   | Nisbets Essentials Chef Trousers - Size M                               | 1225.0 | 49.0 | _u_            | 2.21 |  778.0 | 830B
+       71 |     1 | CAAU6980806      | 5170072      | BB477-S   | Nisbets Essentials Chef Trousers - Size S                               |  775.0 | 31.0 | _u_            |  1.4 |  682.0 | 830B
+       45 |     1 | CAAU6980806      | 5170072      | BB477-XL  | Nisbets Essentials Chef Trousers - Size XL                              |  575.0 | 23.0 | _u_            | 1.04 |  552.0 | 830B
+       55 |     1 | CAAU6980806      | 5170072      | BB477-XXL | Nisbets Essentials Chef Trousers - Size XXL                             |  200.0 |  8.0 | _u_            | 0.36 |  192.0 | 830B
+       35 |     1 | CAAU6980806      | 5170072      | BB700-M   | Whites Cargo Pants - Size M                                             |  125.0 |  5.0 | _u_            | 0.23 |  107.5 | 830B
+       61 |     1 | CAAU6980806      | 5170072      | BB700-S   | Whites Cargo Pants - Size S                                             |   50.0 |  2.0 | _u_            | 0.09 |   28.0 | 830B
+       70 |     1 | CAAU6980806      | 5170072      | BB700-XL  | Whites Cargo Pants - Size XL                                            |   50.0 |  2.0 | _u_            | 0.09 |   25.4 | 830B
+      104 |     1 | CAAU6980806      | 5170072      | BB702-L   | Southside Band Collar Jacket White - Size L                             |   50.0 |  2.0 | _u_            | 0.09 |   25.8 | 830B
+       99 |     1 | CAAU6980806      | 5170072      | BB702-M   | Southside Band Collar Jacket White - Size M                             |   50.0 |  2.0 | _u_            | 0.09 |   19.8 | 830B
+       44 |     1 | CAAU6980806      | 5170072      | BB712-L   | Southside Band Collar Jacket Charcoal - Size L                          |   25.0 |  1.0 | _u_            | 0.05 |   29.0 | 830B
+       11 |     1 | CAAU6980806      | 5170072      | DL711-S   | Whites Chicago Short Sleeve - Size S                                    |  100.0 |  4.0 | _u_            | 0.18 |   38.8 | 830B
+      112 |     1 | CAAU6980806      | 5170408      | A203-L    | Whites Skull Cap White Polycotton - Size L                              |  300.0 |  1.0 | _u_            | 0.07 |   21.0 | 831A
+       50 |     1 | CAAU6980806      | 5170408      | A211-L    | Whites Vegas Chefs Jacket Short Sleeve White Polycotton - Size L        |  125.0 |  5.0 | _u_            | 0.23 |   77.5 | 831A
+       41 |     1 | CAAU6980806      | 5170408      | A212      | Whites Bakers Cap White - One Size                                      |  300.0 |  1.0 | _u_            | 0.07 |   12.3 | 831A
+      107 |     1 | CAAU6980806      | 5170408      | A275      | Whites Bib Apron Polycotton Black/White Check                           |  100.0 |  1.0 | _u_            | 0.07 |   13.0 | 831A
+       26 |     1 | CAAU6980806      | 5170408      | A438-XL   | Whites Vegas Chefs Jacket Long Sleeve Black Polycotton - Size XL        |  100.0 |  4.0 | _u_            | 0.18 |   56.0 | 831A
+        6 |     1 | CAAU6980806      | 5170408      | A439-L    | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size L        |  100.0 |  4.0 | _u_            | 0.18 |   16.4 | 831A
+       60 |     1 | CAAU6980806      | 5170408      | A439-XL   | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size XL       |  100.0 |  4.0 | _u_            | 0.18 |    9.0 | 831A
+       98 |     1 | CAAU6980806      | 5170408      | A535      | Whites Bib Apron Blue/White Butchers Stripe with Pocket - 28-38", A535" |  100.0 |  1.0 | _u_            | 0.09 |   12.0 | 831A
+       16 |     1 | CAAU6980806      | 5170408      | A540      | Whites Bib Apron Polycotton Green                                       |  100.0 |  1.0 | _u_            | 0.07 |    7.0 | 831A
+       91 |     1 | CAAU6980806      | 5170408      | A580      | EDLP Whites Water Resistant Apron Blue/White Stripe                     |  200.0 |  1.0 | _u_            | 0.07 |   15.0 | 831A
+       56 |     1 | CAAU6980806      | 5170408      | A582-5XL  | Whites Vegas Chefs Trousers Black - Size 5XL                            |  100.0 |  4.0 | _u_            | 0.18 |   60.0 | 831A
+       83 |     1 | CAAU6980806      | 5170408      | A582-M    | Whites Vegas Chefs Trousers Black Polycotton - Size M                   |  100.0 |  4.0 | _u_            | 0.18 |   90.0 | 831A
+       38 |     1 | CAAU6980806      | 5170408      | B250-M    | Whites Boston Short Sleeved White Jacket - Size M                       |  100.0 |  4.0 | _u_            | 0.18 |   96.0 | 831A
+      106 |     1 | CAAU6980806      | 5170408      | B252      | Whites Comfy Hat White - One Size                                       |  300.0 |  1.0 | _u_            | 0.07 |   30.5 | 831A
+       92 |     1 | CAAU6980806      | 5170408      | BB477-M   | Nisbets Essentials Chef Trousers - Size M                               |  100.0 |  4.0 | _u_            | 0.18 |   88.0 | 831A
+       14 |     1 | CAAU6980806      | 5170790      | A134-L    | Whites Vegas Chefs Jacket Long Sleeve White Polycotton - Size L         |  200.0 |  8.0 | _u_            | 0.36 |  156.8 | 832A
+       89 |     1 | CAAU6980806      | 5170790      | A134-S    | Whites Vegas Chefs Jacket Long Sleeve White Polycotton - Size S         |  175.0 |  7.0 | _u_            | 0.32 |  128.1 | 832A
+      115 |     1 | CAAU6980806      | 5170790      | A134-XL   | Whites Vegas Chefs Jacket Long Sleeve White Polycotton - Size XL        |  100.0 |  4.0 | _u_            | 0.18 |   80.0 | 832A
+       23 |     1 | CAAU6980806      | 5170790      | A134-XXL  | Whites Vegas Chefs Jacket Long Sleeve White Polycotton - Size XXL       |  100.0 |  4.0 | _u_            | 0.18 |   50.0 | 832A
+       12 |     1 | CAAU6980806      | 5170790      | A206-M    | Whites Skull Cap Black Polycotton - Size M                              |  300.0 |  1.0 | _u_            | 0.07 |   20.0 | 832A
+       62 |     1 | CAAU6980806      | 5170790      | A211-4XL  | Whites Vegas Chef Jacket Short Sleeve White - Size 4XL                  |  100.0 |  4.0 | _u_            | 0.18 |   53.2 | 832A
+       10 |     1 | CAAU6980806      | 5170790      | A211-5XL  | Whites Vegas Chef Jacket Short Sleeve White - Size 5XL                  |  125.0 |  5.0 | _u_            | 0.23 |  100.0 | 832A
+       72 |     1 | CAAU6980806      | 5170790      | A211-L    | Whites Vegas Chefs Jacket Short Sleeve White Polycotton - Size L        |  800.0 | 32.0 | _u_            | 1.45 |  496.0 | 832A
+       48 |     1 | CAAU6980806      | 5170790      | A211-M    | Whites Vegas Chefs Jacket Short Sleeve White Polycotton - Size M        |  550.0 | 22.0 | _u_            |  1.0 |  275.0 | 832A
+       86 |     1 | CAAU6980806      | 5170790      | A211-S    | Whites Vegas Chefs Jacket Short Sleeve White Polycotton - Size S        |  250.0 | 10.0 | _u_            | 0.45 |  155.0 | 832A
+       68 |     1 | CAAU6980806      | 5170790      | A211-XL   | Whites Vegas Chefs Jacket Short Sleeve White Polycotton - Size XL       |  175.0 |  7.0 | _u_            | 0.32 |   92.4 | 832A
+       21 |     1 | CAAU6980806      | 5170790      | A211-XXL  | Whites Vegas Chefs Jacket Short Sleeve White Polycotton - Size XXL      |  175.0 |  7.0 | _u_            | 0.32 |  150.5 | 832A
+       85 |     1 | CAAU6980806      | 5170790      | A212      | Whites Bakers Cap White - One Size                                      |  300.0 |  1.0 | _u_            | 0.07 |   12.3 | 832A
+       49 |     1 | CAAU6980806      | 5170790      | A279      | EDLP Whites Bib Apron Polycotton Black                                  | 5100.0 | 51.0 | _u_            | 3.53 | 1122.0 | 832A
+        2 |     1 | CAAU6980806      | 5170790      | A351-L    | Whites Unisex Coat White Polycotton - Size L                            |  275.0 | 11.0 | _u_            |  0.5 |  165.0 | 832A
+       24 |     1 | CAAU6980806      | 5170790      | A438-L    | Whites Vegas Chefs Jacket Long Sleeve Black Polycotton - Size L         |  425.0 | 17.0 | _u_            | 0.77 |  221.0 | 832A
+       32 |     1 | CAAU6980806      | 5170790      | A438-XL   | Whites Vegas Chefs Jacket Long Sleeve Black Polycotton - Size XL        |  150.0 |  6.0 | _u_            | 0.27 |   84.0 | 832A
+       93 |     1 | CAAU6980806      | 5170790      | A439-3XL  | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size 3XL      |  125.0 |  5.0 | _u_            | 0.23 |  120.0 | 832A
+       39 |     1 | CAAU6980806      | 5170790      | A439-L    | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size L        |  100.0 |  4.0 | _u_            | 0.18 |   16.4 | 832A
+       43 |     1 | CAAU6980806      | 5170790      | A439-M    | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size M        | 1075.0 | 43.0 | _u_            | 1.95 | 177.95 | 832A
+       25 |     1 | CAAU6980806      | 5170790      | A439-S    | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size S        |  225.0 |  9.0 | _u_            | 0.41 |   18.0 | 832A
+       20 |     1 | CAAU6980806      | 5170790      | A439-XL   | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size XL       |  300.0 | 12.0 | _u_            | 0.54 |   24.0 | 832A
+       87 |     1 | CAAU6980806      | 5170790      | A439-XS   | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size XS       |  100.0 |  4.0 | _u_            | 0.18 |   86.0 | 832A
+       42 |     1 | CAAU6980806      | 5170790      | A439-XXL  | Whites Vegas Chefs Jacket Short Sleeve Black Polycotton - Size XXL      |  100.0 |  4.0 | _u_            | 0.18 |   86.0 | 832A
+       90 |     1 | CAAU6980806      | 5170790      | A582-4XL  | Whites Vegas Chefs Trousers Black - Size 4XL                            |  100.0 |  4.0 | _u_            | 0.18 |   92.0 | 832A
+       74 |     1 | CAAU6980806      | 5170790      | A582-M    | Whites Vegas Chefs Trousers Black Polycotton - Size M                   | 1375.0 | 55.0 | _u_            | 2.49 | 1237.5 | 832A
+       51 |     1 | CAAU6980806      | 5170790      | A582-S    | Whites Vegas Chefs Trousers Black Polycotton - Size S                   |  100.0 |  4.0 | _u_            | 0.18 |   84.0 | 832A
+      114 |     1 | CAAU6980806      | 5170790      | A582-XL   | Whites Vegas Chefs Trousers Black Polycotton - Size XL                  |  250.0 | 10.0 | _u_            | 0.45 |  210.0 | 832A
+       95 |     1 | CAAU6980806      | 5170790      | A582-XS   | Whites Vegas Chefs Trousers Black Polycotton - Size XS                  |  100.0 |  4.0 | _u_            | 0.18 |   80.0 | 832A
+       73 |     1 | CAAU6980806      | 5170790      | A582-XXL  | Whites Vegas Chefs Trousers Black Polycotton - Size XXL                 |  175.0 |  7.0 | _u_            | 0.32 |   86.1 | 832A
+      113 |     1 | CAAU6980806      | 5170790      | A590      | Whites Heavy Duty Water Proof Apron                                     | 1400.0 | 14.0 | _u_            | 0.97 |  186.2 | 832A
+       28 |     1 | CAAU6980806      | 5170790      | A928-M    | Whites Nevada Chefs Jacket White with Black Contrast - Size M           |  120.0 |  3.0 | _u_            | 0.21 |   29.1 | 832A
+      105 |     1 | CAAU6980806      | 5170790      | B046      | Whites Tabard with Pocket Black - One Size                              |  200.0 |  2.0 | _u_            | 0.14 |   25.0 | 832A
+       29 |     1 | CAAU6980806      | 5170790      | B226      | Whites Net Peaked Hat White - One Size                                  |  300.0 |  1.0 | _u_            | 0.07 |   22.0 | 832A
+       40 |     1 | CAAU6980806      | 5170790      | B250-L    | Whites Boston Short Sleeved White Jacket - Size L                       |  675.0 | 27.0 | _u_            | 1.22 |  688.5 | 832A
+       97 |     1 | CAAU6980806      | 5170790      | B250-M    | Whites Boston Short Sleeved White Jacket - Size M                       | 1575.0 | 63.0 | _u_            | 2.85 | 1512.0 | 832A
+       19 |     1 | CAAU6980806      | 5170790      | B250-S    | Whites Boston Short Sleeved White Jacket - Size S                       |  375.0 | 15.0 | _u_            | 0.68 |  412.5 | 832A
+       63 |     1 | CAAU6980806      | 5170790      | B250-XL   | Whites Boston Short Sleeved White Jacket - Size XL                      |  425.0 | 17.0 | _u_            | 0.77 |  467.5 | 832A
+       18 |     1 | CAAU6980806      | 5170790      | B250-XS   | Whites Boston Short Sleeved White Jacket - Size XS                      |  375.0 | 15.0 | _u_            | 0.68 |  457.5 | 832A
+      109 |     1 | CAAU6980806      | 5170790      | B255      | Whites Peaked Hat - White                                               |  600.0 |  2.0 | _u_            | 0.14 |   30.0 | 832A
+        3 |     1 | CAAU6980806      | 5170790      | B989-L    | Southside Chefs Utility Trousers - Size L                               |  100.0 |  4.0 | _u_            | 0.18 |   30.0 | 832A
+       36 |     1 | CAAU6980806      | 5170790      | B998-M    | Southside Chefs Jacket - Size M                                         |  100.0 |  4.0 | _u_            | 0.18 |   30.0 | 832A
+      102 |     1 | CAAU6980806      | 5170790      | B998-XL   | Southside Chefs Jacket - Size XL                                        |   75.0 |  3.0 | _u_            | 0.14 |   22.5 | 832A
+       52 |     1 | CAAU6980806      | 5170790      | BA002-S   | Whites Vegas Big Check Trousers Black & White Polycotton - Size S       |   50.0 |  2.0 | _u_            | 0.09 |   21.6 | 832A
+       76 |     1 | CAAU6980806      | 5170790      | BA112-XL  | Whites Vegas Chefs Trousers Charcoal - Size XL                          |  100.0 |  4.0 | _u_            | 0.18 |   33.0 | 832A
+       33 |     1 | CAAU6980806      | 5170790      | BA116-L   | Southside Harlem Chefs Jacket White Short Sleeve Mesh - Size L          |  125.0 |  5.0 | _u_            | 0.23 |   43.0 | 832A
+        9 |     1 | CAAU6980806      | 5170790      | BA116-M   | Southside Harlem Chefs Jacket White Short Sleeve Mesh - Size M          |  125.0 |  5.0 | _u_            | 0.23 |   43.0 | 832A
+      116 |     1 | CAAU6980806      | 5170790      | BA116-XL  | Southside Harlem Chefs Jacket White Short Sleeve Mesh - Size XL         |  125.0 |  5.0 | _u_            | 0.23 |   43.0 | 832A
+       15 |     1 | CAAU6980806      | 5170790      | BA199-L   | Southside Casual Trouser Black - Size L                                 |  100.0 |  4.0 | _u_            | 0.18 |   35.0 | 832A
+        8 |     1 | CAAU6980806      | 5170790      | BA199-M   | Southside Casual Trouser Black - Size M                                 |  125.0 |  5.0 | _u_            | 0.23 |  41.25 | 832A
+       47 |     1 | CAAU6980806      | 5170790      | BA199-S   | Southside Casual Trouser Black - Size S                                 |  100.0 |  4.0 | _u_            | 0.18 |   32.0 | 832A
+       64 |     1 | CAAU6980806      | 5170790      | BA199-XL  | Southside Casual Trouser Black - Size XL                                |  100.0 |  4.0 | _u_            | 0.18 |   36.0 | 832A
+      110 |     1 | CAAU6980806      | 5170790      | BB177     | Whites Short Bistro Apron Burgundy - 750x373mm                          |  180.0 |  1.0 | _u_            | 0.07 |   12.5 | 832A
+       46 |     1 | CAAU6980806      | 5170790      | BB476     | Nisbets Essentials Chef Skull Cap Black - One Size (Pack 2)             |  600.0 |  4.0 | _u_            | 0.28 |   50.0 | 832A
+       77 |     1 | CAAU6980806      | 5170790      | BB477-S   | Nisbets Essentials Chef Trousers - Size S                               |  700.0 | 28.0 | _u_            | 1.26 |  616.0 | 832A
+       81 |     1 | CAAU6980806      | 5170790      | BB477-XL  | Nisbets Essentials Chef Trousers - Size XL                              |  150.0 |  6.0 | _u_            | 0.27 |  144.0 | 832A
+       31 |     1 | CAAU6980806      | 5170790      | BB477-XXL | Nisbets Essentials Chef Trousers - Size XXL                             |  100.0 |  4.0 | _u_            | 0.18 |   96.0 | 832A
+       22 |     1 | CAAU6980806      | 5170790      | BB700-L   | Whites Cargo Pants - Size L                                             |   75.0 |  3.0 | _u_            | 0.14 |   60.0 | 832A
+        5 |     1 | CAAU6980806      | 5170790      | BB700-M   | Whites Cargo Pants - Size M                                             |   75.0 |  3.0 | _u_            | 0.14 |   64.5 | 832A
+       66 |     1 | CAAU6980806      | 5170790      | BB700-XL  | Whites Cargo Pants - Size XL                                            |   25.0 |  1.0 | _u_            | 0.05 |   12.7 | 832A
+       30 |     1 | CAAU6980806      | 5170790      | BB701-XS  | Whites Ladies Fitted Jacket - Size XS                                   |   50.0 |  2.0 | _u_            | 0.09 |   46.0 | 832A
+       58 |     1 | CAAU6980806      | 5170790      | BB702-L   | Southside Band Collar Jacket White - Size L                             |   50.0 |  2.0 | _u_            | 0.09 |   25.8 | 832A
+       78 |     1 | CAAU6980806      | 5170790      | BB712-L   | Southside Band Collar Jacket Charcoal - Size L                          |   75.0 |  3.0 | _u_            | 0.14 |   87.0 | 832A
+       88 |     1 | CAAU6980806      | 5170790      | BB712-M   | Southside Band Collar Jacket Charcoal - Size M                          |  100.0 |  4.0 | _u_            | 0.18 |   84.0 | 832A
+       53 |     1 | CAAU6980806      | 5170790      | DP923     | Bolero Banquet Chair Poly Jersey Covers Black                           |   75.0 |  3.0 | _u_            | 0.14 |   54.0 | 832A
+(117 rows)
+
