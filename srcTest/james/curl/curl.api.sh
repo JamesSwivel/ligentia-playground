@@ -10,7 +10,7 @@
 ##
 ## - Opening Suppliers > Shipment > Search
 ##   - APP URL:
-##     https://supplier.ligentix.net/shipments/search
+##     https://supplier.uat1.ligentix.net/shipments/search
 ##   - ✅ Get customers
 ##     GET https://supplier.uat1.ligentix.net/Api/Shipments/bookingSearch/customers
 ##   - ✅ Get POLs
@@ -40,7 +40,6 @@
 ##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/SummaryInformation/SE0612240084
 ##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/ContainerTypes/Sea
 ##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/Currencies/44187 (44187 is the client id)
-##     NOTE: but don't know what is 44187
 ##     https://supplier.uat1.ligentix.net/Api/Shipments/shipment/PackTypes
 ##
 ##
