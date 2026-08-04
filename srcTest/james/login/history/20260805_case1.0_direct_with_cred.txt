@@ -1,0 +1,43 @@
+[ Summary ]
+Case 1.0 - direct jump to dashboard with supplied credentials
+2026-08-04 23:57:46.831`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/
+2026-08-04 23:57:50.112`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/
+
+
+[ Detail logs ]
+xdata@CNL1040:[~/.../swivel/ligentia/james/ligentia-playground]: srcTest/james/login/login.py
+1
+2026-08-05 00:15:52.837`W`ScriptDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground/srcTest/james/login
+2026-08-05 00:15:52.838`W`ProjectRootDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground
+2026-08-05 00:15:52.838`W`LogDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground/log
+2026-08-05 00:15:52.838`W`DataDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground/data
+2026-08-05 00:15:52.838`W`BrowseDataDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser
+1. UAT | 2. PROD | 0. Exit >  2026-08-05 00:15:53.147`I`Loading session SessionStorage: /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/session.json
+2026-08-05 00:15:53.147`I`Loading cookies and LocalStorage: /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/state.json
+2026-08-05 00:15:53.383`I`Loading page: https://supplier.uat1.ligentix.net/ ...
+2026-08-05 00:15:53.387`D`NAVIGATION REQUEST: https://supplier.uat1.ligentix.net/
+2026-08-05 00:15:53.982`D`NAVIGATION RESPONSE: 200 https://supplier.uat1.ligentix.net/
+2026-08-05 00:15:53.983`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/
+2026-08-05 00:15:53.984`D`waitForUrl waiting for URLs[domcontentloaded]: ['supplierDashboard'] ...
+2026-08-05 00:15:53.989`D`BROWSER CONSOLE: [LOG][initScript] Hostname matched: supplier.uat1.ligentix.net
+2026-08-05 00:15:53.989`D`BROWSER CONSOLE: [LOG][initScript] sessionStorage initialized:  restoredCount=2keys=["oidc.user:https://identity.uat1.ligentix.net/:shipping-confirmation-portal-app","__playwrightSessionStorageInitialized__"]
+2026-08-05 00:15:53.990`D`BROWSER CONSOLE: [LOG][initScript] sessionStorage initialization marker created: __playwrightSessionStorageInitialized__
+2026-08-05 00:15:56.867`D`XHR/FETCH REQUEST: GET https://supplier.uat1.ligentix.net/appsettings.json
+2026-08-05 00:15:56.870`D`DOM CONTENT LOADED: https://supplier.uat1.ligentix.net/
+2026-08-05 00:15:56.870`D`waitForUrl loaded URL[domcontentloaded]: https://supplier.uat1.ligentix.net/, matched: supplierDashboard
+2026-08-05 00:15:56.870`D`LOAD COMPLETE: https://supplier.uat1.ligentix.net/
+2026-08-05 00:15:57.063`D`XHR/FETCH RESPONSE: 200 https://supplier.uat1.ligentix.net/appsettings.json
+2026-08-05 00:15:57.105`D`XHR/FETCH REQUEST: GET https://identity.uat1.ligentix.net/.well-known/openid-configuration
+2026-08-05 00:15:57.106`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/
+2026-08-05 00:15:57.107`D`BROWSER CONSOLE: [LOG][initScript] URL changed: replaceState https://supplier.uat1.ligentix.net/
+2026-08-05 00:15:57.142`D`XHR/FETCH REQUEST: GET https://supplier.uat1.ligentix.net/Api/statistics/bookings
+2026-08-05 00:15:57.143`D`XHR/FETCH REQUEST: GET https://supplier.uat1.ligentix.net/Api/statistics/shipment/rag/count
+2026-08-05 00:15:57.407`D`XHR/FETCH RESPONSE: 200 https://supplier.uat1.ligentix.net/Api/statistics/bookings
+2026-08-05 00:15:57.479`D`XHR/FETCH RESPONSE: 200 https://supplier.uat1.ligentix.net/Api/statistics/shipment/rag/count
+2026-08-05 00:15:57.680`D`XHR/FETCH RESPONSE: 200 https://identity.uat1.ligentix.net/.well-known/openid-configuration
+2026-08-05 00:15:59.871`D`waitForUrl waiting for URLs[commit]: ['login', 'supplierDashboard'] ...
+2026-08-05 00:15:59.874`D`waitForUrl loaded URL[commit]: https://supplier.uat1.ligentix.net/, matched: supplierDashboard
+2026-08-05 00:15:59.881`W`saveSessionStorage[https://supplier.uat1.ligentix.net/] /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/session.json
+2026-08-05 00:15:59.961`W`saveLocalStorageAndCookies /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/state.json
+2026-08-05 00:16:01.170`W`dumpPageScreen[https://supplier.uat1.ligentix.net/] /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/dashboard_1.png
+2026-08-05 00:16:01.170`W`JWT: /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/jwt.txt

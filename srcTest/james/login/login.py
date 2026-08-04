@@ -12,7 +12,7 @@ import re
 from textwrap import dedent
 import os
 from pathlib import Path
-from typing import Callable, Literal
+from typing import Callable, Literal, cast
 from typing_extensions import TypedDict
 import swivel.common as U
 from playwright.async_api import (
@@ -80,7 +80,7 @@ class PlaywrightHelper:
     async def waitForUrl(
         cls,
         page: PwPage,
-        patterns: list[TWaitForPattern],
+        patterns: list[TWaitForPattern] | TWaitForPattern,
         *,
         isDebug: bool = False,
         wait_until: Literal["commit", "domcontentloaded", "load", "networkidle", None] = "load",
@@ -90,15 +90,17 @@ class PlaywrightHelper:
         prefix = funcName
         try:
             """Wait for a URL that matches any of the given patterns, and return the matched pattern."""
+            if not isinstance(patterns, list):
+                patterns = [patterns]
             if isDebug:
-                U.logD(f"{prefix} waiting for URLs: {[p['name'] for p in patterns]} ...")
+                U.logD(f"{prefix} waiting for URLs[{wait_until}]: {[p['name'] for p in patterns]} ...")
             predicate = cls.makeUrlPatternPredicate(patterns)
             await page.wait_for_url(predicate, wait_until=wait_until, **kwargs)
             matchedPattern = cls.findMatchedPattern(page.url, patterns)
             if matchedPattern is None:
                 raise Exception(f"wait_for_url() returned but no pattern matched the URL: {page.url}")
             if isDebug:
-                U.logD(f"{prefix} matched URL: {page.url}, pattern: {matchedPattern['name']}")
+                U.logD(f"{prefix} loaded URL[{wait_until}]: {page.url}, matched: {matchedPattern['name']}")
             return matchedPattern
         except Exception as e:
             U.throwPrefix(prefix, e)
@@ -107,7 +109,7 @@ class PlaywrightHelper:
     async def waitForUrlNotThrow(
         cls,
         page: PwPage,
-        patterns: list[TWaitForPattern],
+        patterns: list[TWaitForPattern] | TWaitForPattern,
         *,
         isDebug: bool = False,
         wait_until: Literal["commit", "domcontentloaded", "load", "networkidle", None] = "load",
@@ -132,11 +134,20 @@ class PlaywrightHelper:
         return matched, err
 
     @classmethod
-    async def dumpPageScreen(cls, page: PwPage, imageFile: Path):
+    async def dumpPageScreen(
+        cls,
+        page: PwPage,
+        imageFile: Path,
+        *,
+        isWaitFullPage: bool = True,
+        waitFullPageTimeout: int = 30_000,
+    ):
         funcName = cls.dumpPageScreen.__name__
         prefix = funcName
         try:
             prefix = f"{prefix}[{page.url}]"
+            if isWaitFullPage:
+                await page.wait_for_load_state("domcontentloaded", timeout=waitFullPageTimeout)
             await page.screenshot(path=imageFile, full_page=True)
             U.logW(f"{prefix} {imageFile}")
         except Exception as e:
@@ -150,8 +161,11 @@ class PlaywrightHelper:
             prefix = f"{prefix}[{page.url}]"
             sessionStorageStr = await page.evaluate("() => JSON.stringify(sessionStorage)")
             js = U.toDictNotThrow(sessionStorageStr)
-            await U.SwAsyncFile.writeJsonFileFromDict(str(sessionFilePath), js, isIndent=True)
-            U.logW(f"{prefix} {sessionFilePath}")
+            if len(js) == 0:
+                U.logW(f"{prefix} sessionStorage is empty")
+            else:
+                await U.SwAsyncFile.writeJsonFileFromDict(str(sessionFilePath), js, isIndent=True)
+                U.logW(f"{prefix} {sessionFilePath}")
             return js
         except Exception as e:
             U.throwPrefix(prefix, e)
@@ -161,10 +175,26 @@ class PlaywrightHelper:
         funcName = cls.saveLocalStorageAndCookies.__name__
         prefix = funcName
         try:
+            ## The storage has shape
+            ## {
+            ##   "cookies": [...],
+            ##   "origins": [...]
+            ## }
             storage = await ctx.storage_state()  # contains cookies and local storage
             js = dict(storage)
-            await U.SwAsyncFile.writeJsonFileFromDict(str(sessionFilePath), js, isIndent=True)
-            U.logW(f"{prefix} {sessionFilePath}")
+
+            isSave = False
+            if len(js) > 0:
+                cookies = js.get("cookies", [])
+                origins = js.get("origins", [])
+                if isinstance(cookies, list) and len(cookies) > 0 and isinstance(origins, list) and len(origins) > 0:
+                    isSave = True
+
+            if isSave:
+                await U.SwAsyncFile.writeJsonFileFromDict(str(sessionFilePath), js, isIndent=True)
+                U.logW(f"{prefix} {sessionFilePath}")
+            else:
+                U.logW(f"{prefix} storage_state is empty")
             return js
         except Exception as e:
             U.throwPrefix(prefix, e)
@@ -226,7 +256,7 @@ class PlaywrightHelper:
                 raise TypeError("sessionStorage must be a JSON string, Mapping, or None")
 
             initScript = dedent(f"""
-                console.log("[LOG][initScript] running initScript...");
+                //console.log("[LOG][initScript] running initScript...");
                 (() => {{
                     const targetHostname = {json.dumps(hostname)};
                     const currentHostname = window.location.hostname;
@@ -238,8 +268,8 @@ class PlaywrightHelper:
 
                     // restores session storage for the specified hostname
                     if (currentHostname !== targetHostname) {{
-                        console.log("[LOG][initScript] Hostname not matched:", "expected=" + targetHostname, "actual=" + currentHostname);
-                        console.log("[LOG][initScript] sessionStorage initialization skipped: hostname not matched");
+                        //console.log("[LOG][initScript] Hostname not matched:", "expected=" + targetHostname, "actual=" + currentHostname);
+                        //console.log("[LOG][initScript] sessionStorage initialization skipped: hostname not matched");
                     }} else {{
                         console.log("[LOG][initScript] Hostname matched:", currentHostname);
 
@@ -274,9 +304,7 @@ class PlaywrightHelper:
                         console.log("[LOG][initScript] Client-side routing trace skipped: already installed");
                     }} else {{
                         window[routingTraceMarker] = true;
-
-                        console.log("[LOG][initScript] Installing client-side routing trace:", window.location.href);
-
+                        //console.log("[LOG][initScript] Installing client-side routing trace:", window.location.href);
                         const reportUrlChange = (source) => {{
                             console.log("[LOG][initScript] URL changed:", source, window.location.href);
                         }};
@@ -321,35 +349,51 @@ class PlaywrightHelper:
             def onRequest(request: PwRequest) -> None:
                 if request.is_navigation_request() and request.frame == page.main_frame:
                     redirected_from = request.redirected_from
-
                     if redirected_from:
                         U.logD(f"NAVIGATION REQUEST: {redirected_from.url} -> {request.url}")
                     else:
                         U.logD(f"NAVIGATION REQUEST: {request.url}")
+                elif request.resource_type in ("xhr", "fetch"):
+                    U.logD(f"XHR/FETCH REQUEST: {request.method} {request.url}")
+
+            def onRequestFailed(request: PwRequest) -> None:
+                if request.frame != page.main_frame:
+                    return
+                failure = request.failure
+                kind = "NAVIGATION" if request.is_navigation_request() else request.resource_type.upper()
+                U.logD(f"{kind} REQUEST FAILED: {request.url}  reason={failure}")
 
             def onResponse(response: PwResponse) -> None:
-                request = response.request
-
-                if not (request.is_navigation_request() and request.frame == page.main_frame):
+                if response.request.frame != page.main_frame:
                     return
-                location = response.headers.get("location")
-                if 300 <= response.status < 400:
-                    U.logD(
-                        f"HTTP REDIRECT: {response.status} {response.url} -> {location or '<missing Location header>'}"
-                    )
-                else:
+
+                if response.request.is_navigation_request():
                     U.logD(f"NAVIGATION RESPONSE: {response.status} {response.url}")
+                elif response.request.resource_type in ("xhr", "fetch"):
+                    # Flag auth-relevant status codes explicitly, adjust as needed
+                    marker = ""
+                    if response.status in (401, 403):
+                        marker = "  <-- AUTH FAILURE"
+                    U.logD(f"XHR/FETCH RESPONSE: {response.status} {response.url}{marker}")
+
+            def onDomContentLoaded(page: PwPage) -> None:
+                U.logD(f"DOM CONTENT LOADED: {page.url}")
+
+            def onLoad(page: PwPage) -> None:
+                U.logD(f"LOAD COMPLETE: {page.url}")
 
             def onFrameNavigated(frame: PwFrame) -> None:
                 if frame == page.main_frame:
-                    U.logD(
-                        f"BROWSER COMMITTED: {frame.url}",
-                    )
+                    U.logD(f"BROWSER COMMITTED: {frame.url}")
 
             page.on("request", onRequest)
             page.on("response", onResponse)
             page.on("framenavigated", onFrameNavigated)
+            page.on("domcontentloaded", onDomContentLoaded)
+            page.on("load", onLoad)
             page.on("console", onConsole)
+
+            page.on("requestfailed", onRequestFailed)
 
         except Exception as e:
             U.throwPrefix(prefix, e)
@@ -477,6 +521,9 @@ async def main():
                         context = await browser.new_context()
                         page = await context.new_page()
                         PlaywrightHelper.installPageTrace(page)
+                        await PlaywrightHelper.installInitScript(
+                            context, hostname=f"supplier.{hostname}", sessionStorage=None
+                        )
                 except Exception as e:
                     U.logE(f"Error loading browser data, please delete all json file and try again ({e})")
                     raise Exception("Failed opening browser")
@@ -490,6 +537,7 @@ async def main():
                 # Direction: can't use if else on wait_for_url, so check the redirected URL after /login
                 U.logI(f"Loading page: {main_supplier_url} ...")
                 await page.goto(main_supplier_url, wait_until="commit")
+                # await page.goto(main_supplier_url, wait_until="domcontentloaded")
 
                 # ## Wait for the redirect to /login
                 # ## e.g. https://supplier.(uat1.)ligentix.net/login
@@ -497,37 +545,51 @@ async def main():
                 # await page.wait_for_url("**/login", wait_until="commit")
                 # U.logI(f"Loaded page: {page.url}")
 
-                patterns: list[TWaitForPattern] = [
-                    {
+                patterns: dict[str, TWaitForPattern] = {
+                    "login": {
                         "name": "login",
                         ## This pattern matches
                         ## - https://supplier.(uat1.)ligentix.net/login
                         ## - https://supplier.(uat1.)ligentix.net/login/
                         ## - https://supplier.(uat1.)ligentix.net/login?returnUrl=...
-                        "pattern": re.compile(rf"/login(?:[/?]|$)"),
+                        "pattern": re.compile(rf"/login(?:[/?]|$)", re.IGNORECASE),
                     },
-                    {
+                    "supplierDashboard": {
                         "name": "supplierDashboard",
                         ## This pattern matches
                         ## - https://supplier.(uat1.)ligentix.net
                         ## - https://supplier.(uat1.)ligentix.net/
                         ## - https://supplier.(uat1.)ligentix.net/?xxx=...
-                        "pattern": re.compile(rf"supplier.{re.escape(hostname)}(?:[/?]|$)"),
+                        # "pattern": re.compile(rf"supplier.{re.escape(hostname)}(?:[/?]|$)", re.IGNORECASE),
+                        "pattern": re.compile(rf"supplier.{re.escape(hostname)}/$", re.IGNORECASE),
                     },
-                ]
+                }
+
+                ## Wait for full page load
+                waitedMatch = await PlaywrightHelper.waitForUrl(
+                    page,
+                    patterns["supplierDashboard"],
+                    isDebug=True,
+                    wait_until="domcontentloaded",
+                    timeout=30_000,
+                )
+                if waitedMatch["name"] != "supplierDashboard":
+                    raise Exception(f"Expected to match supplierDashboard, but got {waitedMatch['name']}")
+
+                await asyncio.sleep(3)  # wait for any potential redirects to complete
 
                 waitedMatch = await PlaywrightHelper.waitForUrl(
                     page,
-                    patterns,
+                    [p for p in patterns.values()],
                     isDebug=True,
                     wait_until="commit",
                     timeout=30_000,
                 )
-                U.logI(f"Loaded page: {page.url}")
 
                 if waitedMatch["name"] == "supplierDashboard":
                     sessionStorage = await PlaywrightHelper.saveSessionStorage(page, SessionFile)
                     localStorageAndCookies = await PlaywrightHelper.saveLocalStorageAndCookies(context, StateFile)
+                    await PlaywrightHelper.dumpPageScreen(page, BrowseDataDir / "dashboard_1.png")
                     await saveJwt()
 
                 elif waitedMatch["name"] == "login":
@@ -546,6 +608,7 @@ async def main():
                         sessionStorage = await PlaywrightHelper.saveSessionStorage(page, SessionFile)
                         localStorageAndCookies = await PlaywrightHelper.saveLocalStorageAndCookies(context, StateFile)
                         await saveJwt()
+                        await PlaywrightHelper.dumpPageScreen(page, BrowseDataDir / "dashboard_1.png")
                         # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
                         # await context.close()
                         # await browser.close()
@@ -589,6 +652,7 @@ async def main():
                                 context, StateFile
                             )
                             await saveJwt()
+                            await PlaywrightHelper.dumpPageScreen(page, BrowseDataDir / "dashboard_2.png")
 
                     # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
                     # await context.close()
@@ -606,7 +670,6 @@ async def main():
 
     except Exception as e:
         U.logPrefixE(funcName, e, __file__)
-
 
 
 async def saveJwt():

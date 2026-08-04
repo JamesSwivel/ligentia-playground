@@ -397,6 +397,7 @@
     "relativedelta",
     "Renminbi",
     "reqd",
+    "requestfailed",
     "requestid",
     "requirepass",
     "Restic",
