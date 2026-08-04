@@ -82,6 +82,7 @@ class PlaywrightHelper:
         page: PwPage,
         patterns: list[TWaitForPattern],
         *,
+        isDebug: bool = False,
         wait_until: Literal["commit", "domcontentloaded", "load", "networkidle", None] = "load",
         **kwargs,
     ) -> TWaitForPattern:
@@ -89,11 +90,15 @@ class PlaywrightHelper:
         prefix = funcName
         try:
             """Wait for a URL that matches any of the given patterns, and return the matched pattern."""
+            if isDebug:
+                U.logD(f"{prefix} waiting for URLs: {[p['name'] for p in patterns]} ...")
             predicate = cls.makeUrlPatternPredicate(patterns)
             await page.wait_for_url(predicate, wait_until=wait_until, **kwargs)
             matchedPattern = cls.findMatchedPattern(page.url, patterns)
             if matchedPattern is None:
                 raise Exception(f"wait_for_url() returned but no pattern matched the URL: {page.url}")
+            if isDebug:
+                U.logD(f"{prefix} matched URL: {page.url}, pattern: {matchedPattern['name']}")
             return matchedPattern
         except Exception as e:
             U.throwPrefix(prefix, e)
@@ -104,20 +109,65 @@ class PlaywrightHelper:
         page: PwPage,
         patterns: list[TWaitForPattern],
         *,
+        isDebug: bool = False,
         wait_until: Literal["commit", "domcontentloaded", "load", "networkidle", None] = "load",
         **kwargs,
-    ) -> tuple[TWaitForPattern | None, str]:
+    ) -> tuple[TWaitForPattern | None, Exception | None]:
         funcName = cls.waitForUrlNotThrow.__name__
         prefix = funcName
-        err = ""
+        err: Exception | None = None
         matched: TWaitForPattern | None = None
         try:
-            matchedPattern = await cls.waitForUrl(page, patterns, wait_until=wait_until, **kwargs)
+            matchedPattern = await cls.waitForUrl(
+                page,
+                patterns,
+                isDebug=isDebug,
+                wait_until=wait_until,
+                **kwargs,
+            )
             return matchedPattern, err
         except Exception as e:
             U.logPrefixE(prefix, e)
-
+            err = e
         return matched, err
+
+    @classmethod
+    async def dumpPageScreen(cls, page: PwPage, imageFile: Path):
+        funcName = cls.dumpPageScreen.__name__
+        prefix = funcName
+        try:
+            prefix = f"{prefix}[{page.url}]"
+            await page.screenshot(path=imageFile, full_page=True)
+            U.logW(f"{prefix} {imageFile}")
+        except Exception as e:
+            U.logPrefixE(prefix, e)
+
+    @classmethod
+    async def saveSessionStorage(cls, page: PwPage, sessionFilePath: Path):
+        funcName = cls.saveSessionStorage.__name__
+        prefix = funcName
+        try:
+            prefix = f"{prefix}[{page.url}]"
+            sessionStorageStr = await page.evaluate("() => JSON.stringify(sessionStorage)")
+            js = U.toDictNotThrow(sessionStorageStr)
+            await U.SwAsyncFile.writeJsonFileFromDict(str(sessionFilePath), js, isIndent=True)
+            U.logW(f"{prefix} {sessionFilePath}")
+            return js
+        except Exception as e:
+            U.throwPrefix(prefix, e)
+
+    @classmethod
+    async def saveLocalStorageAndCookies(cls, ctx: PwBrowserContext, sessionFilePath: Path):
+        funcName = cls.saveLocalStorageAndCookies.__name__
+        prefix = funcName
+        try:
+            storage = await ctx.storage_state()  # contains cookies and local storage
+            js = dict(storage)
+            await U.SwAsyncFile.writeJsonFileFromDict(str(sessionFilePath), js, isIndent=True)
+            U.logW(f"{prefix} {sessionFilePath}")
+            return js
+        except Exception as e:
+            U.throwPrefix(prefix, e)
 
     @classmethod
     async def installInitScript(
@@ -256,52 +306,82 @@ class PlaywrightHelper:
         except Exception as e:
             U.throwPrefix(prefix, e)
 
+    @classmethod
+    def installPageTrace(cls, page: PwPage):
+        funcName = cls.installPageTrace.__name__
+        prefix = funcName
+        try:
 
-def enablePageTrace(page: PwPage):
-    funcName = enablePageTrace.__name__
-    prefix = funcName
-    try:
+            def onConsole(message) -> None:
+                if message.text.startswith("[URL_CHANGE]"):
+                    U.logD(f"CLIENT ROUTE: {message.text}")
+                elif message.text.startswith("[LOG]"):
+                    U.logD(f"BROWSER CONSOLE: {message.text}")
 
-        def onConsole(message) -> None:
-            if message.text.startswith("[URL_CHANGE]"):
-                U.logD(f"CLIENT ROUTE: {message.text}")
-            elif message.text.startswith("[LOG]"):
-                U.logD(f"BROWSER CONSOLE: {message.text}")
+            def onRequest(request: PwRequest) -> None:
+                if request.is_navigation_request() and request.frame == page.main_frame:
+                    redirected_from = request.redirected_from
 
-        def onRequest(request: PwRequest) -> None:
-            if request.is_navigation_request() and request.frame == page.main_frame:
-                redirected_from = request.redirected_from
+                    if redirected_from:
+                        U.logD(f"NAVIGATION REQUEST: {redirected_from.url} -> {request.url}")
+                    else:
+                        U.logD(f"NAVIGATION REQUEST: {request.url}")
 
-                if redirected_from:
-                    U.logD(f"NAVIGATION REQUEST: {redirected_from.url} -> {request.url}")
+            def onResponse(response: PwResponse) -> None:
+                request = response.request
+
+                if not (request.is_navigation_request() and request.frame == page.main_frame):
+                    return
+                location = response.headers.get("location")
+                if 300 <= response.status < 400:
+                    U.logD(
+                        f"HTTP REDIRECT: {response.status} {response.url} -> {location or '<missing Location header>'}"
+                    )
                 else:
-                    U.logD(f"NAVIGATION REQUEST: {request.url}")
+                    U.logD(f"NAVIGATION RESPONSE: {response.status} {response.url}")
 
-        def onResponse(response: PwResponse) -> None:
-            request = response.request
+            def onFrameNavigated(frame: PwFrame) -> None:
+                if frame == page.main_frame:
+                    U.logD(
+                        f"BROWSER COMMITTED: {frame.url}",
+                    )
 
-            if not (request.is_navigation_request() and request.frame == page.main_frame):
-                return
+            page.on("request", onRequest)
+            page.on("response", onResponse)
+            page.on("framenavigated", onFrameNavigated)
+            page.on("console", onConsole)
 
-            location = response.headers.get("location")
+        except Exception as e:
+            U.throwPrefix(prefix, e)
 
-            if 300 <= response.status < 400:
-                U.logD(f"HTTP REDIRECT: {response.status} {response.url} -> {location or '<missing Location header>'}")
-            else:
-                U.logD(f"NAVIGATION RESPONSE: {response.status} {response.url}")
+    @classmethod
+    async def dumpPageErrors(cls, page: PwPage, inputE: Exception, logDir: Path, baseNamePrefix: str = "") -> None:
+        funcName = cls.dumpPageErrors.__name__
+        prefix = funcName
+        try:
 
-        def onFrameNavigated(frame: PwFrame) -> None:
-            if frame == page.main_frame:
-                U.logD(
-                    f"BROWSER COMMITTED: {frame.url}",
-                )
+            U.logPrefixE(prefix, f"Current page URL: {page.url}, inputE={inputE}")
+            for index, current_page in enumerate(page.context.pages):
+                try:
+                    U.logPrefixE(
+                        prefix,
+                        (f"Open page[{index}]: " f"url={current_page.url}, " f"closed={current_page.is_closed()}"),
+                    )
 
-        page.on("request", onRequest)
-        page.on("response", onResponse)
-        page.on("framenavigated", onFrameNavigated)
-        page.on("console", onConsole)
-    except Exception as e:
-        U.throwPrefix(prefix, e)
+                    if current_page.is_closed():
+                        U.logW(f"{funcName} cannot capture " f"screenshot on page[{index}]")
+                        continue
+
+                    await cls.dumpPageScreen(
+                        current_page,
+                        logDir / f"{baseNamePrefix}.p{index+1:02d}.png",
+                    )
+
+                except Exception as error:
+                    U.logPrefixE(prefix, error)
+
+        except Exception as e:
+            U.logPrefixE(prefix, e)
 
 
 async def main():
@@ -371,7 +451,7 @@ async def main():
                 await new_page.wait_for_load_state("domcontentloaded", timeout=5000)
             except Exception:
                 pass
-            await dumpPageScreen(new_page, BrowseDataDir / f"popup.{popup_index:02d}.png")
+            await PlaywrightHelper.dumpPageScreen(new_page, BrowseDataDir / f"popup.{popup_index:02d}.png")
 
         async with async_playwright() as p:
             try:
@@ -386,7 +466,7 @@ async def main():
                         browser = await p.chromium.launch()
                         context = await browser.new_context(storage_state=StateFile)
                         page = await context.new_page()
-                        enablePageTrace(page)
+                        PlaywrightHelper.installPageTrace(page)
                         await PlaywrightHelper.installInitScript(
                             context, hostname=f"supplier.{hostname}", sessionStorage=session_storage
                         )
@@ -396,7 +476,7 @@ async def main():
                         browser = await p.chromium.launch()
                         context = await browser.new_context()
                         page = await context.new_page()
-                        enablePageTrace(page)
+                        PlaywrightHelper.installPageTrace(page)
                 except Exception as e:
                     U.logE(f"Error loading browser data, please delete all json file and try again ({e})")
                     raise Exception("Failed opening browser")
@@ -411,11 +491,11 @@ async def main():
                 U.logI(f"Loading page: {main_supplier_url} ...")
                 await page.goto(main_supplier_url, wait_until="commit")
 
-                ## Wait for the redirect to /login
-                ## e.g. https://supplier.(uat1.)ligentix.net/login
-                U.logI("Waiting page: **/login ...")
-                await page.wait_for_url("**/login", wait_until="commit")
-                U.logI(f"Loaded page: {page.url}")
+                # ## Wait for the redirect to /login
+                # ## e.g. https://supplier.(uat1.)ligentix.net/login
+                # U.logI("Waiting page: **/login ...")
+                # await page.wait_for_url("**/login", wait_until="commit")
+                # U.logI(f"Loaded page: {page.url}")
 
                 patterns: list[TWaitForPattern] = [
                     {
@@ -436,118 +516,97 @@ async def main():
                     },
                 ]
 
-                ## Use regex to wait for a URL that isn't the login page
-                ## i.e.either the Callback URL or Identity URL
-                U.logI(f"Waiting page: (NOT login page) ...")
-                await page.wait_for_url(regex_NotLogin, wait_until="commit")
+                waitedMatch = await PlaywrightHelper.waitForUrl(
+                    page,
+                    patterns,
+                    isDebug=True,
+                    wait_until="commit",
+                    timeout=30_000,
+                )
                 U.logI(f"Loaded page: {page.url}")
 
-                # Todo: regex to check whether the redirected URL is case 1 or 2
-                if re.match(regex_signin_callback, page.url):
-                    # if await page.wait_for_url("**/supplier.uat1.ligentix.net/signin-callback**", timeout=120000):
-                    U.logI("Case A: callback and wait for dashboard home page")
-                    await page.wait_for_url(supplier_wildcard, timeout=240000)
-
-                    session_storage = await page.evaluate("() => JSON.stringify(sessionStorage)")
-                    storage = await context.storage_state(path=StateFile)  # contains cookies and local storage
-                    U.logW(f"LocalStorage + cookies: {StateFile}")
-                    await saveSessionStorage(session_storage)
+                if waitedMatch["name"] == "supplierDashboard":
+                    sessionStorage = await PlaywrightHelper.saveSessionStorage(page, SessionFile)
+                    localStorageAndCookies = await PlaywrightHelper.saveLocalStorageAndCookies(context, StateFile)
                     await saveJwt()
-                    # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
-                    await context.close()
-                    await browser.close()
 
-                elif re.match(regex_identity, page.url):
-                    # elif await page.wait_for_url("**/identity.uat1.ligentix.net/**", timeout=120000):
-                    U.logI("Case B: login required")
-                    U.logD("Auto-filling credentials and logging in...")
-                    await page.get_by_placeholder("Username").fill(username)  # type: ignore
-                    await page.get_by_placeholder("Password").fill(password)  # type: ignore
-                    await page.get_by_label("Remember me next time").check()
-
-                    U.logI("Click button: Login to Ligentix")
-                    await page.get_by_role("button", name="Login to Ligentix").click()
-
-                    U.logD(f"Waiting page: **ligentix.net ...")
-                    # await page.wait_for_url("**ligentix.net", timeout=60000 * 2)
-                    await page.wait_for_url("**://*.ligentix.net/**", timeout=30000)
+                elif waitedMatch["name"] == "login":
+                    ## Use regex to wait for a URL that isn't the login page
+                    ## i.e.either the Callback URL or Identity URL
+                    U.logI(f"Waiting page: (NOT login page) ...")
+                    await page.wait_for_url(regex_NotLogin, wait_until="commit")
                     U.logI(f"Loaded page: {page.url}")
 
-                    # still on identity page -> captcha required
-                    if re.match(regex_identity, page.url):
-                        U.logI("Case C: recaptcha may be required")
-                        try:
-                            await page.wait_for_selector('iframe[title="reCAPTCHA"]', state="visible", timeout=8000)
-                            U.logI("reCAPTCHA widget rendered")
-                        except PwTimeoutError:
-                            U.logW(
-                                "reCAPTCHA widget did NOT render within 8s "
-                                "(likely withheld by bot detection, not just slow to load)"
-                            )
-                        # send alert
-                        raise Exception("recaptcha required.")
-                    else:
-                        U.logD(f"Waiting page: {supplier_wildcard} ...")
-                        await page.wait_for_url(supplier_wildcard, timeout=60000)
+                    # Todo: regex to check whether the redirected URL is case 1 or 2
+                    if re.match(regex_signin_callback, page.url):
+                        # if await page.wait_for_url("**/supplier.uat1.ligentix.net/signin-callback**", timeout=120000):
+                        U.logI("Case A: callback and wait for dashboard home page")
+                        await page.wait_for_url(supplier_wildcard, timeout=240000)
+
+                        sessionStorage = await PlaywrightHelper.saveSessionStorage(page, SessionFile)
+                        localStorageAndCookies = await PlaywrightHelper.saveLocalStorageAndCookies(context, StateFile)
+                        await saveJwt()
+                        # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
+                        # await context.close()
+                        # await browser.close()
+
+                    elif re.match(regex_identity, page.url):
+                        # elif await page.wait_for_url("**/identity.uat1.ligentix.net/**", timeout=120000):
+                        U.logI("Case B: login required")
+                        U.logD("Auto-filling credentials and logging in...")
+                        await page.get_by_placeholder("Username").fill(username)  # type: ignore
+                        await page.get_by_placeholder("Password").fill(password)  # type: ignore
+                        await page.get_by_label("Remember me next time").check()
+
+                        U.logI("Click button: Login to Ligentix")
+                        await page.get_by_role("button", name="Login to Ligentix").click()
+
+                        U.logD(f"Waiting page: **ligentix.net ...")
+                        # await page.wait_for_url("**ligentix.net", timeout=60000 * 2)
+                        await page.wait_for_url("**://*.ligentix.net/**", timeout=30000)
                         U.logI(f"Loaded page: {page.url}")
 
-                        session_storage = await page.evaluate("() => JSON.stringify(sessionStorage)")
-                        storage = await context.storage_state(path=StateFile)  # contains cookies and local storage
-                        U.logW(f"LocalStorage + cookies: {StateFile}")
-                        await saveSessionStorage(session_storage)
-                        await saveJwt()
+                        # still on identity page -> captcha required
+                        if re.match(regex_identity, page.url):
+                            U.logI("Case C: recaptcha may be required")
+                            try:
+                                await page.wait_for_selector('iframe[title="reCAPTCHA"]', state="visible", timeout=8000)
+                                U.logI("reCAPTCHA widget rendered")
+                            except PwTimeoutError:
+                                U.logW(
+                                    "reCAPTCHA widget did NOT render within 8s "
+                                    "(likely withheld by bot detection, not just slow to load)"
+                                )
+                            # send alert
+                            raise Exception("recaptcha required.")
+                        else:
+                            U.logD(f"Waiting page: {supplier_wildcard} ...")
+                            await page.wait_for_url(supplier_wildcard, timeout=60000)
+                            U.logI(f"Loaded page: {page.url}")
+
+                            sessionStorage = await PlaywrightHelper.saveSessionStorage(page, SessionFile)
+                            localStorageAndCookies = await PlaywrightHelper.saveLocalStorageAndCookies(
+                                context, StateFile
+                            )
+                            await saveJwt()
 
                     # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
-                    await context.close()
-                    await browser.close()
+                    # await context.close()
+                    # await browser.close()
+
             except Exception as e:
                 U.logPrefixE(funcName, e, __file__)
                 if page is not None:
-                    await dumpPageErrors(page, e)
+                    await PlaywrightHelper.dumpPageErrors(
+                        page,
+                        e,
+                        BrowseDataDir,
+                        baseNamePrefix="wait-for-ligentix",
+                    )
 
     except Exception as e:
         U.logPrefixE(funcName, e, __file__)
 
-
-async def dumpPageErrors(page: PwPage, inputE: Exception):
-    funcName = dumpPageErrors.__name__
-    prefix = funcName
-    try:
-        await dumpPageScreen(page, BrowseDataDir / f"wait-for-ligentix.00.png")
-        U.logPrefixE(prefix, f"Page URL: {page.url}")
-        for index, current_page in enumerate(page.context.pages):
-            U.logPrefixE(prefix, f"Open page[{index}]: url={current_page.url}, closed={current_page.is_closed()}")
-            try:
-                if current_page.is_closed():
-                    U.logW(f"{prefix} cannot capture screenshot on page[{index}]")
-                else:
-                    await dumpPageScreen(current_page, BrowseDataDir / f"wait-for-ligentix.{index+1:02d}.png")
-            except Exception as e2:
-                U.logPrefixE(prefix, e2)
-
-    except Exception as e:
-        U.logPrefixE(prefix, e)
-
-
-async def dumpPageScreen(page: PwPage, imageFile: Path):
-    funcName = dumpPageScreen.__name__
-    prefix = funcName
-    try:
-        prefix = f"{prefix}[{page.url}]"
-        await page.screenshot(
-            path=imageFile,
-            full_page=True,
-        )
-        U.logW(f"{prefix} {imageFile}")
-
-    except Exception as e:
-        U.logPrefixE(prefix, e)
-
-
-async def saveSessionStorage(session_storage_data):
-    with open(SessionFile, "w+") as f:
-        f.write(session_storage_data)
-    U.logW(f"SessionStorage: {SessionFile}")
 
 
 async def saveJwt():
