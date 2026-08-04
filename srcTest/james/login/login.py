@@ -134,6 +134,34 @@ class PlaywrightHelper:
         return matched, err
 
     @classmethod
+    async def waitForApiResponses(cls, page: PwPage, urlSubstrings: list[str], timeoutMs: int = 30_000) -> None:
+        funcName = cls.waitForApiResponses.__name__
+        prefix = funcName
+
+        ## initially, all urlSubstrings are not seen, i.e. False
+        seen = {s: False for s in urlSubstrings}
+
+        def _on_response(response: PwResponse) -> None:
+            for s in urlSubstrings:
+                if s in response.url and response.status == 200:
+                    U.logD(f"{prefix} API responses received: {response.url}")
+                    seen[s] = True
+
+        page.on("response", _on_response)
+
+        try:
+            U.logD(f"{prefix} Waiting for API responses: {urlSubstrings} ...")
+            deadline = asyncio.get_event_loop().time() + timeoutMs / 1000
+            while not all(seen.values()):
+                if asyncio.get_event_loop().time() > deadline:
+                    missing = [s for s, ok in seen.items() if not ok]
+                    raise TimeoutError(f"Timed out waiting for API responses: {missing}")
+                await asyncio.sleep(0.05)
+            U.logD(f"{prefix} All API responses received")
+        finally:
+            page.remove_listener("response", _on_response)
+
+    @classmethod
     async def dumpPageScreen(
         cls,
         page: PwPage,
@@ -561,6 +589,9 @@ async def main():
                         ## - https://supplier.(uat1.)ligentix.net/
                         ## - https://supplier.(uat1.)ligentix.net/?xxx=...
                         # "pattern": re.compile(rf"supplier.{re.escape(hostname)}(?:[/?]|$)", re.IGNORECASE),
+                        ##
+                        ## This patterns matches
+                        ## - https://supplier.(uat1.)ligentix.net/ (without any query params)
                         "pattern": re.compile(rf"supplier.{re.escape(hostname)}/$", re.IGNORECASE),
                     },
                 }
@@ -576,23 +607,37 @@ async def main():
                 if waitedMatch["name"] != "supplierDashboard":
                     raise Exception(f"Expected to match supplierDashboard, but got {waitedMatch['name']}")
 
-                await asyncio.sleep(3)  # wait for any potential redirects to complete
+                # U.logW(f"wait for 5 seconds...")
+                # await asyncio.sleep(5)  # wait for any potential redirects to complete
 
-                waitedMatch = await PlaywrightHelper.waitForUrl(
-                    page,
-                    [p for p in patterns.values()],
-                    isDebug=True,
-                    wait_until="commit",
-                    timeout=30_000,
-                )
+                isDashboardWaited = False
+                try:
+                    await PlaywrightHelper.waitForApiResponses(
+                        page,
+                        [
+                            "/Api/statistics/bookings",
+                            "/Api/statistics/shipment/rag/count",
+                        ],
+                        timeoutMs=20_000,
+                    )
+                    isDashboardWaited = True
+                except Exception as eWaitDashboard:
+                    U.logW(f"{eWaitDashboard}")
 
-                if waitedMatch["name"] == "supplierDashboard":
+                if isDashboardWaited:
                     sessionStorage = await PlaywrightHelper.saveSessionStorage(page, SessionFile)
                     localStorageAndCookies = await PlaywrightHelper.saveLocalStorageAndCookies(context, StateFile)
                     await PlaywrightHelper.dumpPageScreen(page, BrowseDataDir / "dashboard_1.png")
                     await saveJwt()
+                else:
+                    waitedMatch = await PlaywrightHelper.waitForUrl(
+                        page,
+                        patterns["login"],
+                        isDebug=True,
+                        wait_until="domcontentloaded",
+                        timeout=30_000,
+                    )
 
-                elif waitedMatch["name"] == "login":
                     ## Use regex to wait for a URL that isn't the login page
                     ## i.e.either the Callback URL or Identity URL
                     U.logI(f"Waiting page: (NOT login page) ...")
