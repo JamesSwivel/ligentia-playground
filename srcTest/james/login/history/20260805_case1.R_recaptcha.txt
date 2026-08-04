@@ -2,6 +2,7 @@
 Case 1.R - recaptcha needed
 2026-08-04 23:49:46.911`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/
 2026-08-04 23:49:53.061`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/login
+2026-08-05 01:11:13.598`W`Timed out waiting for API responses: ['/Api/statistics/bookings', '/Api/statistics/shipment/rag/count']
 2026-08-05 00:01:12.218`D`BROWSER COMMITTED: https://identity.uat1.ligentix.net/Account/Login
 fill logon
 2026-08-05 00:01:15.005`D`BROWSER COMMITTED: https://identity.uat1.ligentix.net/Account/Login
@@ -9,61 +10,52 @@ it means logon filling not OK -> recaptcha
 
 
 [ Detail logs ]
-xdata@CNL1040:[~/.../swivel/ligentia/james/ligentia-playground]: srcTest/james/login/login.py
-2026-08-05 00:21:20.020`W`ScriptDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground/srcTest/james/login
-2026-08-05 00:21:20.021`W`ProjectRootDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground
-2026-08-05 00:21:20.021`W`LogDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground/log
-2026-08-05 00:21:20.021`W`DataDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground/data
-2026-08-05 00:21:20.021`W`BrowseDataDir=/home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser
-1. UAT | 2. PROD | 0. Exit >  1
-2026-08-05 00:21:20.832`W`Browser Session/LocalStorage + Cookies NOT found!
-2026-08-05 00:21:20.927`I`Loading page: https://supplier.uat1.ligentix.net/ ...
-2026-08-05 00:21:20.936`D`NAVIGATION REQUEST: https://supplier.uat1.ligentix.net/
-2026-08-05 00:21:21.503`D`NAVIGATION RESPONSE: 200 https://supplier.uat1.ligentix.net/
-2026-08-05 00:21:21.523`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/
-2026-08-05 00:21:21.524`D`waitForUrl waiting for URLs[domcontentloaded]: ['supplierDashboard'] ...
-2026-08-05 00:21:21.529`D`BROWSER CONSOLE: [LOG][initScript] Hostname matched: supplier.uat1.ligentix.net
-2026-08-05 00:21:21.529`D`BROWSER CONSOLE: [LOG][initScript] sessionStorage initialization skipped: none
-2026-08-05 00:21:25.281`D`XHR/FETCH REQUEST: GET https://supplier.uat1.ligentix.net/appsettings.json
-2026-08-05 00:21:25.284`D`DOM CONTENT LOADED: https://supplier.uat1.ligentix.net/
-2026-08-05 00:21:25.284`D`waitForUrl loaded URL[domcontentloaded]: https://supplier.uat1.ligentix.net/, matched: supplierDashboard
-2026-08-05 00:21:25.284`D`LOAD COMPLETE: https://supplier.uat1.ligentix.net/
-2026-08-05 00:21:25.472`D`XHR/FETCH RESPONSE: 200 https://supplier.uat1.ligentix.net/appsettings.json
-2026-08-05 00:21:25.508`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/login
-2026-08-05 00:21:25.509`D`BROWSER CONSOLE: [LOG][initScript] URL changed: pushState https://supplier.uat1.ligentix.net/login
-2026-08-05 00:21:25.512`D`XHR/FETCH REQUEST: GET https://identity.uat1.ligentix.net/.well-known/openid-configuration
-2026-08-05 00:21:26.483`D`XHR/FETCH RESPONSE: 200 https://identity.uat1.ligentix.net/.well-known/openid-configuration
-2026-08-05 00:21:26.487`D`NAVIGATION REQUEST: https://identity.uat1.ligentix.net/connect/authorize?client_id=shipping-confirmation-portal-app&redirect_uri=https%3A%2F%2Fsupplier.uat1.ligentix.net%2Fsignin-callback&response_type=code&scope=openid%20profile%20shipping-confirmation-portal-api&state=260ed5a9cb304c31a3a38b7e46d46057&code_challenge=6szsBydFFcsTkw2HIajxTQ0fI2PzoQb9uefvd1dVijE&code_challenge_method=S256&response_mode=query
-2026-08-05 00:21:27.045`D`NAVIGATION RESPONSE: 302 https://identity.uat1.ligentix.net/connect/authorize?client_id=shipping-confirmation-portal-app&redirect_uri=https%3A%2F%2Fsupplier.uat1.ligentix.net%2Fsignin-callback&response_type=code&scope=openid%20profile%20shipping-confirmation-portal-api&state=260ed5a9cb304c31a3a38b7e46d46057&code_challenge=6szsBydFFcsTkw2HIajxTQ0fI2PzoQb9uefvd1dVijE&code_challenge_method=S256&response_mode=query
-2026-08-05 00:21:27.046`D`NAVIGATION REQUEST: https://identity.uat1.ligentix.net/connect/authorize?client_id=shipping-confirmation-portal-app&redirect_uri=https%3A%2F%2Fsupplier.uat1.ligentix.net%2Fsignin-callback&response_type=code&scope=openid%20profile%20shipping-confirmation-portal-api&state=260ed5a9cb304c31a3a38b7e46d46057&code_challenge=6szsBydFFcsTkw2HIajxTQ0fI2PzoQb9uefvd1dVijE&code_challenge_method=S256&response_mode=query -> https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D260ed5a9cb304c31a3a38b7e46d46057%26code_challenge%3D6szsBydFFcsTkw2HIajxTQ0fI2PzoQb9uefvd1dVijE%26code_challenge_method%3DS256%26response_mode%3Dquery
-2026-08-05 00:21:27.244`D`NAVIGATION RESPONSE: 200 https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D260ed5a9cb304c31a3a38b7e46d46057%26code_challenge%3D6szsBydFFcsTkw2HIajxTQ0fI2PzoQb9uefvd1dVijE%26code_challenge_method%3DS256%26response_mode%3Dquery
-2026-08-05 00:21:27.246`D`IMAGE REQUEST FAILED: https://supplier.uat1.ligentix.net/assets/images/ligentix-logo-white.svg  reason=net::ERR_ABORTED
-2026-08-05 00:21:27.247`D`IMAGE REQUEST FAILED: https://supplier.uat1.ligentix.net/assets/images/ligentix-logo.svg  reason=net::ERR_ABORTED
-2026-08-05 00:21:27.247`D`BROWSER COMMITTED: https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D260ed5a9cb304c31a3a38b7e46d46057%26code_challenge%3D6szsBydFFcsTkw2HIajxTQ0fI2PzoQb9uefvd1dVijE%26code_challenge_method%3DS256%26response_mode%3Dquery
-2026-08-05 00:21:28.199`D`DOM CONTENT LOADED: https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D260ed5a9cb304c31a3a38b7e46d46057%26code_challenge%3D6szsBydFFcsTkw2HIajxTQ0fI2PzoQb9uefvd1dVijE%26code_challenge_method%3DS256%26response_mode%3Dquery
-2026-08-05 00:21:28.284`D`waitForUrl waiting for URLs[commit]: ['login', 'supplierDashboard'] ...
-2026-08-05 00:21:28.288`D`waitForUrl loaded URL[commit]: https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D260ed5a9cb304c31a3a38b7e46d46057%26code_challenge%3D6szsBydFFcsTkw2HIajxTQ0fI2PzoQb9uefvd1dVijE%26code_challenge_method%3DS256%26response_mode%3Dquery, matched: login
-2026-08-05 00:21:28.288`I`Waiting page: (NOT login page) ...
-2026-08-05 00:21:28.291`I`Loaded page: https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D260ed5a9cb304c31a3a38b7e46d46057%26code_challenge%3D6szsBydFFcsTkw2HIajxTQ0fI2PzoQb9uefvd1dVijE%26code_challenge_method%3DS256%26response_mode%3Dquery
-2026-08-05 00:21:28.291`I`Case B: login required
-2026-08-05 00:21:28.291`D`Auto-filling credentials and logging in...
-2026-08-05 00:21:28.652`I`Click button: Login to Ligentix
-2026-08-05 00:21:28.695`D`Waiting page: **ligentix.net ...
-2026-08-05 00:21:29.131`D`XHR/FETCH REQUEST: POST https://www.recaptcha.net/recaptcha/api2/reload?k=6Le5QNUbAAAAAAFFJKy2zyQ_16nFKoQjRmxFG2sn
-2026-08-05 00:21:29.244`D`NAVIGATION REQUEST: https://identity.uat1.ligentix.net/Account/Login
-2026-08-05 00:21:29.250`D`XHR/FETCH REQUEST: POST https://www.recaptcha.net/recaptcha/api2/clr?k=6Le5QNUbAAAAAAFFJKy2zyQ_16nFKoQjRmxFG2sn
-2026-08-05 00:21:29.604`D`XHR/FETCH RESPONSE: 200 https://www.recaptcha.net/recaptcha/api2/clr?k=6Le5QNUbAAAAAAFFJKy2zyQ_16nFKoQjRmxFG2sn
-2026-08-05 00:21:29.604`D`FETCH REQUEST FAILED: https://www.recaptcha.net/recaptcha/api2/clr?k=6Le5QNUbAAAAAAFFJKy2zyQ_16nFKoQjRmxFG2sn  reason=net::ERR_ABORTED
-2026-08-05 00:21:29.703`D`NAVIGATION RESPONSE: 200 https://identity.uat1.ligentix.net/Account/Login
-2026-08-05 00:21:29.711`D`BROWSER COMMITTED: https://identity.uat1.ligentix.net/Account/Login
-2026-08-05 00:21:29.938`D`DOM CONTENT LOADED: https://identity.uat1.ligentix.net/Account/Login
-2026-08-05 00:21:30.981`D`XHR/FETCH REQUEST: POST https://www.recaptcha.net/recaptcha/api2/bcn?k=6Le5QNUbAAAAAAFFJKy2zyQ_16nFKoQjRmxFG2sn
-2026-08-05 00:21:31.005`D`XHR/FETCH REQUEST: POST https://www.recaptcha.net/recaptcha/api2/bcn?k=6LdoM30pAAAAAFyhuFqXMlHFV0OxJ5jroRk5CaS7
-2026-08-05 00:21:31.295`D`LOAD COMPLETE: https://identity.uat1.ligentix.net/Account/Login
-2026-08-05 00:21:31.295`I`Loaded page: https://identity.uat1.ligentix.net/Account/Login
-2026-08-05 00:21:31.296`I`Case C: recaptcha may be required
-2026-08-05 00:21:31.325`I`reCAPTCHA widget rendered
-2026-08-05 00:21:31.325`E`|main: srcTest/james/login/login.py#644 | recaptcha required.
-2026-08-05 00:21:31.325`E`|dumpPageErrors| Current page URL: https://identity.uat1.ligentix.net/Account/Login, inputE=recaptcha required.
-2026-08-05 00:21:31.326`E`|dumpPageErrors| Open page[0]: url=https://identity.uat1.ligentix.net/Account/Login, closed=False
-2026-08-05 00:21:31.560`W`dumpPageScreen[https://identity.uat1.ligentix.net/Account/Login] /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/wait-for-ligentix.p01.png
+2026-08-05 01:10:49.997`W`Browser Session/LocalStorage + Cookies NOT found!
+2026-08-05 01:10:50.107`I`Loading page: https://supplier.uat1.ligentix.net/ ...
+2026-08-05 01:10:50.118`D`NAVIGATION REQUEST: https://supplier.uat1.ligentix.net/
+2026-08-05 01:10:50.708`D`NAVIGATION RESPONSE: 200 https://supplier.uat1.ligentix.net/
+2026-08-05 01:10:50.715`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/
+2026-08-05 01:10:50.716`D`waitForUrl waiting for URLs[domcontentloaded]: ['supplierDashboard'] ...
+2026-08-05 01:10:50.719`D`BROWSER CONSOLE: [LOG][initScript] Hostname matched: supplier.uat1.ligentix.net
+2026-08-05 01:10:50.720`D`BROWSER CONSOLE: [LOG][initScript] sessionStorage initialization skipped: none
+2026-08-05 01:10:53.565`D`XHR/FETCH REQUEST: GET https://supplier.uat1.ligentix.net/appsettings.json
+2026-08-05 01:10:53.567`D`DOM CONTENT LOADED: https://supplier.uat1.ligentix.net/
+2026-08-05 01:10:53.567`D`waitForUrl loaded URL[domcontentloaded]: https://supplier.uat1.ligentix.net/, matched: supplierDashboard
+2026-08-05 01:10:53.567`D`waitForApiResponses Waiting for API responses: ['/Api/statistics/bookings', '/Api/statistics/shipment/rag/count'] ...
+2026-08-05 01:10:53.758`D`XHR/FETCH RESPONSE: 200 https://supplier.uat1.ligentix.net/appsettings.json
+2026-08-05 01:10:53.797`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/login
+2026-08-05 01:10:53.798`D`BROWSER CONSOLE: [LOG][initScript] URL changed: pushState https://supplier.uat1.ligentix.net/login
+2026-08-05 01:10:53.802`D`XHR/FETCH REQUEST: GET https://identity.uat1.ligentix.net/.well-known/openid-configuration
+2026-08-05 01:10:54.376`D`XHR/FETCH RESPONSE: 200 https://identity.uat1.ligentix.net/.well-known/openid-configuration
+2026-08-05 01:10:54.386`D`NAVIGATION REQUEST: https://identity.uat1.ligentix.net/connect/authorize?client_id=shipping-confirmation-portal-app&redirect_uri=https%3A%2F%2Fsupplier.uat1.ligentix.net%2Fsignin-callback&response_type=code&scope=openid%20profile%20shipping-confirmation-portal-api&state=5ce84a2d8e164720926ee9e6a1db3f15&code_challenge=4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg&code_challenge_method=S256&response_mode=query
+2026-08-05 01:10:55.133`D`NAVIGATION RESPONSE: 302 https://identity.uat1.ligentix.net/connect/authorize?client_id=shipping-confirmation-portal-app&redirect_uri=https%3A%2F%2Fsupplier.uat1.ligentix.net%2Fsignin-callback&response_type=code&scope=openid%20profile%20shipping-confirmation-portal-api&state=5ce84a2d8e164720926ee9e6a1db3f15&code_challenge=4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg&code_challenge_method=S256&response_mode=query
+2026-08-05 01:10:55.134`D`NAVIGATION REQUEST: https://identity.uat1.ligentix.net/connect/authorize?client_id=shipping-confirmation-portal-app&redirect_uri=https%3A%2F%2Fsupplier.uat1.ligentix.net%2Fsignin-callback&response_type=code&scope=openid%20profile%20shipping-confirmation-portal-api&state=5ce84a2d8e164720926ee9e6a1db3f15&code_challenge=4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg&code_challenge_method=S256&response_mode=query -> https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D5ce84a2d8e164720926ee9e6a1db3f15%26code_challenge%3D4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg%26code_challenge_method%3DS256%26response_mode%3Dquery
+2026-08-05 01:10:56.138`D`NAVIGATION RESPONSE: 200 https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D5ce84a2d8e164720926ee9e6a1db3f15%26code_challenge%3D4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg%26code_challenge_method%3DS256%26response_mode%3Dquery
+2026-08-05 01:10:56.161`D`STYLESHEET REQUEST FAILED: https://supplier.uat1.ligentix.net/styles-MNDAMCQA.css  reason=net::ERR_ABORTED
+2026-08-05 01:10:56.162`D`IMAGE REQUEST FAILED: https://supplier.uat1.ligentix.net/assets/images/ligentix-logo.svg  reason=net::ERR_ABORTED
+2026-08-05 01:10:56.163`D`BROWSER COMMITTED: https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D5ce84a2d8e164720926ee9e6a1db3f15%26code_challenge%3D4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg%26code_challenge_method%3DS256%26response_mode%3Dquery
+2026-08-05 01:10:57.164`D`DOM CONTENT LOADED: https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D5ce84a2d8e164720926ee9e6a1db3f15%26code_challenge%3D4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg%26code_challenge_method%3DS256%26response_mode%3Dquery
+2026-08-05 01:11:02.772`D`LOAD COMPLETE: https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D5ce84a2d8e164720926ee9e6a1db3f15%26code_challenge%3D4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg%26code_challenge_method%3DS256%26response_mode%3Dquery
+2026-08-05 01:11:13.598`W`Timed out waiting for API responses: ['/Api/statistics/bookings', '/Api/statistics/shipment/rag/count']
+2026-08-05 01:11:13.598`D`waitForUrl waiting for URLs[domcontentloaded]: ['login'] ...
+2026-08-05 01:11:13.605`D`waitForUrl loaded URL[domcontentloaded]: https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D5ce84a2d8e164720926ee9e6a1db3f15%26code_challenge%3D4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg%26code_challenge_method%3DS256%26response_mode%3Dquery, matched: login
+2026-08-05 01:11:13.605`I`Waiting page: (NOT login page) ...
+2026-08-05 01:11:13.608`I`Loaded page: https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D5ce84a2d8e164720926ee9e6a1db3f15%26code_challenge%3D4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg%26code_challenge_method%3DS256%26response_mode%3Dquery
+2026-08-05 01:11:13.608`I`Case B: login required
+2026-08-05 01:11:13.608`D`Auto-filling credentials and logging in...
+2026-08-05 01:11:13.717`I`Click button: Login to Ligentix
+2026-08-05 01:11:13.762`D`Waiting page: **ligentix.net ...
+2026-08-05 01:11:13.765`I`Loaded page: https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D5ce84a2d8e164720926ee9e6a1db3f15%26code_challenge%3D4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg%26code_challenge_method%3DS256%26response_mode%3Dquery
+2026-08-05 01:11:13.765`I`Case C: recaptcha may be required
+2026-08-05 01:11:13.841`D`XHR/FETCH REQUEST: POST https://www.recaptcha.net/recaptcha/api2/reload?k=6Le5QNUbAAAAAAFFJKy2zyQ_16nFKoQjRmxFG2sn
+2026-08-05 01:11:13.844`I`reCAPTCHA widget rendered
+2026-08-05 01:11:13.844`E`|main: srcTest/james/login/login.py#689 | recaptcha required.
+2026-08-05 01:11:13.844`E`|dumpPageErrors| Current page URL: https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D5ce84a2d8e164720926ee9e6a1db3f15%26code_challenge%3D4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg%26code_challenge_method%3DS256%26response_mode%3Dquery, inputE=recaptcha required.
+2026-08-05 01:11:13.844`E`|dumpPageErrors| Open page[0]: url=https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D5ce84a2d8e164720926ee9e6a1db3f15%26code_challenge%3D4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg%26code_challenge_method%3DS256%26response_mode%3Dquery, closed=False
+2026-08-05 01:11:14.005`D`NAVIGATION REQUEST: https://identity.uat1.ligentix.net/Account/Login
+2026-08-05 01:11:14.005`D`XHR/FETCH REQUEST: POST https://www.recaptcha.net/recaptcha/api2/clr?k=6Le5QNUbAAAAAAFFJKy2zyQ_16nFKoQjRmxFG2sn
+2026-08-05 01:11:14.788`D`NAVIGATION RESPONSE: 200 https://identity.uat1.ligentix.net/Account/Login
+2026-08-05 01:11:14.845`D`FETCH REQUEST FAILED: https://www.recaptcha.net/recaptcha/api2/clr?k=6Le5QNUbAAAAAAFFJKy2zyQ_16nFKoQjRmxFG2sn  reason=net::ERR_ABORTED
+2026-08-05 01:11:14.852`D`XHR/FETCH REQUEST: POST https://www.recaptcha.net/recaptcha/api2/clr?k=6Le5QNUbAAAAAAFFJKy2zyQ_16nFKoQjRmxFG2sn
+2026-08-05 01:11:14.852`D`BROWSER COMMITTED: https://identity.uat1.ligentix.net/Account/Login
+2026-08-05 01:11:14.858`W`dumpPageScreen[https://identity.uat1.ligentix.net/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dshipping-confirmation-portal-app%26redirect_uri%3Dhttps%253A%252F%252Fsupplier.uat1.ligentix.net%252Fsignin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520shipping-confirmation-portal-api%26state%3D5ce84a2d8e164720926ee9e6a1db3f15%26code_challenge%3D4eOP3v5ON6QdpYkipKwp7nveEGGzN1C6-TvQTxNgAqg%26code_challenge_method%3DS256%26response_mode%3Dquery] /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/wait-for-ligentix.p01.png

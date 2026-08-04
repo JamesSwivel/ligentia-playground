@@ -155,7 +155,9 @@ class PlaywrightHelper:
             while not all(seen.values()):
                 if asyncio.get_event_loop().time() > deadline:
                     missing = [s for s, ok in seen.items() if not ok]
-                    raise TimeoutError(f"Timed out waiting for API responses: {missing}")
+                    errMessage = f"Timed out waiting for API responses: {missing}"
+                    U.logPrefixE(prefix, errMessage)
+                    raise PwTimeoutError(errMessage)
                 await asyncio.sleep(0.05)
             U.logD(f"{prefix} All API responses received")
         finally:
@@ -606,9 +608,6 @@ async def main():
                 )
                 if waitedMatch["name"] != "supplierDashboard":
                     raise Exception(f"Expected to match supplierDashboard, but got {waitedMatch['name']}")
-
-                # U.logW(f"wait for 5 seconds...")
-                # await asyncio.sleep(5)  # wait for any potential redirects to complete
 
                 isDashboardWaited = False
                 try:
