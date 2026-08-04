@@ -9,11 +9,22 @@
 import asyncio
 import json
 import re
-import sys
+from textwrap import dedent
 import os
 from pathlib import Path
+from typing import Callable, Literal
+from typing_extensions import TypedDict
 import swivel.common as U
-from playwright.async_api import async_playwright, Page as PwPage, TimeoutError as PwTimeoutError
+from playwright.async_api import (
+    async_playwright,
+    Page as PwPage,
+    TimeoutError as PwTimeoutError,
+    Request as PwRequest,
+    Response as PwResponse,
+    Frame as PwFrame,
+    Browser as PwBrowser,
+    BrowserContext as PwBrowserContext,
+)
 from dotenv import dotenv_values
 
 ### Load <scriptDir>/.env
@@ -37,6 +48,260 @@ U.logW(f"BrowseDataDir={BrowseDataDir}")
 SessionFile = BrowseDataDir / "session.json"
 StateFile = BrowseDataDir / "state.json"
 JwtFile = BrowseDataDir / "jwt.txt"
+
+
+import json
+from textwrap import dedent
+from typing import Any, Mapping
+
+from playwright.async_api import BrowserContext
+
+
+class TWaitForPattern(TypedDict):
+    name: str
+    """name of the pattern"""
+    pattern: re.Pattern
+    """regex pattern to match the URL"""
+
+
+class PlaywrightHelper:
+
+    @classmethod
+    def makeUrlPatternPredicate(cls, patterns: list[TWaitForPattern]) -> Callable[[str], bool]:
+        """Builds the predicate function to pass into wait_for_url()."""
+        return lambda url: any(p["pattern"].search(url) for p in patterns)
+
+    @classmethod
+    def findMatchedPattern(cls, url: str, patterns: list[TWaitForPattern]) -> TWaitForPattern | None:
+        """After wait_for_url() resolves, find which pattern matched."""
+        return next((p for p in patterns if p["pattern"].search(url)), None)
+
+    @classmethod
+    async def waitForUrl(
+        cls,
+        page: PwPage,
+        patterns: list[TWaitForPattern],
+        *,
+        wait_until: Literal["commit", "domcontentloaded", "load", "networkidle", None] = "load",
+        **kwargs,
+    ) -> TWaitForPattern:
+        funcName = cls.waitForUrl.__name__
+        prefix = funcName
+        try:
+            """Wait for a URL that matches any of the given patterns, and return the matched pattern."""
+            predicate = cls.makeUrlPatternPredicate(patterns)
+            await page.wait_for_url(predicate, wait_until=wait_until, **kwargs)
+            matchedPattern = cls.findMatchedPattern(page.url, patterns)
+            if matchedPattern is None:
+                raise Exception(f"wait_for_url() returned but no pattern matched the URL: {page.url}")
+            return matchedPattern
+        except Exception as e:
+            U.throwPrefix(prefix, e)
+
+    @classmethod
+    async def waitForUrlNotThrow(
+        cls,
+        page: PwPage,
+        patterns: list[TWaitForPattern],
+        *,
+        wait_until: Literal["commit", "domcontentloaded", "load", "networkidle", None] = "load",
+        **kwargs,
+    ) -> tuple[TWaitForPattern | None, str]:
+        funcName = cls.waitForUrlNotThrow.__name__
+        prefix = funcName
+        err = ""
+        matched: TWaitForPattern | None = None
+        try:
+            matchedPattern = await cls.waitForUrl(page, patterns, wait_until=wait_until, **kwargs)
+            return matchedPattern, err
+        except Exception as e:
+            U.logPrefixE(prefix, e)
+
+        return matched, err
+
+    @classmethod
+    async def installInitScript(
+        cls,
+        context: PwBrowserContext,
+        *,
+        hostname: str,
+        sessionStorage: str | Mapping[str, Any] | None,
+    ) -> None:
+        """
+        Description:
+        - Install a browser initialization script
+          - restores sessionStorage for the specified hostname.
+          - installs a client-side routing trace to log URL changes in the browser console.
+        """
+        funcName = cls.installInitScript.__name__
+        prefix = funcName
+        try:
+
+            sessionStorageData: dict[str, Any] = {}
+            sessionStorageStatus: str
+
+            if sessionStorage is None:
+                sessionStorageStatus = "none"
+
+            elif isinstance(sessionStorage, str):
+                strippedSessionStorage = sessionStorage.strip()
+
+                if not strippedSessionStorage:
+                    sessionStorageStatus = "empty string"
+                else:
+                    try:
+                        parsedSessionStorage = json.loads(strippedSessionStorage)
+                    except json.JSONDecodeError as error:
+                        raise ValueError("sessionStorage must be a valid JSON object string") from error
+
+                    if not isinstance(parsedSessionStorage, dict):
+                        raise ValueError("sessionStorage JSON must represent an object")
+
+                    sessionStorageData = parsedSessionStorage
+
+                    if sessionStorageData:
+                        sessionStorageStatus = "available"
+                    else:
+                        sessionStorageStatus = "empty object"
+
+            elif isinstance(sessionStorage, Mapping):
+                sessionStorageData = dict(sessionStorage)
+
+                if sessionStorageData:
+                    sessionStorageStatus = "available"
+                else:
+                    sessionStorageStatus = "empty mapping"
+
+            else:
+                raise TypeError("sessionStorage must be a JSON string, Mapping, or None")
+
+            initScript = dedent(f"""
+                console.log("[LOG][initScript] running initScript...");
+                (() => {{
+                    const targetHostname = {json.dumps(hostname)};
+                    const currentHostname = window.location.hostname;
+
+                    const sessionStorageStatus = {json.dumps(sessionStorageStatus)};
+                    const sessionStorageEntries = {json.dumps(sessionStorageData, ensure_ascii=False)};
+                    const sessionStorageInitMarker = "__playwrightSessionStorageInitialized__";
+                    const routingTraceMarker = "__playwrightRoutingTraceInstalled__";
+
+                    // restores session storage for the specified hostname
+                    if (currentHostname !== targetHostname) {{
+                        console.log("[LOG][initScript] Hostname not matched:", "expected=" + targetHostname, "actual=" + currentHostname);
+                        console.log("[LOG][initScript] sessionStorage initialization skipped: hostname not matched");
+                    }} else {{
+                        console.log("[LOG][initScript] Hostname matched:", currentHostname);
+
+                        // avoids re-initializing sessionStorage if already initialized
+                        if (sessionStorageStatus !== "available") {{
+                            console.log("[LOG][initScript] sessionStorage initialization skipped:", sessionStorageStatus);
+                        }} else if (window.sessionStorage.getItem(sessionStorageInitMarker) === "true") {{
+                            console.log("[LOG][initScript] sessionStorage initialization skipped: already initialized");
+                        }} else {{
+                            let restoredCount = 0;
+                            const restoredKeys = [];
+                            for (const [key, value] of Object.entries(sessionStorageEntries)) {{
+                                const storageValue =
+                                    typeof value === "string" ? value : JSON.stringify(value);
+                                window.sessionStorage.setItem(key, storageValue);
+                                restoredCount += 1;
+                                restoredKeys.push(key);
+                            }}
+
+                            //  create a marker to indicate that sessionStorage has been initialized
+                            window.sessionStorage.setItem(sessionStorageInitMarker, "true");
+
+                            console.log("[LOG][initScript] sessionStorage initialized: ", 
+                              "restoredCount=" + restoredCount + 
+                              "keys=" + JSON.stringify(restoredKeys)
+                            );
+                            console.log("[LOG][initScript] sessionStorage initialization marker created:", sessionStorageInitMarker);
+                        }}
+                    }}
+
+                    if (window[routingTraceMarker] === true) {{
+                        console.log("[LOG][initScript] Client-side routing trace skipped: already installed");
+                    }} else {{
+                        window[routingTraceMarker] = true;
+
+                        console.log("[LOG][initScript] Installing client-side routing trace:", window.location.href);
+
+                        const reportUrlChange = (source) => {{
+                            console.log("[LOG][initScript] URL changed:", source, window.location.href);
+                        }};
+
+                        const originalPushState = history.pushState;
+                        history.pushState = function (...args) {{
+                            const result = originalPushState.apply(this, args);
+                            reportUrlChange("pushState");
+                            return result;
+                        }};
+
+                        const originalReplaceState = history.replaceState;
+                        history.replaceState = function (...args) {{
+                            const result = originalReplaceState.apply(this, args);
+                            reportUrlChange("replaceState");
+                            return result;
+                        }};
+
+                        window.addEventListener("popstate", () => reportUrlChange("popstate"));
+                        window.addEventListener("hashchange", () => reportUrlChange("hashchange"));
+                    }}
+                }})();
+                """)
+
+            await context.add_init_script(initScript)
+
+        except Exception as e:
+            U.throwPrefix(prefix, e)
+
+
+def enablePageTrace(page: PwPage):
+    funcName = enablePageTrace.__name__
+    prefix = funcName
+    try:
+
+        def onConsole(message) -> None:
+            if message.text.startswith("[URL_CHANGE]"):
+                U.logD(f"CLIENT ROUTE: {message.text}")
+            elif message.text.startswith("[LOG]"):
+                U.logD(f"BROWSER CONSOLE: {message.text}")
+
+        def onRequest(request: PwRequest) -> None:
+            if request.is_navigation_request() and request.frame == page.main_frame:
+                redirected_from = request.redirected_from
+
+                if redirected_from:
+                    U.logD(f"NAVIGATION REQUEST: {redirected_from.url} -> {request.url}")
+                else:
+                    U.logD(f"NAVIGATION REQUEST: {request.url}")
+
+        def onResponse(response: PwResponse) -> None:
+            request = response.request
+
+            if not (request.is_navigation_request() and request.frame == page.main_frame):
+                return
+
+            location = response.headers.get("location")
+
+            if 300 <= response.status < 400:
+                U.logD(f"HTTP REDIRECT: {response.status} {response.url} -> {location or '<missing Location header>'}")
+            else:
+                U.logD(f"NAVIGATION RESPONSE: {response.status} {response.url}")
+
+        def onFrameNavigated(frame: PwFrame) -> None:
+            if frame == page.main_frame:
+                U.logD(
+                    f"BROWSER COMMITTED: {frame.url}",
+                )
+
+        page.on("request", onRequest)
+        page.on("response", onResponse)
+        page.on("framenavigated", onFrameNavigated)
+        page.on("console", onConsole)
+    except Exception as e:
+        U.throwPrefix(prefix, e)
 
 
 async def main():
@@ -121,25 +386,17 @@ async def main():
                         browser = await p.chromium.launch()
                         context = await browser.new_context(storage_state=StateFile)
                         page = await context.new_page()
-                        await context.add_init_script(
-                            """(storage => {
-                            if (window.location.hostname === """
-                            + hostname  # type: ignore
-                            + """) {
-                                const entries = JSON.parse(storage)
-                                for (const [key, value] of Object.entries(entries)) {
-                                    window.sessionStorage.setItem(key, value)
-                                }
-                            }
-                        })('"""
-                            + session_storage
-                            + "')"
+                        enablePageTrace(page)
+                        await PlaywrightHelper.installInitScript(
+                            context, hostname=f"supplier.{hostname}", sessionStorage=session_storage
                         )
+
                     else:
                         U.logW("Browser Session/LocalStorage + Cookies NOT found!")
                         browser = await p.chromium.launch()
                         context = await browser.new_context()
                         page = await context.new_page()
+                        enablePageTrace(page)
                 except Exception as e:
                     U.logE(f"Error loading browser data, please delete all json file and try again ({e})")
                     raise Exception("Failed opening browser")
@@ -159,6 +416,25 @@ async def main():
                 U.logI("Waiting page: **/login ...")
                 await page.wait_for_url("**/login", wait_until="commit")
                 U.logI(f"Loaded page: {page.url}")
+
+                patterns: list[TWaitForPattern] = [
+                    {
+                        "name": "login",
+                        ## This pattern matches
+                        ## - https://supplier.(uat1.)ligentix.net/login
+                        ## - https://supplier.(uat1.)ligentix.net/login/
+                        ## - https://supplier.(uat1.)ligentix.net/login?returnUrl=...
+                        "pattern": re.compile(rf"/login(?:[/?]|$)"),
+                    },
+                    {
+                        "name": "supplierDashboard",
+                        ## This pattern matches
+                        ## - https://supplier.(uat1.)ligentix.net
+                        ## - https://supplier.(uat1.)ligentix.net/
+                        ## - https://supplier.(uat1.)ligentix.net/?xxx=...
+                        "pattern": re.compile(rf"supplier.{re.escape(hostname)}(?:[/?]|$)"),
+                    },
+                ]
 
                 ## Use regex to wait for a URL that isn't the login page
                 ## i.e.either the Callback URL or Identity URL
