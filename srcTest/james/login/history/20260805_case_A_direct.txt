@@ -1,0 +1,39 @@
+[ Case A ]
+2026-08-05 19:47:49.044`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/
+2026-08-05 19:47:51.957`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/
+2026-08-05 19:47:52.205`D`XHR/FETCH RESPONSE: 200 https://supplier.uat1.ligentix.net/Api/statistics/bookings
+2026-08-05 19:47:52.533`D`XHR/FETCH RESPONSE: 200 https://supplier.uat1.ligentix.net/Api/statistics/shipment/rag/count
+2026-08-05 19:47:58.149`D`LOAD COMPLETE: https://supplier.uat1.ligentix.net/
+
+[ details ]
+2026-08-05 19:47:48.213`W`Loading session SessionStorage: /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/session.json
+2026-08-05 19:47:48.213`W`Loading cookies and LocalStorage: /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/state.json
+2026-08-05 19:47:48.453`I`Loading page: https://supplier.uat1.ligentix.net/ ...
+2026-08-05 19:47:48.457`D`NAVIGATION REQUEST: https://supplier.uat1.ligentix.net/
+2026-08-05 19:47:49.042`D`NAVIGATION RESPONSE: 200 https://supplier.uat1.ligentix.net/
+2026-08-05 19:47:49.044`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/
+2026-08-05 19:47:49.045`D`waitForUrl waiting for URLs[domcontentloaded]: ['dashboardHome'] ...
+2026-08-05 19:47:49.051`D`BROWSER CONSOLE: [LOG][initScript] Hostname matched: supplier.uat1.ligentix.net
+2026-08-05 19:47:49.052`D`BROWSER CONSOLE: [LOG][initScript] sessionStorage initialized:  restoredCount=2keys=["oidc.user:https://identity.uat1.ligentix.net/:shipping-confirmation-portal-app","__playwrightSessionStorageInitialized__"]
+2026-08-05 19:47:49.052`D`BROWSER CONSOLE: [LOG][initScript] sessionStorage initialization marker created: __playwrightSessionStorageInitialized__
+2026-08-05 19:47:51.719`D`XHR/FETCH REQUEST: GET https://supplier.uat1.ligentix.net/appsettings.json
+2026-08-05 19:47:51.721`D`DOM CONTENT LOADED: https://supplier.uat1.ligentix.net/
+2026-08-05 19:47:51.721`D`waitForUrl loaded URL[domcontentloaded]: https://supplier.uat1.ligentix.net/, matched: dashboardHome
+2026-08-05 19:47:51.721`D`waitForUrl waiting for URLs[commit]: ['login'] ...
+2026-08-05 19:47:51.925`D`XHR/FETCH RESPONSE: 200 https://supplier.uat1.ligentix.net/appsettings.json
+2026-08-05 19:47:51.956`D`XHR/FETCH REQUEST: GET https://identity.uat1.ligentix.net/.well-known/openid-configuration
+2026-08-05 19:47:51.957`D`BROWSER COMMITTED: https://supplier.uat1.ligentix.net/
+2026-08-05 19:47:51.958`D`BROWSER CONSOLE: [LOG][initScript] URL changed: replaceState https://supplier.uat1.ligentix.net/
+2026-08-05 19:47:51.982`D`XHR/FETCH REQUEST: GET https://supplier.uat1.ligentix.net/Api/statistics/bookings
+2026-08-05 19:47:51.982`D`XHR/FETCH REQUEST: GET https://supplier.uat1.ligentix.net/Api/statistics/shipment/rag/count
+2026-08-05 19:47:52.205`D`XHR/FETCH RESPONSE: 200 https://supplier.uat1.ligentix.net/Api/statistics/bookings
+2026-08-05 19:47:52.205`D`installDashboardApiResponseEventHandler API responses received: https://supplier.uat1.ligentix.net/Api/statistics/bookings
+2026-08-05 19:47:52.525`D`XHR/FETCH RESPONSE: 200 https://identity.uat1.ligentix.net/.well-known/openid-configuration
+2026-08-05 19:47:52.533`D`XHR/FETCH RESPONSE: 200 https://supplier.uat1.ligentix.net/Api/statistics/shipment/rag/count
+2026-08-05 19:47:52.533`D`installDashboardApiResponseEventHandler API responses received: https://supplier.uat1.ligentix.net/Api/statistics/shipment/rag/count
+2026-08-05 19:47:58.149`D`LOAD COMPLETE: https://supplier.uat1.ligentix.net/
+2026-08-05 19:48:11.742`W`saveSessionStorage[https://supplier.uat1.ligentix.net/] /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/session.json
+2026-08-05 19:48:11.824`W`saveLocalStorageAndCookies /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/state.json
+2026-08-05 19:48:11.824`W`JWT: /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/jwt.txt
+2026-08-05 19:48:11.893`W`dumpPageScreen[https://supplier.uat1.ligentix.net/] /home/xdata/projects/swivel/ligentia/james/ligentia-playground/data/browser/dashboard_case_A.png
+2026-08-05 19:48:11.893`W`main ✅ Case A
