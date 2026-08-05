@@ -33,6 +33,9 @@ class PlaywrightHelper:
 
     ON_PAGE_INDEX: int = 0
 
+    class ForExitError(Exception):
+        """A custom Exception for exiting try/exception block"""
+
     @classmethod
     def makeUrlPatternPredicate(cls, patterns: list[TWaitForPattern]) -> Callable[[str], bool]:
         """Builds the predicate function to pass into wait_for_url()."""
@@ -139,38 +142,37 @@ class PlaywrightHelper:
         isWaitDomContentLoaded: bool = True,
         waitDomContentLoadedTimeout: int = 30_000,
         maxAttempts: int = 3,
-    ) -> None:
+    ) -> bool:
         funcName = cls.dumpPageScreen.__name__
         prefix = funcName
+        isSaveOK = False
         try:
             prefix = f"{prefix}[{page.url}]"
 
             if page.is_closed():
-                U.logW(f"{prefix} page already closed")
-                return
+                raise cls.ForExitError(f"page already closed")
 
             if isWaitDomContentLoaded:
-                await page.wait_for_load_state(
-                    "domcontentloaded",
-                    timeout=waitDomContentLoadedTimeout,
-                )
+                try:
+                    await page.wait_for_load_state("domcontentloaded", timeout=waitDomContentLoadedTimeout)
+                except Exception as eWaitLoad:
+                    U.logPrefixE(prefix, eWaitLoad)
 
-            lastError: Exception | None = None
             for attempt in range(1, maxAttempts + 1):
                 try:
                     if page.is_closed():
-                        U.logW(f"{prefix} page closed before screenshot")
-                        return
-
+                        raise cls.ForExitError(f"page closed before screenshot")
                     await page.screenshot(
                         path=imageFile,
                         full_page=True,
                         animations="disabled",
                         timeout=10_000,
                     )
-
                     U.logW(f"{prefix} {imageFile}")
-                    return
+                    return True
+
+                except cls.ForExitError:
+                    raise
 
                 except Exception as e:
                     U.logW(f"{prefix} screenshot attempt " f"{attempt}/{maxAttempts} failed: {e}")
@@ -187,11 +189,16 @@ class PlaywrightHelper:
                 animations="disabled",
                 timeout=10_000,
             )
-
+            isSaveOK = True
             U.logW(f"{prefix} {imageFile} [viewport fallback]")
+
+        except cls.ForExitError as e1:
+            U.logW(f"{prefix} {e1}")
 
         except Exception as e:
             U.logPrefixE(prefix, e)
+
+        return isSaveOK
 
     @classmethod
     async def saveSessionStorage(cls, page: PwPage, sessionFilePath: Path):
