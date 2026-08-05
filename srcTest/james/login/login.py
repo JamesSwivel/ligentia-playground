@@ -291,7 +291,7 @@ async def main():
                         page,
                         e,
                         App.BrowseDataDir,
-                        baseNamePrefix="wait-for-ligentix",
+                        imageBaseNamePrefix="wait-for-ligentix",
                     )
 
     except Exception as e:

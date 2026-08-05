@@ -19,6 +19,20 @@ from playwright.async_api import (
     BrowserContext as PwBrowserContext,
 )
 
+"""
+- For page.wait_for_url(pattern, wait_until="xxx", timeout=timeoutMs) where xxx:
+  'commit': network response received, document started loading. For pure SPA route changes
+    (history.pushState, no new document), there's nothing to "commit" in the strict sense —
+    but since 'commit' doesn't depend on document-lifecycle events that only fire for a real
+    page load, it doesn't get stuck waiting on something that will never re-fire. In practice
+    this makes it resolve as soon as the URL matches, for both real navigations and SPA route
+    changes — which is why it "sees" SPA transitions even though no actual commit occurs.
+  'domcontentloaded': HTML doc is parsed but other blocking resources, e.g. image loading, JavaScript invoking, are still in progress
+  'load': when browser window fires 'load' event, which means the page and virtually all its resources have finished loading
+- default timeout is 30_000, i.e. 30K msec = 30sec
+
+"""
+
 
 class TWaitForPattern(TypedDict):
     name: str
@@ -56,6 +70,10 @@ class PlaywrightHelper:
         wait_until: Literal["commit", "domcontentloaded", "load", "networkidle", None] = "load",
         **kwargs,
     ) -> TWaitForPattern:
+        """
+        ### Description
+        - Enhanced version of wait_for_url() that support waiting for multiple regex in form of regex list
+        """
         funcName = cls.waitForUrl.__name__
         prefix = funcName
         try:
@@ -93,6 +111,11 @@ class PlaywrightHelper:
         wait_until: Literal["commit", "domcontentloaded", "load", "networkidle", None] = "load",
         **kwargs,
     ) -> tuple[TWaitForPattern | None, Exception | None]:
+        """
+        ### Description
+        - not throw version of waitForUrl
+        """
+
         funcName = cls.waitForUrlNotThrow.__name__
         prefix = funcName
         err: Exception | None = None
@@ -113,19 +136,25 @@ class PlaywrightHelper:
 
     @classmethod
     async def waitForApiResponses(cls, page: PwPage, urlSubstrings: list[str], timeoutMs: int = 30_000) -> None:
+        """
+        ### Description
+        - Sometimes, it is useful to wait for API responses instead of URLs
+        """
         funcName = cls.waitForApiResponses.__name__
         prefix = funcName
 
         ## initially, all urlSubstrings are not seen, i.e. False
         seen = {s: False for s in urlSubstrings}
 
-        def _on_response(response: PwResponse) -> None:
+        def onResponse(response: PwResponse) -> None:
             for s in urlSubstrings:
                 if s in response.url and response.status == 200:
                     U.logD(f"{prefix} API responses received: {response.url}")
                     seen[s] = True
 
-        page.on("response", _on_response)
+        ## event listeners are stacked but NOT overwriting the older handlers
+        ## Thus, it has to be removed after used
+        page.on("response", onResponse)
 
         try:
             U.logD(f"{prefix} Waiting for API responses: {urlSubstrings} ...")
@@ -138,8 +167,10 @@ class PlaywrightHelper:
                     raise PwTimeoutError(errMessage)
                 await asyncio.sleep(0.05)
             U.logD(f"{prefix} All API responses received")
+
         finally:
-            page.remove_listener("response", _on_response)
+            ## remove the event listener
+            page.remove_listener("response", onResponse)
 
     @classmethod
     async def dumpPageScreen(
@@ -166,6 +197,7 @@ class PlaywrightHelper:
                 except Exception as eWaitLoad:
                     U.logPrefixE(prefix, eWaitLoad)
 
+            ## It allows to capture the screenshot by a few attempts
             for attempt in range(1, maxAttempts + 1):
                 try:
                     if page.is_closed():
@@ -481,7 +513,7 @@ class PlaywrightHelper:
             U.throwPrefix(prefix, e)
 
     @classmethod
-    async def dumpPageErrors(cls, page: PwPage, inputE: Exception, logDir: Path, baseNamePrefix: str = "") -> None:
+    async def dumpPageErrors(cls, page: PwPage, inputE: Exception, logDir: Path, imageBaseNamePrefix: str = "") -> None:
         funcName = cls.dumpPageErrors.__name__
         prefix = funcName
         try:
@@ -500,7 +532,7 @@ class PlaywrightHelper:
 
                     await cls.dumpPageScreen(
                         current_page,
-                        logDir / f"{baseNamePrefix}.p{index+1:02d}.png",
+                        logDir / f"{imageBaseNamePrefix}.p{index+1:02d}.png",
                     )
 
                 except Exception as error:
