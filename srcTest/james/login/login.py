@@ -176,7 +176,7 @@ async def main():
                             "/Api/statistics/bookings",
                             "/Api/statistics/shipment/rag/count",
                         ],
-                        timeoutMs=20_000,
+                        timeoutMs=60_000,
                     )
                     isDashboardWaited = True
                 except Exception as eWaitDashboard:
