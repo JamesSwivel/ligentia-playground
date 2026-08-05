@@ -79,54 +79,35 @@ async def main():
         # Identity URL: https://identity.(uat1.)ligentix.net/
         regex_identity = re.compile(rf"^.*identity\.{re.escape(hostname)}/.*$")
 
-        popup_index = 0
-
-        async def dump_new_page(new_page: PwPage):
-            # Fires the instant a new tab/window is opened in the context (e.g. a
-            # recaptcha/verification popup). Screenshot it right away, since a
-            # transient popup like that can close again before dumpPageErrors's
-            # own page.context.pages loop ever gets a chance to see it.
-            nonlocal popup_index
-            popup_index += 1
-            U.logI(f"New page/tab opened in context (index={popup_index}): {new_page.url}")
-            try:
-                await new_page.wait_for_load_state("domcontentloaded", timeout=5000)
-            except Exception:
-                pass
-            await PlaywrightHelper.dumpPageScreen(new_page, BrowseDataDir / f"popup.{popup_index:02d}.png")
-
         async with async_playwright() as p:
             try:
-                session_storage = ""
-                try:
-                    if os.path.isfile(SessionFile) and os.path.isfile(StateFile):
-                        U.logI(f"Loading session SessionStorage: {SessionFile}")
-                        U.logI(f"Loading cookies and LocalStorage: {StateFile}")
-                        with open(SessionFile, "r+") as f:
-                            session_storage = f.read()
-                            # U.logD(session_storage)
-                        browser = await p.chromium.launch()
-                        context = await browser.new_context(storage_state=StateFile)
-                        page = await context.new_page()
-                        PlaywrightHelper.installPageTrace(page)
-                        await PlaywrightHelper.installInitScript(
-                            context, hostname=f"supplier.{hostname}", sessionStorage=session_storage
-                        )
 
+                #######################################################################
+                ## create browser context and page, load session data on if exists
+                #######################################################################
+                try:
+                    sessionStorageData: str | None = None
+                    isLoadBrowserSession = os.path.isfile(App.SessionFile) and os.path.isfile(App.StateFile)
+                    if isLoadBrowserSession:
+                        U.logW(f"Loading session SessionStorage: {App.SessionFile}")
+                        U.logW(f"Loading cookies and LocalStorage: {App.StateFile}")
+                        with open(App.SessionFile, "r+") as f:
+                            sessionStorageData = f.read()
+                            # U.logD(session_storage)
                     else:
                         U.logW("Browser Session/LocalStorage + Cookies NOT found!")
-                        browser = await p.chromium.launch()
-                        context = await browser.new_context()
-                        page = await context.new_page()
-                        PlaywrightHelper.installPageTrace(page)
-                        await PlaywrightHelper.installInitScript(
-                            context, hostname=f"supplier.{hostname}", sessionStorage=None
-                        )
-                except Exception as e:
-                    U.logE(f"Error loading browser data, please delete all json file and try again ({e})")
-                    raise Exception("Failed opening browser")
 
-                context.on("page", dump_new_page)
+                    browser = await p.chromium.launch()
+                    context = await browser.new_context(storage_state=App.StateFile if isLoadBrowserSession else None)
+                    page = await context.new_page()
+                    PlaywrightHelper.installPageTrace(page)
+                    await PlaywrightHelper.installInitScript(
+                        context, hostname=f"supplier.{hostname}", sessionStorage=sessionStorageData
+                    )
+                    PlaywrightHelper.installBrowserContextTrace(context, App.BrowseDataDir)
+
+                except Exception as e:
+                    U.throwPrefix(prefix, e)
 
                 # Flow:
                 # Base URL -> /login ->

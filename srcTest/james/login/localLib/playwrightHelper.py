@@ -31,6 +31,8 @@ class TWaitForPattern(TypedDict):
 
 class PlaywrightHelper:
 
+    ON_PAGE_INDEX: int = 0
+
     @classmethod
     def makeUrlPatternPredicate(cls, patterns: list[TWaitForPattern]) -> Callable[[str], bool]:
         """Builds the predicate function to pass into wait_for_url()."""
@@ -389,6 +391,29 @@ class PlaywrightHelper:
             page.on("console", onConsole)
 
             page.on("requestfailed", onRequestFailed)
+
+        except Exception as e:
+            U.throwPrefix(prefix, e)
+
+    @classmethod
+    def installBrowserContextTrace(cls, ctx: PwBrowserContext, dataPath: Path):
+        funcName = cls.installBrowserContextTrace.__name__
+        prefix = funcName
+        try:
+
+            async def onPage(new_page: PwPage):
+                U.logI(f"New page/tab opened[{cls.ON_PAGE_INDEX}]: {new_page.url}")
+                isLoaded = False
+                try:
+                    await new_page.wait_for_load_state("domcontentloaded", timeout=30_000)
+                    isLoaded = True
+                    cls.ON_PAGE_INDEX += 1
+                except Exception:
+                    pass
+                if isLoaded:
+                    await PlaywrightHelper.dumpPageScreen(new_page, dataPath / f"popup.{cls.ON_PAGE_INDEX:02d}.png")
+
+            ctx.on("page", onPage)
 
         except Exception as e:
             U.throwPrefix(prefix, e)
