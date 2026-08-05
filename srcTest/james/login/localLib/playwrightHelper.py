@@ -136,17 +136,60 @@ class PlaywrightHelper:
         page: PwPage,
         imageFile: Path,
         *,
-        isWaitFullPage: bool = True,
-        waitFullPageTimeout: int = 30_000,
-    ):
+        isWaitDomContentLoaded: bool = True,
+        waitDomContentLoadedTimeout: int = 30_000,
+        maxAttempts: int = 3,
+    ) -> None:
         funcName = cls.dumpPageScreen.__name__
         prefix = funcName
         try:
             prefix = f"{prefix}[{page.url}]"
-            if isWaitFullPage:
-                await page.wait_for_load_state("domcontentloaded", timeout=waitFullPageTimeout)
-            await page.screenshot(path=imageFile, full_page=True)
-            U.logW(f"{prefix} {imageFile}")
+
+            if page.is_closed():
+                U.logW(f"{prefix} page already closed")
+                return
+
+            if isWaitDomContentLoaded:
+                await page.wait_for_load_state(
+                    "domcontentloaded",
+                    timeout=waitDomContentLoadedTimeout,
+                )
+
+            lastError: Exception | None = None
+            for attempt in range(1, maxAttempts + 1):
+                try:
+                    if page.is_closed():
+                        U.logW(f"{prefix} page closed before screenshot")
+                        return
+
+                    await page.screenshot(
+                        path=imageFile,
+                        full_page=True,
+                        animations="disabled",
+                        timeout=10_000,
+                    )
+
+                    U.logW(f"{prefix} {imageFile}")
+                    return
+
+                except Exception as e:
+                    U.logW(f"{prefix} screenshot attempt " f"{attempt}/{maxAttempts} failed: {e}")
+                    if attempt < maxAttempts:
+                        await asyncio.sleep(0.5 * attempt)
+
+            ## Full-page screenshot may fail when the page is changing,
+            ## navigating, or temporarily too large to capture.
+            U.logW(f"{prefix} falling back to viewport screenshot")
+
+            await page.screenshot(
+                path=imageFile,
+                full_page=False,
+                animations="disabled",
+                timeout=10_000,
+            )
+
+            U.logW(f"{prefix} {imageFile} [viewport fallback]")
+
         except Exception as e:
             U.logPrefixE(prefix, e)
 
