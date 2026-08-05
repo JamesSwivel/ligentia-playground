@@ -49,7 +49,7 @@ if len(sysDirsToAppend) == 0:
     raise Exception(f"import dirs not found, targetPaths={importDirs}")
 
 
-from localLib import App, PlaywrightHelper, askMenu
+from localLib import App, PlaywrightHelper, askMenu, TWaitForPattern
 
 App.readEnv()
 
@@ -183,10 +183,7 @@ async def main():
                     U.logW(f"{eWaitDashboard}")
 
                 if isDashboardWaited:
-                    sessionStorage = await PlaywrightHelper.saveSessionStorage(page, SessionFile)
-                    localStorageAndCookies = await PlaywrightHelper.saveLocalStorageAndCookies(context, StateFile)
-                    await PlaywrightHelper.dumpPageScreen(page, BrowseDataDir / "dashboard_1.png")
-                    await saveJwt()
+                    await App.saveSession(context, page, "dashboard_1")
                 else:
                     waitedMatch = await PlaywrightHelper.waitForUrl(
                         page,
@@ -208,10 +205,7 @@ async def main():
                         U.logI("Case A: callback and wait for dashboard home page")
                         await page.wait_for_url(supplier_wildcard, timeout=240000)
 
-                        sessionStorage = await PlaywrightHelper.saveSessionStorage(page, SessionFile)
-                        localStorageAndCookies = await PlaywrightHelper.saveLocalStorageAndCookies(context, StateFile)
-                        await saveJwt()
-                        await PlaywrightHelper.dumpPageScreen(page, BrowseDataDir / "dashboard_1.png")
+                        await App.saveSession(context, page, "dashboard_2")
                         # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
                         # await context.close()
                         # await browser.close()
@@ -250,12 +244,7 @@ async def main():
                             await page.wait_for_url(supplier_wildcard, timeout=60000)
                             U.logI(f"Loaded page: {page.url}")
 
-                            sessionStorage = await PlaywrightHelper.saveSessionStorage(page, SessionFile)
-                            localStorageAndCookies = await PlaywrightHelper.saveLocalStorageAndCookies(
-                                context, StateFile
-                            )
-                            await saveJwt()
-                            await PlaywrightHelper.dumpPageScreen(page, BrowseDataDir / "dashboard_2.png")
+                            await App.saveSession(context, page, "dashboard_3")
 
                     # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
                     # await context.close()
@@ -267,7 +256,7 @@ async def main():
                     await PlaywrightHelper.dumpPageErrors(
                         page,
                         e,
-                        BrowseDataDir,
+                        App.BrowseDataDir,
                         baseNamePrefix="wait-for-ligentix",
                     )
 
@@ -275,15 +264,15 @@ async def main():
         U.logPrefixE(funcName, e, __file__)
 
 
-async def saveJwt():
-    with open(SessionFile, "r+") as f:
-        temp = json.load(f)
-        token = temp["oidc.user:https://identity.uat1.ligentix.net/:shipping-confirmation-portal-app"]
-        temp2 = json.loads(token).get("access_token")
-        # U.logI(f"JWT Bearer = {temp2}")
-        with open(JwtFile, "w+") as f:
-            f.write(temp2)
-        U.logW(f"JWT: {JwtFile}")
+# async def saveJwt():
+#     with open(SessionFile, "r+") as f:
+#         temp = json.load(f)
+#         token = temp["oidc.user:https://identity.uat1.ligentix.net/:shipping-confirmation-portal-app"]
+#         temp2 = json.loads(token).get("access_token")
+#         # U.logI(f"JWT Bearer = {temp2}")
+#         with open(JwtFile, "w+") as f:
+#             f.write(temp2)
+#         U.logW(f"JWT: {JwtFile}")
 
 
 asyncio.run(main())

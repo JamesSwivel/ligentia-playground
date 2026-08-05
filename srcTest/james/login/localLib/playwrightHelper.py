@@ -154,6 +154,7 @@ class PlaywrightHelper:
     async def saveSessionStorage(cls, page: PwPage, sessionFilePath: Path):
         funcName = cls.saveSessionStorage.__name__
         prefix = funcName
+        isEmpty = True
         try:
             prefix = f"{prefix}[{page.url}]"
             sessionStorageStr = await page.evaluate("() => JSON.stringify(sessionStorage)")
@@ -163,7 +164,8 @@ class PlaywrightHelper:
             else:
                 await U.SwAsyncFile.writeJsonFileFromDict(str(sessionFilePath), js, isIndent=True)
                 U.logW(f"{prefix} {sessionFilePath}")
-            return js
+                isEmpty = False
+            return js, isEmpty
         except Exception as e:
             U.throwPrefix(prefix, e)
 
@@ -171,6 +173,7 @@ class PlaywrightHelper:
     async def saveLocalStorageAndCookies(cls, ctx: PwBrowserContext, sessionFilePath: Path):
         funcName = cls.saveLocalStorageAndCookies.__name__
         prefix = funcName
+        isEmpty = True
         try:
             ## The storage has shape
             ## {
@@ -190,9 +193,10 @@ class PlaywrightHelper:
             if isSave:
                 await U.SwAsyncFile.writeJsonFileFromDict(str(sessionFilePath), js, isIndent=True)
                 U.logW(f"{prefix} {sessionFilePath}")
+                isEmpty = False
             else:
                 U.logW(f"{prefix} storage_state is empty")
-            return js
+            return js, isEmpty
         except Exception as e:
             U.throwPrefix(prefix, e)
 
