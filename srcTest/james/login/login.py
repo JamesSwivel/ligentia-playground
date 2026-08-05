@@ -147,10 +147,21 @@ async def main():
                     },
                 }
 
+                dashboardApiPartialUrls: list[str] = [
+                    "/Api/statistics/bookings",
+                    "/Api/statistics/shipment/rag/count",
+                ]
+
                 ##############################################################
                 ## create browser and load session if exists
                 ##############################################################
                 browser, context, page = await createBrowser(p, hostname)
+
+                ##############################################################
+                ## Install dashboard API response handler
+                ##############################################################
+                dashboardApiResponseCounters: dict[str, int] = {url: 0 for url in dashboardApiPartialUrls}
+                installDashboardApiResponseEventHandler(page, dashboardApiResponseCounters)
 
                 ##############################################################
                 ## Goto supplier dashboard and wait for it (domcontentloaded)
@@ -185,7 +196,9 @@ async def main():
                 ## - simply wait for dashboard API response
                 ##############################################################
                 if waitedMatch is None:
-                    isDashboardWaited = await waitForDashboardApiResponse(page)
+                    isDashboardWaited = await waitForDashboardApiResponse(
+                        page, dashboardApiPartialUrls, dashboardApiResponseCounters
+                    )
                     if isDashboardWaited:
                         await App.saveSession(context, page, "dashboard_case_A")
                         ## Case A: wait no login and waited dashboard response
@@ -212,9 +225,11 @@ async def main():
                         raise Exception(f"❌ Case B.E1 failure")
 
                     if waitedMatch["name"] == "signinCallback":
-                        isDashboardWaited = await waitForDashboardApiResponse(page)
+                        isDashboardWaited = await waitForDashboardApiResponse(
+                            page, dashboardApiPartialUrls, dashboardApiResponseCounters
+                        )
                         if isDashboardWaited:
-                            await App.saveSession(context, page, "dashboard_1")
+                            await App.saveSession(context, page, "dashboard_case_B1")
                             ## Case B1: waited login and signin callback, waited dashboard API response
                             U.logW(f"{prefix} ✅ Case B1")
                         else:
@@ -239,9 +254,11 @@ async def main():
                             raise Exception(f"❌ Case B.E3 failure")
 
                         if waitedMatch["name"] == "signinCallback":
-                            isDashboardWaited = await waitForDashboardApiResponse(page)
+                            isDashboardWaited = await waitForDashboardApiResponse(
+                                page, dashboardApiPartialUrls, dashboardApiResponseCounters
+                            )
                             if isDashboardWaited:
-                                await App.saveSession(context, page, "dashboard_1")
+                                await App.saveSession(context, page, "dashboard_B2")
                                 ## Case B2: waited login and signin callback, waited dashboard API response
                                 U.logW(f"{prefix} ✅ Case B2")
                             else:
@@ -281,20 +298,21 @@ async def main():
         U.logPrefixE(funcName, e, __file__)
 
 
-async def waitForDashboardApiResponse(page: PwPage):
+async def waitForDashboardApiResponse(page: PwPage, partialUrls: list[str], counters: dict[str, int]):
     funcName = waitForDashboardApiResponse.__name__
     prefix = funcName
     isDashboardWaited = False
     try:
-        await PlaywrightHelper.waitForApiResponses(
-            page,
-            [
-                "/Api/statistics/bookings",
-                "/Api/statistics/shipment/rag/count",
-            ],
-            timeoutMs=60_000,
-        )
-        isDashboardWaited = True
+        isAllReceived = all([counters[k] > 0 for k in counters.keys()])
+        if isAllReceived:
+            isDashboardWaited = True
+        else:
+            await PlaywrightHelper.waitForApiResponses(
+                page,
+                partialUrls,
+                timeoutMs=60_000,
+            )
+            isDashboardWaited = True
 
     except Exception as e:
         U.logPrefixE(prefix, e)
@@ -320,214 +338,22 @@ async def waitForIdentityLoginOrSigninCallback(page: PwPage, patterns: list[TWai
     return waitedMatch
 
 
-asyncio.run(main())
-
-
-async def mainOld():
-    funcName = mainOld.__name__
+def installDashboardApiResponseEventHandler(page: PwPage, counters: dict[str, int]):
+    funcName = installDashboardApiResponseEventHandler.__name__
     prefix = funcName
-    page = None
     try:
-        answer = askMenu()
-        if answer is None:
-            return
-        username, password, hostname = answer
+        partialUrls = [k for k in counters.keys()]
 
-        ## Supplier URL: https://supplier.(uat1.)ligentix.net/
-        main_supplier_url = f"https://supplier.{hostname}/"
+        def onResponse(response: PwResponse) -> None:
+            for s in partialUrls:
+                if s in response.url and response.status == 200:
+                    U.logD(f"{prefix} API responses received: {response.url}")
+                    counters[s] += 1
 
-        ## Login URL: https://supplier.(uat1.)ligentix.net/login \
-        ## regex used to detect if the URL is not the login URL
-        regex_NotLogin = re.compile(rf"^(?!.*supplier\.{re.escape(hostname)}/login).*$")
-
-        ## Callback URL: https://supplier.(uat1.)ligentix.net/signin-callback?...
-        regex_signin_callback = re.compile(rf"^.*supplier\.{re.escape(hostname)}/signin-callback.*$")
-
-        supplier_wildcard = f"**/supplier.{hostname}/"
-
-        # Identity URL: https://identity.(uat1.)ligentix.net/
-        regex_identity = re.compile(rf"^.*identity\.{re.escape(hostname)}/.*$")
-
-        async with async_playwright() as p:
-            try:
-
-                #######################################################################
-                ## create browser context and page, load session data on if exists
-                #######################################################################
-                try:
-                    sessionStorageData: str | None = None
-                    isLoadBrowserSession = os.path.isfile(App.SessionFile) and os.path.isfile(App.StateFile)
-                    if isLoadBrowserSession:
-                        U.logW(f"Loading session SessionStorage: {App.SessionFile}")
-                        U.logW(f"Loading cookies and LocalStorage: {App.StateFile}")
-                        with open(App.SessionFile, "r+") as f:
-                            sessionStorageData = f.read()
-                            # U.logD(session_storage)
-                    else:
-                        U.logW("Browser Session/LocalStorage + Cookies NOT found!")
-
-                    browser = await p.chromium.launch()
-                    context = await browser.new_context(storage_state=App.StateFile if isLoadBrowserSession else None)
-                    page = await context.new_page()
-                    PlaywrightHelper.installPageTrace(page)
-                    await PlaywrightHelper.installInitScript(
-                        context, hostname=f"supplier.{hostname}", sessionStorage=sessionStorageData
-                    )
-                    PlaywrightHelper.installBrowserContextTrace(context, App.BrowseDataDir)
-
-                except Exception as e:
-                    U.throwPrefix(prefix, e)
-
-                # Flow:
-                # Base URL -> /login ->
-                # Case A: /signin-callback -> /
-                # Case B: identity.* -> require login
-                # Direction: can't use if else on wait_for_url, so check the redirected URL after /login
-                U.logI(f"Loading page: {main_supplier_url} ...")
-                await page.goto(main_supplier_url, wait_until="commit")
-                # await page.goto(main_supplier_url, wait_until="domcontentloaded")
-
-                # ## Wait for the redirect to /login
-                # ## e.g. https://supplier.(uat1.)ligentix.net/login
-                # U.logI("Waiting page: **/login ...")
-                # await page.wait_for_url("**/login", wait_until="commit")
-                # U.logI(f"Loaded page: {page.url}")
-
-                patterns: dict[str, TWaitForPattern] = {
-                    "identityLogin": {
-                        "name": "identityLogin",
-                        "desc": "Identity login page",
-                        ## This pattern matches
-                        ## - https://identity.uat1.ligentix.net/Account/Login
-                        ## - https://identity.ligentix.net/Account/Login
-                        "pattern": re.compile(rf"{re.escape(hostname)}/Account/Login(?:[/?]|$)"),
-                    },
-                    "login": {
-                        "name": "login",
-                        "desc": "Login page",
-                        ## This pattern matches
-                        ## - https://supplier.(uat1.)ligentix.net/login
-                        ## - https://supplier.(uat1.)ligentix.net/login/
-                        ## - https://supplier.(uat1.)ligentix.net/login?returnUrl=...
-                        "pattern": re.compile(rf"/login(?:[/?]|$)", re.IGNORECASE),
-                    },
-                    "dashboardHome": {
-                        "name": "dashboardHome",
-                        "desc": "Dashboard home page",
-                        ## This pattern matches
-                        ## - https://supplier.(uat1.)ligentix.net
-                        ## - https://supplier.(uat1.)ligentix.net/
-                        ## - https://supplier.(uat1.)ligentix.net/?xxx=...
-                        # "pattern": re.compile(rf"supplier.{re.escape(hostname)}(?:[/?]|$)", re.IGNORECASE),
-                        ##
-                        ## This patterns matches
-                        ## - https://supplier.(uat1.)ligentix.net/ (without any query params)
-                        "pattern": re.compile(rf"supplier.{re.escape(hostname)}/$", re.IGNORECASE),
-                    },
-                }
-
-                ## Wait for full page load using 'domcontentloaded'
-                waitedMatch = await PlaywrightHelper.waitForUrl(
-                    page,
-                    patterns["dashboardHome"],
-                    isDebug=True,
-                    wait_until="domcontentloaded",
-                    timeout=30_000,
-                )
-                if waitedMatch["name"] != "dashboardHome":
-                    raise Exception(f"Expected to match dashboardHome, but got {waitedMatch['name']}")
-
-                isDashboardWaited = False
-                try:
-                    await PlaywrightHelper.waitForApiResponses(
-                        page,
-                        [
-                            "/Api/statistics/bookings",
-                            "/Api/statistics/shipment/rag/count",
-                        ],
-                        timeoutMs=60_000,
-                    )
-                    isDashboardWaited = True
-                except Exception as eWaitDashboard:
-                    U.logW(f"{eWaitDashboard}")
-
-                if isDashboardWaited:
-                    await App.saveSession(context, page, "dashboard_1")
-                else:
-                    waitedMatch = await PlaywrightHelper.waitForUrl(
-                        page,
-                        patterns["login"],
-                        isDebug=True,
-                        wait_until="domcontentloaded",
-                        timeout=30_000,
-                    )
-
-                    ## Use regex to wait for a URL that isn't the login page
-                    ## i.e.either the Callback URL or Identity URL
-                    U.logI(f"Waiting page: (NOT login page) ...")
-                    await page.wait_for_url(regex_NotLogin, wait_until="commit")
-                    U.logI(f"Loaded page: {page.url}")
-
-                    # Todo: regex to check whether the redirected URL is case 1 or 2
-                    if re.match(regex_signin_callback, page.url):
-                        # if await page.wait_for_url("**/supplier.uat1.ligentix.net/signin-callback**", timeout=120000):
-                        U.logI("Case A: callback and wait for dashboard home page")
-                        await page.wait_for_url(supplier_wildcard, timeout=240000)
-
-                        await App.saveSession(context, page, "dashboard_2")
-                        # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
-                        # await context.close()
-                        # await browser.close()
-
-                    elif re.match(regex_identity, page.url):
-                        # elif await page.wait_for_url("**/identity.uat1.ligentix.net/**", timeout=120000):
-                        U.logI("Case B: login required")
-                        U.logD("Auto-filling credentials and logging in...")
-                        await page.get_by_placeholder("Username").fill(username)  # type: ignore
-                        await page.get_by_placeholder("Password").fill(password)  # type: ignore
-                        await page.get_by_label("Remember me next time").check()
-
-                        U.logI("Click button: Login to Ligentix")
-                        await page.get_by_role("button", name="Login to Ligentix").click()
-
-                        U.logD(f"Waiting page: **ligentix.net ...")
-                        # await page.wait_for_url("**ligentix.net", timeout=60000 * 2)
-                        await page.wait_for_url("**://*.ligentix.net/**", timeout=30000)
-                        U.logI(f"Loaded page: {page.url}")
-
-                        # still on identity page -> captcha required
-                        if re.match(regex_identity, page.url):
-                            U.logI("Case C: recaptcha may be required")
-                            try:
-                                await page.wait_for_selector('iframe[title="reCAPTCHA"]', state="visible", timeout=8000)
-                                U.logI("reCAPTCHA widget rendered")
-                            except PwTimeoutError:
-                                U.logW(
-                                    "reCAPTCHA widget did NOT render within 8s "
-                                    "(likely withheld by bot detection, not just slow to load)"
-                                )
-                            # send alert
-                            raise Exception("recaptcha required.")
-                        else:
-                            U.logD(f"Waiting page: {supplier_wildcard} ...")
-                            await page.wait_for_url(supplier_wildcard, timeout=60000)
-                            U.logI(f"Loaded page: {page.url}")
-
-                            await App.saveSession(context, page, "dashboard_3")
-
-                    # await page.wait_for_url("**/supplier.uat1.ligentix.net/shipments/search", timeout=60000)
-                    # await context.close()
-                    # await browser.close()
-
-            except Exception as e:
-                U.logPrefixE(funcName, e, __file__)
-                if page is not None:
-                    await PlaywrightHelper.dumpPageErrors(
-                        page,
-                        e,
-                        App.BrowseDataDir,
-                        baseNamePrefix="wait-for-ligentix",
-                    )
+        page.on("response", onResponse)
 
     except Exception as e:
-        U.logPrefixE(funcName, e, __file__)
+        U.throwPrefix(prefix, e)
+
+
+asyncio.run(main())

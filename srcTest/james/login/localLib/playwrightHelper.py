@@ -62,15 +62,23 @@ class PlaywrightHelper:
             """Wait for a URL that matches any of the given patterns, and return the matched pattern."""
             if not isinstance(patterns, list):
                 patterns = [patterns]
+
+            timeoutSec = 30_000 / 1000.0
+            if "timeout" in kwargs:
+                timeoutSec = kwargs["timeout"] / 1000.0
+
             if isDebug:
-                U.logD(f"{prefix} waiting for URLs[{wait_until}]: {[p['name'] for p in patterns]} ...")
+                U.logD(
+                    f"{prefix} waiting for URLs[{wait_until}][{timeoutSec:.0f}s]: {[p['name'] for p in patterns]} ..."
+                )
+
             predicate = cls.makeUrlPatternPredicate(patterns)
             await page.wait_for_url(predicate, wait_until=wait_until, **kwargs)
             matchedPattern = cls.findMatchedPattern(page.url, patterns)
             if matchedPattern is None:
                 raise Exception(f"wait_for_url() returned but no pattern matched the URL: {page.url}")
             if isDebug:
-                U.logD(f"{prefix} loaded URL[{wait_until}]: {page.url}, matched: {matchedPattern['name']}")
+                U.logD(f"{prefix} loaded URL[{wait_until}].match[{matchedPattern['name']}]: {page.url}")
             return matchedPattern
         except Exception as e:
             U.throwPrefix(prefix, e)
@@ -99,7 +107,7 @@ class PlaywrightHelper:
             )
             return matchedPattern, err
         except Exception as e:
-            U.logPrefixE(prefix, e)
+            # U.logPrefixE(prefix, e)
             err = e
         return matched, err
 
