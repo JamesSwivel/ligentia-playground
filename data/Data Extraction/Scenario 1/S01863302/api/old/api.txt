@@ -19,7 +19,7 @@ POL	- KHSHV                                         SummaryInformation > "pol"
 ETD	- 12/29/2024                                    SummaryInformation > "etd"
 POD	- GBSOU                                         SummaryInformation > "pod"
 ETA	- 02/22/2025                                    SummaryInformation > "eta"
-Status - Submitted
+Status - Submitted                                  Details > "shipmentState"
 
 Invoices:
 (Invoice number - Currency)
