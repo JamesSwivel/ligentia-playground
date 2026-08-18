@@ -76,7 +76,10 @@ async def createBrowser(p: Playwright, hostname: str):
             U.logW("Browser Session/LocalStorage + Cookies NOT found!")
 
         browser = await p.chromium.launch()
-        context = await browser.new_context(storage_state=App.StateFile if isLoadBrowserSession else None)
+        context = await browser.new_context(
+            storage_state=App.StateFile if isLoadBrowserSession else None,
+            ignore_https_errors=True,
+        )
         page = await context.new_page()
         PlaywrightHelper.installPageTrace(page)
         await PlaywrightHelper.installInitScript(
@@ -202,10 +205,10 @@ async def main():
                     if isDashboardWaited:
                         await App.saveSession(context, page, "dashboard_case_A")
                         ## Case A: wait no login and waited dashboard response
-                        U.logW(f"{prefix} ✅ Case A")
+                        U.logW(f"{prefix} ✅ Case A (direct)")
                     else:
                         ## Case A.E1: wait no app login and failed to wait for dashboard API response
-                        raise Exception(f"❌ Case A.E1 failure")
+                        raise Exception(f"❌ Case A.E1 failure (timeout API response)")
 
                 ##############################################################
                 ## Case B: If login can be waited
@@ -222,7 +225,7 @@ async def main():
                     )
                     if waitedMatch is None:
                         ## Case B.E1: wait no signin callback nor identity login
-                        raise Exception(f"❌ Case B.E1 failure")
+                        raise Exception(f"❌ Case B.E1 failure (timeout no signin callback/identity login)")
 
                     if waitedMatch["name"] == "signinCallback":
                         isDashboardWaited = await waitForDashboardApiResponse(
@@ -231,10 +234,10 @@ async def main():
                         if isDashboardWaited:
                             await App.saveSession(context, page, "dashboard_case_B1")
                             ## Case B1: waited login and signin callback, waited dashboard API response
-                            U.logW(f"{prefix} ✅ Case B1")
+                            U.logW(f"{prefix} ✅ Case B1 (signin callback)")
                         else:
                             ## Case B.E2: waited signin callback and failed to wait for dashboard API response
-                            raise Exception(f"❌ Case B.E2 failure")
+                            raise Exception(f"❌ Case B.E2 failure (timeout API response after signin callback)")
 
                     elif waitedMatch["name"] == "identityLogin":
                         U.logW("RPA login required")
@@ -251,7 +254,9 @@ async def main():
                         )
                         if waitedMatch is None:
                             ## Case B.E3: after RPA logon, wait no signin callback and identity login
-                            raise Exception(f"❌ Case B.E3 failure")
+                            raise Exception(
+                                f"❌ Case B.E3 failure (timeout no signin callback/identity login after RPA login)"
+                            )
 
                         if waitedMatch["name"] == "signinCallback":
                             isDashboardWaited = await waitForDashboardApiResponse(
@@ -260,10 +265,10 @@ async def main():
                             if isDashboardWaited:
                                 await App.saveSession(context, page, "dashboard_B2")
                                 ## Case B2: waited login and signin callback, waited dashboard API response
-                                U.logW(f"{prefix} ✅ Case B2")
+                                U.logW(f"{prefix} ✅ Case B2 (RPA login)")
                             else:
                                 ## Case B.E2: waited signin callback and failed to wait for dashboard API response
-                                raise Exception(f"case B.E2 failure")
+                                raise Exception(f"case B.E3 failure (timeout API response after RPA login)")
 
                         elif waitedMatch["name"] == "identityLogin":
                             U.logW("Case C: recaptcha may be required")
@@ -275,7 +280,7 @@ async def main():
                                     "reCAPTCHA widget did NOT render within 8s "
                                     "(likely withheld by bot detection, not just slow to load)"
                                 )
-                            raise Exception("recaptcha required.")
+                            raise Exception("case C.E1 failure (recaptcha required)")
 
                     else:
                         raise Exception(f"unexpected waitedMatch, name={waitedMatch['name']}")
@@ -330,7 +335,7 @@ async def waitForIdentityLoginOrSigninCallback(page: PwPage, patterns: list[TWai
             patterns,
             isDebug=True,
             wait_until="commit",
-            timeout=30_000,
+            timeout=60_000,
         )
     except Exception as e:
         U.logPrefixE(prefix, e)
